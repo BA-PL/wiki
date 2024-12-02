@@ -4,6 +4,7 @@ theme: just-the-docs
 color_scheme: beck
 
 url: https://ba-pl.github.io/wiki/
+baseurl: /assets/images
 enable_copy_code_button: true
 logo: "https://github.com/BA-PL/wiki/blob/main/assets/images/logo4.png?raw=true"
 aux_links:
