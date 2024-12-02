@@ -15,4 +15,4 @@ Instrukcja  nie  opisuje  przypadku  wgrywania  licencji  na  moduł EL6070 lub 
 
 Na początku warto sprawdzić zakupione licencje. Do realizacji procesu licencjonowania będzie potrzebny numer „BADE-IN” (wpisujemy tylko znaki zaznaczone na zielono). Znajdziemy je na Fakturze VAT lub na Potwierdzeniu zamówienia.
 
-![protokol](https://github.com/BA-PL/wiki/blob/main/docs/TwinCAT%203/Licencjonowanie/protokol.png "protokol")
+![protokol](Licencjonowanie/protokol.png "protokol")
