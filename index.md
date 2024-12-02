@@ -7,7 +7,7 @@ nav_order: 1
 **Witaj!**
 <br>
 <br>
-Znajdujesz się w bazie wiedzy działu technicznego polskiego oddziału Beckhoff Automation. aa
+Znajdujesz się w bazie wiedzy działu technicznego polskiego oddziału Beckhoff Automation. 
 <br>
 Pamiętaj, że aktualne i oficjalne informacje znajdziesz na [Infosys]
 <br>
