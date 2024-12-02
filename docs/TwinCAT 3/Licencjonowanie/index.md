@@ -40,7 +40,6 @@ Na tym etapie nasz numer zamówieniowy licencji dla licencji PLC/NC PTP będzie 
 - TC1250-0050, gdzie -xx50 oznacza klasę wydajności.
 
 <br>
-
 Ostatni etap, to decyzja w jaki sposób będziemy przechowywać licencję. Do wyboru są 3 opcje:
 - bezpośrednio na sterowniku: w przypadku awarii sterownika i wymiany na nowy, trzeba będzie przejść procedurę przeniesienia licencji. W tym czasie można uruchomić aplikację za pomocą 7-dniowych licencji testowych
 - na module EL6070 (tylko magistrala EtherCAT): licencja jest aktywna tam, gdzie znajduje się moduł, w przypadku awarii sterownika nie trzeba nic robić w kwestii licencji
@@ -51,4 +50,6 @@ Ostatni etap, to decyzja w jaki sposób będziemy przechowywać licencję. Do wy
 Niezależnie od wybranego sposobu, kopia pliku licencyjnego jest zawsze przechowywana na sterowniku w katalogu instalacyjnym TwinCATa **...\TwinCAT\3.1\Target\License**
 <br>
 W przypadku awarii urządzenia licencję z reguły można przenieść, należy w tej sprawie skontaktować się z działem technicznym **support@beckhoff.pl**
+<br>
+
 ---
