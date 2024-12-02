@@ -27,4 +27,17 @@ Następnie, jeśli potrzebujemy w naszej aplikacji dodać np. komunikację z inn
 ![tf](tf.png "tf")
 
 Co do zasady, zdecydowaną większość licencji TCxxxx oraz TFxxxx można uruchomić w trybie testowym.
+<br>
+Jeśli wiemy już jakich licencji potrzebujemy, w kolejnym kroku musimy wyspecyfikować na jakim typie urządzenia (o jakiej wydajności) będziemy je uruchamiać. Od tego jest uzależniona cena danej licencji. Klasę wydajności każdego sterownika możemy znaleźć w jego karcie katalogowej, np. dla CX5140:
+
+![perf](perf.png "performance")
+
+Lub w TwinCAT:
+
+![perfTC](perfTC.png "performanceTwinCAT")
+
+Na tym etapie nasz numer zamówieniowy licencji dla licencji PLC/NC PTP będzie wyglądał tak:
+- TC1250-0050, gdzie -xx50 oznacza klasę wydajności.
+
+
 ---
