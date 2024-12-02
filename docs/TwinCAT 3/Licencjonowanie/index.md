@@ -40,7 +40,6 @@ Na tym etapie nasz numer zamówieniowy licencji dla licencji PLC/NC PTP będzie 
 - TC1250-0050, gdzie -xx50 oznacza klasę wydajności.
 
 <br>
-<br>
 
 Ostatni etap, to decyzja w jaki sposób będziemy przechowywać licencję. Do wyboru są 3 opcje:
 - bezpośrednio na sterowniku: w przypadku awarii sterownika i wymiany na nowy, trzeba będzie przejść procedurę przeniesienia licencji. W tym czasie można uruchomić aplikację za pomocą 7-dniowych licencji testowych
