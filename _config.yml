@@ -5,7 +5,7 @@ color_scheme: beck
 
 url: https://ba-pl.github.io/wiki/
 enable_copy_code_button: true
-logo: "/assets/images/logo4.png"
+logo: "https://github.com/BA-PL/wiki/blob/main/assets/images/logo4.png?raw=true"
 aux_links:
   "Infosys":
     - "https://infosys.beckhoff.com/index_en.htm"
