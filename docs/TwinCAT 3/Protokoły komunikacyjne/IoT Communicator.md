@@ -5,10 +5,13 @@ nav_order: 2
 layout: page
 ---
 
-**IoT Communicator**
-
 # Wprowadzenie 
+{: .no_toc }
 
+## Table of Contents
+{: .no_toc .text-delta }
+
+1. TOC
 {:toc}
 
 ## Wykorzystana konfiguracja
