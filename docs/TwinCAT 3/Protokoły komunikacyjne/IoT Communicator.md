@@ -226,7 +226,11 @@ samym miejscu uruchomić rysowanie wykresu.
 
 ![iot_comm17](https://ba-pl.github.io/wiki/assets/images/iot_comm17.png "iot_comm17")
 
+# Przykładowa aplikacja
 
+Przykładową aplikację możesz pobrać tutaj:
+<br>
+[IoT Sample](https://github.com/BA-PL/IoTCommunicator/archive/refs/heads/main.zip){: .btn .btn-red }
 
 
 
