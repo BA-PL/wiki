@@ -27,8 +27,6 @@ się w programie PLC.
 
 **UWAGA! Dla sterowników z TwinCAT 3.1.4024.0 i nowszych dane do logowania to „Administrator” z hasłem „1” dla wszystkich urządzeń (również z Windows CE)!**
 
-<br>
-
 # Program PLC dla serwera
 
 Możliwy jest odczyt/zapis danych znajdujących się w przestrzeni Memory (zadeklarowanych … AT %M …). W pokazanym przykładzie z serwera odczytywana jest zmienna typu STRING zadeklarowana w sposób pokazany poniżej.
@@ -57,6 +55,7 @@ go funkcją ADR,
 - READ (BOOL): Wejście reagujące na zbocze narastające, służy do wydawania polecenia odczytu,
 - TMOUT (TIME): Limit czasu odczytu, po jego przekroczeniu blok sygnalizuje błąd.
 <br>
+<br>
 Wyjścia z bloku są następujące:
 - BUSY (BOOL): Wyjście sygnalizujące, że blok wykonuje operację odczytu,
 - ERR (BOOL): Wyjście sygnalizujące wystąpienie błędu. Przyjmuje ono wartość TRUE, gdy wyjście BUSY
@@ -69,11 +68,9 @@ przyjmie wartość FALSE, a odczyt zakończy się niepowodzeniem,
 
 Analogicznie wygląda wywołanie bloku ADSWRITE, z tą różnicą, że jako LEN i SRCADDR podaje się odnośniki do
 zmiennej, którą chcemy ZAPISAĆ na wybranym obszarze pamięci w sterowniku który jest serwerem.
-
 # Odczyt po nazwach 
 
 Istnieje również możliwość odczytu zmiennych po ich nazwach. W tym celu należy użyć bloków FB_ReadAdsSymByName lub FB_WriteAdsSymByName pochodzaćych z bliblioteki Tc2_DataExchange. 
-
 # Tips&Tricks
 
 ## Adresowanie 
