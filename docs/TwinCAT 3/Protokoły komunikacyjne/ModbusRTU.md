@@ -164,68 +164,196 @@ można użyć z kolei akcji .WriteSingleRegister lub .WriteRegs.
 
 Obszar pamięci posiada stałe przesunięcie o wartości 16#4000.
 
+# Konfiguracja sprzętowa
+## COM Port
+W przypadku jeżeli urządzenie posiada port COM który będziemy wykorzystywać ( np. CX9020 z opcją N031)
+mamy możliwość użycia tego portu w programie PLC jako interfejs magistrali np. RS485. W celu konfiguracji danego
+portu w pierwszej kolejności należy wyprać PPM na elemencie I/O / Devices i dodać element Serial Communication
+Port.
 
 ![modbus22](https://ba-pl.github.io/wiki/assets/images/modbus22.png "modbus22")
+
+Pierwszym elementem, na który warto zwrócić uwagę jest ustawienie portu komunikacyjnego jako COM 1. Jest
+to domyślny adres pierwszego portu szeregowego dla każdego urządzenia z serii CX. Ustawienie można sprawdzić
+poprzez zakładkę Serial Port w danym obiekcie COM Port.
+
 ![modbus23](https://ba-pl.github.io/wiki/assets/images/modbus23.png "modbus23")
+
+Następnie główną konfigurację danego portu można przeprowadzić w zakładce Communication Properties. Ze
+względu na użycie portu jako interfejsu komunikacyjnego do Modbusa należy zmienić tryb COM Port Mode na
+KL6xx1 Mode. Poniżej została przedstawiona przykładowa konfiguracja na sterowniku CX9020 z portem RS485 dla
+ramki Modbusa RTU o parametrach:
+
 ![modbus24](https://ba-pl.github.io/wiki/assets/images/modbus24.png "modbus24")
+
+## Konfiguracja KL60XX na przykładzie KL6021 – 22 bajt
+### Konfiguracja za pomocą programu KS2000
+Przed przystąpieniem do konfiguracji modułu KL60xx należy mieć zainstalowany dodatkowo płatny program
+KS2000. Pozwala on na konfigurację modułów K-Busowych. Następnie należy wykonać skanowanie istniejącego
+modułu w następującej kolejności :
+<br>
+1. Zrestartować sterownik docelowy w tryb Config
+2. Zeskanować konfigurację magistrali K-BUS bez włączania trybu Toggle Free Run State
+3. Przejść do programu KS2000
+4. Wybieramy sterownik docelowy z którym się łączymy
+
 ![modbus25](https://ba-pl.github.io/wiki/assets/images/modbus25.png "modbus25")
+
+5. Logujemy się za pomocą programu KS2000 do sterownika
+
 ![modbus26](https://ba-pl.github.io/wiki/assets/images/modbus26.png "modbus26")
+
+6. Wchodzimy w zakładkę Settings wybranego modułu komunikacyjnego
+
 ![modbus27](https://ba-pl.github.io/wiki/assets/images/modbus27.png "modbus27")
+
+7. Konfigurujemy parametry komunikacji. Przykładowo:
+
 ![modbus28](https://ba-pl.github.io/wiki/assets/images/modbus28.png "modbus28")
+
+8. Klikamy przycisk Apply
+9. Zlinkować zmienne z I/O karty KL6021 adekwatnie według instrukcji opisanej w dalszej części 
+
+### Konfiguracja poprzez blok funkcyjny KL6Configugation
+
 ![modbus29](https://ba-pl.github.io/wiki/assets/images/modbus29.png "modbus29")
+
+Drugą możliwością konfiguracji karty jest użycie bloku funkcyjnego KL6Configuration. Jest to blok pozwalający
+na określenie parametrów nastaw komunikacji wykorzystujących magistralę szeregową. W celu określenia który
+port należy utworzyć zmienne będące buforem komunikacyjnym posiadający możliwość podlinkowana do
+zmiennych komunikacyjnych karty KL6xxx. Zmiennymi buforowymi pozwalającymi na linkowanie są:
+
 ![modbus30](https://ba-pl.github.io/wiki/assets/images/modbus30.png "modbus30")
+
+Poniżej zaprezentowano przykładową parametryzację:
+
 ![modbus31](https://ba-pl.github.io/wiki/assets/images/modbus31.png "modbus31")
+
+Zmienne stKL6x22bCommBuff zostały odpowiednio zlinkowane zgodnie z opisem umieszczonym w dalszej części. 
+
+## EL60xx 
+W przypadku kart z serii EL60xx mamy do dyspozycji rozmiar bufora danych w wielkości 22 bajtów niezależnie
+od wybranej karty jak i możliwość konfiguracji parametrów komunikacyjnych bez użycia oprogramowania KS2000.
+Samą konfigurację karty możemy przeprowadzić poprzez konfigurację po protokole CAN over Ethercat.
+Komunikacja CAN over Ethercat pozwala na wprowadzenie parametrów komunikacyjnych bezpośrednio w
+przestrzeni rejestrów karty docelowej. Niezależnie od rozwiązania możemy konfigurować parametry na
+przykładowe 2 sposoby:
+- konfiguracja poprzez zakładkę CoE – Online
+- konfiguracja poprzez zakładkę CoE – Startup
+
+### Konfiguracja poprzez zakładkę CoE – Online
+
 ![modbus32](https://ba-pl.github.io/wiki/assets/images/modbus32.png "modbus32")
+
+Część kart wymieniających informację poprzez magistralę E-BUS posiada możliwość konfiguracji
+parametrów nastaw bezpośrednio na samej karcie, niezależnie od konfiguracji sprzętowej. Parametryzację samej
+karty w trybie Online można wykonać poprzez zakładkę CoE-Online.
+<br>
+Unikatowe parametry konfiguracyjne charakterystyczne dla danej karty w większości przypadków znajdują
+się pod adresem 8000.
+
 ![modbus33](https://ba-pl.github.io/wiki/assets/images/modbus33.png "modbus33")
+
+Zmienne z flagą RW – Read/Write programista ma możliwość nadpisania i zmiany parametrów. Zmianę
+danego parametru z listy można wykonać poprzez dwukrotne kliknięcie danego parametru LPM. W przypadku
+zmiennych przyjmujących wartości nieokreślone żadnym standardem (np. Enable Half Duplex) otworzy się nam
+okno posiadający standardowy szablon wprowadzenia nowej wartości. Nową wartość można wprowadzić w
+dowolnym formacie numerycznych i zapisać poprzez kliknięcie przycisku OK.
+
 ![modbus34](https://ba-pl.github.io/wiki/assets/images/modbus34.png "modbus34")
+
+W przypadku zmiennych posiadających jakieś bliżej określone standardowe wartości (np.Baudrate)
+użytkownik ma możliwość wyboru danej wartości z rozwijanego paska wyboru, ułatwiając wprowadzanie.
+
 ![modbus35](https://ba-pl.github.io/wiki/assets/images/modbus35.png "modbus35")
+
+### Konfiguracja poprzez zakładkę CoE – Startup
+W przypadku konfiguracji poprzez zakładkę CoE – Online edytujemy bezpośrednio wartości na karcie docelowej
+w trybie online. Wadą tego rozwiązania jest możliwość utracenia konfiguracji w przypadku uszkodzenia danej karty
+podczas działania. W momencie wymiany karty poprzednia konfiguracja zostaje utracona.
+<br>
+Dlatego też w tym przykładzie zostanie pokazana konfiguracja poprzez zakładkę CoE – Startup . W przypadku
+konfiguracji poprzez zakładkę CoE – Startup parametry konfiguracyjne zostają przepisane z pamięci sterownika i
+wprowadzone na karcie docelowej w trakcie przejścia w tryb Run.
+
 ![modbus36](https://ba-pl.github.io/wiki/assets/images/modbus36.png "modbus36")
+
+W celu wprowadzenia nowej konfiguracji danego parametru należy w zakładce Startup kliknąć przycisk New…
+
 ![modbus37](https://ba-pl.github.io/wiki/assets/images/modbus37.png "modbus37")
+
+W nowo otwartym oknie rozwijamy zakładkę COM Settings z indeksem 8000. Zawarte są w niej wszystkie
+ustawienia parametrów komunikacyjnych.
+
 ![modbus38](https://ba-pl.github.io/wiki/assets/images/modbus38.png "modbus38")
+
+Przykładowo klikając dwukrotnie LPM na parametrze Baudrate jesteśmy w stanie edytować wartość prędkości
+komunikacji poprzez rozsuwany pasek z enumeracyjnymi wartościami prędkości komunikacji. Następnie nowo
+wybraną wartość prędkości komunikacji zatwierdzamy przyciskiem OK.
+
 ![modbus39](https://ba-pl.github.io/wiki/assets/images/modbus39.png "modbus39")
+
+Po wprowadzeniu nowej wartości należy, zaznaczając zmieniony przez nas parametr, kliknąć przycisk OK.
+Zmiana danego parametru zostanie wówczas zapisana w oknie Startup i zostanie wczytana na kartę w
+momencie przejścia karty ze stanu Pre-OP do Safe-OP.
+
 ![modbus40](https://ba-pl.github.io/wiki/assets/images/modbus40.png "modbus40")
+
+Programista ma również możliwość szybkiego przepisania wartości zmiennych z zakładki CoE – Online do
+zakładki Startup poprzez wybranie zmienionego parametru i kliknięcie przycisku Add to startup…
+
 ![modbus41](https://ba-pl.github.io/wiki/assets/images/modbus41.png "modbus41")
+
+Wybrana konfiguracja danej zmiennej, wraz z określoną jej wartoscią zostanie przeniesona na koniec Startup
+listy.
+
 ![modbus42](https://ba-pl.github.io/wiki/assets/images/modbus42.png "modbus42")
+
+Po takim skonfigurowaniu parametrów komunikacyjnych karty należy już tylko utworzyć połączenie pomiędzy
+programem PLC a wyprowadzeniami utworzonymi w karcie EL60xx zgodnie z kolejnym rozdziałem.
+
+## Przykładowe linkowanie zmiennych procesu komunikacyjnego 
+
 ![modbus43](https://ba-pl.github.io/wiki/assets/images/modbus43.png "modbus43")
+
+Posiadając utworzony w programie blok ModbusRtuMaster_xxx lub ModbusRtuSlave_xxx mamy możliwość
+podlinkowania Process Image z programu PLC do COM Port’u. Połączenie należy utworzyć w sposób następujący :
+<br>
+1. Połączenie elementu Input/Status do elementu InData/SerStatus
+
 ![modbus44](https://ba-pl.github.io/wiki/assets/images/modbus44.png "modbus44")
+
+2. Połączenie elementów od Input/Data1 do Input/Data64 za pomocą skrótu Change multi-link do elementu
+InData/D
+
 ![modbus45](https://ba-pl.github.io/wiki/assets/images/modbus45.png "modbus45")
+
+3. Następnie należy przypisać element Outputs/Ctrl do OutData/SerCtrl
+
 ![modbus46](https://ba-pl.github.io/wiki/assets/images/modbus46.png "modbus46")
+
+4. Połączenie zmiennych od Outputs/Data1 do Outputs/Data64 poprzez Change multi-link do OutData/D
+
 ![modbus47](https://ba-pl.github.io/wiki/assets/images/modbus47.png "modbus47")
-![modbus48](https://ba-pl.github.io/wiki/assets/images/modbus48.png "modbus48")
-![modbus49](https://ba-pl.github.io/wiki/assets/images/modbus49.png "modbus49")
-![modbus50](https://ba-pl.github.io/wiki/assets/images/modbus50.png "modbus50")
-![modbus51](https://ba-pl.github.io/wiki/assets/images/modbus51.png "modbus51")
-![modbus52](https://ba-pl.github.io/wiki/assets/images/modbus52.png "modbus52")
-![modbus53](https://ba-pl.github.io/wiki/assets/images/modbus53.png "modbus53")
-![modbus54](https://ba-pl.github.io/wiki/assets/images/modbus54.png "modbus54")
-![modbus55](https://ba-pl.github.io/wiki/assets/images/modbus55.png "modbus55")
-![modbus56](https://ba-pl.github.io/wiki/assets/images/modbus56.png "modbus56")
-![modbus57](https://ba-pl.github.io/wiki/assets/images/modbus57.png "modbus57")
-![modbus58](https://ba-pl.github.io/wiki/assets/images/modbus58.png "modbus58")
-![modbus59](https://ba-pl.github.io/wiki/assets/images/modbus59.png "modbus59")
-![modbus60](https://ba-pl.github.io/wiki/assets/images/modbus60.png "modbus60")
-![modbus61](https://ba-pl.github.io/wiki/assets/images/modbus61.png "modbus61")
-![modbus62](https://ba-pl.github.io/wiki/assets/images/modbus62.png "modbus62")
-![modbus63](https://ba-pl.github.io/wiki/assets/images/modbus63.png "modbus63")
-![modbus64](https://ba-pl.github.io/wiki/assets/images/modbus64.png "modbus64")
-![modbus65](https://ba-pl.github.io/wiki/assets/images/modbus65.png "modbus65")
-![modbus66](https://ba-pl.github.io/wiki/assets/images/modbus66.png "modbus66")
-![modbus67](https://ba-pl.github.io/wiki/assets/images/modbus67.png "modbus67")
-![modbus68](https://ba-pl.github.io/wiki/assets/images/modbus68.png "modbus68")
-![modbus69](https://ba-pl.github.io/wiki/assets/images/modbus69.png "modbus69")
-![modbus70](https://ba-pl.github.io/wiki/assets/images/modbus70.png "modbus70")
-![modbus71](https://ba-pl.github.io/wiki/assets/images/modbus71.png "modbus71")
-![modbus72](https://ba-pl.github.io/wiki/assets/images/modbus72.png "modbus72")
-![modbus73](https://ba-pl.github.io/wiki/assets/images/modbus73.png "modbus73")
-![modbus74](https://ba-pl.github.io/wiki/assets/images/modbus74.png "modbus74")
-![modbus75](https://ba-pl.github.io/wiki/assets/images/modbus75.png "modbus75")
-![modbus76](https://ba-pl.github.io/wiki/assets/images/modbus76.png "modbus76")
-![modbus77](https://ba-pl.github.io/wiki/assets/images/modbus77.png "modbus77")
-![modbus78](https://ba-pl.github.io/wiki/assets/images/modbus78.png "modbus78")
-![modbus79](https://ba-pl.github.io/wiki/assets/images/modbus79.png "modbus79")
-![modbus80](https://ba-pl.github.io/wiki/assets/images/modbus80.png "modbus80")
+
+Po utworzeniu połączeń, a następnie po prze aktywowaniu nowej konfiguracji strona hardware’owa jest
+przygotowana do działania. W przypadku jeżeli w projekcie PLC jest utworzona zmienna typu
+ModbusRtuMaster_PcCom lub ModbusRtuSlave_PcCom, lecz nie widać jej w elemencie do podlinkowania należy
+przebudować program PLC. Niezależnie czy wykorzystujemy karty z serii KL6xxx czy karty EL6xxx linkowanie
+zmiennych komunikacyjnych wygląda identycznie.
+
+# Tips & Tricks 
+## Wyprowadzenia portu DB9 i przykład połączenia
+W zależności od sterownika możemy posiadać różne konfiguracje wyprowadzeń na porcie DB9. W przypadku
+sterowników serii CX9020 z rozszerzeniem na port COM wyprowadzenie na RS485 prezentuje się następująco
+
 ![modbus81](https://ba-pl.github.io/wiki/assets/images/modbus81.png "modbus81")
+
+W przypadku sterowników CX8180 oraz CX7080 wyprowadzenie DB9 jest przygotowane do konfiguracji
+magistrali RS232 lub RS485 w Half-Duplex’ie :
+
 ![modbus82](https://ba-pl.github.io/wiki/assets/images/modbus82.png "modbus82")
+
 ![modbus83](https://ba-pl.github.io/wiki/assets/images/modbus83.png "modbus83")
 
 # Przykład aplikacji 
@@ -233,6 +361,6 @@ Obszar pamięci posiada stałe przesunięcie o wartości 16#4000.
 Przykładową aplikację możesz pobrać tutaj:
 <br>
 <br>
-[Download ADS Sample](https://github.com/BA-PL/ADS/archive/refs/heads/main.zip){: .btn .btn-red }
+[Download Modbus Sample](https://github.com/BA-PL/Tx6255-Modbus-RTU/archive/refs/heads/main.zip){: .btn .btn-red }
 
 
