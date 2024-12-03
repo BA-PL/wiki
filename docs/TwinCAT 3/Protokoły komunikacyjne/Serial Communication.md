@@ -26,7 +26,6 @@ Dokumentacja ta nie zastępuje informacji zawartych w dokumentacji do urządzeń
 Spis użytych urządzeń:
 - komputer z zainstalowanym oprogramowaniem TwinCAT 3 w wersji 4024.7 i środowiskiem TwinCAT XAE Shell oraz zainstalowaną biblioteką TF6340 Serial Communication
 - sterownik CX9020 z opcją N031 (port RS485) oraz systemem operacyjnym Windows Embedded Compact 7 oraz TwinCAT 3 w wersji 4024.7
-
 # Wymagania programowe
 Potrzebne nam będzie oprogramowanie TwinCAT 3 oraz biblioteka TF6340 Serial Communication
 Bibliotekę dodajemy w zakładce References, klikając PPM i wybierając Add library:
@@ -36,7 +35,6 @@ Bibliotekę dodajemy w zakładce References, klikając PPM i wybierając Add lib
 a następnie wybierając (poprzez dwukrotne kliknięcie LPM) z listy żądaną bibliotekę (w tym przypadku jest to biblioteka Tc2_SerialCom):
 
 ![sm2](https://ba-pl.github.io/wiki/assets/images/sm2.png "sm2")
-
 # Program PLC
 ## SerialLineControl
 Ten blok funkcyjny jest częścią wspólną każdej aplikacji. SerialLineControl służy przesyłaniu danych z programu PLC do fizycznego buforu portu COM. Dzięki takiemu podejściu bloki wysyłania i odbierania danych są takie same, niezależnie od tego jaki rodzaj portu COM jest fizycznie używany. Rodzaj portu określa zmienna Mode typu ComSerialLineMode_t. Najczęściej wybierane są wartości SERIALLINEMODE_KL6_22B_STANDARD (dla modułów w trybie 22B) lub SERIALLINEMODE_PC_COM_PORT (dla portów COM).
@@ -49,7 +47,6 @@ Po wybraniu odpowiedniego typu portu, trzeba podłączyć zmienne zlinkowane z w
 
 Zmienne RxBuffer i TxBuffer (obie typu ComBuffer) są to bufory danych, łączone z blokami funkcyjnymi komend wysyłania i odbierania.
 Dodatkowe informacje o tym bloku znajdują się w dalszej części dokumentacji.
-
 ## Wymiana danych – rola urządzenia Master i Slave
 Program szablonowy realizuje komunikację RS typu pytanie – odpowiedź. Master na rozkaz wysyła zapytanie i oczekuje na odpowiedź. Odpowiedź jest analizowana i wracamy do początku. Slave czeka na zapytanie, gdy je otrzyma rozpoczyna analizę i wysyła odpowiednią odpowiedź. Po wszystkim jest powrót do oczekiwania. W przypadku wystąpienia błędu jest on zliczony i zapamiętany. Po określonym czasie następuje restart cyklu i powrót do kroku początkowego.
 <br>
@@ -62,28 +59,39 @@ Komunikację za pomocą dowolnego typu danych wykorzystuje się najczęściej do
 ![sm5](https://ba-pl.github.io/wiki/assets/images/sm5.png "sm5")
 
 ## Strona Master 
+
 CASE iState OF
+<br>
 <br>
 0: Oczekujemy na sygnał do wysłania komendy – zmienna bRead. Gdy go otrzymamy to czyszczona jest zmienna odczytana InData i wstawiana jest wartość do zmiennej wysyłanej OutData. W przykładzie zmienna bRead przyjmuje wartość TRUE co 1s, ponieważ podpięta jest do wyjścia timera fbTimer (linia 15). Można to oczywiście zmienić.
 <br>
+<br>
 10: Wysłanie ramki – tu nie należy nic modyfikować. Jeśli wszystko zakończy się sukcesem, to idziemy do kroku 20. Gdyby operacja zakończyła się niepowodzeniem, to idziemy do kroku 10000.
+<br>
 <br>
 20: W tym kroku czekamy na odpowiedź urządzenia Slave. Odczytane dane przepisujemy do zmiennej InData. Gdyby operacja zakończyła się niepowodzeniem, to idziemy do kroku 10000.
 <br>
+<br>
 30: Jest to krok analizy danych – należy zmodyfikować go wedle uznania.
+<br>
 <br>
 10000: Krok obsługi błędu. Tu również można dokonać modyfikacji. W przykładzie po 5s jest wykonywany reset – zmienne wejścia, wyjścia i kod błędu są zerowane, wracamy do kroku pierwszego.
 
 ## Strona Slave
 **Uwaga!** W typowej aplikacji odczytującej dane strona slave jest już w urządzeniu wykonana, do nas należy przygotowanie odpowiedniego zapytania ze strony Master. Przykład nasz pokazuje przykładową implementację obu stron.
 <br>
+<br>
 CASE iSate OF:
+<br>
 <br>
 0: Nasłuch – oczekujemy na dane. Gdy go otrzymamy to wpisujemy dane do zmiennej InData, dane wyjściowe są czyszczone i przechodzimy do kroku 10. Gdyby operacja zakończyła się niepowodzeniem, to idziemy do kroku 10000.
 <br>
+<br>
 10: Dekodowanie danych – tu sprawdzamy czy zapytanie było kierowane do nas, czy zgadza się suma kontrolna CRC, jaki rodzaj zapytania dostaliśmy itp. w zależności od tego jakie zapytanie otrzymaliśmy szykujemy odpowiednią odpowiedź. Jeśli zapytanie nie było kierowane do nas, to wracamy do nasłuchu. Tą część należy zmodyfikować zgodnie z aplikacją.
 <br>
+<br>
 20: Wysłanie wcześniej przygotowanej ramki – tu nie należy nic modyfikować. Jeśli wszystko zakończy się sukcesem, to idziemy do kroku 0 (do nasłuchu). Gdyby operacja zakończyła się niepowodzeniem, to idziemy do kroku 10000.
+<br>
 <br>
 10000: Krok obsługi błędu. Tu również można dokonać modyfikacji. W przykładzie po 5s jest wykonywany reset – zmienne wejścia, wyjścia i kod błędu są zerowane, wracamy do kroku pierwszego.
 
@@ -132,7 +140,6 @@ Następnie konfigurujemy go na zakładce CoE – Online:
 ![sm14](https://ba-pl.github.io/wiki/assets/images/sm14.png "sm14")
 
 Powyższe parametry są wpisywane do modułu. Można skonfigurować system w ten sposób, że będą wgrywane zawsze przy starcie TwinCATa. Wystarczy odpowiednie parametry dodać na zakładce Startup i aktywować konfigurację. Upraszcza to znacznie procedurę wymiany modułu w przyszłości.
-
 # Linkowanie zmiennych 
 W przypadku każdego z czterech omówionych programów (dwa rodzaje master’a i dwa rodzaje slave’a) konieczne jest zlinkowanie zmiennych w konfiguracji sterownika. Robimy to w ten sam sposób dla każdego programu. W drzewku projektu wybieramy port szeregowy, który wcześniej skonfigurowaliśmy. Następnie klikamy zakładkę Inputs i zaznaczamy wszystkie zmienne (w przypadku portu PC COM oprócz ExtVoltageOk):
 
@@ -143,7 +150,6 @@ Następnie, klikamy zaznaczenie prawym przyciskiem myszy i wybieramy opcję Chan
 ![sm16](https://ba-pl.github.io/wiki/assets/images/sm16.png "sm16")
 
 Podobnie robimy w przypadku danych wyjściowych. Klikamy zakładkę Outputs, tym razem zaznaczamy jednak wszystkie zmienne. Po kliknięciu Change Multilink pojawi się możliwość zlinkowania zmiennej. Na koniec trzeba aktywować konfigurację.
-
 # Task 
 W przypadku modułów pracujących w trybie 5 i 22 bajtowym może być konieczne wywołanie bloku
 SerialLineControl w szybszym tasku. Jest to wyjaśnione na przykładzie, przedstawionym na poniższym rysunku.
@@ -164,6 +170,7 @@ tyle danych jest przesyłanych w jednym cyklu.
 <br>
 5. W jednym cyklu między modułem a programem PLC może być wymienionych 22 B danych – wynika to
 z proces image modułu.
+<br>
 <br>
 Prześledźmy proces odczytu danych. Wewnątrz modułu jest bufor odczytu do którego trafiają dane z
 urządzenia slave. W przypadku KL6041 ma on pojemność 1024 bajtów. Nasze urządzenie slave „wrzuca” do niego
