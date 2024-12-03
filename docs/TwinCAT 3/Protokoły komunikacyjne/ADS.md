@@ -7,6 +7,13 @@ layout: page
 
 
 # Komunikacja ADS
+{: .no_toc }
+
+## Table of Contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
 
 Protokół ADS to asynchroniczny protokół komunikacyjny wykorzystywany w systemie TwinCAT. Definiuje on
 komunikację typu klient – serwer. Serwerem nazywamy komputer (sterownik), który udostępnia pewne dane,
