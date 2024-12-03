@@ -138,5 +138,11 @@ Adres AMS Net Id sterownika można odczytać w kilku miejscach:
 
 ![choosetarget](https://ba-pl.github.io/wiki/assets/images/choosetarget.png "choosetarget")
 
+# Przykład aplikacji 
+
+Przykładową aplikację możesz pobrać tutaj:
+<br>
+<br>
+[Download ADS Sample](https://github.com/BA-PL/ADS/archive/refs/heads/main.zip){: .btn .btn-red }
 
 
