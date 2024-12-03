@@ -5,7 +5,11 @@ nav_order: 2
 layout: page
 ---
 
-# IoT Communicator: wprowadzenie 
+**IoT Communicator**
+
+{:toc}
+
+# Wprowadzenie 
 ## Wykorzystana konfiguracja
 
 W celu opracowania instrukcji posłużono się następującą konfiguracją sprzętową:
