@@ -7,9 +7,10 @@ layout: page
 
 **IoT Communicator**
 
+# Wprowadzenie 
+
 {:toc}
 
-# Wprowadzenie 
 ## Wykorzystana konfiguracja
 
 W celu opracowania instrukcji posłużono się następującą konfiguracją sprzętową:
