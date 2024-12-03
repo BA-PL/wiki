@@ -13,6 +13,7 @@ layout: page
 - Dowolna topologia (linia, drzewo, gwiazda, ring, topologia mieszana)
 - Brak konieczności adresowania urządzeń
 - Synchronizacja czasowa dzięki technologii Distributed Clocks o rodzielczości 1 ns
+
 <br>
 **Technologie EtherCAT:**
 <br>
@@ -20,7 +21,7 @@ layout: page
 - XFC (eXtreme Fast Control): technologia pozwalająca na uzyskiwanie czasów cyklu rzędu dziesiątek mikrosekund dzięki szybkim przetwornikom
 - EtherCAT P: technologia umożliwiająca przesyłanie sygnału sieci EtherCAT oraz zasilania urządzenia przy pomocy jednego przewodu
 
-![EtherCAT](ether.png "EtherCAT")
+![EtherCAT](EtherCAT.png "EtherCAT")
 
 
 
