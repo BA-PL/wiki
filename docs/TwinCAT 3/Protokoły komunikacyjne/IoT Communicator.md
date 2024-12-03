@@ -231,7 +231,7 @@ samym miejscu uruchomić rysowanie wykresu.
 Przykładową aplikację możesz pobrać tutaj:
 <br>
 <br>
-[IoT Sample](https://github.com/BA-PL/IoTCommunicator/archive/refs/heads/main.zip){: .btn .btn-red }
+[Download IoT Sample](https://github.com/BA-PL/IoTCommunicator/archive/refs/heads/main.zip){: .btn .btn-red }
 
 
 
