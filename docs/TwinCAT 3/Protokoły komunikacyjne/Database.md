@@ -245,7 +245,7 @@ Bloki te posiadają na wyjściu interfejs *ipTcResultEvent* zgodny z formułą *
 
 Uruchamiamy program **P_PLCExpert_AutoLog**. Jest to przykład wykorzystania trybu PLC Expert zrobiony według schematu:
 
-![db35](https://ba-pl.github.io/wiki/assets/images/db35.png "db35")
+![db38](https://ba-pl.github.io/wiki/assets/images/db38.png "db38")
 
 Zmiana zmiennej **bRun** na TRUE spowoduje uruchomienie grupy autologowania.
 
@@ -259,5 +259,5 @@ Kiedy zbierzemy zadowalającą nas liczbę danych, możemy zmienić **bStop** na
 Możemy też zmienić okres co jaki aktualizowany jest status grupy za pomocą zmiennej **tAutoLogStatusCheckCycle**.
 Status można podejrzeć w zmiennej **ipTcResult**.
 
-![db38](https://ba-pl.github.io/wiki/assets/images/db38.png "db38")
+![db35](https://ba-pl.github.io/wiki/assets/images/db35.png "db35")
 
