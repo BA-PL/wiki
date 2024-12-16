@@ -119,11 +119,9 @@ Aby odczytać wszystkie wartości znajdujące się w tabeli należy:
 
 Aby wczytać tylko część wyników należałoby wykorzystać komendę WHERE zgodnie ze standardem języka SQL. Można również ręcznie wpisać całą komendę SQL, której wyniki wpisane zostaną do tabeli w dolnej części okna, trzeba jednak zadbać o zgodność typów zmiennych. Informacje o równoważnych typach zmiennych znajdują się pod linkiem: [Typy danych](https://infosys.beckhoff.com/english.php?content=../content/1033/tf6420_tc3_database_server/27021597872201739.html)
 
-![db17](https://ba-pl.github.io/wiki/assets/images/db17.png "db17")
-
 Ostatnia opcja - **Drop/Delete** - służy do usuwania wszystkich wpisów z tabeli **(Delete Datasets )** lub całej tabeli **(Drop Table)**. Aby usunąć tylko wybrane elementy należy ręcznie wpisać komendy zgodnie ze standardem języka SQL.
 
-![db18](https://ba-pl.github.io/wiki/assets/images/db18.png "db18")
+![db17](https://ba-pl.github.io/wiki/assets/images/db17.png "db17")
 
 ## AutoLog Group 
 
