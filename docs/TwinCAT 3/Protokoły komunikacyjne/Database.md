@@ -261,3 +261,107 @@ Status można podejrzeć w zmiennej **ipTcResult**.
 
 ![db35](https://ba-pl.github.io/wiki/assets/images/db35.png "db35")
 
+Włączamy drugi przykład P_PLCExpert_Independent_FBs, którego schemat wykonania widać poniżej:
+
+![db41](https://ba-pl.github.io/wiki/assets/images/db41.png "db41")
+
+Obsługa programu polega na modyfikowaniu podanych zmiennych.
+
+![db39](https://ba-pl.github.io/wiki/assets/images/db39.png "db39")
+
+Zmienne **hDBID** i **sDBID** odpowiadają za określenie, na której bazie danych i tabeli będą wykonywane operacje. Ustawiamy odpowiednio na **1 i TESTtable**. W razie tworzenia nowej tabeli będą to jej parametry, dlatego będzie trzeba zmienić nazwę.
+<br>
+Operacje uruchamiamy zmieniając **ePLCDBState**. Dostępne opcje:
+- Wait - żadna operacja nie jest wykonywana,
+- WriteData – wpisanie danych do tabeli i ich odczytanie,
+- ReadData – odczytanie danych z tabeli,
+- RunCMDCommand – wykonanie komendy SQL,
+- AutoLog – jednokrotne uruchomienie grupy autologowania,
+- CreateTable – stworzenie nowej tabeli,
+- EventHandling – wykonywana automatycznie w razie błędu. Wybranie jej ręcznie umożliwia zaktualizowanie i podejrzenie informacji z Event Loggera. Informacje zapisywane są w poniższych zmiennych.
+
+![db40](https://ba-pl.github.io/wiki/assets/images/db40.png "db40")
+
+W *RunCMDCommand* wykonywaną komendę wybiera się za pomocą **eCommands**. Możliwe opcje:
+- InsertIntoTable – wpisuje dane do tabeli,
+- ClearTable – usuwa dane z tabeli,
+- ReadAllfromTable – czyta wszystkie dane z tabeli,
+- CustomReadfromTable – czyta rekordy, w których Value równe jest 21.3,
+- DropTable – usuwa tabelę
+
+Reszta zmiennych to parametry, z których korzystają bloki funkcyjne wywoływane za pomocą ePLCDBState. Ich nastawy przedstawione zostały poniżej.
+
+![db42](https://ba-pl.github.io/wiki/assets/images/db42.png "db42")
+
+Wszelkie dane pobierane z tabeli są wpisywane do tablicy **arrData**.
+<br>
+Możemy przetestować wszystkie operacje i komendy SQL, z wyjątkiem *CreateTable*. W celu wykonania *CreateTable* należy zmienić *sDBID* na dowolną inną nazwę. Zmieniamy na **TESTtableNew**. Efekty wykonanych operacji podejrzeć można w Sql Query Editor i w *arrData*.
+
+# Tryb SQL Expert
+Tryb *SQL Expert* jest najbardziej efektywnym trybem. Zezwala on użytkownikowi na wykorzystanie zaawansowanych możliwości, na które zezwala dany typ bazy danych np. procedur przechowywanych w bazie.
+<br>
+Tryb ten można podzielić na cztery zasadnicze działania:
+
+## Wysłanie komendy SQL bez odczytu danych (INSERT/UPDATE)
+Uruchamiamy program **P_SQLExpert_NoDataRet**. Korzysta on z poniższych bloków funkcyjnych:
+- FB_SQLDatabase.Connect() – łączenie z bazą danych,
+- FB_SQLDatabase.CreateCmd() – stworzenie komendy SQL,
+- FB_SQLCommand.Execute() – wykonanie komendy,
+- FB_SQLDatabase.Disconnect() – rozłączenie z bazą danych.
+
+![db44](https://ba-pl.github.io/wiki/assets/images/db44.png "db44")
+
+Program obsługuje się za pomocą poniższych zmiennych:
+
+![db43](https://ba-pl.github.io/wiki/assets/images/db43.png "db43")
+
+Zmienna **hDBID** określa numer bazy danych, na której wykonamy przykład. **Ustawiamy na 1.**
+<br>
+**sTableName** określa nawę tabeli, na której wykonamy przykład, jeśli tabela o takiej nazwie nie istnieje to zostanie utworzona. **Ustawiamy na TESTtable1.**
+<br>
+Ustawienie **bInsert** na TRUE powoduje dodanie tabeli i rekordu takich jak poniżej.
+
+![db45](https://ba-pl.github.io/wiki/assets/images/db45.png "db45")
+
+## Wysłanie komendy SQL z odczytem danych (SELECT)
+
+Uruchamiamy program **P_SQLExpert_DataRet**. Realizuje on wykonanie komendy SQL - SELECT na określonej tabeli. Korzysta on z poniższych bloków funkcyjnych:
+- FB_SQLDatabase.Connect(),
+- FB_SQLDatabase.CreateCmd(),
+- FB_SQLCommand.ExecuteDataReturn() – realizacja komendy i przygotowanie danych,
+- FB_SQLResult.Read() - odczytanie danych,
+- FB_SQLResult.Release() – zwolnienie danych,
+- FB_SQLDatabase.Disconnect().
+
+![db48](https://ba-pl.github.io/wiki/assets/images/db48.png "db48")
+
+Obsługa programu zachodzi za pomocą modyfikacji poniższych zmiennych:
+
+![db46](https://ba-pl.github.io/wiki/assets/images/db46.png "db46")
+
+Zmienne **hDBID i sTableName** pełnią analogiczną funkcję jak w poprzednim przykładzie. **Ustawiamy odpowiednio na 1 i TESTtable1.**
+**udiStartIndex** i **udiRecordCount** określają początkowy indeks, od którego czytane będą dane i liczbę przeczytanych rekordów. Chcemy przeczytać rekord dodany w poprzednim przykładzie więc ustawiamy **udiStartIndex= 1 i udiRecordCount= 0.**
+Ustawiamy **bRead na TRUE**, żeby wystartować program.
+Wynik komendy SELECT zostanie zawarty w strukturze **stSelect.**
+
+![db47](https://ba-pl.github.io/wiki/assets/images/db47.png "db47")
+
+**Użycie procedury bez odczytu danych**
+<br>
+- FB_SQLDatabase.Connect()
+- FB_SQLDatabase.CreateSP() \*  
+- FB_SQLStoredProcedure.Execute()
+- FB_SQLStoredProcedure.Release()
+- FB_SQLDatabase.Disconnect()
+
+**Użycie procedury z odczytem danych**
+<br>
+- FB_SQLDatabase.Connect()
+- FB_SQLDatabase.CreateSP()*
+- FB_SQLStoredProcedure.ExecuteDataReturn()
+- FB_SQLResult.Read()
+- FB_SQLResult.Release()
+- FB_SQLStoredProcedure.Release()
+- FB_SQLDatabase.Disconnect()
+
+\* procedurę tworzy się tylko raz, przesyłane zostają jedynie jej parametry
