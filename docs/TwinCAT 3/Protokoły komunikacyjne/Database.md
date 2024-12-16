@@ -144,11 +144,61 @@ Pierwsze okno, które się pojawi, to główne ustawienia trybu logowania:
 
 W opisywanym przykładzie konfiguracja wygląda jak na zdjęciu powyżej (Start Up → Manual, Write Mode → Append).
 
+### AdsDevice
+W oknie AdsDevice, w polach **AMS NetID i ADS Device**, należy wybrać urządzenie, z którego pobierane będą zmienne. Zmieniając typ połączenia można zdecydować, czy zmienne mają być odszukiwane po adresie w pamięci **(Connection Type → byIGroupIOffset)** czy po nazwie **(Connection Type → bySymbolName)**. Ma to znaczenie w przypadku ręcznego dodawania symbolów zmiennych. Przy odszukiwaniu po adresie w trakcie deklarowania kolejnych zmiennych adresy mogą się zmieniać, co może potem powodować nieprzewidziane skutki. Przy odszukiwaniu po nazwie ten problem nie występuje.
 
+![db20](https://ba-pl.github.io/wiki/assets/images/db20.png "db20")
 
+### Symbols
+Zakładka **Symbols** służy do skonfigurowania zmiennych, które mają być logowane do bazy. Można w tym celu skorzystać z narzędzia **Target Browser**. Program na sterowniku, z którego będą pobierane zmienne musi być uruchomiony.
 
+![db21](https://ba-pl.github.io/wiki/assets/images/db21.png "db21")
 
+Wybrane zmienne należy z okna **Target Browser** umieścić w zakładce **Symbols** metodą drag’n’drop.
 
+![db22](https://ba-pl.github.io/wiki/assets/images/db22.png "db22")
+
+### DBTable
+Ostatnim krokiem jest dodanie standardowej tabeli w zakładce **DBTable**. Do tej tabeli wpisywane będą zmienne. W wersji **STANDARD** każda zmienna zostanie przekazana osobno. Można również wybrać tryb **CUSTOM**, który pozwoli na ręczne dopasowanie nazwy, typu i zawartości każdej kolumny, jednak trzeba pamiętać, aby były one zgodne z istniejącą tabelą.
+W przykładzie wybrano **TableMode → Standard i Table → (Nazwa utworzonej wcześniej tabeli)**.
+
+![db23](https://ba-pl.github.io/wiki/assets/images/db23.png "db23")
+
+### Uruchomienie
+**Uwaga!** Po zakończeniu konfiguracji należy zapisać wszystkie zmiany wybierając **Save All**, niezapisane zmiany nie zostaną wprowadzone. Następnie należy aktywować konfigurację projektu bazy danych.
+
+![db24](https://ba-pl.github.io/wiki/assets/images/db24.png "db24")
+
+Status serwera można sprawdzić obserwując kolor ikony w drzewie projektu.
+Dozwolone kolory to:
+- Zielony – gotowy do pracy
+- Czerwony – nie można połączyć z TC3 DataBase Server
+- Niebieski – brak licencji Tc3_Database
+- Fioletowy – Grupa autologowania jest w trakcie pracy
+
+![db25](https://ba-pl.github.io/wiki/assets/images/db25.png "db25")
+
+Jeżeli aktywacja konfiguracji przebiegła pomyślnie, można uruchomić grupę autologowania. Należy w tym celu otworzyć okno **AutoLog Viewer** zieloną ikoną z Toolbara dodatku Database Server:
+
+![db26](https://ba-pl.github.io/wiki/assets/images/db26.png "db26")
+
+W opisywanym przykładzie zarządzanie grupą autologowania zostało ustawione na tryb Manualny. Pozwala to na ręcznie uruchamianie/zatrzymywanie grupy. W oknie **AutoLog Viewer** najpierw należy wybrać Serwer **(1)** a następnie uruchomić logowanie **(2)**. Ewentualne błędy pojawią się w kolumnach *HRESULT* i Error Type.
+
+![db27](https://ba-pl.github.io/wiki/assets/images/db27.png "db27")
+
+Jeśli kilka cykli zaloguje się poprawnie, grupę można zatrzymać. Aby odczytać dane wpisane do bazy, należy wykonać komendę **Select**, jak opisano to we wcześniejszej części instrukcji (w oknie **Sql Query Editor**).
+Przykład odczytanych danych:
+
+![db28](https://ba-pl.github.io/wiki/assets/images/db28.png "db28")
+
+Jeśli grupa autologowania działa poprawnie, można zmienić tryb jej uruchamiania na AutoStart i aktywować konfigurację projektu baz danych. Od tej pory skonfigurowane zmienne będą logować się do bazy automatycznie, razem z uruchomieniem się Run-Time’u TwinCATa.
+
+![db29](https://ba-pl.github.io/wiki/assets/images/db29.png "db29")
+
+# Tryb Konfiguracji - przykład niestandardowej tabeli 
+W trybie konfiguracyjnym można skorzystać z opcji stworzenia własnej tabeli. W tym celu należy postępować jak w rozdziale 2.3, ale na etapie tworzenia tabeli, zamiast opcji *Set Standard Table Schema*, należy dodać odpowiednie pola opcją **Append Datafield**. W każdej tabeli niezbędny jest klucz główny, dlatego zaleca się dodanie ID w pierwszej kolumnie. Wybranie typu *BigInt* oraz własności *IDENTITY(1,1)* spowoduje, że ID będzie miało wartość początkową równą 1 i będzie inkrementowane automatycznie przez serwer. Stempel czasowy można uzyskać poprzez dodanie kolumny *Timestamp* typu *DateTime*. Analogicznie należy dodać kolejne kolumny.
+
+![db30](https://ba-pl.github.io/wiki/assets/images/db30.png "db30")
 
 
 
