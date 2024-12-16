@@ -249,17 +249,17 @@ Uruchamiamy program **P_PLCExpert_AutoLog**. Jest to przykład wykorzystania try
 
 Zmiana zmiennej **bRun** na TRUE spowoduje uruchomienie grupy autologowania.
 
-![db36](https://ba-pl.github.io/wiki/assets/images/db36.png "db36")
+![db35](https://ba-pl.github.io/wiki/assets/images/db35.png "db35")
 
 W *Sql Query Editor* można zaobserwować pojawiające się rekordy.
 
-![db37](https://ba-pl.github.io/wiki/assets/images/db37.png "db37")
+![db36](https://ba-pl.github.io/wiki/assets/images/db36.png "db36")
 
 Kiedy zbierzemy zadowalającą nas liczbę danych, możemy zmienić **bStop** na TRUE, żeby zatrzymać grupę autologowania.
 Możemy też zmienić okres co jaki aktualizowany jest status grupy za pomocą zmiennej **tAutoLogStatusCheckCycle**.
 Status można podejrzeć w zmiennej **ipTcResult**.
 
-![db35](https://ba-pl.github.io/wiki/assets/images/db35.png "db35")
+![db37](https://ba-pl.github.io/wiki/assets/images/db37.png "db37")
 
 Włączamy drugi przykład P_PLCExpert_Independent_FBs, którego schemat wykonania widać poniżej:
 
