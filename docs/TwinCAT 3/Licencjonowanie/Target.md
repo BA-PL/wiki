@@ -28,7 +28,7 @@ W zakładce *License / Manage Licenses* zaznaczamy *Disable automatic detection 
 
 ![listalicencji](https://ba-pl.github.io/wiki/assets/images/listalicencji.png "listalicencji")
 
-Następnie w zakładce *Order information (Runtime)* dopasowujemy licencję do urządzenia docelowego (dla sterownika – Target ) 
+Następnie w zakładce *Order information (Runtime)* dopasowujemy licencję do urządzenia docelowego (dla sterownika – Target, z reguły nie ma potrzeby ustawiać ) 
 
 ![licensedevice](https://ba-pl.github.io/wiki/assets/images/licensedevice.png "licensedevice")
 
