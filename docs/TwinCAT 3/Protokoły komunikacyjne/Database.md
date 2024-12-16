@@ -228,6 +228,36 @@ Jeżeli grupa ma za zadanie zapisywać wartości do bazy to zmienne *ID* oraz *T
 
 Na koniec należy wykonać zapis (Save All) i aktywację konfiguracji projektu baz danych.
 
+# Sterowanie grupami autologowania poprzez PLC
 
+W programie PLC możemy w dowolnym momencie sprawdzić status lub rozpocząć/przerwać pracę każdej grupy autologowania. Służy do tego blok FB_PLCDBAutoLogEvt oraz metody RunOnce(), Start(), Status(), Stop(). Aby rozróżnić konkretne bazy oraz grupy potrzebujemy DBID otrzymane przy konfiguracji serwera bazy oraz AutoLogGrpID otrzymane podczas dodawania grupy. Pod [linkiem](HTTPS://INFOSYS.BECKHOFF.COM/ENGLISH.PHP?CONTENT=../CONTENT/1033/TF6420_TC3_DATABASE_SERVER/2674373259.HTML) więcej informacji.
 
+# Tryb PLC Expert
+Tryb ten ma podobne możliwości oraz wymagania, co tryb konfiguracji. Jedyną różnicą jest wprowadzanie wszystkich wyżej wymienionych ustawień bezpośrednio w kodzie PLC. Wszystkie bloki funkcyjne zawierają metody pozwalające na wykonanie wielu różnych komend SQL w zależności od zapotrzebowania. Skrócone opisy możliwych do zrealizowania czynności:
+- FB_ConfigTcDBSrv – Wprowadza zmiany w pliku konfiguracyjnym CurrentConfigDataBase.xml. Plik ten zawiera informacje o całej konfiguracji Tc3_DataBase_Server na danym komputerze i znajduje się domyślnie w folderze C:\TwinCAT\3.1\Boot. Za pomocą tego bloku możemy więc dowolnie odczytywać, dodawać oraz usuwać kolejne bazy danych oraz grupy autologowania zmiennych.
+- FB_PLCDBAutoLogEvt – Blok ten pozwala na uruchamianie, zatrzymywanie oraz sprawdzanie statusu grup autologowania.
+- FB_PLCDBCreateEvt – Pozwala na utworzenie pliku bazy danych określonego wcześniej w pliku konfiguracyjnym, oraz nowych tabeli do dowolnych baz danych.
+- FB_PLCDBReadEvt – Działa w dwóch trybach. Pierwszy pozwala na odczytywanie dowolnej ilości rejestrów z tabeli w formacie zgodnym ze standardową tabelą Tc3_Database. Drugi tryb pozwala na odczytanie dowolnej tabeli, ale wymaga załączenia struktury zgodnej z kolejnymi kolumnami tabeli.
+- FB_PLCDBWriteEvt – Pozwala na zapis wartości w trzech trybach. Pierwsze dwa zapisują wartości zmiennych do tabeli zgodnej ze standardową tabelą Tc3_Database, odpowiednio po nazwie zmiennej oraz po adresie ADS. Trzeci zapisuje w tabeli zawartość dowolnej zgodnej z nią struktury.
+- FB_PLCDBCmdEvt – Pozwala na wykonywanie bardziej zaawansowanych funkcji odczytu oraz zapisu. Możliwe jest między innymi odczytywanie/zapisywanie tylko części kolumn z danego wpisu oraz selektywne odczytywanie rekordów przy pomocy komendy WHERE. Blok ten wysyła do serwera bazy danych bezpośrednią komendę SQL, którą możemy ręcznie zdefiniować. W komendzie tej mogą znajdować się placeholdery, które następnie ustawiamy na wejście bloku w formie tablicy struktur ST_ExpParameter. Dokładne możliwości tego bloku zależne są od obsługiwanych przez daną bazę komendami SQL.
+<br>
+Bloki te posiadają na wyjściu interfejs *ipTcResultEvent* zgodny z formułą *EventLoggera*. Pozwala to na bardzo łatwe przetwarzanie wiadomości o błędach. Przy pomocy biblioteki Tc3_EventLogger wiadomości z bloków można wpisać do zmiennych o specjalnym typie. Skorzystamy z tego w następnych przykładach.
+
+Uruchamiamy program **P_PLCExpert_AutoLog**. Jest to przykład wykorzystania trybu PLC Expert zrobiony według schematu:
+
+![db35](https://ba-pl.github.io/wiki/assets/images/db35.png "db35")
+
+Zmiana zmiennej **bRun** na TRUE spowoduje uruchomienie grupy autologowania.
+
+![db36](https://ba-pl.github.io/wiki/assets/images/db36.png "db36")
+
+W *Sql Query Editor* można zaobserwować pojawiające się rekordy.
+
+![db37](https://ba-pl.github.io/wiki/assets/images/db37.png "db37")
+
+Kiedy zbierzemy zadowalającą nas liczbę danych, możemy zmienić **bStop** na TRUE, żeby zatrzymać grupę autologowania.
+Możemy też zmienić okres co jaki aktualizowany jest status grupy za pomocą zmiennej **tAutoLogStatusCheckCycle**.
+Status można podejrzeć w zmiennej **ipTcResult**.
+
+![db38](https://ba-pl.github.io/wiki/assets/images/db38.png "db38")
 
