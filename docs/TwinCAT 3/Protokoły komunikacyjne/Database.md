@@ -45,7 +45,7 @@ Opcja Impersonate user **(3)** jest zaznaczana, jeżeli jest potrzeba, żeby zre
 Pozostałe ustawienia zmieniamy w razie potrzeby.
 
 ## Dodawanie bazy 
-W celu dodania bazy należy kliknąć **PPM na TcDbServer** i wybrać **Add -> Add New Database (1)**. Pojawi się okno do wskazania rodzaju bazy danych (2), z którą ma zachodzić komunikacja poprzez TwinCAT Database Server.
+W celu dodania bazy należy kliknąć **PPM na TcDbServer** i wybrać **Add -> Add New Database (1)**. Pojawi się okno do wskazania rodzaju bazy danych **(2)**, z którą ma zachodzić komunikacja poprzez TwinCAT Database Server.
 
 ![db3](https://ba-pl.github.io/wiki/assets/images/db3.png "db3")
 
@@ -59,6 +59,7 @@ W przykładzie wybrano bazę **SQLite (1)**. W polu **SQLite Database File (2)**
 ![db5](https://ba-pl.github.io/wiki/assets/images/db5.png "db5")
 
 Na dole okna widać automatycznie wygenerowany **Connection String (4)** zawierający wykonane ustawienia.
+
 Po tak wykonanej konfiguracji, można dodatkowo wybrać w polu **FailoverDB** tak zwaną failover database, w której zachowane zostaną dane w razie napotkania błędu w trybie konfiguracyjnym. W razie rozłączenia z siecią, ta funkcja automatycznie zapewni, że dane nie przepadną i zostaną zapisane w innym miejscu.
 Na zakończenie tego etapu należy zapisać zmiany i aktywować konfigurację projektu bazy danych (1) **(nie mylić z aktywowaniem konfiguracji PLC)**. Spowoduje to przesłanie pliku z konfiguracją na urządzenie docelowe wybrane w Server Settings.
 
@@ -70,7 +71,7 @@ Operacja ta nie wywołuje żadnego okna popup, należy obserwować okno błędó
 
 ## SQL Query Editor
 
-Operacja ta nie wywołuje żadnego okna popup, należy obserwować okno błędów oraz okno Output (Ctrl+Alt+O). Jeśli aktywacja się powiodła, powinna pojawić się informacja jak poniżej:
+Sql Query Editor służy do ręcznego tworzenia/usuwania tabel oraz wpisów. Aby otworzyć okno edytora należy w pierwszej kolejności uaktywnić Toolbar dodatku Database Server:
 
 ![db8](https://ba-pl.github.io/wiki/assets/images/db8.png "db8")
 
@@ -88,7 +89,7 @@ W przykładzie wykorzystano standardową strukturę tabeli. Aby utworzyć taką 
 
 Kolumny zawierają kolejno: auto inkrementujące się ID wiersza, będące kluczem głównym; stempel czasowy zawierający aktualną datę i godzinę; nazwę zmiennej; wartość zmiennej. Pozostawienie ich bez zmian pozwoli na wykorzystanie standardowej metody logowania tabeli.
 <br>
-W kolejnym kroku należy wpisać nazwę tabeli (1), automatycznie wygenerować komendę SQL (2) i ją wykonać (3).
+W kolejnym kroku należy wpisać nazwę tabeli **(1)**, automatycznie wygenerować komendę SQL **(2)** i ją wykonać **(3)**.
 
 ![db12](https://ba-pl.github.io/wiki/assets/images/db12.png "db12")
 
@@ -97,11 +98,11 @@ Jeżeli operacja się powiodła, na dolnym pasku statusowym środowiska TwinCAT,
 ![db13](https://ba-pl.github.io/wiki/assets/images/db13.png "db13")
 
 Aby ręcznie wykonać wpis do bazy (w celach testowych) należy:
-- kliknąć na utworzoną wcześniej tabelę PPM i wybrać Insert (1)
-- wybrać opcję Get Table Schema (2) (powoduje automatyczne nadanie wartości Timestamp)
-- z prawej strony w kolumnie Value wpisać wartości, które mają trafić do bazy (3)
-- kliknąć komendę Create Query (4) (generowanie wyrażenia SQL)
-- wykonać komendę opcją FB_SQLCommandEvt.Execute (5)
+- kliknąć na utworzoną wcześniej tabelę PPM i wybrać Insert **(1)**
+- wybrać opcję Get Table Schema **(2)** (powoduje automatyczne nadanie wartości Timestamp)
+- z prawej strony w kolumnie Value wpisać wartości, które mają trafić do bazy **(3)**
+- kliknąć komendę Create Query **(4)** (generowanie wyrażenia SQL)
+- wykonać komendę opcją FB_SQLCommandEvt.Execute **(5)**
 
 ![db14](https://ba-pl.github.io/wiki/assets/images/db14.png "db14")
 
