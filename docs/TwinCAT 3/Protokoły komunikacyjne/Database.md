@@ -261,7 +261,7 @@ Status można podejrzeć w zmiennej **ipTcResult**.
 
 ![db37](https://ba-pl.github.io/wiki/assets/images/db37.png "db37")
 
-Włączamy drugi przykład P_PLCExpert_Independent_FBs, którego schemat wykonania widać poniżej:
+Włączamy drugi przykład **P_PLCExpert_Independent_FBs**, którego schemat wykonania widać poniżej:
 
 ![db41](https://ba-pl.github.io/wiki/assets/images/db41.png "db41")
 
