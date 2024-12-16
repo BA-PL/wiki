@@ -124,8 +124,27 @@ Ostatnia opcja - **Drop/Delete** - służy do usuwania wszystkich wpisów z tabe
 ![db17](https://ba-pl.github.io/wiki/assets/images/db17.png "db17")
 
 ## AutoLog Group 
+Docelowym krokiem trybu konfiguracyjnego jest dodanie i skonfigurowanie grupy autologowania. Grupa pozwala na automatyczne przekazywanie zmiennych z PLC do bazy albo na odwrót. Do jednej bazy danych może być dołączonych wiele różnych grup autologowania jednocześnie.
 
-aaa
+Aby rozpocząć pracę z grupami należy dodać je na wybranej bazie, klikając **PPM** i wybierając opcję **Add New AutlogGroup**:
+
+![db18](https://ba-pl.github.io/wiki/assets/images/db18.png "db18")
+
+Pierwsze okno, które się pojawi, to główne ustawienia trybu logowania:
+- **Start Up** – wybranie opcji *Automatic* spowoduje uruchamianie logowania grupy razem ze startem TwinCATA, opcja *Manual* wymaga sterownia grupą z poziomu kodu PLC
+- **Direction** - decyduje o kierunku przepływu danych. Wybranie *DeviceAsTarget* daje możliwość uaktualniania zmiennych PLC wartościami znajdującymi się w bazie. Wybranie *DeviceAsSource* pozwoli na zapisywanie zmiennych PLC na jeden z trzech sposobów, które konfiguruje się w polu *Write Mode*
+- **Write Mode**:
+	- UPDATE – wartości zmiennych w bazie będą aktualizowane (nadpisywane)
+	- APPEND – wartości będą każdorazowo dopisane jako nowy wiersz
+	- RINGBUFFER_TIME – określa maksymalny czas żywotności rekordu w sekundach, po upłynięciu tego czasu zostanie on usunięty. Czas określany jest w polu *Ringbuffer Parameter*
+	- RINGBUFFER_COUNT – określa maksymalną ilość rekordów, po jej przekroczeniu kolejne rekordy będą usuwane, zaczynając od najstarszego. Ilość rekordów jest określana w polu *Ringbuffer Parameter*
+- **Log Mode** – dane mogę być logowane w momencie zmiany wartości zmiennej (onChange) lub co określony w milisekundach w parametrze *Cyclic Time* czasu (opcja Cyclic)
+
+![db19](https://ba-pl.github.io/wiki/assets/images/db19.png "db19")
+
+W opisywanym przykładzie konfiguracja wygląda jak na zdjęciu powyżej (Start Up → Manual, Write Mode → Append).
+
+
 
 
 
