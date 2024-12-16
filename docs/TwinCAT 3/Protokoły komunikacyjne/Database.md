@@ -200,6 +200,34 @@ W trybie konfiguracyjnym można skorzystać z opcji stworzenia własnej tabeli. 
 
 ![db30](https://ba-pl.github.io/wiki/assets/images/db30.png "db30")
 
+## Rzutowanie zmiennych 
+Okno **SQL Query Editor** pozwala na eksport utworzonej tabeli do struktury zmiennych dla programu PLC. Dzięki temu zyskujemy pewność, że przygotowane do logowania w programie PLC zmienne będą odpowiedniego typu. Aby wykonać eksport należy, po utworzeniu tabeli, należy:
+- kliknąć na tabelę PPM i wybrać opcję **Select (1)**
+- wykonać komendę **Get Table Schema (2)**
+- wykonać eksport opcją **Export Tablestruct to TwinCAT3 DUT (3)**
+
+![db31](https://ba-pl.github.io/wiki/assets/images/db31.png "db31")
+
+Plik można zapisać w dowolnym miejscu na dysku komputera.
+
+Aby zaimportować strukturę do projektu PLC należy kliknąć **PPM** na folder **DUT** i wybrać opcję **Import PLCopenXML…** Po zaimportowaniu wcześniej wyeksportowanej struktury widać, że typy zmiennych SQL zostały zamienione na odpowiadające im typy zmiennych PLC.
+Następnie należy strukturę takiego typu zadeklarować w programie PLC oraz wgrać i uruchomić program.
+
+![db32](https://ba-pl.github.io/wiki/assets/images/db32.png "db32")
+
+## Niestandardowa grupa autologowania
+Aby uruchomić niestandardową grupę autologowania należy skonfigurować zakładki **AutoLogGroup** oraz **AdsDevice** jak opisano w rozdziale 2.4. W zakładce **Symbols**, korzystając z okna **Target Browser**, należy umieścić zawartość opisanej wyżej struktury z programu PLC (program PLC musi być uruchomiony):
+
+![db33](https://ba-pl.github.io/wiki/assets/images/db33.png "db33")
+
+W zakładce **DBTable** w polu **TableMode** należy wybrać opcję **CUSTOM**, a w polu **Tables** wybrać odpowiednią tabelę. Następnie trzeba ręcznie wykonać powiązanie zmiennych:
+
+![db34](https://ba-pl.github.io/wiki/assets/images/db34.png "db34")
+
+Jeżeli grupa ma za zadanie zapisywać wartości do bazy to zmienne *ID* oraz *Timestamp* należy odpowiednio ustawić jako *<AutoID>* oraz *<Data Timestamps>*. Jeżeli jednak grupa będzie miała za zadanie odczytywanie zmiennych z bazy to *<AutoID>* oraz *<Data Timestamps>* należy zastąpić zmiennymi ze struktury, do których wpisywane będą odczytywane wartości.
+
+Na koniec należy wykonać zapis (Save All) i aktywację konfiguracji projektu baz danych.
+
 
 
 
