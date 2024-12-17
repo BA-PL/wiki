@@ -1,6 +1,6 @@
 ---
 title: Licencjonowanie
-nav_order: 1
+nav_order: 2
 layout: page
 parent: TwinCAT 3
 ---
