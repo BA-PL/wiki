@@ -8,6 +8,7 @@ parent: EtherCAT
 # EtherCAT Sync Units
 <h6> Data modyfikacji: 20.12.2024 </h6>
 <br>
+<br>
 Dokument  krok  po  kroku  prezentuje  konfigurowanie  funkcji  Sync  Units  sieci  EtherCAT dla przykładowej topologii sieci składającej się z Embedded PC CX9020 z dołączonym modułem rozszerzeń EtherCAT EK1110 oraz trzech szaf z wyspami EK1100.
 
 ## Topologia przykładowej sieci EtherCAT
