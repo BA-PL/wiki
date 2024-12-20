@@ -6,6 +6,7 @@ parent: TwinCAT 3
 ---
 
 **Licencjonowanie**
+<h6> Data modyfikacji: 20.12.2024 </h6>
 
 Licencje w TwinCAT 3 będziemy dzielić na różne grupy, w zależności od kryterium.
 <br>

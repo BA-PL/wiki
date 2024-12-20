@@ -5,6 +5,7 @@ layout: page
 ---
 
 # EtherCAT
+<h6> Data modyfikacji: 20.12.2024 </h6>
 
 **Cechy podstawowe:**
 <br>
