@@ -6,7 +6,7 @@ layout: page
 
 # EtherCAT
 <h6> Data modyfikacji: 20.12.2024 </h6>
-
+<br>
 **Cechy podstawowe:**
 <br>
 - Sieć typu single-master (jedno urządzenie zarządzające siecią)

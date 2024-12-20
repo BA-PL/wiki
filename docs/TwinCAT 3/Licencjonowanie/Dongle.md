@@ -8,7 +8,7 @@ layout: page
 
 # Licencjonowanie Dongle
 <h6> Data modyfikacji: 20.12.2024 </h6>
-
+<br>
 Niniejsza instrukcja opisuje sposób samodzielnego aktywowania licencji na urządzeniu licencyjnym takim jak EL6070 lub klucz USB C9900-L100.
 
 Instrukcja nie opisuje przypadku wgrywania licencji bezpośrednio na sterownik.
