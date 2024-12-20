@@ -8,7 +8,7 @@ parent: TwinCAT 3
 **Licencjonowanie**
 <h6> Data modyfikacji: 20.12.2024 </h6>
 <br>
-<br>
+
 Licencje w TwinCAT 3 będziemy dzielić na różne grupy, w zależności od kryterium.
 <br>
 Podstawowy podział to podział na licencje Runtime (do uruchomienia aplikacji na sterowniku) oraz na licencje do narzędzia inżynierskiego.

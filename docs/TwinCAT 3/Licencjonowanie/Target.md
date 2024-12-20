@@ -8,7 +8,7 @@ layout: page
 # Licencjonowanie Target 
 <h6> Data modyfikacji: 20.12.2024 </h6>
 <br>
-<br>
+
 Niniejsza  instrukcja  opisuje  sposób  samodzielnego  aktywowania licencji bezpośrednio na sterowniku.
 
 Instrukcja  nie  opisuje  przypadku  wgrywania  licencji  na  moduł EL6070 lub klucz USB C9900-L100.
