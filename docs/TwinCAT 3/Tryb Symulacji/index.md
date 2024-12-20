@@ -7,7 +7,7 @@ parent: TwinCAT 3
 
 # Tryb symulacji - poradnik
 {: .no_toc }
-
+<h6> Data modyfikacji: 20.12.2024 </h6>
 ## Table of Contents
 {: .no_toc .text-delta }
 
