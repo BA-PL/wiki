@@ -5,7 +5,7 @@ layout: page
 parent: TwinCAT 3
 ---
 
-**PLC HMI TF18x0**
+# PLC HMI TF18x0
 <h6> Data modyfikacji: 20.12.2024 </h6>
 <br>
 Ponieżej znajdziesz kilka przykładowych projektów do pobrania. Zamieszczone projekty są jedynie przykładami i korzystanie z nich/ adaptację do swojego projektu, robisz na własną odpowiedzialność.
