@@ -10,6 +10,7 @@ parent: TwinCAT 3
 <br>
 Ponieżej znajdziesz kilka przykładowych projektów do pobrania. Zamieszczone projekty są jedynie przykładami i korzystanie z nich/ adaptację do swojego projektu, robisz na własną odpowiedzialność.
 <br>
+[Download Samples](https://github.com/BA-PL/PLC-HMI/archive/refs/heads/main.zip){: .btn .btn-red }
 <br>
 Lista projektów:
 
