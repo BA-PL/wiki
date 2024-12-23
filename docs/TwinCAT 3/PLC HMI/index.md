@@ -8,8 +8,8 @@ parent: TwinCAT 3
 **PLC HMI TF1800**
 <h6> Data modyfikacji: 20.12.2024 </h6>
 <br>
-
 Ponieżej znajdziesz kilka przykładowych projektów do pobrania. Zamieszczone projekty są jedynie przykładami i korzystanie z nich/ adaptację do swojego projektu, robisz na własną odpowiedzialność.
+<br>
 <br>
 Lista projektów:
 
@@ -20,6 +20,7 @@ Lista projektów:
 - **EventsHistoricalSimple**: własna obsługa zdarzeń z historią w formie danych PERSISTENT
 - **EventTable**: przykład obsługi wbudowanej tabeli zdarzeń (tylko aktywne alarmy)
 - **HMISample**: przykładowy szablon wizualizacji z nawigacją i najczęściej używanymi elementami wizualizacji (m.in Histogram jako wykres, FileOpenSave dialog, użytkownicy, zmiana języka)
+<br>
 <br>
 Przydatne linki:
 
