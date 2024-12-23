@@ -4,7 +4,7 @@ nav_order: 4
 layout: page
 ---
 
-**IPC**
+# IPC / Embedded PC 
 
 
 
