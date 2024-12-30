@@ -75,12 +75,11 @@ Hasło/password: 1
 <br>
 W tym momencie powinien ukazać się udostępniony w sterowniku folder.
 Można teraz skopiować do katalogu Public wybrany wcześniej plik. Od tej chwili plik będzie dostępny w systemie operacyjnym sterownika.
-<br>
+
 <br>
 
 **Warto wiedzieć**: Folder Public znajduje się w pamięci RAM sterownika. Po zaniku zasilania znika jego zawartość.
 
-<br>
 <br>
 
 **Uwaga!** W celu prawidłowego działania protokołu SMB konieczne jest odblokowanie portów 137-139 w ustawieniach Firewall na sterowniku (patrz **Dodatek II**)
