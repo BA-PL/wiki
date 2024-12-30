@@ -14,4 +14,4 @@ W celu zastosowania zmiennych typu Retain należy posiadać do tego odpowiedni h
 <br>
 Sterowniki, które posiadają NOV-RAM to: CX7xxx oraz CX9020. Można również w tym przypadku użyć modułu EL6080.
 <br>
-Sposób konfiguracji oraz użycia zmiennych Retain przedstawiony jest w ![Infosys](https://infosys.beckhoff.com/content/1033/cx9020_hw/34647782514569642507.html)
+Sposób konfiguracji oraz użycia zmiennych Retain przedstawiony jest w [Infosys](https://infosys.beckhoff.com/content/1033/cx9020_hw/34647782514569642507.html)
