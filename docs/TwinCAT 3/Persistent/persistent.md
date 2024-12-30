@@ -119,7 +119,7 @@ Blok funkcyjny wygląda następująco:
 - sNetID: AMS Net ID urządzenia na którym będziemy zapisywać dane. W przypadku pozostawienia pustej nóżki domyślnie jako urządzenie docelowe wybierane jest urządzenie lokalne
 - iPLCPort: numer Runtime, na którym zapisujemy dane. Runtime 1 to Port 851, Runtime 2 to 852 itd.
 - tTimeout: domyślny Timeout, po którego przekroczeniu blok zgłosi błąd
-- eUpsMode: tryb działania bloku UPS (z/bez zapisu danych Persistent, z/bez szybkiego zamknięcia systemu), więcej informacji [tuatj](https://infosys.beckhoff.com/english.php?content=../content/1033/tcplclib_tc2_sups/30505867.html)
+- eUpsMode: tryb działania bloku UPS (z/bez zapisu danych Persistent, z/bez szybkiego zamknięcia systemu), więcej informacji [tutaj](https://infosys.beckhoff.com/english.php?content=../content/1033/tcplclib_tc2_sups/30505867.html)
 - ePersistentMode: tryb zapisu zmiennych Persistent, dokładny opis dostępny [tutaj](https://infosys.beckhoff.com/english.php?content=../content/1033/tcplclib_tc2_utilities/35342347.html)
 - tRecoverTime: czas, po którym blok powróci do stanu pierwotnego w przypadku wybrania opcji bez zamknięcia systemu operacyjnego – czyli gdy zasilanie wróci szybciej niż rozładuje się kondensator
 - bPowerFailDetect: TRUE gdy blok wykryje brak zasilania i sterownik przechodzi na zasilanie z wbudowanego kondensatora
@@ -134,11 +134,11 @@ Blok funkcyjny wygląda następująco:
 - sNetID: AMS Net ID urządzenia na którym będziemy zapisywać dane. W przypadku pozostawienia pustej nóżki domyślnie jako urządzenie docelowe wybierane jest urządzenie lokalne
 - iPLCPort: numer Runtime, na którym zapisujemy dane. Runtime 1 to Port 851, Runtime 2 to 852 itd.
 - tTimeout: domyślny Timeout, po którego przekroczeniu blok zgłosi błąd
-- eUpsMode: tryb działania bloku UPS (z/bez zapisu danych Persistent, z/bez szybkiego zamknięcia systemu), więcej informacji [tuatj](https://infosys.beckhoff.com/english.php?content=../content/1033/tcplclib_tc2_sups/30505867.html)
-- ePersistentMode: tryb zapisu zmiennych Persistent, dokładny opis dostępny [tuatj](https://infosys.beckhoff.com/english.php?content=../content/1033/tcplclib_tc2_utilities/35342347.html)
+- eUpsMode: tryb działania bloku UPS (z/bez zapisu danych Persistent, z/bez szybkiego zamknięcia systemu), więcej informacji [tutaj](https://infosys.beckhoff.com/english.php?content=../content/1033/tcplclib_tc2_sups/30505867.html)
+- ePersistentMode: tryb zapisu zmiennych Persistent, dokładny opis dostępny [tutaj](https://infosys.beckhoff.com/english.php?content=../content/1033/tcplclib_tc2_utilities/35342347.html)
 - tRecoverTime: czas, po którym blok powróci do stanu pierwotnego w przypadku wybrania opcji bez zamknięcia systemu operacyjnego – czyli gdy zasilanie wróci szybciej niż rozładuje się kondensator
 - bPowerFailDetect: TRUE gdy blok wykryje brak zasilania i sterownik przechodzi na zasilanie z wbudowanego kondensatora
-- eState: aktualny stan bloku, dokładny opis znajduje się [tuatj](https://infosys.beckhoff.com/english.php?content=../content/1033/tcplclib_tc2_sups/30507403.html)
+- eState: aktualny stan bloku, dokładny opis znajduje się [tutaj](https://infosys.beckhoff.com/english.php?content=../content/1033/tcplclib_tc2_sups/30507403.html)
 
 ### FB_S_UPS
 Jest to blok funkcyjny przeznaczony dla urządzeń CX50x0.
@@ -150,11 +150,11 @@ Blok funkcyjny wygląda następująco:
 - iPLCPort: numer Runtime, na którym zapisujemy dane. Runtime 1 to Port 851, Runtime 2 to 852 itd.
 - iUPSPort: port do odczytu stanu UPS. Zwykle pozostawia się pusty, by przyjął wartość domyślną.
 - tTimeout: domyślny Timeout, po którego przekroczeniu blok zgłosi błąd
-- eUpsMode: tryb działania bloku UPS (z/bez zapisu danych Persistent, z/bez szybkiego zamknięcia systemu), więcej informacji [tuatj](https://infosys.beckhoff.com/english.php?content=../content/1033/tcplclib_tc2_sups/30505867.html)
-- ePersistentMode: tryb zapisu zmiennych Persistent, dokładny opis dostępny [tuatj](https://infosys.beckhoff.com/english.php?content=../content/1033/tcplclib_tc2_utilities/35342347.html)
+- eUpsMode: tryb działania bloku UPS (z/bez zapisu danych Persistent, z/bez szybkiego zamknięcia systemu), więcej informacji [tutaj](https://infosys.beckhoff.com/english.php?content=../content/1033/tcplclib_tc2_sups/30505867.html)
+- ePersistentMode: tryb zapisu zmiennych Persistent, dokładny opis dostępny [tutaj](https://infosys.beckhoff.com/english.php?content=../content/1033/tcplclib_tc2_utilities/35342347.html)
 - tRecoverTime: czas, po którym blok powróci do stanu pierwotnego w przypadku wybrania opcji bez zamknięcia systemu operacyjnego – czyli gdy zasilanie wróci szybciej niż rozładuje się kondensator
 - bPowerFailDetect: TRUE gdy blok wykryje brak zasilania i sterownik przechodzi na zasilanie z wbudowanego kondensatora
-- eState: aktualny stan bloku, dokładny opis znajduje się [tuatj](https://infosys.beckhoff.com/english.php?content=../content/1033/tcplclib_tc2_sups/30507403.html)
+- eState: aktualny stan bloku, dokładny opis znajduje się [tutaj](https://infosys.beckhoff.com/english.php?content=../content/1033/tcplclib_tc2_sups/30507403.html)
 
 ### FB_S_UPS_CX51x0
 Jest to blok funkcyjny przeznaczony dla urządzeń CX51x0.
@@ -166,11 +166,11 @@ Blok funkcyjny wygląda następująco:
 -iPLCPort: numer Runtime, na którym zapisujemy dane. Runtime 1 to Port 851, Runtime 2 to 852 itd.
 -iUPSPort: port do odczytu stanu UPS. Zwykle pozostawia się pusty, by przyjął wartość domyślną.
 -tTimeout: domyślny Timeout, po którego przekroczeniu blok zgłosi błąd
--eUpsMode: tryb działania bloku UPS (z/bez zapisu danych Persistent, z/bez szybkiego zamknięcia systemu), więcej informacji [tuatj](https://infosys.beckhoff.com/english.php?content=../content/1033/tcplclib_tc2_sups/30505867.html)
--ePersistentMode: tryb zapisu zmiennych Persistent, dokładny opis dostępny [tuatj](https://infosys.beckhoff.com/english.php?content=../content/1033/tcplclib_tc2_utilities/35342347.html)
+-eUpsMode: tryb działania bloku UPS (z/bez zapisu danych Persistent, z/bez szybkiego zamknięcia systemu), więcej informacji [tutaj](https://infosys.beckhoff.com/english.php?content=../content/1033/tcplclib_tc2_sups/30505867.html)
+-ePersistentMode: tryb zapisu zmiennych Persistent, dokładny opis dostępny [tutaj](https://infosys.beckhoff.com/english.php?content=../content/1033/tcplclib_tc2_utilities/35342347.html)
 -tRecoverTime: czas, po którym blok powróci do stanu pierwotnego w przypadku wybrania opcji bez zamknięcia systemu operacyjnego – czyli gdy zasilanie wróci szybciej niż rozładuje się kondensator
 -bPowerFailDetect: TRUE gdy blok wykryje brak zasilania i sterownik przechodzi na zasilanie z wbudowanego kondensatora
--eState: aktualny stan bloku, dokładny opis znajduje się [tuatj](https://infosys.beckhoff.com/english.php?content=../content/1033/tcplclib_tc2_sups/30507403.html)
+-eState: aktualny stan bloku, dokładny opis znajduje się [tutaj](https://infosys.beckhoff.com/english.php?content=../content/1033/tcplclib_tc2_sups/30507403.html)
 
 ### FB_S_UPS_BAPI
 Jest to najbardziej zaawansowany blok funkcyjny przeznaczony do obsługi urządzeń wyposażonych w funkcjonalność 1-second UPS. Są to urządzenia posiadające BIOS-API w wersji 1.15 lub wyższej, a więc urządzenia takie jak:
@@ -183,11 +183,11 @@ Jest to najbardziej zaawansowany blok funkcyjny przeznaczony do obsługi urządz
 - sNetID: AMS Net ID urządzenia na którym będziemy zapisywać dane. W przypadku pozostawienia pustej nóżki domyślnie jako urządzenie docelowe wybierane jest urządzenie lokalne
 - iPLCPort: numer Runtime, na którym zapisujemy dane. Runtime 1 to Port 851, Runtime 2 to 852 itd.
 - tTimeout: domyślny Timeout, po którego przekroczeniu blok zgłosi błąd
-- eUpsMode: tryb działania bloku UPS (z/bez zapisu danych Persistent, z/bez szybkiego zamknięcia systemu), więcej informacji [tuatj](https://infosys.beckhoff.com/english.php?content=../content/1033/tcplclib_tc2_sups/30505867.html)
-- ePersistentMode: tryb zapisu zmiennych Persistent, dokładny opis dostępny [tuatj](https://infosys.beckhoff.com/english.php?content=../content/1033/tcplclib_tc2_utilities/35342347.html)
+- eUpsMode: tryb działania bloku UPS (z/bez zapisu danych Persistent, z/bez szybkiego zamknięcia systemu), więcej informacji [tutaj](https://infosys.beckhoff.com/english.php?content=../content/1033/tcplclib_tc2_sups/30505867.html)
+- ePersistentMode: tryb zapisu zmiennych Persistent, dokładny opis dostępny [tutaj](https://infosys.beckhoff.com/english.php?content=../content/1033/tcplclib_tc2_utilities/35342347.html)
 - tRecoverTime: czas, po którym blok powróci do stanu pierwotnego w przypadku wybrania opcji bez zamknięcia systemu operacyjnego – czyli gdy zasilanie wróci szybciej niż rozładuje się kondensator
 - bPowerFailDetect: TRUE gdy blok wykryje brak zasilania i sterownik przechodzi na zasilanie z wbudowanego kondensatora
-- eState: aktualny stan bloku, dokładny opis znajduje się [tuatj](https://infosys.beckhoff.com/english.php?content=../content/1033/tcplclib_tc2_sups/30507403.html)
+- eState: aktualny stan bloku, dokładny opis znajduje się [tutaj](https://infosys.beckhoff.com/english.php?content=../content/1033/tcplclib_tc2_sups/30507403.html)
 - nCapacity: aktualny stan naładowania kondensatora w procentach
 - bBusy: TRUE tak długo, aż blok nie zakończy działania
 - bError: TRUE w momencie wystąpienia błędu
