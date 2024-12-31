@@ -1,5 +1,5 @@
 ---
-title: PLC HMI TF18x0
+title: - PLC HMI TF18x0
 nav_order: 4
 layout: page
 parent: TwinCAT 3

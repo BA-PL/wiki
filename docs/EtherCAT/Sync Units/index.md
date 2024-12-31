@@ -1,5 +1,5 @@
 ---
-title: Sync Units
+title: - Sync Units
 nav_order: 1
 layout: page
 parent: EtherCAT

@@ -1,6 +1,6 @@
 ---
 title: Target
-parent: Licencjonowanie
+parent: - Licencjonowanie
 nav_order: 1
 layout: page
 ---

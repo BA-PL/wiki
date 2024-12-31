@@ -1,6 +1,6 @@
 ---
 title: Przywracanie ustawień fabrycznych 
-parent: Windows Embedded Compact
+parent: - Windows Embedded Compact 
 nav_order: 2
 layout: page
 ---

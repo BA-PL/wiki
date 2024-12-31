@@ -1,6 +1,6 @@
 ---
 title: SMTP
-parent: Protokoły komunikacyjne
+parent: - Protokoły komunikacyjne
 nav_order: 6
 layout: page
 ---

@@ -1,6 +1,6 @@
 ---
 title: ModbusRTU
-parent: Protokoły komunikacyjne
+parent: - Protokoły komunikacyjne
 nav_order: 3
 layout: page
 ---

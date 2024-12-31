@@ -1,6 +1,6 @@
 ---
 title: VPN dla WinCE 7
-parent: Windows Embedded Compact
+parent: - Windows Embedded Compact 
 nav_order: 4
 layout: page
 ---
