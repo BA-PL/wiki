@@ -1,5 +1,5 @@
 ---
-title: - Windows Embedded Compact 
+title: Windows Embedded Compact 
 nav_order: 1
 layout: page
 parent: IPC

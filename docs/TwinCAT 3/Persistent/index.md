@@ -1,5 +1,5 @@
 ---
-title: - Zmienne nieulotne 
+title: Zmienne nieulotne 
 nav_order: 6
 layout: page
 parent: TwinCAT 3

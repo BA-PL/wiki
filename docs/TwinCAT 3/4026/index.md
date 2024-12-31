@@ -1,5 +1,5 @@
 ---
-title: - Wersja 4026
+title: Wersja 4026
 nav_order: 5
 layout: page
 parent: TwinCAT 3

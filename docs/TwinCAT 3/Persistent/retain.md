@@ -1,6 +1,6 @@
 ---
 title: Zmienne RETAIN
-parent: - Zmienne nieulotne 
+parent: Zmienne nieulotne 
 nav_order: 2
 layout: page
 ---

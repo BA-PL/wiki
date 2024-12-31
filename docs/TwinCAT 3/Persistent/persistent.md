@@ -1,6 +1,6 @@
 ---
 title: Zmienne PERSISTENT 
-parent: - Zmienne nieulotne 
+parent: Zmienne nieulotne 
 nav_order: 1
 layout: page
 ---

@@ -1,6 +1,6 @@
 ---
 title: Dongle
-parent: - Licencjonowanie
+parent: Licencjonowanie
 nav_order: 2
 layout: page
 ---

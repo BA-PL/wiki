@@ -1,6 +1,6 @@
 ---
 title: IoT Communicator
-parent: - Protokoły komunikacyjne
+parent: Protokoły komunikacyjne
 nav_order: 2
 layout: page
 ---

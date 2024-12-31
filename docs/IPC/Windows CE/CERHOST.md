@@ -1,6 +1,6 @@
 ---
 title: Pulpit zdalny CERHOST 
-parent: - Windows Embedded Compact 
+parent: Windows Embedded Compact 
 nav_order: 1
 layout: page
 ---

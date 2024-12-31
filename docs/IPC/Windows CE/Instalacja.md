@@ -1,6 +1,6 @@
 ---
 title: Instalacja dodatków 
-parent: - Windows Embedded Compact 
+parent: Windows Embedded Compact 
 nav_order: 3
 layout: page
 ---

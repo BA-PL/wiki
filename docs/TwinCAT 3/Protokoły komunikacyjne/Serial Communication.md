@@ -1,6 +1,6 @@
 ---
 title: Serial Communication
-parent: - Protokoły komunikacyjne
+parent: Protokoły komunikacyjne
 nav_order: 4
 layout: page
 ---

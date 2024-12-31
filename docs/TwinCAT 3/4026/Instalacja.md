@@ -1,6 +1,6 @@
 ---
 title: Instrukcja instalacji 
-parent: - Wersja 4026
+parent: Wersja 4026
 nav_order: 1
 layout: page
 ---
