@@ -88,3 +88,22 @@ Po wybraniu tego przycisku powinna załadować się konfiguracja sprzętowa:
 Dobrym zwyczajem jest natychmiastowe zapisanie pobranej konfiguracji, z górnego menu wybierając File --> Save As… (zapisujemy pod taką nazwą, jaka została zaczytana przy pobieraniu, widoczna w lewym górnym rogu). 
 
 ![tsm9](https://ba-pl.github.io/wiki/assets/images/tsm9.png "tsm9")
+
+# Możliwe problemy 
+
+## Problemy z połączeniem 
+Najczęściej występującym w czasie pobierania konfiguracji sprzętowej błędem jest błąd występujący w jednym z pierwszych kroków instrukcji (połączenie ze sterownikiem), prezentujący się następująco:
+
+![tsm10](https://ba-pl.github.io/wiki/assets/images/tsm10.png "tsm10")
+
+Oznacza on prawdopodobniej, że użyte zostały złe poświadczenia. Należy użyć poprawnych poświadczeń (użytkownika i hasła).
+
+## Brak lub uszkodzony plik konfiguracji
+
+Jeśli po wykonani komendy *Open from Target* otrzymujemy pustą konfigurację (nic nie pojawia się w drzewku):
+
+![tsm11](https://ba-pl.github.io/wiki/assets/images/tsm11.png "tsm11")
+
+Oznacza to, że sterownik nie posiada aplikacji lub jest problem z plikiem CurrentConfig.tsm znajdującym się na sterowniku. W takim przypadku pobranie konfirguacji nie będzie raczej możliwe.
+<br>
+Zalecamy kontakt z działem support - **support@beckhoff.pl**
