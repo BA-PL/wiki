@@ -96,7 +96,7 @@ Najczęściej występującym w czasie pobierania konfiguracji sprzętowej błęd
 
 ![tsm10](https://ba-pl.github.io/wiki/assets/images/tsm10.png "tsm10")
 
-Oznacza on prawdopodobniej, że użyte zostały złe poświadczenia. Należy użyć poprawnych poświadczeń (użytkownika i hasła).
+Oznacza on najprawdopodobniej, że użyte zostały złe poświadczenia. Należy użyć poprawnych poświadczeń (użytkownika i hasła).
 
 ## Brak lub uszkodzony plik konfiguracji
 
@@ -104,6 +104,6 @@ Jeśli po wykonani komendy *Open from Target* otrzymujemy pustą konfigurację (
 
 ![tsm11](https://ba-pl.github.io/wiki/assets/images/tsm11.png "tsm11")
 
-Oznacza to, że sterownik nie posiada aplikacji lub jest problem z plikiem CurrentConfig.tsm znajdującym się na sterowniku. W takim przypadku pobranie konfirguacji nie będzie raczej możliwe.
+oznacza to, że sterownik nie posiada aplikacji lub jest problem z plikiem **CurrentConfig.tsm** znajdującym się na sterowniku. W takim przypadku pobranie konfiguracji nie będzie raczej możliwe.
 <br>
 Zalecamy kontakt z działem support - **support@beckhoff.pl**
