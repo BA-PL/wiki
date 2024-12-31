@@ -5,7 +5,8 @@ layout: page
 ---
 
 # TwinCAT 2
-Ogólne instrukcje obługi oprogramowania TwinCAT 2 możesz pobrać tutaj:
+**Ogólne instrukcje obługi oprogramowania TwinCAT 2 możesz pobrać tutaj:**
+<br>
 <br>
 [Download TC2 Manual](https://github.com/BA-PL/TwinCAT-2-General/archive/refs/heads/main.zip){: .btn .btn-red }
 
