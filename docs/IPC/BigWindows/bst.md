@@ -20,19 +20,19 @@ Niniejsza instrukcja przedstawia sposób korzystania z narzędzia Beckhoff Servi
 
 # Dobór wersji BST 
 
-Przed użyciem BST na komputerze przemysłowym, należy sprawdzić i dostosować jego wersję. Aby sprawdzić wersję, należy wpiąć BST np. do swojego laptopa. Pojawi sie on jako nowy dysk z nazwą **Image**
+Przed użyciem BST na komputerze przemysłowym, należy sprawdzić i dostosować jego wersję. Aby sprawdzić wersję, należy wpiąć BST np. do swojego laptopa. Pojawi sie on jako nowy dysk z nazwą **Image**:
 
 ![bst00](https://ba-pl.github.io/wiki/assets/images/bst00.png "bst00")
 
 Następnie szukamy pliki z informacją o wersji:
 
-![bst01](https://ba-pl.github.io/wiki/assets/images/bst00.png "bst01")
+![bst01](https://ba-pl.github.io/wiki/assets/images/bst01.png "bst01")
 
 Wersja BST powinna być dostosowana do komputera przemysłowego na którym będziemy BST operować. Wersję będzimy dobierać na podstawie dostępnej na komputerze pamięci RAM.
 
 ![bst02](https://ba-pl.github.io/wiki/assets/images/bst02.png "bst02")
 
-Jeśli zachodzi potrzeba zmiany wersji BST, można to zrobić za pomocą narzędzia ApplyBST. Narzędzie można pobrać wraz z odpowiednią wersją obrazu BST na [stronie Beckhoff](https://www.beckhoff.com/pl-pl/products/ipc/panel-pcs/accessories/bst.html?)
+Jeśli zachodzi potrzeba zmiany wersji BST, można to zrobić za pomocą narzędzia ApplyBST. Narzędzie można pobrać wraz z odpowiednią wersją obrazu BST na [stronie Beckhoff:](https://www.beckhoff.com/pl-pl/products/ipc/panel-pcs/accessories/bst.html?)
 
 ![bst1](https://ba-pl.github.io/wiki/assets/images/bst1.png "bst1")
 
@@ -68,26 +68,28 @@ Jeśli *Deployment Progress* wyniesie 100% można zamknąć okno ApplyBST.
 
 Aby przejść do tworzenia lub przywracania kopii zapasowej na komputerze przemysłowym, należy taki komputer zbootować z BST (wymaga to chwilowej przerwy w normalnej pracy komputera). Można to zrobić na dwa sposoby:
 - wpiąć BST do komputera przemysłowego w trakcie jego pracy, a następnie wykonać restart systemu
-- wyłączyć bezpiecznie system i zdjąć zasialanie z kompuetra przemysłowego --> wpiąć BST --> podać zasialanie
+- wyłączyć bezpiecznie system i zdjąć zasilanie z kompuetra przemysłowego --> wpiąć BST --> podać zasilanie
+<br>
 W obu przypadkach przy ponownym uruchomieniu powienin pojawić się interfejs BST (nie powienin wystartować system operacyjny).  
 
 ![bst10](https://ba-pl.github.io/wiki/assets/images/bst10.png "bst10")
 
-Jeśli dzieje się inaczej, należy w BIOS zmienić ustawienia **Boot order**.
+Jeśli dzieje się inaczej, należy w BIOS zmienić ustawienia **Boot order**. 
+<br>
 <br>
 Aby mieć kontrolę nad BST potrzebujemy mieć podłączony do komputera przemysłowego dowolny monitor/panel przemysłowy lub można skorzystać ze zdalnego dostępu za pomocą aplikacji TightVNC Viewer (połączenie klasycznym pulpitem zdalnym RDP nie zadziała). 
 
 ## Tworzenie kopii zapasowej 
 
-Aby rozpocząć tworzenie kopii zapasowej wybierz Backup na ekranie głównym (1)
+Po poprawnym zbootowaniu BST, aby rozpocząć tworzenie kopii zapasowej wybierz opcję **Backup** na ekranie głównym (1):
 
 ![bst18](https://ba-pl.github.io/wiki/assets/images/bst18.png "bst18")
 
-Następnie do wyboru jest format pliku naszej kopii zapasowej: wim lub tib. Zalecany jest wybór Acronis Image (2)
+Następnie do wyboru jest format pliku naszej kopii zapasowej: wim lub tib. Zalecany jest wybór Acronis Image (2):
 
 ![bst19](https://ba-pl.github.io/wiki/assets/images/bst19.png "bst19")
 
-W kolejnym kroku wybierz dysk, którego kopie zapasową chcesz utworzyć (4), w przykładzie wybrany jest cały dysk komputera przemysłowego 
+W kolejnym kroku wybierz dysk, którego kopie zapasową chcesz utworzyć (4), w przykładzie wybrany jest cały dysk komputera przemysłowego: 
 
 ![bst20](https://ba-pl.github.io/wiki/assets/images/bst20.png "bst20")
 
@@ -95,23 +97,28 @@ Następnie można ustawić hasło do naszej kopii i ustawić sposób kompresji. 
 
 ![bst21](https://ba-pl.github.io/wiki/assets/images/bst21.png "bst21")
 
-Tutaj nadaj nazwę swojej kopii (7) oraz wskaż ścieżkę (8) do katalogu *Images* na pendrive’ie BST lub zewnętrznego dysku twardego lub dysku sieciowego za pomocą Map Network Drive, na którym ma być zapisana kopia. Kopia nie musi znajdować się bezpośrednio na BST.
+Tutaj nadaj nazwę swojej kopii (7) oraz wskaż ścieżkę (8) pod którą ma zostać zapisany plik z backupu. Możesz go zapisać:
+- w katalogu *Images* bezpśrednio na pendrive’ie BST 
+- na zewnętrznym dysku/pendrive'ie (musi być wcześniej podłączony do komputera przemysłowego)
+- na dysku sieciowym (za pomocą opcji *Map Network Drive*)
+<br>
+Kopia nie musi znajdować się bezpośrednio na BST.
 
 ![bst22](https://ba-pl.github.io/wiki/assets/images/bst22.png "bst22")
 
-Następnie pojawi się ekran podsumowywujący, naciśnij Proceed jeśli wszystko zgadza się z Twoimi oczekiwaniami.
+Następnie pojawi się ekran podsumowywujący, naciśnij **Proceed*** jeśli wszystko zgadza się z Twoimi oczekiwaniami.
 <br>
 Jeśli paski **Current Process i Completed** wypełnią się w całości, pojawi się możliwość naciśnięcia **Close** i tym samym zakończenia procesu tworzenia kopii zapasowej danych.
 
 ![bst23](https://ba-pl.github.io/wiki/assets/images/bst23.png "bst23")
 
-Po powrocie do ekranu starrtowego, należy wybrać opcję **Shutdown**, a następnie:
+Po powrocie do ekranu startowego, należy wybrać opcję **Shutdown**, a następnie:
+- wybrać opcję Shutdown --> po chwili wyłączyć zasilanie komputera przeysłowego --> wypiąć BST --> podać zasilanie --> powienin wystartować system operacyjny / (opcja zalecana) 
 - wybrać opcję restartu i w trakcie restartowania wypiąć BST z komputera przemysłłowego --> powienin wystartować system operacyjny
-- wybrać opcję Shutdown --> po chwili wyłączyć zasilanie komputera przeysłowego --> wypiąć BST --> podać zasialnie --> powienin wystartować system operacyjny
 
 ## Przywracanie kopii zapasowej
 
-Aby rozpocząć przywrócenie kopii zapasowej wybierz Restore na ekranie głównym:
+Aby rozpocząć przywrócenie kopii zapasowej wybierz **Restore** na ekranie głównym:
 
 ![bst24](https://ba-pl.github.io/wiki/assets/images/bst24.png "bst24")
 
@@ -119,7 +126,7 @@ Następnie należy wybrać format pliku stworzonej wcześniej kopii zapasowej:
 
 ![bst25](https://ba-pl.github.io/wiki/assets/images/bst25.png "bst25")
 
-Tutaj wskaż ścieżkę do pliku w folderze Images na pendrive’ie BST, zewnętrznym dysku twardym lub dysku sieciowym, w którym znajduje się zapisana kopia:
+Tutaj wskaż ścieżkę do pliku w folderze *Images* na pendrive’ie BST, zewnętrznym dysku twardym lub dysku sieciowym, w którym znajduje się zapisana kopia:
 
 ![bst26](https://ba-pl.github.io/wiki/assets/images/bst26.png "bst26")
 
@@ -131,23 +138,23 @@ Wybierz, gdzie ma być przywrócona kopia zapasowa. W naszym przypadku, została
 
 Następnie pojawi się ekran podsumowywujący, naciśnij **Proceed** jeśli wszystko zgadza się z Twoimi oczekiwaniami.
 <br>
-Jeśli paski **Current Process i Completed** wypełnią się w całości pojawi się możliwość naciśnięcia Close i tym samym zakończenia procesu przywracania kopii zapasowej danych
+Jeśli paski **Current Process i Completed** wypełnią się w całości pojawi się możliwość naciśnięcia Close i tym samym zakończenia procesu przywracania kopii zapasowej danych.
 
 ![bst29](https://ba-pl.github.io/wiki/assets/images/bst29.png "bst29")
 
-Po powrocie do ekranu starrtowego, należy wybrać opcję **Shutdown**, a następnie:
+Po powrocie do ekranu startowego, należy wybrać opcję **Shutdown**, a następnie:
+- wybrać opcję Shutdown --> po chwili wyłączyć zasilanie komputera przeysłowego --> wypiąć BST --> podać zasilanie --> powienin wystartować system operacyjny / (opcja zalecana) 
 - wybrać opcję restartu i w trakcie restartowania wypiąć BST z komputera przemysłłowego --> powienin wystartować system operacyjny
-- wybrać opcję Shutdown --> po chwili wyłączyć zasilanie komputera przeysłowego --> wypiąć BST --> podać zasialnie --> powienin wystartować system operacyjny
 
 ## Aktywacja dostępu zdalnego (opcjonalne) 
 
 ### Aktywacja za pomocą pliku (przed użyciem BST)
 
-Jeśli nie posiadamy żadnego monitora podłączonego do komputera przemysłowego, przed użyciem BST można aktywować na nim dostęp zdalny. W tym celu wpinamy BST do swojego laptopa i edytujemy znajdujący się na nim plik **Settings.XML**
+Jeśli nie posiadamy żadnego monitora podłączonego do komputera przemysłowego, przed użyciem BST można aktywować na nim dostęp zdalny. W tym celu wpinamy BST do swojego laptopa i edytujemy znajdujący się na nim plik **Settings.XML** :
 
 ![bst14](https://ba-pl.github.io/wiki/assets/images/bst14.png "bst14")
 
-Po otwarciu pliku należy zmienić część kodu znajdującą się pod tagiem **<RemoteControl>** na pokazaną poniżej:
+Po otwarciu pliku należy zmienić część kodu znajdującą się pod tagiem **RemoteControl** na pokazaną poniżej:
 
 ```
 <RemoteControl>
@@ -197,14 +204,14 @@ Po wpisaniu poprawnego adresu IP w oknie aplikacji TightVNC Viwer, pojawi się k
 
 ![bst17](https://ba-pl.github.io/wiki/assets/images/bst17.png "bst17")
 
-W którym wpisz hasło domyślne (admin) lub własne, jeśli było ono przez Ciebie zmieniane i przejdź dalej naciskając OK. Spowoduje to otwarcie okienka Beckhoff Service Tool. Dalej postępuj zgodnie ze wskazówki z powyższych rozdziałów dotyczących tworzenia lub przywracania kopii zapasowej. 
+w którym wpisz hasło domyślne (admin) lub własne, jeśli było ono przez Ciebie zmieniane i przejdź dalej naciskając OK. Spowoduje to otwarcie okienka Beckhoff Service Tool. Dalej postępuj zgodnie ze wskazówkami z powyższych rozdziałów dotyczących tworzenia lub przywracania kopii zapasowej. 
 <br>
-Więcej infrmacjo o dostepnie zdalnym znajdiesz [tutaj](https://infosys.beckhoff.com/english.php?content=../content/1033/bst/4382504331.html)
+Więcej infrmacji o o dostepnie zdalnym znajdiesz [tutaj](https://infosys.beckhoff.com/english.php?content=../content/1033/bst/4382504331.html)
 
 ## Przywracanie ustawień fabrycznych za pomocą BST
 Przy pomocy narzędzia BST możliwe jest również przywrócenie systemu naszego komputera przemysłowego do ustawień fabrycznych. Procedura postępowania jest wówczas analogiczna do procedury przywracania kopii zapasowej opisanej w rozdziale **Przywracanie kopii zapasowej**, gdzie zamiast wykonanej przez nas kopii należy w kroku czwartym (4) wybrać plik z fabrycznym obrazem systemu. 
 <br>
-Plik ten można otrzymać kontaktując się z supportem Beckhoff (**support@beckhoff.pl**) podając numer seryjny posiadanego komputera przemysłowego. Plik taki należy umiescic na BST w katalogu *Images* przed rozpoczęciem procedury przywracania.
+Plik ten można otrzymać kontaktując się z supportem Beckhoff (**support@beckhoff.pl**) podając numer seryjny posiadanego komputera przemysłowego. Plik taki należy umieścić na BST w katalogu *Images* przed rozpoczęciem procedury przywracania.
 
 # Informacje dodatkowe
 
@@ -218,7 +225,7 @@ Po ustawieniu opcji jak na powyższym zdjęciu przechodzimy do zakładki Save & 
 
 ## Dostęp do katalogu Boot 
  
- W następstwie błędu programistycznego może się zdarzyć, że sterownik przedzie w tryb Exception. Oznaką tego jest zatrzymanie wykonywania programu PLC oraz zapalenie się diody TC na sterowniku na żółto. Jeśli w projekcie została zaznaczona opcja Autostart boot project to może się zdarzyć, że sterownik wpadnie w nieskończoną pętlę błędu. W takim przypadku, aby uniemożliwić uruchomienie programu PLC możemy zmienić nazwę katalogu C:\TwinCAT\3.1\Boot. TwinCAT uruchamia się wtedy w trybie Config, a program PLC nie jest wykonywany. W przypadku gdy nie możemy bezpośrednio odczytać dysku sterownika do zmiany nazwy wyżej wymienionego katalogu możemy wykorzystać BST. W tym celu należy zbootować BST na sterowniku jak opisano to w poprzednich rozdziałach a następnie:
+ W następstwie błędu programistycznego może się zdarzyć, że sterownik przejdzie w tryb Exception. Oznaką tego jest zatrzymanie wykonywania programu PLC oraz zapalenie się diody TC na sterowniku na żółto. Jeśli w projekcie została zaznaczona opcja *Autostart boot project* to może się zdarzyć, że sterownik wpadnie w nieskończoną pętlę błędu. W takim przypadku, aby uniemożliwić uruchomienie programu PLC możemy zmienić nazwę katalogu C:\TwinCAT\3.1\Boot. TwinCAT uruchamia się wtedy w trybie Config, a program PLC nie jest wykonywany. W przypadku gdy nie możemy bezpośrednio odczytać dysku sterownika do zmiany nazwy wyżej wymienionego katalogu możemy wykorzystać BST. W tym celu należy zbootować BST na sterowniku jak opisano to w poprzednich rozdziałach a następnie:
  
  - wybrać zakładkę **Manage Images**:
  
