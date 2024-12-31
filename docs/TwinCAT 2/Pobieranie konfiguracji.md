@@ -100,7 +100,7 @@ Oznacza on najprawdopodobniej, że użyte zostały złe poświadczenia. Należy 
 
 ## Brak lub uszkodzony plik konfiguracji
 
-Jeśli po wykonani komendy *Open from Target* otrzymujemy pustą konfigurację (nic nie pojawia się w drzewku):
+Jeśli po wykonaniu komendy *Open from Target* otrzymujemy pustą konfigurację (nic nie pojawia się w drzewku):
 
 ![tsm11](https://ba-pl.github.io/wiki/assets/images/tsm11.png "tsm11")
 

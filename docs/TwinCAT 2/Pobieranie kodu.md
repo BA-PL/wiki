@@ -33,7 +33,7 @@ Kolejnym krokiem jest wybranie odpowiedniego typu urządzenia:
 
 ![plc4](https://ba-pl.github.io/wiki/assets/images/plc4.png "plc4")
 
-- ***PC or CX (x86)**: opcja używana do połączenie wszystkich komputerów klasy PC oraz sterowników z architekturą procesora x86 np. sterowniki z serii CX20xx, CX5xxx, panele z serii CP22xx, wszystkie komputery.
+- **PC or CX (x86)**: opcja używana do połączenie wszystkich komputerów klasy PC oraz sterowników z architekturą procesora x86 np. sterowniki z serii CX20xx, CX5xxx, panele z serii CP22xx, wszystkie komputery.
 - **CX (ARM)**: opcja używana do połączenia urządzeń z architekturą procesora ARM np. z serii CX8xxx, CX9xxx lub panele CP66xx.
 - **BCxx50 or BX via AMS**: opcja może być używana do sterowników z serii BCxx50, BCxx20 oraz BX.
 - **BCxx50 or BX via serial**: opcja używana do łączenia ze sterownikami przez port szeregowy. Niezalecany w nowych aplikacjach. Opcja może być używana do sterowników z serii BCxx50, BCxx20 oraz BX.
@@ -51,9 +51,9 @@ Po poprawnym wykonaniu komendy kody źródłowe zostaną pobrane:
 
 ![plc6](https://ba-pl.github.io/wiki/assets/images/plc6.png "plc6")
 
-**Uwaga! Plik pobiera się jako Untitled (bez nazwy), należy więc go zapisać poprzez wybranie* File --> Save As…*, najlepiej pod nazwą taką, z jaką jest zlinkowany w zakładce PLC w System Manager!**
+**Uwaga!** Plik pobiera się jako **Untitled (bez nazwy)**, należy więc go zapisać poprzez wybranie *File --> Save As…*, najlepiej pod nazwą taką, z jaką jest zlinkowany w zakładce PLC w System Manager!
 
-![plc7](https://ba-pl.github.io/wiki/assets/images/plc7.png "plc7")
+![plc7_1](https://ba-pl.github.io/wiki/assets/images/plc7_1.png "plc7_1")
 
 # Możliwe problemy 
 
@@ -93,7 +93,9 @@ Każdy sterownik wyposażony w TwinCAT 2 przechowuje całą aplikację oraz plik
 	- kody źródłowe (TCPLC_**S**): brak tego pliku nie umożliwi pobrania kodów źródłowych
 	- zmienne Persistent (TCPLC_**T**): brak tego pliku nie załaduje poprawnie zmiennych nieulotnych typu Persistent 
 	- zmienne Retain (TCPLC_**R**): brak tego pliku nie załaduje poprawnie zmiennych nieulotnych typu Retain
+	
 <br>
+
 Opis poszczególnych plików na zrzucie poniżej:
 
 ![boot2](https://ba-pl.github.io/wiki/assets/images/boot2.png "boot2")
