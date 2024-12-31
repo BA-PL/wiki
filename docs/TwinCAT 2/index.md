@@ -4,11 +4,12 @@ nav_order: 5
 layout: page
 ---
 
-**TwinCAT 2**
-
-![cd](cd.png "TwinCAT CD")
-
-Szczegółowe instrukcje obługi możesz pobrać tutaj:
+# TwinCAT 2
+Ogólne instrukcje obługi oprogramowania TwinCAT 2 możesz pobrać tutaj:
+<br>
 [Download TC2 Manual](https://github.com/BA-PL/TwinCAT-2-General/archive/refs/heads/main.zip){: .btn .btn-red }
+
+<br>
+![cd](cd.png "TwinCAT CD")
 
 ---
