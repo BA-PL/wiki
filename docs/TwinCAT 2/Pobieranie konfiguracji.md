@@ -73,7 +73,7 @@ Status TwinCATa musi sygnalizować albo stan pracu RUN (zielony kolor) lub stan 
 <br>
 Nie może tam znajdować się kolor czerowny (STOP), szary (INACTIVE) lub żółty (TIMEOUT). 
 
-![tsmx](https://ba-pl.github.io/wiki/assets/images/tsmx.png "tsmx")
+![tsmx1](https://ba-pl.github.io/wiki/assets/images/tsmx1.png "tsmx1")
 
 Następnie w celu pobrania konfiguracji sprzętowej należy wybrać przycisk File --> Open From Target:
 
