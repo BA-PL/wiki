@@ -19,7 +19,7 @@ Funkcje Checks:
 - Funkcje systemowe (nie trzeba ich wywoływać)
 - Nie wolno zmieniać nazwy funkcji i argumentów wejściowych
 
-![ch1](https://ba-pl.github.io/wiki/assets/images/checks/ch1.png "ch1)
+![ch1](https://ba-pl.github.io/wiki/assets/images/checks/ch1.png "ch1")
 
 ## Import funkcji do programu
 Pobierz wymagane pliki tutaj:
@@ -30,45 +30,45 @@ Pobierz wymagane pliki tutaj:
 <br>
 Aby zaimportować funkcje Checks do projektu PLC, proponujemy wydzielić sobie oddzielny katalog, np. o nazwie Checks:
 
-![ch2](https://ba-pl.github.io/wiki/assets/images/checks/ch2.png "ch2)
+![ch2](https://ba-pl.github.io/wiki/assets/images/checks/ch2.png "ch2")
 
 Następnie do katalogu dodajemy pliki związane z funkcjami Checks:
 
-![ch3](https://ba-pl.github.io/wiki/assets/images/checks/ch3.png "ch3)
+![ch3](https://ba-pl.github.io/wiki/assets/images/checks/ch3.png "ch3")
 
 ## Używanie funkcji Checks 
 Po dodaniu funkcji sprawdzających do projektu wgraj zmiany w projekcie (wymaga to wgrania projektu z trybie **Download**, czyli z zatrzymaniem programu).
 <br>
 Następnie, sprawdź wartości liczników na liście zmiennych globalnych **GVL_Checks:**
 
-![ch4](https://ba-pl.github.io/wiki/assets/images/checks/ch4.png "ch4)
+![ch4](https://ba-pl.github.io/wiki/assets/images/checks/ch4.png "ch4")
 
 Jeśli który licznik ma wartość różną od zera, znajdź funkcję odpowiadającą temu działaniu (o takiej samej
 nazwie):
 
-![ch5](https://ba-pl.github.io/wiki/assets/images/checks/ch5.png "ch5)
+![ch5](https://ba-pl.github.io/wiki/assets/images/checks/ch5.png "ch5")
 
 Następnie kliknij na linię, w której następuje inkrementacja licznika (w tym przypadku jest to linia nr 4) i postaw w tym miejscu Breakpoint (wybierz z zakładki Debug lub wciśnij F9) i zaczekaj, aż **program zatrzyma swoje działanie.**
 
-![ch6](https://ba-pl.github.io/wiki/assets/images/checks/ch6.png "ch6)
+![ch6](https://ba-pl.github.io/wiki/assets/images/checks/ch6.png "ch6")
 
 Znajdź fragment programu, w którym wystąpiła niepożądana akcja. W tym celu wybierz **PLC --> Windows --> Call Stack** i wskaż element w którym była wywołana funkcja sprawdzająca.
 
-![ch7](https://ba-pl.github.io/wiki/assets/images/checks/ch7.png "ch7)
+![ch7](https://ba-pl.github.io/wiki/assets/images/checks/ch7.png "ch7")
 
 Następnie popraw algorytm i uruchom ponownie program:
 
-![ch8](https://ba-pl.github.io/wiki/assets/images/checks/ch8.png "ch8)
+![ch8](https://ba-pl.github.io/wiki/assets/images/checks/ch8.png "ch8")
 
 Wyłącz wszystkie breakpointy, aby program PLC nie zatrzymał się w nieodpowiednim momencie:
 
-![ch9](https://ba-pl.github.io/wiki/assets/images/checks/ch9.png "ch9)
+![ch9](https://ba-pl.github.io/wiki/assets/images/checks/ch9.png "ch9")
 
 
-![ch10](https://ba-pl.github.io/wiki/assets/images/checks/ch10.png "ch10)
+![ch10](https://ba-pl.github.io/wiki/assets/images/checks/ch10.png "ch10")
 
 Pamiętaj aby po naprawieniu algorytmu i ponownym uruchomieniu programu wyczyścić okno błędów i wyzerować liczniki naliczone na liście zmiennych globalnych. Pozwoli to uchronić się przed późniejszymi wątpliwościami czy błędy naliczały się, czy nie.
 
-![ch11](https://ba-pl.github.io/wiki/assets/images/checks/ch11.png "ch11)
+![ch11](https://ba-pl.github.io/wiki/assets/images/checks/ch11.png "ch11")
 
 Po usunięciu wszystkich błędów i przed wgraniem ostatecznej wersji projektu na sterownik, usuń funkcje Checks z projektu. 
