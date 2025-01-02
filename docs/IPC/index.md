@@ -1,6 +1,6 @@
 ---
 title: IPC
-nav_order: 4
+nav_order: 2
 layout: page
 ---
 
