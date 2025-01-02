@@ -1,8 +1,8 @@
 ---
 title: Zmienne nieulotne 
-nav_order: 6
+nav_order: 1
 layout: page
-parent: TwinCAT 3
+parent: Projekt TwinCAT
 ---
 
 **Zmienne nieulotne - PERSISTENT oraz RETAIN**

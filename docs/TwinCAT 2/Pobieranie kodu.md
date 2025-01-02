@@ -90,7 +90,7 @@ Każdy sterownik wyposażony w TwinCAT 2 przechowuje całą aplikację oraz plik
 - Pliki CurrentConfigX.bin: pliki binarne powstałe w momencie kompilacji aplikacji
 - Pliki z rozszerzeniem \*.wbp: pliki zawierające: 
 	- projekt bootowalny (TCPLC_**P**):  brak tego pliku będzie powodować że aplikacja nie uruchomi się automatycznie wraz ze sterownikiem
-	- kody źródłowe (TCPLC_**S**): brak tego pliku nie umożliwi pobrania kodów źródłowych
+	- kody źródłowe (TCPLC_**S**): brak tego pliku uniemożliwi pobranie kodów źródłowych
 	- zmienne Persistent (TCPLC_**T**): brak tego pliku nie załaduje poprawnie zmiennych nieulotnych typu Persistent 
 	- zmienne Retain (TCPLC_**R**): brak tego pliku nie załaduje poprawnie zmiennych nieulotnych typu Retain
 	
