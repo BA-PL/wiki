@@ -47,7 +47,7 @@ Aby zmienić nazwę solucji, podobnie jak poprzednio klikamy PPM i wybieramy opc
 
 Zmiana nazwy ponownie nie zmienia nazwy folderu solucji lecz elementu w drzewku oraz nazwy pliku solucji (.sln) w folderze solucji. Aby zmienić również nazwę folderu projektu należy wykonać to ręcznie, co opisano w dalszych krokach instrukcji.
 
-# 5	Zmiana nazwy folderu solucji i projektu TwinCAT
+#  Zmiana nazwy folderu solucji i projektu TwinCAT
 Na początku zapisujemy wszystko – opcja **Save All**, po czym przechodzimy do folderu solucji.
 
 ![name7](https://ba-pl.github.io/wiki/assets/images/name/name7.png "name7")
