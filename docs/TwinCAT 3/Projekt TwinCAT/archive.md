@@ -15,7 +15,7 @@ layout: page
 
 Jeśli chcesz wykonać backup projektu lub spakować go do jednego pliku celem udostępnienia np. za pomocą e-mail, wykonaj kroki:
 
-- (opcjonalny) Jeśli Twój projekt nie zawiera zewnętrzym bibliotek (takich, które nie są autorstwa Beckhoff), zastosuj ustawienie jak na zdjęciu poniżej. Znacznie zmniejszy to rozmiar pliku z projektem. 
+- (opcjonalny) Jeśli Twój projekt nie zawiera zewnętrznych bibliotek (takich, które nie są autorstwa Beckhoff), zastosuj ustawienie jak na zdjęciu poniżej. Znacznie zmniejszy to rozmiar pliku z projektem. 
 
 ![arch1](https://ba-pl.github.io/wiki/assets/images/arch1.png "arch1")
 
@@ -23,10 +23,9 @@ Jeśli chcesz wykonać backup projektu lub spakować go do jednego pliku celem u
 
 ![arch2](https://ba-pl.github.io/wiki/assets/images/arch2.png "arch2")
 
-- plik z rozszerzenim .tnzip można np. załączyć do wiadomości
+- plik z rozszerzenim **.tnzip** można np. załączyć do wiadomości
 
 <br>
-
 Aby otworzyć projekt z archiwum należy:
 
 ![arch3](https://ba-pl.github.io/wiki/assets/images/arch3.png "arch3")
