@@ -22,7 +22,7 @@ oparta na protokole ADS jest siecią typu multimaster, co oznacza, że w sieci m
 nadrzędnych – serwerów. W przypadku sterowników z serii CX możliwe jest nawiązanie nieograniczonej liczby
 połączeń pomiędzy klientami a serwerami.
 
-![ads](https://ba-pl.github.io/wiki/assets/images/ads.png "ads")
+![ads](https://ba-pl.github.io/wiki/assets/images/ADS/ads.png "ads")
 
 # Konfiguracja sterowników
 
@@ -30,7 +30,7 @@ W celu przesyłania danych pomiędzy dwoma sterownikami za pomocą protokołu AD
 dodany drugi sterownik jako route’a. Realizacja wymiany zmiennych za pomocą protokołu ADS odbywa
 się w programie PLC.
 
-![routes](https://ba-pl.github.io/wiki/assets/images/routes.png "routes")
+![routes](https://ba-pl.github.io/wiki/assets/images/ADS/routes.png "routes")
 
 **UWAGA! Dla sterowników z TwinCAT 3.1.4024.0 i nowszych dane do logowania to „Administrator” z hasłem „1” dla wszystkich urządzeń (również z Windows CE)!**
 
@@ -42,7 +42,7 @@ czyli (zadeklarowanych … AT %M …).
 <br>
 W pokazanym przykładzie z serwera odczytywana jest zmienna typu STRING zadeklarowana w sposób pokazany poniżej.
 
-![address](https://ba-pl.github.io/wiki/assets/images/address.png "address")
+![address](https://ba-pl.github.io/wiki/assets/images/ADS/address.png "address")
 
 # Program PLC dla klienta
 
@@ -53,7 +53,7 @@ W programie uruchomianym na kliencie używamy bloku funkcyjnego ADSREAD. W bloku
 następujące wejścia:
 
 - **NETID** (T_AmsNetId): Adres ADS sterownika, który jest serwerem,
-- ****PORT** (T_AmsPort): Numer portu wykorzystywanego przez PLC Runtime. W przypadku PC i CX dla TC3 dla Runtime 1 jest to port 851, dla Runtime 2 jest to port 852 itd.
+- **PORT** (T_AmsPort): Numer portu wykorzystywanego przez PLC Runtime. W przypadku PC i CX dla TC3 dla Runtime 1 jest to port 851, dla Runtime 2 jest to port 852 itd.
 - **IDXGRP** (UDINT): Indeks grupy usługi ADS. Wskazuje on na obszar pamięci z którego dokonujemy
 odczytu. W przypadku odczytu/zapisu zmiennych przestrzeni Memory (flaga %M) jest to zawsze
 wartość 16#4020,
@@ -74,9 +74,9 @@ Wyjścia z bloku są następujące:
 przyjmie wartość FALSE, a odczyt zakończy się niepowodzeniem,
 - **ERRID** (UDINT): ADS Return Code, znaczenie kodu można odnaleźć w dokumentacji protokołu.
 
-![client](https://ba-pl.github.io/wiki/assets/images/client.png "client")
+![client](https://ba-pl.github.io/wiki/assets/images/ADS/client.png "client")
 
-![adsread](https://ba-pl.github.io/wiki/assets/images/adsread.png "adsread")
+![adsread](https://ba-pl.github.io/wiki/assets/images/ADS/adsread.png "adsread")
 
 Analogicznie wygląda wywołanie bloku ADSWRITE, z tą różnicą, że jako LEN i SRCADDR podaje się odnośniki do
 zmiennej, którą chcemy ZAPISAĆ na wybranym obszarze pamięci w sterowniku który jest serwerem.
@@ -103,7 +103,7 @@ Przy deklarowaniu zmiennych należy uważać, aby adres był podzielny przez roz
 dla zmiennej typu REAL (4-bajtowej) zalecane adresy to AT %MB0, AT %MB4, AT %MB8 itd. Podanie niezalecanego
 adresu skutkuje warningiem, przykład poniżej.
 
-![size](https://ba-pl.github.io/wiki/assets/images/size.png "size")
+![size](https://ba-pl.github.io/wiki/assets/images/ADS/size.png "size")
 
 ## Nakładanie obszarów pamięci 
 
@@ -112,18 +112,18 @@ zmiennych jednocześnie (za pomocą jednego bloku). Zostało to pokazane na rysu
 zostały nałożone różnego typu zmienne zmienne. Po stronie klienta i serwera układ zmiennych powinien być taki
 sam, wówczas rozkodowanie zmiennych odbędzie się samoczynnie.
 
-![overlap](https://ba-pl.github.io/wiki/assets/images/overlap.png "overlap")
+![overlap](https://ba-pl.github.io/wiki/assets/images/ADS/overlap.png "overlap")
 
 W kliencie do bloku funkcyjnego odczytu/zapisu podpinamy tylko zmienną tablicową – ZM. Pozostałe zmienne
 uzupełnią swoje wartości samoczynnie. Jest to pokazane poniżej.
 <br>
 Widok offline:
 
-![adsoffline](https://ba-pl.github.io/wiki/assets/images/adsoffline.png "adsoffline")
+![adsoffline](https://ba-pl.github.io/wiki/assets/images/ADS/adsoffline.png "adsoffline")
 
 Widok online:
 
-![adsonline](https://ba-pl.github.io/wiki/assets/images/adsonline.png "adsonline")
+![adsonline](https://ba-pl.github.io/wiki/assets/images/ADS/adsonline.png "adsonline")
 
 ## Odczyt adresu AMS Net ID 
 
@@ -131,19 +131,19 @@ Adres AMS Net Id sterownika można odczytać w kilku miejscach:
 <br>
 - Jeśli znamy adres IP: poprzez stronę diagnostyczną Device Manager
 
-![amsdevman](https://ba-pl.github.io/wiki/assets/images/amsdevman.png "amsdevman")
+![amsdevman](https://ba-pl.github.io/wiki/assets/images/ADS/amsdevman.png "amsdevman")
 
 - W TwinCAT: W zakładce Routes --> NetId Management
 
-![netidman](https://ba-pl.github.io/wiki/assets/images/netidman.png "netidman")
+![netidman](https://ba-pl.github.io/wiki/assets/images/ADS/netidman.png "netidman")
 
 - Po wybraniu Router --> Edit Routes po kliknięciu PPM na ikonie TC na pasku:
 
-![routesman](https://ba-pl.github.io/wiki/assets/images/routesman.png "routesman")
+![routesman](https://ba-pl.github.io/wiki/assets/images/ADS/routesman.png "routesman")
 
 - W zakładce „Choose Target System”:
 
-![choosetarget](https://ba-pl.github.io/wiki/assets/images/choosetarget.png "choosetarget")
+![choosetarget](https://ba-pl.github.io/wiki/assets/images/ADS/choosetarget.png "choosetarget")
 
 # Przykład aplikacji 
 
