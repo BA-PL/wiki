@@ -21,17 +21,17 @@ Dostęp poprzez pulpit zdalny do sterowników z Windowsem CE możliwy jest dzię
 
 ![cer0](https://ba-pl.github.io/wiki/assets/images/cerhost/cer0.png "cer0")
 
-Jeśli podczas próby połączenia pojawi się komunikat błędu **Can't connect**, oznacza to że dostęp zdlany za pomocą CERHOST jest na sterowniku zablokowany (domyślne ustawienie). Można go odblokować jedną z metod opisaych w kolejnych rozdziałach.
+Jeśli podczas próby połączenia pojawi się komunikat błędu **Can't connect**, oznacza to że dostęp zdalny za pomocą CERHOST jest na sterowniku zablokowany (domyślne ustawienie). Można go odblokować jedną z metod opisaych w kolejnych rozdziałach.
 Po udanym połączeniu zoabczymy pulpit sterownika:
 
-![cer01](https://ba-pl.github.io/wiki/assets/images/cerhost/cer01.png "cer01")
+![ce1](https://ba-pl.github.io/wiki/assets/images/cerhost/ce1.png "ce1")
 
 # Odblokowanie CERHOST
 
 ## Odblokowanie programu CERHOST poprzez przeglądarkę internetową 
 Aby odblokować program CERHOST za pomocą przeglądarki internetowej, należy w przeglądarce wpisać https://**adres_IP_sterownika**/config lub http://**adres_IP_sterownika**/config
 
-![ce1](https://ba-pl.github.io/wiki/assets/images/cerhost/ce1.png "ce1")
+![cer1](https://ba-pl.github.io/wiki/assets/images/cerhost/cer1.png "cer1")
 
 Pojawi się okno logowania. Dane do logowania są następujące:
 <br>
@@ -56,7 +56,7 @@ Aby odblokować CERHOST tą metodą, należy podłączyć monitor i wykonać wpi
 
 ![cer4](https://ba-pl.github.io/wiki/assets/images/cerhost/cer4.png "cer4")
 ## Odblokowanie programu CERHOST za pomocą bloku funkcyjnego
-Do odblokowania programu CERHOST został stworzony specjalny blok funkcyjny **FB_CERHOST** znajdujący się w projekcie **Demo**, który można pobrać [tutaj.](https://github.com/BA-PL/Demo/archive/refs/heads/main.zip)
+Do odblokowania programu CERHOST został stworzony specjalny blok funkcyjny **FB_CERHOST** znajdujący się w projekcie **Demo**, który można pobrać [tutaj.](https://github.com/BA-PL/Demo-TC3/archive/refs/heads/main.zip)
 <br>
 Po wykonaniu algorytmu bloku funkcyjnego FB_CERHOST nastąpi **automatyczny restart sterownika**.
 
