@@ -59,8 +59,7 @@ INFO
 {: .label .label-purple }
 
 </div>
-```markdown
-Jeśli ikona TwinCAT na pasku zadań nie jest widoczna należy ją uruchomić poprzez plik:
-- C:\TwinCAT\3.1\System\TcSysUI.exe dla wersji 4024
-- C:\Program Files (x86)\Beckhoff\TwinCAT\3.1\System\TcSysUI.exe dla wersji 4026
-```
+{: .new-title }
+> Jeśli ikona TwinCAT na pasku zadań nie jest widoczna należy ją uruchomić poprzez plik:
+> - C:\TwinCAT\3.1\System\TcSysUI.exe dla wersji 4024
+> - C:\Program Files (x86)\Beckhoff\TwinCAT\3.1\System\TcSysUI.exe dla wersji 4026
