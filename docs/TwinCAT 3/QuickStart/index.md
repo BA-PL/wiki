@@ -31,7 +31,7 @@ Ikona TwinCAT System Service informuje nas o aktualnym stanie TwinCATa na danym 
 
 Stany które mogą wystąpić:
 
-![tc3q2](tc3q2.png "tc3q2")
+![tc3q2x](tc3q2x.png "tc3q2x")
 
 ## Właściwości TwinCAT 
 
