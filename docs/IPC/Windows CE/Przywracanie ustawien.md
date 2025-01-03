@@ -6,7 +6,7 @@ layout: page
 ---
 
 
-# Przywracanie ustawień fabrycznych na Windows CE
+# Przywracanie ustawień fabrycznych na systemach Windows CE
 {: .no_toc }
 <h6> Data modyfikacji: 20.12.2024 </h6>
 ## Table of Contents
