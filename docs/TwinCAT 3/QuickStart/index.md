@@ -58,9 +58,8 @@ Aby uruchomić środowisko, klikamy na ikonę TwinCATa i wybieramy opcję TwinCA
 INFO
 {: .label .label-purple }
 
-{: .new-title }
-> Jeśli ikona TwinCAT na pasku zadań nie jest widoczna należy ją uruchomić poprzez plik:
-> - C:\TwinCAT\3.1\System\TcSysUI.exe dla wersji 4024
-> - C:\Program Files (x86)\Beckhoff\TwinCAT\3.1\System\TcSysUI.exe dla wersji 4026
+Jeśli ikona TwinCAT na pasku zadań nie jest widoczna należy ją uruchomić poprzez plik:
+ - C:\TwinCAT\3.1\System\TcSysUI.exe dla wersji 4024
+ - C:\Program Files (x86)\Beckhoff\TwinCAT\3.1\System\TcSysUI.exe dla wersji 4026
  
 </div>
