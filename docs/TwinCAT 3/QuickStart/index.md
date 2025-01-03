@@ -53,7 +53,7 @@ Aby uruchomić środowisko, klikamy na ikonę TwinCATa i wybieramy opcję TwinCA
 
 ![tc3q5](tc3q5.png "tc3q5")
 
-<div class="code-example" markdown="1" style="background: rgba(0, 128, 0, 0.3)">
+<div class="code-example" markdown="1" style="background: rgba(210, 243, 242, 0.8)">
 
 INFO
 {: .label .label-purple }
