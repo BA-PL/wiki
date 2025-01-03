@@ -6,28 +6,33 @@ parent: EtherCAT
 ---
 
 # EtherCAT Sync Units
+{: .no_toc }
 <h6> Data modyfikacji: 20.12.2024 </h6>
-<br>
+## Table of Contents
+{: .no_toc .text-delta }
 
-Dokument  krok  po  kroku  prezentuje  konfigurowanie  funkcji  Sync  Units  sieci  EtherCAT dla przykładowej topologii sieci składającej się z Embedded PC CX9020 z dołączonym modułem rozszerzeń EtherCAT EK1110 oraz trzech szaf z wyspami EK1100.
+1. TOC
+{:toc}
 
-## Topologia przykładowej sieci EtherCAT
+Dokument  krok  po  kroku  prezentuje  konfigurowanie  funkcji  Sync Units sieci  EtherCAT dla przykładowej topologii sieci składającej się z Embedded PC CX9020 z dołączonym modułem rozszerzeń EtherCAT EK1110 oraz trzech szaf z wyspami EK1100.
+
+# Topologia przykładowej sieci EtherCAT
 
 ![topologia](topologia.png "topologia")
 
-## Opis funkcjonalności
+# Opis funkcjonalności
 
 Funkcja Sync Units pozwala na prawidłową wymianę danych z częścią sieci EtherCAT w przypadku, gdy inna część tej sieci jest odłączona (czyli np. w przypadku uszkodzenia lub odłączenia szafy 2, szafa 1 i szafa 3 będą wciąż poprawnie działać).
 
 W  przypadku,  w  którym  chcemy  dokonywać  zmian  konfiguracji  w  trybie  online,  należy skonfigurować funkcję EtherCAT HotConnect.
 
-## Konfiguracja sieci
+# Konfiguracja sieci
 
 Topologię sieci możemy sprawdzić w zakładce Devices 1 (EtherCAT) -> EtherCAT -> Topology. W naszym przykładzie topologia wygląda następująco:
 
 ![topologiaonline](topologiaonline.png "topologiaonline")
 
-## Komendy w ramce EtherCAT
+# Komendy w ramce EtherCAT
 
 Ramka protokołu EtherCAT składa sie z różnego rodzaju komend odczytu i zapisu. Komendy te można zobaczyc w polu Cmd, na zakładce EtherCAT urządzenia EtherCAT Master. Maksymalnie ramka może się składać z 15 komend.
 
@@ -40,7 +45,7 @@ W naszym przypadku występują komendy:
 2.   LRD – odczyt modułów wejść
 3.   BRD – ogólny odczyt parametrów
 
-## Konfiguracja 
+# Konfiguracja 
 
 W  naszym  wypadku  widać,  że  póki  co  funkcja  Sync  Unit  nie  została  skonfigurowana  (napis <default> w kolumnie Sync Unit na zrzucie ekranu załączonym poniżej):
 
@@ -62,7 +67,7 @@ Widok zakładki EtherCAT mastera EtherCATowego po przypisaniu Sync Units:
 
 ![ramki](ramki.png "ramki")
 
-## Funkcje dodatkowe
+# Funkcje dodatkowe
 
 W TwinCAT 3 dodano możliwość szybkiego przekazywania modułów pomiędzy poszczególnymi Sync Units. Dokonuje się tego w zakładce Sync Units w drzewie projektu. Po rozwinięciu otrzymujemy informacje o istniejących w projekcie Sync Units, a po wejściu w poszczególne możemy odznaczać przypisanie modułu do konkretnego Sync Unit lub przypisywać do niego moduły nieprzypisane.
 
@@ -72,7 +77,7 @@ W tej zakładce można także zmienić nazwę Sync Unit. Po kliknięciu PPM na �
 
 ![addSU](addSU.png "addSU")
 
-## Diagnostyka
+# Diagnostyka
 
 Zmienna  Frm0WcState jest  zmienną  typu  UINT,  która  pokazuje  diagnostykę  danych  dla poszczególnych komend ramki cyklicznej EtherCAT (lista komend pokazana jest w tabeli na rysunku powyżej). Dla każdej komendy rezerwowany jest bit tej zmiennej zgodnie z listą rozkazów – numer komendy odpowiada numerowi bitu. Gdy komenda działa prawidłowo mamy w bicie wartość 0, gdy jest błąd to wartosc 1. Dzięki temu możemy łatwo zdiagnozować połączenie.
 
@@ -92,7 +97,7 @@ W  naszym  przykładzie  odłączamy  Szafę   3.  Zmienna  Frm0WcState  przyjmi
 
 ![wcstate](wcstate.png "wcstate")
 
-## Dodatkowe informacje
+# Dodatkowe informacje
 
 [Infosys](https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_io_intro/1468206859.html)
 
