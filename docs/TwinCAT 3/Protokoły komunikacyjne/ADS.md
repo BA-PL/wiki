@@ -36,7 +36,11 @@ się w programie PLC.
 
 # Program PLC dla serwera
 
-Możliwy jest odczyt/zapis danych znajdujących się w przestrzeni Memory (zadeklarowanych … AT %M …). W pokazanym przykładzie z serwera odczytywana jest zmienna typu STRING zadeklarowana w sposób pokazany poniżej.
+Możliwy jest odczyt/zapis danych znajdujących się w przestrzeni Memory, 
+<br>
+czyli (zadeklarowanych … AT %M …). 
+<br>
+W pokazanym przykładzie z serwera odczytywana jest zmienna typu STRING zadeklarowana w sposób pokazany poniżej.
 
 ![address](https://ba-pl.github.io/wiki/assets/images/address.png "address")
 
@@ -48,26 +52,27 @@ Tc2_System.lib.
 W programie uruchomianym na kliencie używamy bloku funkcyjnego ADSREAD. W bloku tym wsytępują
 następujące wejścia:
 
-- NETID (T_AmsNetId): Adres ADS sterownika, który jest serwerem,
-- PORT (T_AmsPort): Numer portu wykorzystywanego przez PLC Runtime. W przypadku PC i CX dla TC3 dla Runtime 1 jest to port 851, dla Runtime 2 jest to port 852 itd.
-- IDXGRP (UDINT): Indeks grupy usługi ADS. Wskazuje on na obszar pamięci z którego dokonujemy
+- **NETID** (T_AmsNetId): Adres ADS sterownika, który jest serwerem,
+- ****PORT** (T_AmsPort): Numer portu wykorzystywanego przez PLC Runtime. W przypadku PC i CX dla TC3 dla Runtime 1 jest to port 851, dla Runtime 2 jest to port 852 itd.
+- **IDXGRP** (UDINT): Indeks grupy usługi ADS. Wskazuje on na obszar pamięci z którego dokonujemy
 odczytu. W przypadku odczytu/zapisu zmiennych przestrzeni Memory (flaga %M) jest to zawsze
 wartość 16#4020,
-- IDXOFFS (UDINT): Offset indeksu usługi ADS. Wskazuje on od którego bajtu chcemy odczytywać
+- **IDXOFFS** (UDINT): Offset indeksu usługi ADS. Wskazuje on od którego bajtu chcemy odczytywać
 pamięć,
-- LEN (UDINT): Ilość bajtów które chcemy odczytać. Jest to jednocześnie rozmiar zmiennej do której
+- **LEN** (UDINT): Ilość bajtów które chcemy odczytać. Jest to jednocześnie rozmiar zmiennej do której
 dokonujemy zapisu (w bajtach) – najczęściej odnosimy się do niej funkcją SIZEOF,
-- DESTADR (DWORD): Adres zmiennej do której wpisujemy odczytaną wartość, najczęsciej odczytujemy
+- **DESTADR** (DWORD): Adres zmiennej do której wpisujemy odczytaną wartość, najczęsciej odczytujemy
 go funkcją ADR,
-- READ (BOOL): Wejście reagujące na zbocze narastające, służy do wydawania polecenia odczytu,
-- TMOUT (TIME): Limit czasu odczytu, po jego przekroczeniu blok sygnalizuje błąd.
+- **READ** (BOOL): Wejście reagujące na zbocze narastające, służy do wydawania polecenia odczytu,
+- **TMOUT** (TIME): Limit czasu odczytu, po jego przekroczeniu blok sygnalizuje błąd.
+
 <br>
 <br>
 Wyjścia z bloku są następujące:
-- BUSY (BOOL): Wyjście sygnalizujące, że blok wykonuje operację odczytu,
-- ERR (BOOL): Wyjście sygnalizujące wystąpienie błędu. Przyjmuje ono wartość TRUE, gdy wyjście BUSY
+- **BUSY** (BOOL): Wyjście sygnalizujące, że blok wykonuje operację odczytu,
+- **ERR** (BOOL): Wyjście sygnalizujące wystąpienie błędu. Przyjmuje ono wartość TRUE, gdy wyjście BUSY
 przyjmie wartość FALSE, a odczyt zakończy się niepowodzeniem,
-- ERRID (UDINT): ADS Return Code, znaczenie kodu można odnaleźć w dokumentacji protokołu.
+- **ERRID** (UDINT): ADS Return Code, znaczenie kodu można odnaleźć w dokumentacji protokołu.
 
 ![client](https://ba-pl.github.io/wiki/assets/images/client.png "client")
 
@@ -77,17 +82,19 @@ Analogicznie wygląda wywołanie bloku ADSWRITE, z tą różnicą, że jako LEN 
 zmiennej, którą chcemy ZAPISAĆ na wybranym obszarze pamięci w sterowniku który jest serwerem.
 # Odczyt po nazwach 
 
-Istnieje również możliwość odczytu zmiennych po ich nazwach. W tym celu należy użyć bloków FB_ReadAdsSymByName lub FB_WriteAdsSymByName pochodzaćych z bliblioteki Tc2_DataExchange. 
+Istnieje również możliwość odczytu zmiennych po ich nazwach. W tym celu należy użyć bloków [FB_ReadAdsSymByName](https://infosys.beckhoff.com/english.php?content=../content/1033/tcplclib_tc2_dataexchange/1783919627.html) lub [FB_WriteAdsSymByName](https://infosys.beckhoff.com/english.php?content=../content/1033/tcplclib_tc2_dataexchange/1783921547.html) pochodzaćych z bliblioteki Tc2_DataExchange. 
 # Tips&Tricks
 
 ## Adresowanie 
 
-W pokazanym wcześniej przykładzie przesyłana zmienna została zadeklarowana w pamięci jako AT %MB0, co
-oznacza że zostanie ona zapisana w pamięci zaczynając od zerowego bajtu. AT %MB4 oznaczałoby, że zmienna
+W pokazanym wcześniej przykładzie przesyłana zmienna została zadeklarowana w pamięci jako **AT %MB0**, co
+oznacza że zostanie ona zapisana w pamięci zaczynając od zerowego bajtu. **AT %MB4** oznaczałoby, że zmienna
 zostanie zapisana w pamięci zaczynając od piątego bajtu. Inne możliwe deklaracje to:
-- AT %MX : umożliwia adresowanie pojedynczych bitów, np. AT %MX4.3 to 4 bit 5 bajtu,
-- AT %MW : służy do adresowania zmiennych dwubajtowych,
-- AT %MD : służy do adresowania zamiennych czterobajtowych.
+- **AT %MX** : umożliwia adresowanie pojedynczych bitów, np. AT %MX4.3 to 4 bit 5 bajtu,
+- **AT %MW** : służy do adresowania zmiennych dwubajtowych,
+- **AT %MD** : służy do adresowania zamiennych czterobajtowych.
+
+<br>
 W praktyce zasadne jest używanie jedynie zmiennych deklarowanych jako AT %MX oraz AT %MB, ponieważ
 ostatecznie wszystkie zmienne są umieszczane we wspólnym obszarze pamięci więc deklaracje AT %MB0, AT
 %MW0 i AT %MD0 dają identyczny rezultat.
@@ -143,6 +150,6 @@ Adres AMS Net Id sterownika można odczytać w kilku miejscach:
 Przykładową aplikację możesz pobrać tutaj:
 <br>
 <br>
-[Download ADS Sample](https://github.com/BA-PL/ADS/archive/refs/heads/main.zip){: .btn .btn-red }
+[Download ADS Sample](https://github.com/BA-PL/ADS-TC3/archive/refs/heads/main.zip){: .btn .btn-red }
 
 
