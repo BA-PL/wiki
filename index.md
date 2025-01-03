@@ -18,6 +18,7 @@ W razie problemów skontaktuj się z nami:
 <br>
 <ins>+48 727 722 900</ins>
 
+![system](system.png "system")
 ----
 
 [Infosys]: https://infosys.beckhoff.com
