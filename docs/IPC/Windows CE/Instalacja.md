@@ -70,11 +70,10 @@ Plik możemy skopiować na sterownik na kilka sposobów:
 **W systemie Windows 7 i Windows 8.1/10 należy zmienić zabezpieczenia sieci – patrz *Dodatek I***
 <br>
 <br>
-Na komputerze z którego chcemy dostać się do folderu udostępnionego otwieramy Windows Explorer lub **Start --> Uruchom(Run)** i wpisujemy
-- \\IP_Address, np.: \\10.24.2.123 
-- lub \\Host_Name, np.: \\CX_123456 
+Na komputerze z którego chcemy dostać się do folderu udostępnionego otwieramy Windows Explorer lub **Start --> Uruchom(Run)** i wpisujemy:
 
-<br>
+![ceix](https://ba-pl.github.io/wiki/assets/images/InstalacjaCE/ceix.png "ceix")
+
 W oknie logowania, należy wpisać odpowiednio:
 <br>
 **Login**: Administrator
