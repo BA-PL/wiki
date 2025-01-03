@@ -17,7 +17,7 @@ layout: page
 
 Poniżej opisany zostanie cały proces instalacji podstawowej wersji inżynierskiej – od wskazania miejsca pobrania wymaganych plików, przez proces instalacji oprogramowania, instalacji powłoki programistycznej TcXaeShell aż po pierwsze uruchomienie TwinCAT 3. 
 # Pobieranie plików instalacyjnych 
-Pliki instalacyjne należy pobierać wyłącznie ze strony [Beckhoff.](https://www.beckhoff.com/pl-pl/) Zapewni to, że będą to zawsze najbardziej aktualne i najbezpieczniejsze wersje. Link do pobrania [najnowszej wersji TwinCAT 3.] (https://www.beckhoff.com/pl-pl/support/download-finder/software-and-tools/) 
+Pliki instalacyjne należy pobierać wyłącznie ze strony [Beckhoff.](https://www.beckhoff.com/pl-pl/) Zapewni to, że będą to zawsze najbardziej aktualne i najbezpieczniejsze wersje. Link do pobrania [najnowszej wersji TwinCAT 3.](https://www.beckhoff.com/pl-pl/support/download-finder/software-and-tools/) 
 <br>
 Stamtąd należy wybrać interesującą nas wersję TwinCAT (zalecane jest, aby wybierać najnowszą dostępną wersję).
 
