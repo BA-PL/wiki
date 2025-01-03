@@ -7,7 +7,7 @@ parent: IPC
 
 # Windows Embedded Compact 
 
-![ce](ce.png "ce")
+![ce1](ce1.png "ce1")
 
 
 ---
