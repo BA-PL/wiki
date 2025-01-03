@@ -142,6 +142,7 @@ Nazwa sterownika, z którym nawiązaliśmy połączenie, powinna być teraz wido
 Jeśli pożądane urządzenie nie jest widoczne na liście po wybraniu polecenia Broadcast Search, to problem może być związany z TwinCAT bądź nie. Aby to rozstrzygnąć należy użyć komendy **ping** w wierszu poleceń systemu Windows **cmd** (ping *adres IP sterownika*). Jeśli urządzenie nie odpowiada na komendę ping oznacza to problem nie związany z TwinCAT. Najczęstsze przyczyny to:
 - Adres IP sterownika z innej puli niż nasz komputer: sprawdź jaki adres ma sterownik, porównaj z adresem komputera. Adresy powinny być w tej samej puli adresowej ale różne od wszystkich innych urządzeń w sieci (konflikt IP).
 - Uszkodzony kabel: jeśli wszystko powyżej zostało sprawdzone i dalej występuje problem z wyszukaniem urządzenia to zmień kabel na inny.
+
 <br>
 Jeśli urządzenie odpowiada na komendę **ping** a nadal nie jest widoczne to problem jest związany z TwinCAT. Możliwości:
 - Niewłaściwy tryb TwinCATa: TwinCAT na obu urządzeniach musi być w trybie konfiguracji (Config) lub pracy (Run). Jeżeli jest inny tryb to funkcja wyszukiwania jest nieaktywna.
@@ -213,10 +214,10 @@ Jeśli chcemy stworzyć nowy projekt PLC to należy kliknąć w drzewie konfigur
 W drzewie projektu pojawią się nowe foldery:
 - External Types: typy zewnętrzne
 - References: referencje do bibliotek
-- DUTs: Data Type Units –-> typy danych definiowalnych przez użytkownika
-- GVLs: Global Variable Lists –-> listy zmiennych globalnych
-- POUs: Program Organization Units –-> pliki programów, bloków funkcyjnych, funkcji etc.
-- VISUs: Visualizations –-> pliki wizualizacji
+- DUTs: Data Type Units --> typy danych definiowalnych przez użytkownika
+- GVLs: Global Variable Lists -->  listy zmiennych globalnych
+- POUs: Program Organization Units -->  pliki programów, bloków funkcyjnych, funkcji etc.
+- VISUs: Visualizations -->  pliki wizualizacji
 
 ![tc3q33](tc3q33.png "tc3q33")
 
@@ -259,6 +260,7 @@ TwinCAT pozwala na zadeklarowanie dwóch grup zmiennych.
 Kolejnym elementem deklaracji jest określenie adresu zmiennej:
 - X --> zmienna bitowa (logiczna), wyrażona przez pojedynczy bit
 - B --> zmienna bajtowa (Byte), wyrażona przez 8 bitów
+
 <br>
 \* - informuje, że adres będzie przydzielony podczas kompilowania
 
@@ -395,7 +397,7 @@ Jeśli podczas aktywacji konfiguracji nie była zaznaczona opcja dotycząca proj
 
 ![tc3q62](tc3q62.png "tc3q62")
 
-Następie, jeśli aktywny jest przycisk **Start**, można uruchomić program **(jeśli nie jest aktywny, to znaczy, że program jest już uruchomiony):**\
+Następie, jeśli aktywny jest przycisk **Start**, można uruchomić program **(jeśli nie jest aktywny, to znaczy, że program jest już uruchomiony):**
 
 ![tc3q63](tc3q63.png "tc3q63")
 
