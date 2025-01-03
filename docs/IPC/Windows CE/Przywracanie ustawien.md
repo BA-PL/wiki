@@ -24,7 +24,10 @@ W pierwszej kolejności należy pobrać fabryczny obraz systemu, który znajduje
 
 ![ce1](https://ba-pl.github.io/wiki/assets/images/ce1.png "ce1")
 
-Następnie, przy odłączonym zasilaniu, należy wyjąć kartę ze urządzenia (informacje gdzie znajduje się karta i jak ją wyjąć można znaleźć w dokumentacji danego sterownika na stronie [beckhoff.](https://beckhoff.com) Po odczytaniu karty należy usunąć całą jej zawartość potwierdzając pojawiające się komunikaty dotyczące usuwania plików systemowych.
+Następnie, przy odłączonym zasilaniu, należy wyjąć kartę ze urządzenia (informacje gdzie znajduje się karta i jak ją wyjąć można znaleźć w dokumentacji danego sterownika na stronie [Beckhoff.](https://www.beckhoff.com/pl-pl/) 
+<br>
+Po odczytaniu karty należy usunąć całą jej zawartość potwierdzając pojawiające się komunikaty dotyczące usuwania plików systemowych.
+<br>
 <br>
 **UWAGA!** Karta nie wymaga formatowania. Formatowanie robimy tylko w przypadku nowej karty, wybierając system plików FAT16 lub FAT32
 <br>
@@ -33,7 +36,7 @@ Po  wyczyszczeniu  karty  należy  wgrać  na  nią  pobrany  wcześniej fabrycz
 
 ![ce2](https://ba-pl.github.io/wiki/assets/images/ce2.png "ce2")
 
-Po wgraniu obrazu, należy zamknąć folder z zawartością karty i bezpiecznie usnąć ją z komputera.
+Po wgraniu obrazu, należy zamknąć folder z zawartością karty i bezpiecznie usnąć kartę z komputera.
 
 ![ce3](https://ba-pl.github.io/wiki/assets/images/ce3.png "ce3")
 
@@ -43,8 +46,8 @@ Po odczycie karty ze sterownika (kroki analogicznie jak w poprzednim rozdziale) 
 
 ![ce4](https://ba-pl.github.io/wiki/assets/images/ce4.png "ce4")
 
-Następnie należy odnaleźć zawartość folderu Boot (**TwinCat --> Boot** w przypadku TC2, **TwinCat --> 3.1 --> Boot**  w przypadku TC3)
-i usunąć wszystkie pliki poza folderem WebVisu:
+Następnie, należy odnaleźć zawartość folderu Boot (**TwinCat --> Boot** w przypadku TC2, **TwinCat --> 3.1 --> Boot**  w przypadku TC3)
+i usunąć wszystkie pliki poza folderem WebVisu (w przypadku TC2):
 
 ![ce5](https://ba-pl.github.io/wiki/assets/images/ce5.png "ce5")
 # Poprzez logowanie do panelu konfiguracyjnego sterownika 
@@ -74,7 +77,8 @@ Nie  zostanie  usunięty  kod  źródłowy,  plik  z  projektem  bootowalnym, ko
 Przywracanie ustawień fabrycznych za pomocą aplikacji CERHOST jest jedną ze zdalnych metod. Aplikacja ta nie wymaga instalacji i można ją pobrać [tutaj.](https://infosys.beckhoff.com/content/1033/cx51x0_hw/Resources/5047075211.zip)
 <br>
 <br>
-Domyślnie  zdalny  pulpit  (CE  Remote  Host  --> CERHOST)  jest  na sterownikach  zablokowany. Odblokować  go  można  za  pomocą  opisanego wcześniej  panelu  konfiguracyjnego  w  zakładce  *Boot  Opt.*,  przełączając ustawienie *Remote Display* z **Off** na **On** i restartując sterownik. Szerszy opis [tutaj.](https://infosys.beckhoff.com/english.php?content=../content/1033/cx51x0_hw/6436348939.html)
+Domyślnie  zdalny  pulpit  (CE  Remote  Host  --> CERHOST)  jest  na sterownikach  zablokowany. Odblokować  go  można  za  pomocą  opisanego wcześniej  panelu  konfiguracyjnego  w  zakładce  *Boot  Opt.*,  przełączając ustawienie *Remote Display* z **Off** na **On** i restartując sterownik. Szerszy opis [tutaj.](https://ba-pl.github.io/wiki/docs/IPC/Windows%20CE/CERHOST/)
+<br>
 <br>
 Po  odblokowaniu  i  pobraniu  programu,  otwieramy  go,  a  następnie wybieramy **File --> Connect**
 
@@ -84,11 +88,11 @@ Program prosi nas o **Hostname** w miejsce którego wpisujemy Adres IP naszego s
 
 ![ce11](https://ba-pl.github.io/wiki/assets/images/ce11.png "ce11")
 
-Otwiera nam się pulpit urządzenia, z którego wybieramy START --> RUN
+Otwiera nam się pulpit urządzenia, z którego wybieramy **START --> RUN**
 
 ![ce12](https://ba-pl.github.io/wiki/assets/images/ce12.png "ce12")
 
-W okienku RUN wpisujemy "explorex.exe" lub znak backslash:
+W okienku RUN wpisujemy "explorer.exe" lub znak backslash:
 
 ![ce13](https://ba-pl.github.io/wiki/assets/images/ce13.png "ce13")
 
