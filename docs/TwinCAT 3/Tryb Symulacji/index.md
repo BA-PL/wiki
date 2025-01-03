@@ -113,7 +113,7 @@ Aby sprawdzi czy VBS jest wykorzystywane, należy w okienku uruchomi wpisać **m
 ![loc17](https://ba-pl.github.io/wiki/assets/images/local/loc17.png "loc17")
 ![loc18](https://ba-pl.github.io/wiki/assets/images/local/loc18.png "loc18")
 
-#### Wyłączenie VBS dla Windows 7 lub Windows 10 
+#### <ins>**Wyłączenie VBS dla Windows 7 lub Windows 10**</ins> 
 <br>
 <br>
 Aby wyłączyć tę funkcję w oknie uruchom wpisz komendę **gpedit.msc**
