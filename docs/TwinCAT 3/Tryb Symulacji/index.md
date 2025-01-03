@@ -114,7 +114,7 @@ Aby sprawdzi czy VBS jest wykorzystywane, należy w okienku uruchomi wpisać **m
 ![loc18](https://ba-pl.github.io/wiki/assets/images/local/loc18.png "loc18")
 
 #### <ins>**Wyłączenie VBS dla Windows 7 lub Windows 10**</ins> 
-<br>
+
 <br>
 Aby wyłączyć tę funkcję w oknie uruchom wpisz komendę **gpedit.msc**
 
@@ -134,8 +134,8 @@ Następnie używamy cmd z prawami administratora i wykonujemy komedę **gpupdate
 
 Następnie należy ponownie uruchomić komputer. **„Shutdown”** nie działa z Windows 10/11, ponieważ nie przeładowuje jądra.
 
-#### Wyłącznie VBS dla Windows 11
-<br>
+#### <ins>**Wyłącznie VBS dla Windows 11**</ins> 
+
 <br>
 Otwieramy ustawienia i wyszukujemy opcji *Core Isolation*:
 
@@ -145,8 +145,8 @@ Następnie wyłączamy funkcję **Memory integrity** i restartujemy system.
 
 ![loc24](https://ba-pl.github.io/wiki/assets/images/local/loc24.png "loc24")
 
-#### Dodatkowe ustawienia które mogą być wymagane
-<br>
+#### <ins>**Dodatkowe ustawienia które mogą być wymagane**</ins> 
+
 <br>
 Może być konieczne wprowadzenie dodatkowych zmian w rejestrach.
 **WAŻNE**: Jeśli dane rejestry ze zdjęć nie istnieją na Twoim komputerze, nie należy ich tworzyć
@@ -170,8 +170,8 @@ Może być konieczne wprowadzenie dodatkowych zmian w rejestrach.
 
 ![loc28](https://ba-pl.github.io/wiki/assets/images/local/loc28.png "loc28")
 
-#### Sprawdzenie czy VBS zostało poprawnie wyłączone
-<br>
+#### <ins>**Sprawdzenie czy VBS zostało poprawnie wyłączone**</ins> 
+
 <br>
 Aby sprawdzi czy VBS jest wyłączone, należy w okienku uruchomi wpisać **msinfo32.exae**:
 

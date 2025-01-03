@@ -17,12 +17,12 @@ layout: page
 
 # Wprowadzenie
 
-System TwinCAT (The Windows Control and Automation Technology) jest platformą programistyczną dla wszystkich kontrolerów oferowanych przez firmę Beckhoff. Wykorzystuje on protokół komunikacyjny ADS (Automation Device Specification) a urządzenia występujące w tym protokole dostają adresy AMS (Automation Message Specification). 
+System TwinCAT (The Windows Control and Automation Technology) jest platformą programistyczną dla wszystkich kontrolerów oferowanych przez firmę Beckhoff. Wykorzystuje on protokół komunikacyjny **ADS** (Automation Device Specification) a urządzenia występujące w tym protokole dostają adresy **AMS** (Automation Message Specification). 
 <br>
 <br>
 System TwinCAT składa się z dwóch części:
-- Narzędzie inżynierskie (eXtended Automation Engineering XAE): służy do tworzenia programów, konfigurowania urządzeń itp.
-- Środowisko uruchomieniowe (eXtended Automation Runtime XAR): pozwala uruchomić wcześniej napisany program, działa na już przekompilowanym pliku binarnym.
+- Narzędzie inżynierskie (eXtended Automation Engineering **XAE**): służy do tworzenia programów, konfigurowania urządzeń itp.
+- Środowisko uruchomieniowe (eXtended Automation Runtime **XAR**): pozwala uruchomić wcześniej napisany program, działa na już przekompilowanym pliku binarnym.
 
 <br>
 Ikona TwinCAT System Service informuje nas o aktualnym stanie TwinCATa na danym urządzeniu.
@@ -201,6 +201,7 @@ Zmienne cyfrowe przyjmują wartości 0 lub 1, natomiast wartości analogowe najl
 
 ### Moduły I/O Beckhoff 
 
+<br>
 ![tc3q26](tc3q26.png "tc3q26")
 
 ## Dodanie projektu PLC
