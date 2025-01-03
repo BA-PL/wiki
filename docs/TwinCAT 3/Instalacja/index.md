@@ -8,8 +8,7 @@ parent: TwinCAT 3
 # TwinCAT 3 
 <h6> Data modyfikacji: 20.12.2024 </h6>
 <br>
-
-Obecnie na stronie [Beckhoff](https://beckhoff.com) są dostępne dwie wersje TwinCAT 3:
+Obecnie na stronie [Beckhoff](https://www.beckhoff.com/pl-pl/) są dostępne dwie wersje TwinCAT 3:
 - 3.1.4024.x w której wprowadzane są już tylko poprawki
 
 ![4024](4024.png "4024")
