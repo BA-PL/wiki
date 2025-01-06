@@ -21,15 +21,15 @@ Dostęp poprzez pulpit zdalny do sterowników z Windowsem CE możliwy jest dzię
 
 ![cer0](https://ba-pl.github.io/wiki/assets/images/cerhost/cer0.png "cer0")
 
-Jeśli podczas próby połączenia pojawi się komunikat błędu **Can't connect**, oznacza to że dostęp zdalny za pomocą CERHOST jest na sterowniku zablokowany (domyślne ustawienie). Można go odblokować jedną z metod opisaych w kolejnych rozdziałach.
-Po udanym połączeniu zoabczymy pulpit sterownika:
+Jeśli podczas próby połączenia pojawi się komunikat błędu **Can't connect** oznacza to, że dostęp zdalny za pomocą CERHOST jest na sterowniku zablokowany (domyślne ustawienie). Można go odblokować jedną z metod opisanych w kolejnych rozdziałach.
+Po udanym połączeniu zobaczymy pulpit sterownika:
 
 ![ce1](https://ba-pl.github.io/wiki/assets/images/cerhost/ce1.png "ce1")
 
 # Odblokowanie CERHOST
 
 ## Odblokowanie programu CERHOST poprzez przeglądarkę internetową 
-Aby odblokować program CERHOST za pomocą przeglądarki internetowej, należy w przeglądarce wpisać https://**adres_IP_sterownika**/config lub http://**adres_IP_sterownika**/config
+Aby odblokować program CERHOST za pomocą przeglądarki internetowej, należy w przeglądarce wpisać http(s)://**adres_IP_sterownika**/config lub http(s)://**hostname_sterownika**/config
 
 ![cer1](https://ba-pl.github.io/wiki/assets/images/cerhost/cer1.png "cer1")
 
@@ -52,7 +52,7 @@ Po zalogowaniu pojawi się strona menagera urządzenia (tzw. Device Manager):
 
 Należy wybrać zakładkę *Boot Options (1)*, a następnie w ustawieniach *Remote Display*, przełączyć jego aktywność na *On(2)* i zatwierdzić zmiany(3). Po wykonaniu tej czynności zostaniemy zapytani czy wykonać restart sterownika, co należy potwierdzić.
 ## Odblokowanie programu CERHOST poprzez wykonanie wpisu do rejestru
-Aby odblokować CERHOST tą metodą, należy podłączyć monitor i wykonać wpis do rejestru o nazwie CeRemoteDisplay_Enable (dukrotne kliknicię lewym klawiszem myszy na pliku). Ścieżka dostępu do pliku: **Hard Disk\RegFiles\Samples\Common** 
+Aby odblokować CERHOST tą metodą, należy podłączyć monitor i wykonać wpis do rejestru o nazwie CeRemoteDisplay_Enable (dwukrotne kliknięcie lewym klawiszem myszy na pliku). Ścieżka dostępu do pliku: **Hard Disk\RegFiles\Samples\Common** 
 
 ![cer4](https://ba-pl.github.io/wiki/assets/images/cerhost/cer4.png "cer4")
 ## Odblokowanie programu CERHOST za pomocą bloku funkcyjnego
@@ -67,7 +67,7 @@ Po wykonaniu algorytmu bloku funkcyjnego FB_CERHOST nastąpi **automatyczny rest
 ![cer5_1](https://ba-pl.github.io/wiki/assets/images/cerhost/cer5_1.png "cer5_1")
 
 ## Zapobieganie zablokowaniu CERHOST
-Program CERHOST na sterownikach jest domyślnie zablokowany. Blokada ma za zadanie zapobiegać niepożądanym bądź przypadkowym działaniom. Aby zapobiec jego blokadzie, należy przed pierwszym uruchomieniem (lub po wgraniu nowego obrazu) z folderu zawierającego obraz, usunąć wpis do rejestru o nazwie CeRemoteDisplay_Disable. Wpis ten znajduje się w podfolderze RegFiles, którego pliki wykonują się przy pierwszym uruchomieniu sterownika lub po przywróceniu ustawień fabrycznych. Ścieżka dostępu jest następująca:
+Program CERHOST na sterownikach jest domyślnie zablokowany. Blokada ma za zadanie zapobiegać niepożądanym bądź przypadkowym działaniom. Aby zapobiec jego blokadzie, należy przed pierwszym uruchomieniem (lub po wgraniu nowego obrazu) z folderu zawierającego obraz, usunąć wpis do rejestru o nazwie **CeRemoteDisplay_Disable**. Wpis ten znajduje się w podfolderze RegFiles, którego pliki wykonują się przy pierwszym uruchomieniu sterownika lub po przywróceniu ustawień fabrycznych. Ścieżka dostępu jest następująca:
 <br>
 **(katalog główny obrazu) --> RegFiles**
 

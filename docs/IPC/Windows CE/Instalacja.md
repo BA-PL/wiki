@@ -15,7 +15,10 @@ layout: page
 1. TOC
 {:toc}
 
-Instrukcja przedstawia sposób instalacji plików na systemach Windows CE. Przykład będzie przeprowadzony krok po kroku na podstawie instalacji pliku **TwinCAT PLC HMI CE** dla TwinCAT 2 oraz dodatku **TwinCAT Database Server** dla TwinCAT 3.
+Instrukcja przedstawia sposób instalacji plików na systemach Windows CE. 
+<br>
+Przykład będzie przeprowadzony krok po kroku na podstawie instalacji pliku **TwinCAT PLC HMI CE** dla TwinCAT 2 oraz dodatku **TwinCAT Database Server** dla TwinCAT 3.
+<br>
 Proces instalacji biblioteki dla Windows CE składa się z dwóch etapów. W pierwszym etapie w środowisku Windows XP/Vista/7/10 z pliku z rozszerzeniem \*.exe instalujemy pliki instalacyjne dla Windows CE, które mają rozszerzenie \*.cab. W drugim etapie instalujemy taki plik na urządzeniu docelowym.
 
 # Pobranie pliku i instalacja na komputerze PC dla TwinCAT 2
@@ -62,14 +65,21 @@ Plik możemy skopiować na sterownik na kilka sposobów:
 3. Transfer pliku z poziomu TwinCAT podczas wgrywania projektu (tylko TwinCAT 3). Dokłady opis można znaleźć [tutaj.](https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/3260050187.html) 
 4. Za pomocą zewnętrznej pamięci, np. pendrive (pojawi się w systemie jako Hard Disk2).
 
-**Dostęp do folderu udostępnionego w sterowniku (SMB - Server Message Block)**
-<br>
-<br>
+## Dostęp do folderu udostępnionego w sterowniku (SMB - Server Message Block)
+
 **Uwaga!** 
 <br>
-**W systemie Windows 7 i Windows 8.1/10 należy zmienić zabezpieczenia sieci – patrz *Dodatek I***
+<div class="code-example" markdown="1" style="background: rgba(210, 243, 242, 0.8)">
+
+INFO
+{: .label .label-purple }
+
+W systemie Windows 7 i Windows 8.1/10 należy zmienić zabezpieczenia sieci – patrz [Dodatek I.](https://ba-pl.github.io/wiki/docs/IPC/Windows%20CE/Instalacja/#dodatek-i---przystosowanie-windows-7810-do-korzystania-z-folderu-public)
+ 
+</div>
+
 <br>
-<br>
+
 Na komputerze z którego chcemy dostać się do folderu udostępnionego otwieramy Windows Explorer lub **Start --> Uruchom(Run)** i wpisujemy:
 
 ![ceix](https://ba-pl.github.io/wiki/assets/images/InstalacjaCE/ceix.png "ceix")
@@ -84,11 +94,19 @@ W oknie logowania, należy wpisać odpowiednio:
 W tym momencie powinien ukazać się udostępniony w sterowniku folder.
 Można teraz skopiować do katalogu Public wybrany wcześniej plik. Od tej chwili plik będzie dostępny w systemie operacyjnym sterownika.
 
-<br>
+<div class="code-example" markdown="1" style="background: rgba(210, 243, 242, 0.8)">
+
+INFO
+{: .label .label-purple }
+
 **Warto wiedzieć**: Folder Public znajduje się w pamięci RAM sterownika. Po zaniku zasilania znika jego zawartość.
 
 <br>
-**Uwaga!** W celu prawidłowego działania protokołu SMB konieczne jest odblokowanie portów 137-139 w ustawieniach Firewall na sterowniku (patrz **Dodatek II**)
+**Uwaga!** W celu prawidłowego działania protokołu SMB konieczne jest odblokowanie portów 137-139 w ustawieniach Firewall na sterowniku - patrz [Dodatek II.](https://ba-pl.github.io/wiki/docs/IPC/Windows%20CE/Instalacja/#dodatek-ii---dodanie-u%C5%BCytkownika-w-windows-ce--odblokowanie-port%C3%B3w-w-firewall)
+ 
+</div>
+<br>
+
 
 # Instalacja pliku na sterowniku
 
@@ -104,11 +122,11 @@ Otworzy nam się explorer plików w którym należy wejść do folderu Public (l
 
 ![cei8x](https://ba-pl.github.io/wiki/assets/images/InstalacjaCE/cei8x.png "cei8x")
 <br>
-Następnie klikamy szybko 2xLPM na pliku instalacyjnym (1), przywoła to okno instalacji i klikamy w przycisk OK. (pole nr 2.) – instalujemy w domyślnej lokalizacji! Po zakończeniu instalacji plik zostanie automatycznie usunięty.
+Następnie klikamy szybko 2xLPM na pliku instalacyjnym (1), przywoła to okno instalacji i klikamy w przycisk OK. (pole nr 2.) – instalujemy w **domyślnej lokalizacji!** Po zakończeniu instalacji plik zostanie automatycznie usunięty.
 
 ![cei8x2](https://ba-pl.github.io/wiki/assets/images/InstalacjaCE/cei8x2.png "cei8x2")
 
-Na koniec należy zresetować sterownik z poziomu Windows CE przez polecenie w Menu Start --> Reset. Jest to bardzo ważne, ponieważ zmiany muszą zostać wprowadzone do systemu!
+Na koniec należy zresetować sterownik z poziomu Windows CE przez polecenie w Menu **Start --> Reset**. Jest to bardzo ważne, ponieważ zmiany muszą zostać wprowadzone do systemu!
 
 # Dodatek I - Przystosowanie Windows 7/8/10 do korzystania z folderu Public
 **Windows 7**

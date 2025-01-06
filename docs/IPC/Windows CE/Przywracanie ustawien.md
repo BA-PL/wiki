@@ -24,12 +24,20 @@ W pierwszej kolejności należy pobrać fabryczny obraz systemu, który znajduje
 
 ![ce1](https://ba-pl.github.io/wiki/assets/images/WinCE/ce1.png "ce1")
 
-Następnie, przy odłączonym zasilaniu, należy wyjąć kartę ze urządzenia (informacje gdzie znajduje się karta i jak ją wyjąć można znaleźć w dokumentacji danego sterownika na stronie [Beckhoff.](https://www.beckhoff.com/pl-pl/) 
+Następnie, przy odłączonym zasilaniu, należy wyjąć kartę z urządzenia (informacje gdzie znajduje się karta i jak ją wyjąć można znaleźć w dokumentacji danego sterownika na stronie [Beckhoff).](https://www.beckhoff.com/pl-pl/) 
 <br>
 Po odczytaniu karty należy usunąć całą jej zawartość potwierdzając pojawiające się komunikaty dotyczące usuwania plików systemowych.
 <br>
 <br>
+
+<div class="code-example" markdown="1" style="background: rgba(236, 116, 136, 0.8)">
+
+WAŻNE
+{: .label .label-red }
+
 **UWAGA!** Karta nie wymaga formatowania. Formatowanie robimy tylko w przypadku nowej karty, wybierając system plików FAT16 lub FAT32
+ 
+</div>
 <br>
 <br>
 Po  wyczyszczeniu  karty  należy  wgrać  na  nią  pobrany  wcześniej fabryczny obraz. Robimy to kopiując zawartość folderu z obrazem.
@@ -51,7 +59,7 @@ i usunąć wszystkie pliki poza folderem WebVisu (w przypadku TC2):
 
 ![ce5](https://ba-pl.github.io/wiki/assets/images/WinCE/ce5.png "ce5")
 # Poprzez logowanie do panelu konfiguracyjnego sterownika 
-Sterowniki posiadają panel konfiguracyjny do którego można się zalogować przez przeglądarkę. Aby to zrobić należy w przeglądarce wpisać adres IP sterownika z  dopiskiem  **/config**. Np.  10.24.2.43/config.
+Sterowniki posiadają panel konfiguracyjny do którego można się zalogować przez przeglądarkę. Aby to zrobić należy w przeglądarce wpisać adres IP sterownika z  dopiskiem  **/config**. Np.  http(s)://10.24.2.43/config.
 
 ![ce6](https://ba-pl.github.io/wiki/assets/images/WinCE/ce6.png "ce6")
 
@@ -70,9 +78,17 @@ Po zalogowaniu pojawi się strona menagera urządzenia. Należy przejść do zak
 Po  potwierdzeniu  komunikatu  nastąpi  restart  sterownika  i  przywrócenie ustawień fabrycznych. Przywrócona zostanie w ten sposób m.in. pierwotna nazwa sieciowa sterownika oraz sposób pobierania adresu IP.
 <br>
 <br>
+<div class="code-example" markdown="1" style="background: rgba(210, 243, 242, 0.8)">
+
+INFO
+{: .label .label-purple }
+
 **UWAGA!**
 <br>
 Nie  zostanie  usunięty  kod  źródłowy,  plik  z  projektem  bootowalnym, konfiguracją oraz informacje dotyczące zmiennych nieulotnych. Aby je usunąć można wykorzystać jedną z metod opisanych w tym dokumencie.
+ 
+</div>
+
 # Za pomocą aplikacji CERHOST
 Przywracanie ustawień fabrycznych za pomocą aplikacji CERHOST jest jedną ze zdalnych metod. Aplikacja ta nie wymaga instalacji i można ją pobrać [tutaj.](https://infosys.beckhoff.com/content/1033/cx51x0_hw/Resources/5047075211.zip)
 <br>
