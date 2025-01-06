@@ -25,7 +25,7 @@ Funkcje Checks:
 Pobierz wymagane pliki tutaj:
 <br>
 <br>
-[Download Checks](https://github.com/BA-PL/Diag/archive/refs/heads/main.zip){: .btn .btn-red }
+[Download Checks](https://github.com/BA-PL/Checks-TC3/archive/refs/heads/main.zip){: .btn .btn-red }
 
 <br>
 Aby zaimportować funkcje Checks do projektu PLC, proponujemy wydzielić sobie oddzielny katalog, np. o nazwie Checks:
