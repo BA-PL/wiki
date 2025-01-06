@@ -34,9 +34,17 @@ jak ich
 
 ![pers2](https://ba-pl.github.io/wiki/assets/images/pers2.png "pers2")
 
-**UWAGA!!! W przypadku deklarowania jako Persistent wartości będących przypisaniem z innych obiektów należy pamiętać o tym, aby jako Persistent zadeklarowany był cały obiekt, a nie tylko zmienna, do której przepisywana jest wartość!**
+<div class="code-example" markdown="1" style="background: rgba(210, 243, 242, 0.8)">
+
+INFO
+{: .label .label-purple }
+
+**UWAGA!!!** W przypadku deklarowania jako Persistent wartości będących przypisaniem z innych obiektów należy pamiętać o tym, aby jako Persistent zadeklarowany był cały obiekt, a nie tylko zmienna, do której przepisywana jest wartość!
+ 
+</div>
+
 <br>
-<br>
+
 W przypadku deklarowania jako Persistent zmiennej w bloku funkcyjnym musimy pamiętać, że każde wywołanie tego bloku funkcyjnego w kodzie spowoduje, że zapisywać się będzie kolejna „instacja” tej zmiennej na nośniku pamięci.
 <br>
 W przypadku korzystania ze sterowników z 1-second UPS co do zasady przyjmuje się, aby wielkość zmiennych Persistent w projekcie nie przekraczała 1 MB, ponieważ wraz ze zużyciem kondensatora używanego do podtrzymania w 1-second UPS większa ilość danych może nie zostać zapisana.
@@ -162,15 +170,15 @@ Blok funkcyjny wygląda następująco:
 
 ![pers9](https://ba-pl.github.io/wiki/assets/images/pers9.png "pers9")
 
--sNetID: AMS Net ID urządzenia na którym będziemy zapisywać dane. W przypadku pozostawienia pustej nóżki domyślnie jako urządzenie docelowe wybierane jest urządzenie lokalne
--iPLCPort: numer Runtime, na którym zapisujemy dane. Runtime 1 to Port 851, Runtime 2 to 852 itd.
--iUPSPort: port do odczytu stanu UPS. Zwykle pozostawia się pusty, by przyjął wartość domyślną.
--tTimeout: domyślny Timeout, po którego przekroczeniu blok zgłosi błąd
--eUpsMode: tryb działania bloku UPS (z/bez zapisu danych Persistent, z/bez szybkiego zamknięcia systemu), więcej informacji [tutaj](https://infosys.beckhoff.com/english.php?content=../content/1033/tcplclib_tc2_sups/30505867.html)
--ePersistentMode: tryb zapisu zmiennych Persistent, dokładny opis dostępny [tutaj](https://infosys.beckhoff.com/english.php?content=../content/1033/tcplclib_tc2_utilities/35342347.html)
--tRecoverTime: czas, po którym blok powróci do stanu pierwotnego w przypadku wybrania opcji bez zamknięcia systemu operacyjnego – czyli gdy zasilanie wróci szybciej niż rozładuje się kondensator
--bPowerFailDetect: TRUE gdy blok wykryje brak zasilania i sterownik przechodzi na zasilanie z wbudowanego kondensatora
--eState: aktualny stan bloku, dokładny opis znajduje się [tutaj](https://infosys.beckhoff.com/english.php?content=../content/1033/tcplclib_tc2_sups/30507403.html)
+- sNetID: AMS Net ID urządzenia na którym będziemy zapisywać dane. W przypadku pozostawienia pustej nóżki domyślnie jako urządzenie docelowe wybierane jest urządzenie lokalne
+- iPLCPort: numer Runtime, na którym zapisujemy dane. Runtime 1 to Port 851, Runtime 2 to 852 itd.
+- iUPSPort: port do odczytu stanu UPS. Zwykle pozostawia się pusty, by przyjął wartość domyślną.
+- tTimeout: domyślny Timeout, po którego przekroczeniu blok zgłosi błąd
+- eUpsMode: tryb działania bloku UPS (z/bez zapisu danych Persistent, z/bez szybkiego zamknięcia systemu), więcej informacji [tutaj](https://infosys.beckhoff.com/english.php?content=../content/1033/tcplclib_tc2_sups/30505867.html)
+- ePersistentMode: tryb zapisu zmiennych Persistent, dokładny opis dostępny [tutaj](https://infosys.beckhoff.com/english.php?content=../content/1033/tcplclib_tc2_utilities/35342347.html)
+- tRecoverTime: czas, po którym blok powróci do stanu pierwotnego w przypadku wybrania opcji bez zamknięcia systemu operacyjnego – czyli gdy zasilanie wróci szybciej niż rozładuje się kondensator
+- bPowerFailDetect: TRUE gdy blok wykryje brak zasilania i sterownik przechodzi na zasilanie z wbudowanego kondensatora
+- eState: aktualny stan bloku, dokładny opis znajduje się [tutaj](https://infosys.beckhoff.com/english.php?content=../content/1033/tcplclib_tc2_sups/30507403.html)
 
 ### FB_S_UPS_BAPI
 Jest to najbardziej zaawansowany blok funkcyjny przeznaczony do obsługi urządzeń wyposażonych w funkcjonalność 1-second UPS. Są to urządzenia posiadające BIOS-API w wersji 1.15 lub wyższej, a więc urządzenia takie jak:
