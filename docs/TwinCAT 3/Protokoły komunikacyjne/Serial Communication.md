@@ -192,6 +192,6 @@ Bufor ten jest współdzielony przez bloki funkcyjne ReceiveString (lub ReceiveD
 Przykładową aplikację możesz pobrać tutaj:
 <br>
 <br>
-[Download SerialComm Sample](link){: .btn .btn-red }
+[Download SerialComm Sample](https://github.com/BA-PL/TF6340-Serial-Comm-TC3/archive/refs/heads/main.zip){: .btn .btn-red }
 
 
