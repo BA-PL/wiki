@@ -28,7 +28,7 @@ Czas wykonywania tasku (oraz dodatkowe informacje) można sprawdzić także z po
 Blok możesz pobrać tutaj:
 <br>
 <br>
-[Download](https://github.com/BA-PL/Diag/archive/refs/heads/main.zip){: .btn .btn-red }
+[Download](https://github.com/BA-PL/Diag-PLC-TC3/archive/refs/heads/main.zip){: .btn .btn-red }
 <br>
 
  Blok ten należy wywołać **w każdym tasku który chcemy monitorować**. Po wywołaniu bloku w zakładce online można sprawdzić informacje o tasku takie jak np.
