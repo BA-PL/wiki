@@ -140,7 +140,7 @@ Następnie uruchom nagrywanie z górnego przybornika (w tym samym przyborniku mo
 
 ## Sprawdź błędy za pomocą funkcji Checks
 
-Dokładny opis użycia funkcji Checks znajdziesz [tutaj.]()
+Dokładny opis użycia funkcji Checks znajdziesz [tutaj.](https://ba-pl.github.io/wiki/docs/TwinCAT%203/Projekt%20TwinCAT/Debugowanie/Checks/)
 <br>
 Po użyciu i ostatecznym wgraniu projektu na sterownik, usuń z niego funkcje Checks.
 
