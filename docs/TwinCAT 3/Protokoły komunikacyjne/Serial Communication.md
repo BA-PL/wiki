@@ -30,20 +30,20 @@ Spis użytych urządzeń:
 Potrzebne nam będzie oprogramowanie TwinCAT 3 oraz biblioteka TF6340 Serial Communication
 Bibliotekę dodajemy w zakładce References, klikając PPM i wybierając Add library:
 
-![sm1](https://ba-pl.github.io/wiki/assets/images/sm1.png "sm1")
+![sm1](https://ba-pl.github.io/wiki/assets/images/SerialComm/sm1.png "sm1")
 
 a następnie wybierając (poprzez dwukrotne kliknięcie LPM) z listy żądaną bibliotekę (w tym przypadku jest to biblioteka Tc2_SerialCom):
 
-![sm2](https://ba-pl.github.io/wiki/assets/images/sm2.png "sm2")
+![sm2](https://ba-pl.github.io/wiki/assets/images/SerialComm/sm2.png "sm2")
 # Program PLC
 ## SerialLineControl
 Ten blok funkcyjny jest częścią wspólną każdej aplikacji. SerialLineControl służy przesyłaniu danych z programu PLC do fizycznego buforu portu COM. Dzięki takiemu podejściu bloki wysyłania i odbierania danych są takie same, niezależnie od tego jaki rodzaj portu COM jest fizycznie używany. Rodzaj portu określa zmienna Mode typu ComSerialLineMode_t. Najczęściej wybierane są wartości SERIALLINEMODE_KL6_22B_STANDARD (dla modułów w trybie 22B) lub SERIALLINEMODE_PC_COM_PORT (dla portów COM).
 
-![sm3](https://ba-pl.github.io/wiki/assets/images/sm3.png "sm3")
+![sm3](https://ba-pl.github.io/wiki/assets/images/SerialComm/sm3.png "sm3")
 
 Po wybraniu odpowiedniego typu portu, trzeba podłączyć zmienne zlinkowane z wejściami i wyjściami portu COM. Zmienne te podpinamy pod 3 wejścia: pComIn, pComOut, SizeComIn. pComIn i pComOut to pointery wskazujące na adres w pamięci, SizeComIn pokazuje jaki jest rozmiar tej zmiennej. Takie rozwiązanie pozwala na wykorzystanie jednego, uniwersalnego bloku funkcyjnego do zmiennych różnych rozmiarów. Zaletą takiego podejścia jest elastyczność. Jeśli w przyszłości będziemy chcieli wykorzystać nasz kod w innej aplikacji, w której jest port COM innego typu, to zmiany ograniczają się do minimum. Przykład przejścia z różnic między trybem 22B a PC COM:
 
-![sm4](https://ba-pl.github.io/wiki/assets/images/sm4.png "sm4")
+![sm4](https://ba-pl.github.io/wiki/assets/images/SerialComm/sm4.png "sm4")
 
 Zmienne RxBuffer i TxBuffer (obie typu ComBuffer) są to bufory danych, łączone z blokami funkcyjnymi komend wysyłania i odbierania.
 Dodatkowe informacje o tym bloku znajdują się w dalszej części dokumentacji.
@@ -56,7 +56,7 @@ Komunikację za pomocą zmiennych typu STRING wykorzystuje się np. do komunikac
 <br>
 Komunikację za pomocą dowolnego typu danych wykorzystuje się najczęściej do stworzenia komunikacji z falownikiem czy stacją pogodową, gdzie producent opisuje poszczególne bajty ramki komunikacyjnej pytania i odpowiedzi, np.:
 
-![sm5](https://ba-pl.github.io/wiki/assets/images/sm5.png "sm5")
+![sm5](https://ba-pl.github.io/wiki/assets/images/SerialComm/sm5.png "sm5")
 
 ## Strona Master 
 
@@ -100,31 +100,31 @@ CASE iSate OF:
 
 Konfiguracja wbudowanego portu COM odbywa się ręcznie. W pierwszej kolejności dodajemy port COM. Robimy to klikając w drzewku projektu, prawym przyciskiem myszy, na zakładce I/O->Devices i wybieramy Add New Item:
 
-![sm6](https://ba-pl.github.io/wiki/assets/images/sm6.png "sm6")
+![sm6](https://ba-pl.github.io/wiki/assets/images/SerialComm/sm6.png "sm6")
 
 Następnie z listy, która się pojawi, rozwijamy zakładkę Miscellaneous i wybieramy Serial Communication Port.
 
-![sm7](https://ba-pl.github.io/wiki/assets/images/sm7.png "sm7")
+![sm7](https://ba-pl.github.io/wiki/assets/images/SerialComm/sm7.png "sm7")
 
 Następnie wybieramy z drzewka projektu dodany w ten sposób port COM i przeprowadzamy jego konfigurację. W zakładce Serial Port wybieramy, który fizyczny port chcemy używać:
 
-![sm8](https://ba-pl.github.io/wiki/assets/images/sm8.png "sm8")
+![sm8](https://ba-pl.github.io/wiki/assets/images/SerialComm/sm8.png "sm8")
 
 W zakładce Communication Properties ustawiamy parametry transmisji. Ważne jest zaznaczenia pola KL6xx Mode i ustawienie parametreów transmisji – w obu urządzeniach muszą być takie same:
 
-![sm9](https://ba-pl.github.io/wiki/assets/images/sm9.png "sm9")
+![sm9](https://ba-pl.github.io/wiki/assets/images/SerialComm/sm9.png "sm9")
 
 ## Moduł magistrali K-Bus
 W przypadku komunikacji z wykorzystaniem modułu komunikacji szeregowej magistrali K-Bus (w przykładzie jest to moduł KL6021) najpierw należy wyszukać moduł na magistrali.
 
-![sm10](https://ba-pl.github.io/wiki/assets/images/sm10.png "sm10")
+![sm10](https://ba-pl.github.io/wiki/assets/images/SerialComm/sm10.png "sm10")
 
 Następnie najłatwiej parametryzację wykonać w programie KS2000 (jedna zakładka konfiguruje moduł, druga parametry transmisji):
 
-![sm11](https://ba-pl.github.io/wiki/assets/images/sm11.png "sm11")
+![sm11](https://ba-pl.github.io/wiki/assets/images/SerialComm/sm11.png "sm11")
 
 
-![sm12](https://ba-pl.github.io/wiki/assets/images/sm12.png "sm12")
+![sm12](https://ba-pl.github.io/wiki/assets/images/SerialComm/sm12.png "sm12")
 
 Informacje na temat programu KS2000 można znaleźć w dokumentacji pod adresem https://infosys.beckhoff.com/content/1033/kl304x_kl305x/1142398859.html
 <br>
@@ -133,28 +133,28 @@ Opcjonalnie moduł taki można konfigurować za pomocą bloku funkcyjnego KL6con
 ## Moduł magistrali E-Bus
 W przypadku komunikacji z wykorzystaniem modułu komunikacji szeregowej magistrali E-Bus (w przykładzie jest to moduł (EL6021) najpierw należy wyszukać moduł na magistrali za pomocą programu TwinCAT System Manager.
 
-![sm13](https://ba-pl.github.io/wiki/assets/images/sm13.png "sm13")
+![sm13](https://ba-pl.github.io/wiki/assets/images/SerialComm/sm13.png "sm13")
 
 Następnie konfigurujemy go na zakładce CoE – Online:
 
-![sm14](https://ba-pl.github.io/wiki/assets/images/sm14.png "sm14")
+![sm14](https://ba-pl.github.io/wiki/assets/images/SerialComm/sm14.png "sm14")
 
 Powyższe parametry są wpisywane do modułu. Można skonfigurować system w ten sposób, że będą wgrywane zawsze przy starcie TwinCATa. Wystarczy odpowiednie parametry dodać na zakładce Startup i aktywować konfigurację. Upraszcza to znacznie procedurę wymiany modułu w przyszłości.
 # Linkowanie zmiennych 
 W przypadku każdego z czterech omówionych programów (dwa rodzaje master’a i dwa rodzaje slave’a) konieczne jest zlinkowanie zmiennych w konfiguracji sterownika. Robimy to w ten sam sposób dla każdego programu. W drzewku projektu wybieramy port szeregowy, który wcześniej skonfigurowaliśmy. Następnie klikamy zakładkę Inputs i zaznaczamy wszystkie zmienne (w przypadku portu PC COM oprócz ExtVoltageOk):
 
-![sm15](https://ba-pl.github.io/wiki/assets/images/sm15.png "sm15")
+![sm15](https://ba-pl.github.io/wiki/assets/images/SerialComm/sm15.png "sm15")
 
 Następnie, klikamy zaznaczenie prawym przyciskiem myszy i wybieramy opcję Change Multilink. W oknie, które się pojawi będziemy mieli do wyboru zmienną odpowiedniego typu:
 
-![sm16](https://ba-pl.github.io/wiki/assets/images/sm16.png "sm16")
+![sm16](https://ba-pl.github.io/wiki/assets/images/SerialComm/sm16.png "sm16")
 
 Podobnie robimy w przypadku danych wyjściowych. Klikamy zakładkę Outputs, tym razem zaznaczamy jednak wszystkie zmienne. Po kliknięciu Change Multilink pojawi się możliwość zlinkowania zmiennej. Na koniec trzeba aktywować konfigurację.
 # Task 
 W przypadku modułów pracujących w trybie 5 i 22 bajtowym może być konieczne wywołanie bloku
 SerialLineControl w szybszym tasku. Jest to wyjaśnione na przykładzie, przedstawionym na poniższym rysunku.
 
-![sm17](https://ba-pl.github.io/wiki/assets/images/sm17.png "sm17")
+![sm17](https://ba-pl.github.io/wiki/assets/images/SerialComm/sm17.png "sm17")
 
 Załóżmy taką sytuację:
 <br>
@@ -170,6 +170,7 @@ tyle danych jest przesyłanych w jednym cyklu.
 <br>
 5. W jednym cyklu między modułem a programem PLC może być wymienionych 22 B danych – wynika to
 z proces image modułu.
+
 <br>
 <br>
 Prześledźmy proces odczytu danych. Wewnątrz modułu jest bufor odczytu do którego trafiają dane z

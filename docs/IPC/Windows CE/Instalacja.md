@@ -67,14 +67,13 @@ Plik możemy skopiować na sterownik na kilka sposobów:
 
 ## Dostęp do folderu udostępnionego w sterowniku (SMB - Server Message Block)
 
-**Uwaga!** 
 <br>
 <div class="code-example" markdown="1" style="background: rgba(210, 243, 242, 0.8)">
 
 INFO
 {: .label .label-purple }
 
-W systemie Windows 7 i Windows 8.1/10 należy zmienić zabezpieczenia sieci – patrz [Dodatek I.](https://ba-pl.github.io/wiki/docs/IPC/Windows%20CE/Instalacja/#dodatek-i---przystosowanie-windows-7810-do-korzystania-z-folderu-public)
+**Uwaga!** W systemie Windows 7 i Windows 8.1/10 należy zmienić zabezpieczenia sieci – patrz [Dodatek I.](https://ba-pl.github.io/wiki/docs/IPC/Windows%20CE/Instalacja/#dodatek-i---przystosowanie-windows-7810-do-korzystania-z-folderu-public)
  
 </div>
 
