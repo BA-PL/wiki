@@ -29,7 +29,7 @@ procesu (subscribe mode) lub zadawanie parametrów (publish mode) bez konieczno�
 pobliżu sterownika czy komputera, z którego sterownik był programowany. W przykładzie przedstawiona zostanie
 komunikacja dla dwóch pokojów, z czego jeden będzie zabezpieczony nazwą użytkownika i hasłem, a drugi nie.
 
-![iot_comm1](https://ba-pl.github.io/wiki/assets/images/iot_comm1.png "iot_comm1")
+![iot_comm1](https://ba-pl.github.io/wiki/assets/images/IoT/iot_comm1.png "iot_comm1")
 
 # Przygotowanie sterownika oraz program PLC
 ## Uruchomienie brokera MQTT
@@ -48,13 +48,13 @@ nazwie **mosquitto.conf**. Potrzebne parametry:
 oznacza dostęp z dowolnego adresu)
 - allow_anonymous true – zezwalamy na połączenia z innych urządzeń
 
-![iot_comm2](https://ba-pl.github.io/wiki/assets/images/iot_comm2.png "iot_comm2")
+![iot_comm2](https://ba-pl.github.io/wiki/assets/images/IoT/iot_comm2.png "iot_comm2")
 
 Aby załadować nową konfigurację, należy zapisać edytowany plik oraz w linii poleceń cmd uruchomić broker:
 <br>
 **mosquitto -v -c mosquitto.config**
 
-![iot_comm3](https://ba-pl.github.io/wiki/assets/images/iot_comm3.png "iot_comm3")
+![iot_comm3](https://ba-pl.github.io/wiki/assets/images/IoT/iot_comm3.png "iot_comm3")
 
 Należy pamiętać, aby broker był cały czas uruchomiony podczas komunikacji!
 <br>
@@ -75,7 +75,7 @@ Należy uruchomić środowisko TwinCAT XAE, a następnie dołączyć do programu
 Tc3_IotCommunicator oraz Tc3_Module. W następnej kolejności należy utworzyć strukturę danych, która
 przesyłana będzie przy pomocy protokołu MQTT, np. jak poniżej:
 
-![iot_comm4](https://ba-pl.github.io/wiki/assets/images/iot_comm4.png "iot_comm4")
+![iot_comm4](https://ba-pl.github.io/wiki/assets/images/IoT/iot_comm4.png "iot_comm4")
 
 Atrybut iot.DisplayName odpowiada za wyświetlanie nazwy zmiennej w urządzeniu klienta, atrybut ReadOnly
 pozwala na ustawienie braku możliwości zmiany wartości zmiennej, atrybut Unit określa jednostkę w jakiej
@@ -116,11 +116,11 @@ Oraz metody:
 W celu zapewnienia podstawowej komunikacji (bez zabezpieczenia przy pomocy podawania nazwy
 użytkownika i hasła), konfiguracja wygląda jak na obrazku poniżej (deklarujemy tylko 4 zmienne wejściowe):
 
-![iot_comm5](https://ba-pl.github.io/wiki/assets/images/iot_comm5.png "iot_comm5")
+![iot_comm5](https://ba-pl.github.io/wiki/assets/images/IoT/iot_comm5.png "iot_comm5")
 
 W aplikacji mobilnej w zakładce Settings odznaczamy opcję „Authentication”:
 
-![iot_comm6](https://ba-pl.github.io/wiki/assets/images/iot_comm6.png "iot_comm6")
+![iot_comm6](https://ba-pl.github.io/wiki/assets/images/IoT/iot_comm6.png "iot_comm6")
 
 Należy pamiętać, że broker MQTT również powinien być uruchomiony bez opcji zakładającej nazwę
 użytkownika i hasło dla komunikacji.
@@ -132,12 +132,12 @@ zmiennymi zadeklarowanymi w przykładzie powyżej należy zadeklarować równie�
 sPassword, jak na przykładzie poniżej (muszą być one zgodne z użytkownikiem i hasłem skonfigurowanymi dla
 brokera):
 
-![iot_comm7](https://ba-pl.github.io/wiki/assets/images/iot_comm7.png "iot_comm7")
+![iot_comm7](https://ba-pl.github.io/wiki/assets/images/IoT/iot_comm7.png "iot_comm7")
 
 W aplikacji mobilnej należy zaznaczyć opcję „Authentication”, a następnie wpisać nazwę użytkownika i hasło w
 oknie, które się pojawi:
 
-![iot_comm8](https://ba-pl.github.io/wiki/assets/images/iot_comm8.png "iot_comm8")
+![iot_comm8](https://ba-pl.github.io/wiki/assets/images/IoT/iot_comm8.png "iot_comm8")
 
 Należy pamiętać, że broker MQTT również powinien być uruchomiony z opcją zakładającą nazwę użytkownika
 i hasło dla komunikacji.
@@ -147,18 +147,18 @@ i hasło dla komunikacji.
 W celu zapewnienia cyklicznej komunikacji klienta z brokerem należy co cykl wywoływać metodę Execute dla
 funkcji FB_IotCommunicator:
 
-![iot_comm9](https://ba-pl.github.io/wiki/assets/images/iot_comm9.png "iot_comm9")
+![iot_comm9](https://ba-pl.github.io/wiki/assets/images/IoT/iot_comm9.png "iot_comm9")
 
 Przesyłanie danych realizowane będzie co 500 ms przy pomocy timera TON, w przypadku gdy wyjście
 bConnected bloku będzie w stanie TRUE (komunikacja będzie poprawna):
 
-![iot_comm10](https://ba-pl.github.io/wiki/assets/images/iot_comm10.png "iot_comm10")
+![iot_comm10](https://ba-pl.github.io/wiki/assets/images/IoT/iot_comm10.png "iot_comm10")
 
 Powyższy fragment kodu służy do odczytu informacji z programu PLC np. za pomocą urządzenia mobilnego. Aby
 możliwe było nadpisywanie wartości zmiennych z poziomu urządzenia klienta należy zaimplementować fragment
 kodu jak poniżej:
 
-![iot_comm11](https://ba-pl.github.io/wiki/assets/images/iot_comm11.png "iot_comm11")
+![iot_comm11](https://ba-pl.github.io/wiki/assets/images/IoT/iot_comm11.png "iot_comm11")
 
 Kod ten pozwala na nadpisanie wartości zmiennej w przypadku gdy dostępna jest możliwość wysłania nowej
 komendy do brokera (fbIoT.fbCommand.bAvailable). 
@@ -173,7 +173,7 @@ zadeklarowane w programie PLC), w polu Topic nazwę tematu, a opcję Authenticat
 rodzaju komunikacji (opisane wcześniej). Pole Encryption pozwala na wybranie kodowania, o ile zostało
 zaimplementowane w brokerze.
 
-![iot_comm12](https://ba-pl.github.io/wiki/assets/images/iot_comm12.png "iot_comm12")
+![iot_comm12](https://ba-pl.github.io/wiki/assets/images/IoT/iot_comm12.png "iot_comm12")
 
 ## Uruchomienie aplikacji mobilnej 
 
@@ -186,7 +186,7 @@ obrazkach.
 W pierwszej kolejności uruchomiono komunikację niechronioną nazwą użytkownika i hasłem. Widok działającej
 aplikacji przedstawiono na obrazkach poniżej:
 
-![iot_comm13](https://ba-pl.github.io/wiki/assets/images/iot_comm13.png "iot_comm13")
+![iot_comm13](https://ba-pl.github.io/wiki/assets/images/IoT/iot_comm13.png "iot_comm13")
 
 Jak można zauważyć, oba pokoje są w trybie online, mimo że drugi z nich został zadeklarowany jako chroniony
 nazwą użytkownika i hasłem. Spowodowane jest to uruchomieniem brokera bez opcji logowania użytkowników.
@@ -196,7 +196,7 @@ nazwą użytkownika i hasłem. Spowodowane jest to uruchomieniem brokera bez opc
 Następnie uruchomiono komunikację wymagającą zalogowania się przy pomocy nazwy użytkownika i hasła.
 Konfiguracja i widok działającej aplikacji przedstawiono na obrazkach poniżej:
 
-![iot_comm14](https://ba-pl.github.io/wiki/assets/images/iot_comm14.png "iot_comm14")
+![iot_comm14](https://ba-pl.github.io/wiki/assets/images/IoT/iot_comm14.png "iot_comm14")
 
 Jak można zauważyć, w zakładce Devices widoczny jest tylko Room 2. Spowodowane jest to uruchomieniem
 brokera z opcją logowania użytkowników, a niezaimplementowaniem tej opcji przy deklaracji bloku funkcyjnego do
@@ -209,14 +209,14 @@ komunikacji dla pokoju 1.
 Opcja nadpisywania wartości dostępna jest po kliknięciu na daną wartość, a następnie pojawi się możliwość
 wpisania żądanej wartości.
 
-![iot_comm15](https://ba-pl.github.io/wiki/assets/images/iot_comm15.png "iot_comm15")
+![iot_comm15](https://ba-pl.github.io/wiki/assets/images/IoT/iot_comm15.png "iot_comm15")
 
 ### Toggle booleans
 
 Opcja „Toggle booleans” pozwala na zmianę wartości zmiennej bool na przeciwną od razu po kliknięciu na nią.
 W przypadku odznaczenia opcji pojawia się okno wyboru wartości zmiennej.
 
-![iot_comm16](https://ba-pl.github.io/wiki/assets/images/iot_comm16.png "iot_comm16")
+![iot_comm16](https://ba-pl.github.io/wiki/assets/images/IoT/iot_comm16.png "iot_comm16")
 
 ### Live graph 
 
@@ -224,7 +224,7 @@ Opcja „Live graph” pozwala na monitorowanie wartości zmiennych na wykresie.
 kliknąć ikonę w prawym górnym rogu ekranu, a nastepnie wybrać zmienne które chcemy monitorować i w tym
 samym miejscu uruchomić rysowanie wykresu.
 
-![iot_comm17](https://ba-pl.github.io/wiki/assets/images/iot_comm17.png "iot_comm17")
+![iot_comm17](https://ba-pl.github.io/wiki/assets/images/IoT/iot_comm17.png "iot_comm17")
 
 # Przykładowa aplikacja
 

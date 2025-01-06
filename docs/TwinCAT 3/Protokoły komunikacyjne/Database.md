@@ -34,12 +34,12 @@ Po instalacji dodatku należy wygenerować licencję, na czas testów może być
 # Tryb Konfiguracji
 Tryb konfiguracji umożliwia zestawienie połączenia z serwerem bazy danych (może być to serwer lokalny), utworzenie tabel w bazie oraz wybranie zmiennych z programu PLC, które mogą być automatycznie logowane do bazy. Aby wykonać powyższe kroki, należy w środowisku TwinCAT dodać nowy projekt Empty TwinCAT Database Server Project.
 
-![db1](https://ba-pl.github.io/wiki/assets/images/db1.png "db1")
+![db1](https://ba-pl.github.io/wiki/assets/images/DataBase/db1.png "db1")
 
 ## Ustawienia serwera 
 W pierwszym oknie wskazujemy urządzenie, które jest serwerem bazy danych **(1)**, możemy również ustawić tryb i lokalizację zapisu logów **(2)** bazy (jest to rejestr błędów, który w przypadku problemów, pomoże nam namierzyć ich źródło).
 
-![db2](https://ba-pl.github.io/wiki/assets/images/db2.png "db2")
+![db2](https://ba-pl.github.io/wiki/assets/images/DataBase/db2.png "db2")
 
 Opcja Impersonate user **(3)** jest zaznaczana, jeżeli jest potrzeba, żeby zrealizować połączenie przez sieć z plikową bazą danych taką jak Access lub SQL Compact.
 Pozostałe ustawienia zmieniamy w razie potrzeby.
@@ -47,55 +47,55 @@ Pozostałe ustawienia zmieniamy w razie potrzeby.
 ## Dodawanie bazy 
 W celu dodania bazy należy kliknąć **PPM na TcDbServer** i wybrać **Add -> Add New Database (1)**. Pojawi się okno do wskazania rodzaju bazy danych **(2)**, z którą ma zachodzić komunikacja poprzez TwinCAT Database Server.
 
-![db3](https://ba-pl.github.io/wiki/assets/images/db3.png "db3")
+![db3](https://ba-pl.github.io/wiki/assets/images/DataBase/db3.png "db3")
 
 Z listy rozwijanej można wybrać jeden z obsługiwanych typów baz danych albo typ *ODBC*, gdzie jest możliwość ręcznego utworzenia *Connection String* do połączenia z bazami spoza listy (więcej informacji dostępne w dokumentacji), zgodnie ze standardem SQL.
 DBID nadawane jest automatycznie przy każdej dodanej bazie i umożliwia rozróżnienie w konfiguracji i programie PLC wielu baz w jednym projekcie.
 
-![db4](https://ba-pl.github.io/wiki/assets/images/db4.png "db4")
+![db4](https://ba-pl.github.io/wiki/assets/images/DataBase/db4.png "db4")
 
 W przykładzie wybrano bazę **SQLite (1)**. W polu **SQLite Database File (2)** należy podać ścieżkę do pliku bazy, o rozszerzeniu **.db** (plik nie musi na tym etapie istnieć). Opcjonalnie można podać hasło po zaznaczeniu opcji **Authentication**. Jeżeli baza ta jeszcze nie istnieje, można ją utworzyć klikając **Create (3)**. Wybierając **Check** można sprawdzić, czy połączenie z bazą działa. W tym przypadku, po kliknięciu przycisku **Check**, powinien pojawić się komunikat pokazany poniżej.
 
-![db5](https://ba-pl.github.io/wiki/assets/images/db5.png "db5")
+![db5](https://ba-pl.github.io/wiki/assets/images/DataBase/db5.png "db5")
 
 Na dole okna widać automatycznie wygenerowany **Connection String (4)** zawierający wykonane ustawienia.
 
 Po tak wykonanej konfiguracji, można dodatkowo wybrać w polu **FailoverDB** tak zwaną failover database, w której zachowane zostaną dane w razie napotkania błędu w trybie konfiguracyjnym. W razie rozłączenia z siecią, ta funkcja automatycznie zapewni, że dane nie przepadną i zostaną zapisane w innym miejscu.
 Na zakończenie tego etapu należy zapisać zmiany i aktywować konfigurację projektu bazy danych (1) **(nie mylić z aktywowaniem konfiguracji PLC)**. Spowoduje to przesłanie pliku z konfiguracją na urządzenie docelowe wybrane w Server Settings.
 
-![db6](https://ba-pl.github.io/wiki/assets/images/db6.png "db6")
+![db6](https://ba-pl.github.io/wiki/assets/images/DataBase/db6.png "db6")
 
 Operacja ta nie wywołuje żadnego okna popup, należy obserwować okno błędów oraz okno **Output (Ctrl+Alt+O)**. Jeśli aktywacja się powiodła, powinna pojawić się informacja jak poniżej:
 
-![db7](https://ba-pl.github.io/wiki/assets/images/db7.png "db7")
+![db7](https://ba-pl.github.io/wiki/assets/images/DataBase/db7.png "db7")
 
 ## SQL Query Editor
 
 Sql Query Editor służy do ręcznego tworzenia/usuwania tabel oraz wpisów. Aby otworzyć okno edytora należy w pierwszej kolejności uaktywnić Toolbar dodatku Database Server:
 
-![db8](https://ba-pl.github.io/wiki/assets/images/db8.png "db8")
+![db8](https://ba-pl.github.io/wiki/assets/images/DataBase/db8.png "db8")
 
 Z dodanego Toolbara należy wybrać ikonę **Sql Querry Editor.**
 
-![db9](https://ba-pl.github.io/wiki/assets/images/db9.png "db9")
+![db9](https://ba-pl.github.io/wiki/assets/images/DataBase/db9.png "db9")
 
 W oknie jak obok należy wybrać serwer bazy danych (1), w razie potrzeby odświeżyć listę dostępnych baz (2) i na danej bazie wybrać komendę **Create Table.**
 
-![db10](https://ba-pl.github.io/wiki/assets/images/db10.png "db10")
+![db10](https://ba-pl.github.io/wiki/assets/images/DataBase/db10.png "db10")
 
 W przykładzie wykorzystano standardową strukturę tabeli. Aby utworzyć taką tabelę należy na pustym polu kliknąć **PPM** i wybrać opcję **Set Standard Table Schema.**
 
-![db11](https://ba-pl.github.io/wiki/assets/images/db11.png "db11")
+![db11](https://ba-pl.github.io/wiki/assets/images/DataBase/db11.png "db11")
 
 Kolumny zawierają kolejno: auto inkrementujące się ID wiersza, będące kluczem głównym; stempel czasowy zawierający aktualną datę i godzinę; nazwę zmiennej; wartość zmiennej. Pozostawienie ich bez zmian pozwoli na wykorzystanie standardowej metody logowania tabeli.
 <br>
 W kolejnym kroku należy wpisać nazwę tabeli **(1)**, automatycznie wygenerować komendę SQL **(2)** i ją wykonać **(3)**.
 
-![db12](https://ba-pl.github.io/wiki/assets/images/db12.png "db12")
+![db12](https://ba-pl.github.io/wiki/assets/images/DataBase/db12.png "db12")
 
 Jeżeli operacja się powiodła, na dolnym pasku statusowym środowiska TwinCAT, powinna się pojawić informacja:
 
-![db13](https://ba-pl.github.io/wiki/assets/images/db13.png "db13")
+![db13](https://ba-pl.github.io/wiki/assets/images/DataBase/db13.png "db13")
 
 Aby ręcznie wykonać wpis do bazy (w celach testowych) należy:
 - kliknąć na utworzoną wcześniej tabelę PPM i wybrać Insert **(1)**
@@ -104,31 +104,31 @@ Aby ręcznie wykonać wpis do bazy (w celach testowych) należy:
 - kliknąć komendę Create Query **(4)** (generowanie wyrażenia SQL)
 - wykonać komendę opcją FB_SQLCommandEvt.Execute **(5)**
 
-![db14](https://ba-pl.github.io/wiki/assets/images/db14.png "db14")
+![db14](https://ba-pl.github.io/wiki/assets/images/DataBase/db14.png "db14")
 
 Ponownie w oknie **Output** powinna pojawić się informacja:
 
-![db15](https://ba-pl.github.io/wiki/assets/images/db15.png "db15")
+![db15](https://ba-pl.github.io/wiki/assets/images/DataBase/db15.png "db15")
 
 Aby odczytać wszystkie wartości znajdujące się w tabeli należy:
 - kliknąć **PPM** na tabelę i wybierać opcję **Select (1)**
 - wybrać kolejno opcje **Get Table Schema (2)** oraz **Create Query (3)** (utworzy się zapytanie do bazy o wszystkie dane z tabeli)
 - wykonać komendę opcją **FB_SQLCommandEvt.ExecuteDataReturn (4)**
 
-![db16](https://ba-pl.github.io/wiki/assets/images/db16.png "db16")
+![db16](https://ba-pl.github.io/wiki/assets/images/DataBase/db16.png "db16")
 
 Aby wczytać tylko część wyników należałoby wykorzystać komendę WHERE zgodnie ze standardem języka SQL. Można również ręcznie wpisać całą komendę SQL, której wyniki wpisane zostaną do tabeli w dolnej części okna, trzeba jednak zadbać o zgodność typów zmiennych. Informacje o równoważnych typach zmiennych znajdują się pod linkiem: [Typy danych](https://infosys.beckhoff.com/english.php?content=../content/1033/tf6420_tc3_database_server/27021597872201739.html)
 
 Ostatnia opcja - **Drop/Delete** - służy do usuwania wszystkich wpisów z tabeli **(Delete Datasets )** lub całej tabeli **(Drop Table)**. Aby usunąć tylko wybrane elementy należy ręcznie wpisać komendy zgodnie ze standardem języka SQL.
 
-![db17](https://ba-pl.github.io/wiki/assets/images/db17.png "db17")
+![db17](https://ba-pl.github.io/wiki/assets/images/DataBase/db17.png "db17")
 
 ## AutoLog Group 
 Docelowym krokiem trybu konfiguracyjnego jest dodanie i skonfigurowanie grupy autologowania. Grupa pozwala na automatyczne przekazywanie zmiennych z PLC do bazy albo na odwrót. Do jednej bazy danych może być dołączonych wiele różnych grup autologowania jednocześnie.
 
 Aby rozpocząć pracę z grupami należy dodać je na wybranej bazie, klikając **PPM** i wybierając opcję **Add New AutlogGroup**:
 
-![db18](https://ba-pl.github.io/wiki/assets/images/db18.png "db18")
+![db18](https://ba-pl.github.io/wiki/assets/images/DataBase/db18.png "db18")
 
 Pierwsze okno, które się pojawi, to główne ustawienia trybu logowania:
 - **Start Up** – wybranie opcji *Automatic* spowoduje uruchamianie logowania grupy razem ze startem TwinCATA, opcja *Manual* wymaga sterownia grupą z poziomu kodu PLC
@@ -140,34 +140,34 @@ Pierwsze okno, które się pojawi, to główne ustawienia trybu logowania:
 	- RINGBUFFER_COUNT – określa maksymalną ilość rekordów, po jej przekroczeniu kolejne rekordy będą usuwane, zaczynając od najstarszego. Ilość rekordów jest określana w polu *Ringbuffer Parameter*
 - **Log Mode** – dane mogę być logowane w momencie zmiany wartości zmiennej (onChange) lub co określony w milisekundach w parametrze *Cyclic Time* czasu (opcja Cyclic)
 
-![db19](https://ba-pl.github.io/wiki/assets/images/db19.png "db19")
+![db19](https://ba-pl.github.io/wiki/assets/images/DataBase/db19.png "db19")
 
 W opisywanym przykładzie konfiguracja wygląda jak na zdjęciu powyżej (Start Up → Manual, Write Mode → Append).
 
 ### AdsDevice
 W oknie AdsDevice, w polach **AMS NetID i ADS Device**, należy wybrać urządzenie, z którego pobierane będą zmienne. Zmieniając typ połączenia można zdecydować, czy zmienne mają być odszukiwane po adresie w pamięci **(Connection Type → byIGroupIOffset)** czy po nazwie **(Connection Type → bySymbolName)**. Ma to znaczenie w przypadku ręcznego dodawania symbolów zmiennych. Przy odszukiwaniu po adresie w trakcie deklarowania kolejnych zmiennych adresy mogą się zmieniać, co może potem powodować nieprzewidziane skutki. Przy odszukiwaniu po nazwie ten problem nie występuje.
 
-![db20](https://ba-pl.github.io/wiki/assets/images/db20.png "db20")
+![db20](https://ba-pl.github.io/wiki/assets/images/DataBase/db20.png "db20")
 
 ### Symbols
 Zakładka **Symbols** służy do skonfigurowania zmiennych, które mają być logowane do bazy. Można w tym celu skorzystać z narzędzia **Target Browser**. Program na sterowniku, z którego będą pobierane zmienne musi być uruchomiony.
 
-![db21](https://ba-pl.github.io/wiki/assets/images/db21.png "db21")
+![db21](https://ba-pl.github.io/wiki/assets/images/DataBase/db21.png "db21")
 
 Wybrane zmienne należy z okna **Target Browser** umieścić w zakładce **Symbols** metodą drag’n’drop.
 
-![db22](https://ba-pl.github.io/wiki/assets/images/db22.png "db22")
+![db22](https://ba-pl.github.io/wiki/assets/images/DataBase/db22.png "db22")
 
 ### DBTable
 Ostatnim krokiem jest dodanie standardowej tabeli w zakładce **DBTable**. Do tej tabeli wpisywane będą zmienne. W wersji **STANDARD** każda zmienna zostanie przekazana osobno. Można również wybrać tryb **CUSTOM**, który pozwoli na ręczne dopasowanie nazwy, typu i zawartości każdej kolumny, jednak trzeba pamiętać, aby były one zgodne z istniejącą tabelą.
 W przykładzie wybrano **TableMode → Standard i Table → (Nazwa utworzonej wcześniej tabeli)**.
 
-![db23](https://ba-pl.github.io/wiki/assets/images/db23.png "db23")
+![db23](https://ba-pl.github.io/wiki/assets/images/DataBase/db23.png "db23")
 
 ### Uruchomienie
 **Uwaga!** Po zakończeniu konfiguracji należy zapisać wszystkie zmiany wybierając **Save All**, niezapisane zmiany nie zostaną wprowadzone. Następnie należy aktywować konfigurację projektu bazy danych.
 
-![db24](https://ba-pl.github.io/wiki/assets/images/db24.png "db24")
+![db24](https://ba-pl.github.io/wiki/assets/images/DataBase/db24.png "db24")
 
 Status serwera można sprawdzić obserwując kolor ikony w drzewie projektu.
 Dozwolone kolory to:
@@ -176,29 +176,29 @@ Dozwolone kolory to:
 - Niebieski – brak licencji Tc3_Database
 - Fioletowy – Grupa autologowania jest w trakcie pracy
 
-![db25](https://ba-pl.github.io/wiki/assets/images/db25.png "db25")
+![db25](https://ba-pl.github.io/wiki/assets/images/DataBase/db25.png "db25")
 
 Jeżeli aktywacja konfiguracji przebiegła pomyślnie, można uruchomić grupę autologowania. Należy w tym celu otworzyć okno **AutoLog Viewer** zieloną ikoną z Toolbara dodatku Database Server:
 
-![db26](https://ba-pl.github.io/wiki/assets/images/db26.png "db26")
+![db26](https://ba-pl.github.io/wiki/assets/images/DataBase/db26.png "db26")
 
 W opisywanym przykładzie zarządzanie grupą autologowania zostało ustawione na tryb Manualny. Pozwala to na ręcznie uruchamianie/zatrzymywanie grupy. W oknie **AutoLog Viewer** najpierw należy wybrać Serwer **(1)** a następnie uruchomić logowanie **(2)**. Ewentualne błędy pojawią się w kolumnach *HRESULT* i Error Type.
 
-![db27](https://ba-pl.github.io/wiki/assets/images/db27.png "db27")
+![db27](https://ba-pl.github.io/wiki/assets/images/DataBase/db27.png "db27")
 
 Jeśli kilka cykli zaloguje się poprawnie, grupę można zatrzymać. Aby odczytać dane wpisane do bazy, należy wykonać komendę **Select**, jak opisano to we wcześniejszej części instrukcji (w oknie **Sql Query Editor**).
 Przykład odczytanych danych:
 
-![db28](https://ba-pl.github.io/wiki/assets/images/db28.png "db28")
+![db28](https://ba-pl.github.io/wiki/assets/images/DataBase/db28.png "db28")
 
 Jeśli grupa autologowania działa poprawnie, można zmienić tryb jej uruchamiania na AutoStart i aktywować konfigurację projektu baz danych. Od tej pory skonfigurowane zmienne będą logować się do bazy automatycznie, razem z uruchomieniem się Run-Time’u TwinCATa.
 
-![db29](https://ba-pl.github.io/wiki/assets/images/db29.png "db29")
+![db29](https://ba-pl.github.io/wiki/assets/images/DataBase/db29.png "db29")
 
 # Tryb Konfiguracji - przykład niestandardowej tabeli 
 W trybie konfiguracyjnym można skorzystać z opcji stworzenia własnej tabeli. W tym celu należy postępować jak w rozdziale 2.3, ale na etapie tworzenia tabeli, zamiast opcji *Set Standard Table Schema*, należy dodać odpowiednie pola opcją **Append Datafield**. W każdej tabeli niezbędny jest klucz główny, dlatego zaleca się dodanie ID w pierwszej kolumnie. Wybranie typu *BigInt* oraz własności *IDENTITY(1,1)* spowoduje, że ID będzie miało wartość początkową równą 1 i będzie inkrementowane automatycznie przez serwer. Stempel czasowy można uzyskać poprzez dodanie kolumny *Timestamp* typu *DateTime*. Analogicznie należy dodać kolejne kolumny.
 
-![db30](https://ba-pl.github.io/wiki/assets/images/db30.png "db30")
+![db30](https://ba-pl.github.io/wiki/assets/images/DataBase/db30.png "db30")
 
 ## Rzutowanie zmiennych 
 Okno **SQL Query Editor** pozwala na eksport utworzonej tabeli do struktury zmiennych dla programu PLC. Dzięki temu zyskujemy pewność, że przygotowane do logowania w programie PLC zmienne będą odpowiedniego typu. Aby wykonać eksport należy, po utworzeniu tabeli, należy:
@@ -206,23 +206,23 @@ Okno **SQL Query Editor** pozwala na eksport utworzonej tabeli do struktury zmie
 - wykonać komendę **Get Table Schema (2)**
 - wykonać eksport opcją **Export Tablestruct to TwinCAT3 DUT (3)**
 
-![db31](https://ba-pl.github.io/wiki/assets/images/db31.png "db31")
+![db31](https://ba-pl.github.io/wiki/assets/images/DataBase/db31.png "db31")
 
 Plik można zapisać w dowolnym miejscu na dysku komputera.
 
 Aby zaimportować strukturę do projektu PLC należy kliknąć **PPM** na folder **DUT** i wybrać opcję **Import PLCopenXML…** Po zaimportowaniu wcześniej wyeksportowanej struktury widać, że typy zmiennych SQL zostały zamienione na odpowiadające im typy zmiennych PLC.
 Następnie należy strukturę takiego typu zadeklarować w programie PLC oraz wgrać i uruchomić program.
 
-![db32](https://ba-pl.github.io/wiki/assets/images/db32.png "db32")
+![db32](https://ba-pl.github.io/wiki/assets/images/DataBase/db32.png "db32")
 
 ## Niestandardowa grupa autologowania
 Aby uruchomić niestandardową grupę autologowania należy skonfigurować zakładki **AutoLogGroup** oraz **AdsDevice** jak opisano w rozdziale 2.4. W zakładce **Symbols**, korzystając z okna **Target Browser**, należy umieścić zawartość opisanej wyżej struktury z programu PLC (program PLC musi być uruchomiony):
 
-![db33](https://ba-pl.github.io/wiki/assets/images/db33.png "db33")
+![db33](https://ba-pl.github.io/wiki/assets/images/DataBase/db33.png "db33")
 
 W zakładce **DBTable** w polu **TableMode** należy wybrać opcję **CUSTOM**, a w polu **Tables** wybrać odpowiednią tabelę. Następnie trzeba ręcznie wykonać powiązanie zmiennych:
 
-![db34](https://ba-pl.github.io/wiki/assets/images/db34.png "db34")
+![db34](https://ba-pl.github.io/wiki/assets/images/DataBase/db34.png "db34")
 
 Jeżeli grupa ma za zadanie zapisywać wartości do bazy to zmienne *ID* oraz *Timestamp* należy odpowiednio ustawić jako *<AutoID>* oraz *<Data Timestamps>*. Jeżeli jednak grupa będzie miała za zadanie odczytywanie zmiennych z bazy to *<AutoID>* oraz *<Data Timestamps>* należy zastąpić zmiennymi ze struktury, do których wpisywane będą odczytywane wartości.
 
@@ -245,29 +245,29 @@ Bloki te posiadają na wyjściu interfejs *ipTcResultEvent* zgodny z formułą *
 
 Uruchamiamy program **P_PLCExpert_AutoLog**. Jest to przykład wykorzystania trybu PLC Expert zrobiony według schematu:
 
-![db38](https://ba-pl.github.io/wiki/assets/images/db38.png "db38")
+![db38](https://ba-pl.github.io/wiki/assets/images/DataBase/db38.png "db38")
 
 Zmiana zmiennej **bRun** na TRUE spowoduje uruchomienie grupy autologowania.
 
-![db35](https://ba-pl.github.io/wiki/assets/images/db35.png "db35")
+![db35](https://ba-pl.github.io/wiki/assets/images/DataBase/db35.png "db35")
 
 W *Sql Query Editor* można zaobserwować pojawiające się rekordy.
 
-![db36](https://ba-pl.github.io/wiki/assets/images/db36.png "db36")
+![db36](https://ba-pl.github.io/wiki/assets/images/DataBase/db36.png "db36")
 
 Kiedy zbierzemy zadowalającą nas liczbę danych, możemy zmienić **bStop** na TRUE, żeby zatrzymać grupę autologowania.
 Możemy też zmienić okres co jaki aktualizowany jest status grupy za pomocą zmiennej **tAutoLogStatusCheckCycle**.
 Status można podejrzeć w zmiennej **ipTcResult**.
 
-![db37](https://ba-pl.github.io/wiki/assets/images/db37.png "db37")
+![db37](https://ba-pl.github.io/wiki/assets/images/DataBase/db37.png "db37")
 
 Włączamy drugi przykład **P_PLCExpert_Independent_FBs**, którego schemat wykonania widać poniżej:
 
-![db41](https://ba-pl.github.io/wiki/assets/images/db41.png "db41")
+![db41](https://ba-pl.github.io/wiki/assets/images/DataBase/db41.png "db41")
 
 Obsługa programu polega na modyfikowaniu podanych zmiennych.
 
-![db39](https://ba-pl.github.io/wiki/assets/images/db39.png "db39")
+![db39](https://ba-pl.github.io/wiki/assets/images/DataBase/db39.png "db39")
 
 Zmienne **hDBID** i **sDBID** odpowiadają za określenie, na której bazie danych i tabeli będą wykonywane operacje. Ustawiamy odpowiednio na **1 i TESTtable**. W razie tworzenia nowej tabeli będą to jej parametry, dlatego będzie trzeba zmienić nazwę.
 <br>
@@ -280,7 +280,7 @@ Operacje uruchamiamy zmieniając **ePLCDBState**. Dostępne opcje:
 - CreateTable – stworzenie nowej tabeli,
 - EventHandling – wykonywana automatycznie w razie błędu. Wybranie jej ręcznie umożliwia zaktualizowanie i podejrzenie informacji z Event Loggera. Informacje zapisywane są w poniższych zmiennych.
 
-![db40](https://ba-pl.github.io/wiki/assets/images/db40.png "db40")
+![db40](https://ba-pl.github.io/wiki/assets/images/DataBase/db40.png "db40")
 
 W *RunCMDCommand* wykonywaną komendę wybiera się za pomocą **eCommands**. Możliwe opcje:
 - InsertIntoTable – wpisuje dane do tabeli,
@@ -291,7 +291,7 @@ W *RunCMDCommand* wykonywaną komendę wybiera się za pomocą **eCommands**. Mo
 
 Reszta zmiennych to parametry, z których korzystają bloki funkcyjne wywoływane za pomocą ePLCDBState. Ich nastawy przedstawione zostały poniżej.
 
-![db42](https://ba-pl.github.io/wiki/assets/images/db42.png "db42")
+![db42](https://ba-pl.github.io/wiki/assets/images/DataBase/db42.png "db42")
 
 Wszelkie dane pobierane z tabeli są wpisywane do tablicy **arrData**.
 <br>
@@ -309,11 +309,11 @@ Uruchamiamy program **P_SQLExpert_NoDataRet**. Korzysta on z poniższych bloków
 - FB_SQLCommand.Execute() – wykonanie komendy,
 - FB_SQLDatabase.Disconnect() – rozłączenie z bazą danych.
 
-![db44](https://ba-pl.github.io/wiki/assets/images/db44.png "db44")
+![db44](https://ba-pl.github.io/wiki/assets/images/DataBase/db44.png "db44")
 
 Program obsługuje się za pomocą poniższych zmiennych:
 
-![db43](https://ba-pl.github.io/wiki/assets/images/db43.png "db43")
+![db43](https://ba-pl.github.io/wiki/assets/images/DataBase/db43.png "db43")
 
 Zmienna **hDBID** określa numer bazy danych, na której wykonamy przykład. **Ustawiamy na 1.**
 <br>
@@ -321,7 +321,7 @@ Zmienna **hDBID** określa numer bazy danych, na której wykonamy przykład. **U
 <br>
 Ustawienie **bInsert** na TRUE powoduje dodanie tabeli i rekordu takich jak poniżej.
 
-![db45](https://ba-pl.github.io/wiki/assets/images/db45.png "db45")
+![db45](https://ba-pl.github.io/wiki/assets/images/DataBase/db45.png "db45")
 
 ## Wysłanie komendy SQL z odczytem danych (SELECT)
 
@@ -333,18 +333,18 @@ Uruchamiamy program **P_SQLExpert_DataRet**. Realizuje on wykonanie komendy SQL 
 - FB_SQLResult.Release() – zwolnienie danych,
 - FB_SQLDatabase.Disconnect().
 
-![db48](https://ba-pl.github.io/wiki/assets/images/db48.png "db48")
+![db48](https://ba-pl.github.io/wiki/assets/images/DataBase/db48.png "db48")
 
 Obsługa programu zachodzi za pomocą modyfikacji poniższych zmiennych:
 
-![db46](https://ba-pl.github.io/wiki/assets/images/db46.png "db46")
+![db46](https://ba-pl.github.io/wiki/assets/images/DataBase/db46.png "db46")
 
 Zmienne **hDBID i sTableName** pełnią analogiczną funkcję jak w poprzednim przykładzie. **Ustawiamy odpowiednio na 1 i TESTtable1.**
 **udiStartIndex** i **udiRecordCount** określają początkowy indeks, od którego czytane będą dane i liczbę przeczytanych rekordów. Chcemy przeczytać rekord dodany w poprzednim przykładzie więc ustawiamy **udiStartIndex= 1 i udiRecordCount= 0.**
 Ustawiamy **bRead na TRUE**, żeby wystartować program.
 Wynik komendy SELECT zostanie zawarty w strukturze **stSelect.**
 
-![db47](https://ba-pl.github.io/wiki/assets/images/db47.png "db47")
+![db47](https://ba-pl.github.io/wiki/assets/images/DataBase/db47.png "db47")
 
 **Użycie procedury bez odczytu danych**
 <br>

@@ -28,11 +28,11 @@ Zmienne te zapisują się w momencie zadziałania któregoś z wcześniej wymien
 # Deklaracja zmiennych PERSISTENT
 Zmienne Persistent deklaruje się bezpośrednio poprzez umieszczenie ich na liście VAR PERSISTENT. Taka deklaracja jest dla TwinCAT znakiem, że zmienną należy traktować jako zmienną nieulotną. Zmienne Persistent mogą być deklarowane zarówno jako zmienne globalne, jak i zmienne lokalne, a więc poprawny jest zarówno zapis
 
-![pers1](https://ba-pl.github.io/wiki/assets/images/pers1.png "pers1")
+![pers1](https://ba-pl.github.io/wiki/assets/images/Persistent/pers1.png "pers1")
 
 jak ich
 
-![pers2](https://ba-pl.github.io/wiki/assets/images/pers2.png "pers2")
+![pers2](https://ba-pl.github.io/wiki/assets/images/Persistent/pers2.png "pers2")
 
 <div class="code-example" markdown="1" style="background: rgba(210, 243, 242, 0.8)">
 
@@ -53,7 +53,7 @@ W przypadku integracji sterownika z zewnętrznym UPS ograniczenie co do ilości 
 <br>
 Ilość zapisywanych zmiennych Persistent możemy kontrolować przez sprawdzanie wielkości plików Port_xxx.bootdata oraz Port_xxx.bootdata-old znajdujących się w lokalizacji **TwinCAT/3.1/Boot/Plc**
 
-![pers3](https://ba-pl.github.io/wiki/assets/images/pers3.png "pers3")
+![pers3](https://ba-pl.github.io/wiki/assets/images/Persistent/pers3.png "pers3")
 
 Plik \*.bootdata to aktualnie zapisany plik, który znika w momencie przejścia TwinCAT na urządzeniu w tryb Run, a tworzy się w momencie przejścia w tryb Config, natomiast plik \*.bootdata-old jest to poprzednio zapisany plik \*.bootdata. W momencie przejścia w tryb Run zawartość pliku \*.bootdata przepisywany jest do \*.bootdata-old.
 
@@ -86,7 +86,7 @@ Bloki służące do zapisu zmiennych Persistent dzielimy na dwie grupy: bloczki 
 ### Blok ogólny FB_WritePersistentData
 Jest to blok służący do zapisu zmiennych Persistent „na żądanie”, a więc w momencie wystąpienia zbocza narastającego na wejściu START.
 
-![pers4](https://ba-pl.github.io/wiki/assets/images/pers4.png "pers4")
+![pers4](https://ba-pl.github.io/wiki/assets/images/Persistent/pers4.png "pers4")
 
 - NETID: AMS Net ID urządzenia na którym będziemy zapisywać dane. W przypadku pozostawienia pustej nóżki domyślnie jako urządzenie docelowe wybierane jest urządzenie lokalne
 - PORT: numer Runtime, na którym zapisujemy dane. Runtime 1 to Port 851, Runtime 2 to 852 itd.
@@ -107,7 +107,7 @@ Jak zostało wspomniane wcześniej, informacje nt. 1-second UPS w danych sterown
 Jest to blok funkcyjny przeznaczony dla urządzeń, które posiadają płytę główną o oznaczeniu CB3011. Są to urządzenia takie jak CP26xx-0000 oraz CP6606-0020
 Blok funkcyjny wygląda następująco:
 
-![pers5](https://ba-pl.github.io/wiki/assets/images/pers5.png "pers5")
+![pers5](https://ba-pl.github.io/wiki/assets/images/Persistent/pers5.png "pers5")
 
 - sNetID: AMS Net ID urządzenia na którym będziemy zapisywać dane. W przypadku pozostawienia pustej nóżki domyślnie jako urządzenie docelowe wybierane jest urządzenie lokalne
 - iPLCPort: numer Runtime, na którym zapisujemy dane. Runtime 1 to Port 851, Runtime 2 to 852 itd.
@@ -122,7 +122,7 @@ Blok funkcyjny wygląda następująco:
 Jest to blok funkcyjny przeznaczony dla urządzeń CX81xx.
 Blok funkcyjny wygląda następująco:
 
-![pers6](https://ba-pl.github.io/wiki/assets/images/pers6.png "pers6")
+![pers6](https://ba-pl.github.io/wiki/assets/images/Persistent/pers6.png "pers6")
 
 - sNetID: AMS Net ID urządzenia na którym będziemy zapisywać dane. W przypadku pozostawienia pustej nóżki domyślnie jako urządzenie docelowe wybierane jest urządzenie lokalne
 - iPLCPort: numer Runtime, na którym zapisujemy dane. Runtime 1 to Port 851, Runtime 2 to 852 itd.
@@ -137,7 +137,7 @@ Blok funkcyjny wygląda następująco:
 Jest to blok funkcyjny przeznaczony dla urządzenia CX9020, do którego dokupiona została opcja 1-second UPS o oznaczeniu CX9020-U900.
 Blok funkcyjny wygląda następująco:
 
-![pers7](https://ba-pl.github.io/wiki/assets/images/pers7.png "pers7")
+![pers7](https://ba-pl.github.io/wiki/assets/images/Persistent/pers7.png "pers7")
 
 - sNetID: AMS Net ID urządzenia na którym będziemy zapisywać dane. W przypadku pozostawienia pustej nóżki domyślnie jako urządzenie docelowe wybierane jest urządzenie lokalne
 - iPLCPort: numer Runtime, na którym zapisujemy dane. Runtime 1 to Port 851, Runtime 2 to 852 itd.
@@ -152,7 +152,7 @@ Blok funkcyjny wygląda następująco:
 Jest to blok funkcyjny przeznaczony dla urządzeń CX50x0.
 Blok funkcyjny wygląda następująco:
 
-![pers8](https://ba-pl.github.io/wiki/assets/images/pers8.png "pers8")
+![pers8](https://ba-pl.github.io/wiki/assets/images/Persistent/pers8.png "pers8")
 
 - sNetID: AMS Net ID urządzenia na którym będziemy zapisywać dane. W przypadku pozostawienia pustej nóżki domyślnie jako urządzenie docelowe wybierane jest urządzenie lokalne
 - iPLCPort: numer Runtime, na którym zapisujemy dane. Runtime 1 to Port 851, Runtime 2 to 852 itd.
@@ -168,7 +168,7 @@ Blok funkcyjny wygląda następująco:
 Jest to blok funkcyjny przeznaczony dla urządzeń CX51x0.
 Blok funkcyjny wygląda następująco:
 
-![pers9](https://ba-pl.github.io/wiki/assets/images/pers9.png "pers9")
+![pers9](https://ba-pl.github.io/wiki/assets/images/Persistent/pers9.png "pers9")
 
 - sNetID: AMS Net ID urządzenia na którym będziemy zapisywać dane. W przypadku pozostawienia pustej nóżki domyślnie jako urządzenie docelowe wybierane jest urządzenie lokalne
 - iPLCPort: numer Runtime, na którym zapisujemy dane. Runtime 1 to Port 851, Runtime 2 to 852 itd.
@@ -186,7 +186,7 @@ Jest to najbardziej zaawansowany blok funkcyjny przeznaczony do obsługi urządz
 - C6017
 - C6027
 
-![pers10](https://ba-pl.github.io/wiki/assets/images/pers10.png "pers10")
+![pers10](https://ba-pl.github.io/wiki/assets/images/Persistent/pers10.png "pers10")
 
 - sNetID: AMS Net ID urządzenia na którym będziemy zapisywać dane. W przypadku pozostawienia pustej nóżki domyślnie jako urządzenie docelowe wybierane jest urządzenie lokalne
 - iPLCPort: numer Runtime, na którym zapisujemy dane. Runtime 1 to Port 851, Runtime 2 to 852 itd.
