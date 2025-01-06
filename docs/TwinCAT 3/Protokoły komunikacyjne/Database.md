@@ -25,7 +25,7 @@ Konfiguracji TwinCAT Database Server można więc dokonać w trzech trybach:
 Tryby można ze sobą mieszać.
 
 W wielu przypadkach, oprócz konfiguracji TwinCAT Database Server, wymagana jest instalacja systemu zarządzania wybraną bazą danych. W tej instrukcji skorzystano z SQLite, która jest plikową bazą danych i nie wymaga instalacji dodatkowego oprogramowania.
-Aby rozpocząć pracę z TwinCAT Database Server, konieczne jest zainstalowanie dodatku Tc3_DatabaseServer TF6420 na komputerze programisty oraz na komputerze, który będzie serwerem (jeśli nie będą to te same urządzenia). Dodatek TF6420 dostępny jest pod adresem: [TF6420](https://www.beckhoff.com/pl-pl/products/automation/twincat/tfxxxx-twincat-3-functions/tf6xxx-tc3-connectivity/tf6420.html)
+Aby rozpocząć pracę z TwinCAT Database Server, konieczne jest zainstalowanie dodatku Tc3_DatabaseServer TF6420 na komputerze programisty oraz na komputerze, który będzie serwerem (jeśli nie będą to te same urządzenia). Dodatek TF6420 dostępny jest pod adresem: [TF6420](https://www.beckhoff.com/pl-pl/products/automation/twincat/tfxxxx-twincat-3-functions/tf6xxx-connectivity/tf6420.html)
 
 Uwaga! Należy pamiętać o uruchamianiu instalatora Tc3_DatabaseServer jako administrator.
 
@@ -365,3 +365,10 @@ Wynik komendy SELECT zostanie zawarty w strukturze **stSelect.**
 - FB_SQLDatabase.Disconnect()
 
 \* procedurę tworzy się tylko raz, przesyłane zostają jedynie jej parametry
+
+# Przykładowe aplikacje
+
+Przykłady aplikacji możesz pobrać tutaj:
+<br>
+<br>
+[Download DataBase Samples](https://github.com/BA-PL/TF6420-Data-Base-TC3/archive/refs/heads/main.zip){: .btn .btn-red }
