@@ -190,7 +190,7 @@ Następnie odszukujemy opcje dotyczące **TwinCAT --> PLC Enviroment --> FBD, LD
 ![faq32](https://ba-pl.github.io/wiki/assets/images/faq/faq32.png "faq32")
 
 # Atrybuty 
-Atrybuty są to specjalne instrukcje w kodzie źródłowym aplikacji wpływające na proces kompilacji. Poniżej opisano najczęściej wykorzystywane atrybuty. Pełna lista dostępna jest na stronie infosys.beckhoff.com w zakładce** TwinCAT 3 --> TE1000 XAE --> PLC --> Reference Programming --> Pragmas --> Attribute pragmas.**
+Atrybuty są to specjalne instrukcje w kodzie źródłowym aplikacji wpływające na proces kompilacji. Poniżej opisano najczęściej wykorzystywane atrybuty. Pełna lista dostępna jest na stronie infosys.beckhoff.com w zakładce **TwinCAT 3 --> TE1000 XAE --> PLC --> Reference Programming --> Pragmas --> Attribute pragmas.**
 
 ## Atrybut TcContextName
 Atrybut TcContextName pozwala na przydzielenie konkretnych zmiennych do poszczególnych tasków w programach które posiadają więcej niż jeden task. W przykładzie mamy skonfigurowane dwa taski: PLCTask_1 oraz PLCTask_2. Tworzymy jedną listę zmiennych globalnych dla całego projektu i przypisujemy zmiennym z tej listy atrybuty, które przyporządkowują je do odpowiednich tasków.
