@@ -13,7 +13,6 @@ Pobierz DEMO TwinCAT **3**:
 [Download DEMO TC3](https://github.com/BA-PL/Demo-TC3/archive/refs/heads/main.zip){: .btn .btn-red }
 
 <br>
-<br>
 Pobierz DEMO TwinCAT **2**:
 <br>
 <br>
