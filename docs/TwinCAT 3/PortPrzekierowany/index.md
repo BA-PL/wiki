@@ -1,5 +1,5 @@
 ---
-title: Port przekierowany
+title: Przekierowanie portów 
 nav_order: 8
 layout: page
 parent: TwinCAT 3
@@ -16,9 +16,9 @@ parent: TwinCAT 3
 
 Niniejsza instrukcja opisuje sposób połączenia się ze sterownikiem poprzez port przekierowany. W pierwszym rozdziale podana jest przykładowa topologia sieci służącej do połączenia ze sterownikiem, dalej opisane są porty, które należy przekierować w celu uzyskania konkretnych funkcjonalności sterownika, a następnie opisany jest sposób przykładowej konfiguracji routera i połączenia się ze sterownikiem z Windows CE.
 
-# Przykłądowa topologia
+# Przykładowa topologia
 
-![port1](port1.png "port1")
+![port1x](port1x.png "port1x")
 
 # Porty wykorzystywane w Beckhoff
 
