@@ -196,3 +196,72 @@ Kompletna lista powiązań zmiennych dla tworzonego przykładu wygląda następu
 
 ![safety35](safety35.png "Safety35")
 
+## Wgrywanie programu do sterownika
+Przed wgraniem programu do modułu EL6910 należy go wcześniej zweryfikować odpowiednią opcją w menu TwinSAFE programu TwinCAT.
+
+![safety36](safety36.png "Safety36")
+
+Po prawidłowej weryfikacji projektu możemy przesłać go do sterownika wybierając z menu **Download Safety Project.**
+
+![safety37](safety37.png "Safety37")
+
+Następnie przechodzimy przez kolejne kroki procesu przesyłania. Domyślna nazwa użytkownika to „Administrator”, a hasło to „TwinSAFE”. Należy wpisać również numer seryjny sterownika widoczny w zakładce Target Browser modułu EL6910.
+
+![safety38](safety38.png "Safety38")
+
+![safety39](safety39.png "Safety39")
+
+![safety40](safety40.png "Safety40")
+
+![safety41](safety41.png "Safety41")
+
+Jako ostatni krok podajemy po raz kolejny hasło **TwinSAFE** 
+
+![safety42](safety42.png "Safety42")
+
+# Diagnostyka działania programu safety
+W celu podglądu stanu układu w trybie online z menu TwinSAFE programu TwinCAT wybrać należy opcję „Show Online Data”
+
+![safety43](safety43.png "Safety43")
+
+Do diagnostyki układu można użyć zakładki „Safety Project Online Data”. Znajdują się w niej dane diagnostyczne dotyczące pracy grupy oraz jej elementów.
+
+![safety44](safety44.png "Safety44")
+
+W przypadku braku okna Safety Project Online View otworzyć je można w zakładce TwinCAT View --> Other Windows --> Safety Project Online View.
+<br>
+Domyślny stan pracy układu bezpieczeństwa po wgraniu nowego programu to tryb Stop. W celu uruchomienia należy więc podać do układu sygnał RunStop.
+
+![safety45](safety45.png "Safety45")
+
+![safety46](safety46.png "Safety46")
+
+Po wysterowaniu wejścia RunStop sygnałem wysokim blok uruchamia się domyślnie w trybie braku bezpiecznego sygnału zezwalającego na pracę (niski logiczny sygnał wyjściowy).
+
+![safety47](safety47.png "Safety47")
+
+Opadająca rampa sygnału RestartFBs powoduje załączenie sygnału zezwalającego na pracę pod warunkiem otrzymania sygnału bezpiecznego z przycisku zatrzymania awaryjnego.
+
+![safety48](safety48.png "Safety48")
+
+Wciśnięcie przycisku zatrzymania awaryjnego powoduje zanik sygnału zezwalającego na pracę.
+
+![safety49](safety49.png "Safety49")
+
+W celu przywrócenia sygnału zezwalającego na pracę należy deaktywować przycisk zatrzymania awaryjnego i ponownie zresetować blok funkcyjny sygnałem RestartFBs.
+<br>
+W przypadku częściowego wciśnięcia przycisku E-Stop tak, aby styki zadziałały w sposób niejednoczesny układu wykrywa zasymulowaną awarię wejścia i przechodzi do trybu błędu. Sygnał zezwolenia na pracę przyjmuje wartość bezpieczną, a błąd sygnalizowany jest na podglądzie online i na liście błędów.
+
+![safety50](safety50.png "Safety50")
+
+![safety51](safety51.png "Safety51")
+
+Diagnostykę błędu najłatwiej jest przeprowadzić przy użyciu „Safety Project Online Data”.
+
+![safety52](safety52.png "Safety52")
+
+Błąd bloku funkcyjnego wskazuje w tym wypadku na przekroczenie czasu nadzoru synchronicznego działania styków przycisku.  Błąd „Discrepancy error not reseted for input group 1”  uniemożliwi potwierdzenie błędów i powrót do trybu pracy. Aby zresetować ten błąd wystarczy przejść przez cykl pracy przycisku, którego dotyczy błąd – układ nadzorujący to urządzenie wykryje powrót do prawidłowej pracy, a ten konkretny błąd zresetuje się w sposób automatyczny. Błąd „Discrepancy error input group 1” nadal pozostanie aktywny.
+
+![safety53](safety53.png "Safety53")
+
+Sygnał reset, ze względu na wykrycie usterki sprzętowej, nie jest w tym wypadku wystarczający do powrotu układu w tryb pracy – wymagane jest podanie sygnału potwierdzenia błędu „ErrAck” całej grupy bezpieczeństwa.
