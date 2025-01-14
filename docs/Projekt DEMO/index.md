@@ -1,6 +1,6 @@
 ---
 title: Projekt DEMO
-nav_order: 6
+nav_order: 7
 layout: page
 ---
 
