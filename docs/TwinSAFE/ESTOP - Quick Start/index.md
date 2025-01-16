@@ -172,6 +172,20 @@ W celu powiązania programu PLC z programem układu bezpieczeństwa należy w pi
 
 ![safety29](safety29.png "Safety29")
 
+```
+(*PLC Outputs*)
+bRunStop		AT%Q*	: BOOL;
+bErrorAck		AT%Q*	: BOOL;
+bRestartFBs	AT%Q*	: BOOL;
+
+(*PLC Inputs*)
+bFBError		AT%I*	: BOOL;
+bSafeError	AT%I*	: BOOL;
+bComError	AT%I*	: BOOL;
+bOtherError	AT%I*	: BOOL;
+bInRun		AT%I*	: BOOL;
+```
+
 W celu powiązania zmiennych globalnych z listy GVL utworzyć należy Aliasy.
 
 ![safety30](safety30.png "Safety30")

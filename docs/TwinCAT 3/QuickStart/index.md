@@ -232,6 +232,24 @@ Deklarujemy zmienne jak na zdjęciu poniżej:
 
 ![tc3q36](tc3q36.png "tc3q36")
 
+```
+bPrzycisk1	AT%I*	: BOOL;
+bPrzycisk2	AT%I*	: BOOL;
+bPrzycisk3	AT%I*	: BOOL;
+bPrzycisk4	AT%I*	: BOOL;
+
+bLampka1		AT%Q*	: BOOL;
+bLampka2		AT%Q*	: BOOL;
+bLampka3		AT%Q*	: BOOL;
+bLampka4		AT%Q*	: BOOL;
+
+iPotencjometr1	AT%I*	: INT;
+iPotencjometr2	AT%I*	: INT;
+
+iWyswietlacz1	AT%Q*	: INT;
+iWyswietlacz2	AT%Q*	: INT;
+```
+
 Aby wygenerowały się symbole do linkowania, należy wykonać kompilację projektu (opis w kolejnym rozdziale).
 <br>
 Kompilacja rozpocznie się po wybraniu z menu opcji **BUILD --> Rebuild** *nazwa projektu*:
