@@ -58,7 +58,7 @@ Aby załadować nową konfigurację, należy zapisać edytowany plik oraz w lini
 ![iot_comm3](https://ba-pl.github.io/wiki/assets/images/IoT/iot_comm3.png "iot_comm3")
 
 <br>
-Pełna dokumentacja pliku konfiguracyjnego dostępna na stronie [mosquitto](https://mosquitto.org/man/mosquitto-conf-5).
+Pełna dokumentacja pliku konfiguracyjnego dostępna na stronie [mosquitto](https://mosquitto.org/man/mosquitto-conf-5.html).
 
 ## Przygotowanie sterownika
 
