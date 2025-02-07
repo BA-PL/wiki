@@ -8,7 +8,7 @@ layout: page
 
 # Instalacja wersji 4026
 {: .no_toc }
-<h6> Data modyfikacji: 20.12.2024 </h6>
+<h6> Data modyfikacji: 07.02.2025 </h6>
 ## Table of Contents
 {: .no_toc .text-delta }
 
