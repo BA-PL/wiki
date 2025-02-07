@@ -185,6 +185,23 @@ Po wybraniu co chcemy zrobić po prawej stronie pojawi się podsumowanie z podzi
 <br>
 Aby zastosować zmiany klikamy przycisk Install/Upgrade/Uninstall na dole podsumowania.
 
+# Dodawanie Remote Manager do wersji 4024
+
+Jeśli posidasz zainstalowaną wersję 4026 a chcesz nadal korzystać z wersji 4024, należy wykonać dwa główne kroki:
+- dodać do instalacji poprzednią wersję XAE Shell 
+
+![26t34](https://ba-pl.github.io/wiki/assets/images/4026/26t34.png "26t34")
+
+![26t35](https://ba-pl.github.io/wiki/assets/images/4026/26t35.png "26t35")
+
+- doinstalować pakiet wybranej wersji Remote Managera
+
+![26t36](https://ba-pl.github.io/wiki/assets/images/4026/26t36.png "26t36")
+
+Po tych ustawieniach, można korzystać z wersji 4026 w TcXaeShell64 oraz z wersji 4024 w standardowym TcXaeShell:
+
+![26t37](https://ba-pl.github.io/wiki/assets/images/4026/26t37.png "26t37")
+
 # Odinstalowywanie TwinCAT
 Aby odinstalować TwinCAT należy najpierw odinstalować wszystkie zainstalowane pakiety, następnie odinstalować aplikację Beckhoff TwinCAT Package Manager z panelu sterowania:
 
