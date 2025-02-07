@@ -79,7 +79,7 @@ Niektóre narzędzia inżynierskie, takie jak na przykład narzędzie TE2000 Twi
 
 ![2411](https://ba-pl.github.io/wiki/assets/images/4024/2411.png "2411")
 
-## Remote Manager dla starszych wersji 
+# Remote Manager dla starszych wersji 
 
 Istnieje możliwość zainstalowania na komputerze programisty kilku wersji oprogramowania TwinCAT jak również doinstalowania starszych wersji do już zainstalowanej najnowszej. Funkcjonalność tę umożliwia **TwinCAT Remote Manager.**
 <br>
