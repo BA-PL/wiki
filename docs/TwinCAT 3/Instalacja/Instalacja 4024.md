@@ -79,4 +79,17 @@ Niektóre narzędzia inżynierskie, takie jak na przykład narzędzie TE2000 Twi
 
 ![2411](https://ba-pl.github.io/wiki/assets/images/4024/2411.png "2411")
 
+## Remote Manager dla starszych wersji 
+
+Istnieje możliwość zainstalowania na komputerze programisty kilku wersji oprogramowania TwinCAT jak również doinstalowania starszych wersji do już zainstalowanej najnowszej. Funkcjonalność tę umożliwia **TwinCAT Remote Manager.**
+<br>
+Należy wtedy pobrać nie standardowy instalator TwinCAT, a właśnie instalator [Remote manager.](https://www.beckhoff.com/pl-pl/support/download-finder/search-result/?download_group=97028330)
+<br>
+<br>
+Pełna dokumenetacja znajduje się [tutaj.](https://download.beckhoff.com/download/document/automation/twincat3/TC3_Remote_Manager_en.pdf)
+<br>
+<br>
+Po instalacji **RM**, aby na swoim komputerze móc wybrać odpowiednią wersję Remote Manager, należy to zrobić przed otwarciem projektu:
+
+![2412](https://ba-pl.github.io/wiki/assets/images/4024/2412.png "2412")
 
