@@ -198,6 +198,30 @@ Jeśli posidasz zainstalowaną wersję 4026 a chcesz nadal korzystać z wersji 4
 
 ![26t36](https://ba-pl.github.io/wiki/assets/images/4026/26t36.png "26t36")
 
+Jeśli Remote Manager nie jest dostpępnu z poziomu UI Package Managera, można go doinstalować z poziomu CLI.
+<br>
+W Beckhoff Stable Feed jest dostępnych tylko parę wersji RM. Aby uzyskać dostęp do wszystkich należy dodać Beckhoff Outdated Feed.
+<br>
+Kroki, jakie należy wykonać:
+1. Uruchamiamy wiersz poleceń jako administrator
+2. Wyszukujemy workload lub wpisujemy bezpośrednio nazwę
+
+![cli1](https://ba-pl.github.io/wiki/assets/images/4026/cli1.png
+
+3. Wpisujemy *tcpkg list nazwa_pakietu --all* co zwróci listę dostępnych wersji:
+
+![cli2](https://ba-pl.github.io/wiki/assets/images/4026/cli2.png
+
+4. Instalujemy Remote Manager w konkretnej wersji, np: *tcpkg install TwinCAT.StandardRM.XAE=4024.53.9*
+
+![cli3](https://ba-pl.github.io/wiki/assets/images/4026/cli3.png
+
+Jeśli brakuje wersji której nam potrzeba można spróbować dodać Beckhoff Outdated Feed.
+<br>
+Można to wykonać z UI lub CLI. Link do feed'a: *https://public.tcpkg.beckhoff-cloud.com/api/v1/feeds/outdated*
+
+![cli4](https://ba-pl.github.io/wiki/assets/images/4026/cli4.png
+
 Po tych ustawieniach, można korzystać z wersji 4026 w TcXaeShell64 oraz z wersji 4024 w standardowym TcXaeShell:
 
 ![26t37](https://ba-pl.github.io/wiki/assets/images/4026/26t37.png "26t37")
