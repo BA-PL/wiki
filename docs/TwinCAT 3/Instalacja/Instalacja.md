@@ -192,7 +192,7 @@ Jeśli posidasz zainstalowaną wersję 4026 a chcesz nadal korzystać z wersji 4
 
 ![26t34](https://ba-pl.github.io/wiki/assets/images/4026/26t34.png "26t34")
 
-![26t35](https://ba-pl.github.io/wiki/assets/images/4026/26t35.png "26t35")
+![26t35](https://ba-pl.github.io/wiki/assets/images/4026/26t35.png "26t35_v2")
 
 - doinstalować pakiet wybranej wersji Remote Managera
 
