@@ -8,7 +8,7 @@ layout: page
 
 # Instalacja wersji 4026
 {: .no_toc }
-<h6> Data modyfikacji: 07.02.2025 </h6>
+<h6> Data modyfikacji: 11.04.2025 </h6>
 ## Table of Contents
 {: .no_toc .text-delta }
 
@@ -206,21 +206,21 @@ Kroki, jakie należy wykonać:
 1. Uruchamiamy wiersz poleceń jako administrator
 2. Wyszukujemy workload lub wpisujemy bezpośrednio nazwę
 
-![cli1](https://ba-pl.github.io/wiki/assets/images/4026/cli1.png
+![cli1](https://ba-pl.github.io/wiki/assets/images/4026/cli1.png "cli1")
 
-3. Wpisujemy *tcpkg list nazwa_pakietu --all* co zwróci listę dostępnych wersji:
+3. Wpisujemy **tcpkg list nazwa_pakietu --all** co zwróci listę dostępnych wersji:
 
-![cli2](https://ba-pl.github.io/wiki/assets/images/4026/cli2.png
+![cli2](https://ba-pl.github.io/wiki/assets/images/4026/cli2.png "cli2")
 
-4. Instalujemy Remote Manager w konkretnej wersji, np: *tcpkg install TwinCAT.StandardRM.XAE=4024.53.9*
+4. Instalujemy Remote Manager w konkretnej wersji, np: **tcpkg install TwinCAT.StandardRM.XAE=4024.53.9**
 
-![cli3](https://ba-pl.github.io/wiki/assets/images/4026/cli3.png
+![cli3](https://ba-pl.github.io/wiki/assets/images/4026/cli3.png "cli3")
 
 Jeśli brakuje wersji której nam potrzeba można spróbować dodać Beckhoff Outdated Feed.
 <br>
-Można to wykonać z UI lub CLI. Link do feed'a: *https://public.tcpkg.beckhoff-cloud.com/api/v1/feeds/outdated*
+Można to wykonać z UI lub CLI. Link do feed'a: **https://public.tcpkg.beckhoff-cloud.com/api/v1/feeds/outdated**
 
-![cli4](https://ba-pl.github.io/wiki/assets/images/4026/cli4.png
+![cli4](https://ba-pl.github.io/wiki/assets/images/4026/cli4.png "cli4")
 
 Po tych ustawieniach, można korzystać z wersji 4026 w TcXaeShell64 oraz z wersji 4024 w standardowym TcXaeShell:
 
