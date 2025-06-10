@@ -16,7 +16,7 @@ layout: page
 {:toc}
 
 # Wprowadzennie
-TwinCAT 3.1 Build 4026 jest instalowany za pomocą TwinCAT Package Manager. Taki sposób instalacji nie ogranicza TwinCAT’a do trzech wariantów jak w poprzednich wersjach, lecz pozwala instalować, aktualizować i usuwać poszczególne komponenty niezależnie. Użytkownik może określić z jakich komponentów będzie korzystał na komputerze programisty czy sterowniku i zainstalować tylko używane przez niego komponenty.
+TwinCAT 3.1 Build 4026 jest instalowany za pomocą TwinCAT Package Manager. Taki sposób instalacji nie ogranicza TwinCAT’a do trzech wariantów jak w poprzednich wersjach, lecz pozwala instalować, aktualizować i usuwać poszczególne komponenty niezależnie. Użytkownik może określić z jakich komponentów będzie korzystał na komputerze programisty czy sterowniku i zainstalować tylko używane przez niego funkcje.
 <br>
 <br>
 TwinCAT Package Manager jest menedżerem pakietów. Komponenty instalowane są jako pakiety w oparciu o format NuGet. Pakiety są pobierane z tzw. źródeł (feeds). Beckhoff udostępnia użytkownikom źródła Stable i Testing (wersja testowa, wymaga akceptacji dodatkowej licencji). Klienci mogą również konfigurować własne źródła w formie katalogu, lokalizacji sieciowej lub serwera pakietów NuGet. Daje to możliwość udostępniania tym kanałem również innych narzędzi na przykład bibliotek PLC, dodatków do edytora a nawet innych aplikacji.
@@ -34,14 +34,14 @@ TwinCAT Package Manager składa się z dwóch programów które ze sobą współ
 Szereg korzyści wynikających z TwinCAT Package Manager wymaga wykonania dodatkowych kroków instalacyjnych na systemach, na których zainstalowano starsze wersje TwinCAT’a. Firma Beckhoff przygotowała narzędzie migracyjne które umożliwia wykonanie przeniesienie obecnej konfiguracji do nowej wersji TwinCAT’a.
 <br>
 <br>
-Oficjalne informacje znajdują się w [Infosys.](https://infosys.beckhoff.com)
+Niniejsza instrukcja opisuje kroki wykonywane w interfejsie graficznym menedżera pakietów. Oficjalne informacje znajdują się w [Infosys.](https://infosys.beckhoff.com)
 
 # Pobieranie i instalacja Package Manager 
 Aby pobrać Package Manager przechodzimy na oficjalną [stronę Beckhoff](https://www.beckhoff.com/pl-pl/support/download-finder/) i klikamy w link na kafelku TwinCAT Package Manager (TwinCAT 3.1 Build 4026):
 
 ![26t1](https://ba-pl.github.io/wiki/assets/images/4026/26t1.png "26t1")
 
-Pojawi się prośba o zalogowanie się na konto myBeckhoff. Jeżeli takiego konta nie posiadamy klikamy Register, tworzymy konto i aktywujemy je. Dane logowania do konta myBeckhoff będą potrzebne również przy instalacji. Logujemy się na stronę klikając Log in:
+Przy próbie pobrania pliku **exe** pojawi się prośba o zalogowanie się na konto myBeckhoff. Jeżeli takiego konta nie posiadamy klikamy Register, tworzymy konto i aktywujemy je. Dane logowania do konta myBeckhoff będą potrzebne również przy instalacji. Logujemy się na stronę klikając Log in:
 
 ![26t2](https://ba-pl.github.io/wiki/assets/images/4026/26t2x.png "26t2")
 
@@ -49,73 +49,91 @@ Po zalogowaniu klikamy w link, aby pobrać instalator:
 
 ![26t3](https://ba-pl.github.io/wiki/assets/images/4026/26t3x.png "26t3")
 
-Uruchamiamy pobrany instalator, zapoznajemy się z warunkami licencji potwierdzamy zapoznanie się zaznaczając checkbox, klikamy Install:
+Uruchamiamy pobrany instalator, zapoznajemy się z warunkami licencji i potwierdzamy zapoznanie się zaznaczając checkbox, następie klikamy **Install**:
 
 ![26t4](https://ba-pl.github.io/wiki/assets/images/4026/26t4x.png "26t4")
 
 Po chwili instalator zakończy pracę. Zamykamy go przyciskiem Close
 
 ![26t5](https://ba-pl.github.io/wiki/assets/images/4026/26t5x.png "26t5")
-## Konfiguracja Package Manager
+## Pierwsze uruchomienie Package Manager
 Na pulpicie pojawi się ikonka Package Manager. Uruchamiamy ją jako administrator (prawy przycisk myszki -> Uruchom jako Administrator).
 
 ![26t6](https://ba-pl.github.io/wiki/assets/images/4026/26t6.png "26t6")
 
-W oknie Package Manager należy dodać źródło pakietów (feed). Domyślnie pojawi się źródło zawierające pakiety w wersji stablinej (stable). W pole User name i Password wprowadzamy dane logowania konta myBeckhoff i klikamy Save
+Po uruchomieniu pojawi się okno z informacją, aby nie instalować plików .exe z Remote Manager ze strony:
 
-![26t7](https://ba-pl.github.io/wiki/assets/images/4026/26t7x.png "26t7")
+![26t6_2](https://ba-pl.github.io/wiki/assets/images/4026/26t6_2.png "26t6_2")
 
-Jeśli pojawia się kod błędu 451 należy zalogować się na stronę beckhoff.pl i zaakceptować warunki na stronie
-## Wybór edytora
-W dalszym kroku należy wybrać edytor, który chcemy zainstalować lub zintegrować TwinCAT:
+Zatwierdzamy, że zapoznaliśmy się z informacją klikając **Next**. Po zatwierdzeniu należy dodać źródło pakietów (feed), klikając **Add new feed**:
 
-![26t8](https://ba-pl.github.io/wiki/assets/images/4026/26t8.png "26t8")
-W komputerach, na których zainstalowano Visual Studio 2019/2022 okno dodatkowo wyświetli opcje UseVS2019 i UseVS2022.
+![26t7_1](https://ba-pl.github.io/wiki/assets/images/4026/26t7_1.png "26t7_1")
+
+W polu *feed url* wybieramy z listy źródło zawierające pakiety w wersji stablinej (stable). W pole *User name* i *Password* wprowadzamy dane którymi logowaliśmy się do konta myBeckhoff i klikamy **Save**:
+
+![26t7_2](https://ba-pl.github.io/wiki/assets/images/4026/26t7_2.png "26t7_2")
+
+Przy zapisywaniu może pojawić się monit o przyznanie uprawnień administratora. Zatwierdzamy go.
+### Wybór edytora
+W dalszym kroku należy wybrać które z edytorów chcemy zainstalować lub zintegrować z TwinCAT:
+
+![26t8_2](https://ba-pl.github.io/wiki/assets/images/4026/26t8_2.png "26t8_2")
+
+W komputerach, na których zainstalowano Visual Studio 2017/2019/2022 okno dodatkowo wyświetli opcje ich integracji.
 <br>
-Jeśli chcemy mieć możliwość programowania sterowników z buildem 4024 lub starszym warto na tym etapie dodatkowo zaznaczyć checkbox UseTcXaeShell i/lub UseVS2019. Integrację z edytorem Visual Studio można również wykonać później, po instalacji środowiska w ustawieniach Package Manager.
 <br>
-Po wybraniu z którymi edytorami ma integrować się TwinCAT przechodzimy dalej klikając Next.
-# Migracja wersji 4024 do Package Manager 
-W przypadku gdy w systemie jest zainstalowany starsza wersja TwinCAT 3 należy wykonać migrację funkcji do nowej wersji. Jeśli w systemie nie ma starszych wersji TwinCAT’a należy przejść do kolejnego rozdziału.
+**UWAGA! Na tym etapie potrzebujemy zaznaczyć minimum jeden edytor! Jeśli chcemy mieć możliwość programowania sterowników z buildem 4024 lub starszym należy zaznaczyć instalację TwinCAT XAE Shell lub integracji z Visual Studio 2017/2019. Dla obsługi buildu 4026 i nowszych może być to dowolny edytor, ale zalecamy TwinCAT XAE Shell 64-bit lub integrację z Visual Studio 2022, szczególnie dla dużych projektów.**
 <br>
-Procedura migracji polega na wykryciu w systemie poprzednich wersji oraz funkcji TwinCAT, usunięcie ich z zachowaniem ustawień, licencji itp., usunięciu pozostałości z systemu, następnie instalacje w nowym formacie paczek. Pierwszym krokiem jest pobranie i instalacja najnowszej wersji skryptu dokonującego migracji:
+<br>
+Po wybraniu integracji klikamy ikonę zapisu (dyskietka) i przechodzimy dalej klikając **Next**. Zainstalowane edytory i integracje z VS można będzie zmienić później w ustawieniach Package Manager.
+<br>
+Na tym etapie następują drobne różnice w przypadku instalacji 4026 na systemie bez TwinCAT’a i systemie na którym znajdują się starsze wersje TwinCAT’a. W pierwszym przypadku przechodzimy do rozdziału *Ścieżka instalacji*. Gdy mamy zainstalowaną starszą wersję TwinCAT, przechodzimy do rozdziału dotyczącego *migracji*. 
 
-![26t9](https://ba-pl.github.io/wiki/assets/images/4026/26t9.png "26t9")
+### Ścieżka instalacji 
+Ostatnim, opcjonalnym krokiem jest wskazanie ścieżki instalacji. Po zatwierdzeniu zmiana nie będzie możliwa:
 
-Po kliknięciu Yes pojawi się okno instalujące narzędzie migracji. Gdy instalacja zostanie ukończona należy zamknąć okno klikając Ok:
+![26t8_3](https://ba-pl.github.io/wiki/assets/images/4026/26t8_3.png "26t8_3")
 
-![26t10](https://ba-pl.github.io/wiki/assets/images/4026/26t10.png "26t10")
+Aby zatwierdzić, klikamy **Finish**.
+<br>
+**UWAGA! Nie zalecamy zmiany domyślnej ścieżki instalacji TwinCAT, gdyż może to powodować problemy!**
 
-Kolejnym krokiem jest symulacja migracji, czyli podsumowanie co zostanie usunięte i przeniesione:
+# Migracja starszych buildów do Package Manager 
+W przypadku gdy w systemie jest zainstalowany starsza wersja TwinCAT 3 należy wykonać migrację funkcji do 4026. Jeśli w systemie nie ma starszych wersji TwinCAT’a należy pominąć ten punkt. Gdy chcemy doinstalować Remote Manager do starszych wersji, przechodzimy do rodziału dotyczącego *Remote Managera*.
+<br>
+Procedura migracji polega na wykryciu w systemie poprzednich wersji oraz funkcji TwinCAT, usunięcie ich z zachowaniem ustawień, licencji itp., usunięciu pozostałości z systemu, następnie instalacje w nowym formacie paczek. Klikamy Yes. Jeśli system poprosi nas o uprawnienia administratora, przyznajemy je.
 
-![26t11](https://ba-pl.github.io/wiki/assets/images/4026/26t11.png "26t11")
+![26t9_2](https://ba-pl.github.io/wiki/assets/images/4026/26t9_2.png "26t9_2")
+
+Pierwszym krokiem jest pobranie i instalacja najnowszej wersji skryptu dokonującego migracji:
+
+![26t10_2](https://ba-pl.github.io/wiki/assets/images/4026/26t10_2.png "26t10_2")
+
+Po kliknięciu Yes może pojawić się monit o uprawnienia administratora. Zatwierdzamy go. Po chwili rozpocznie się symulacja migracji. Po ukończeniu wyświetli podsumowanie co zostanie usunięte i przeniesione:
+
+![26t11_2](https://ba-pl.github.io/wiki/assets/images/4026/26t11_2.png "26t11_2")
 
 Klikamy OK, po czym nastąpi skanowanie systemu i wyświetlenie listy funkcji i odpowiednich paczek/workload’ów którymi zostaną zastąpione:
 
 ![26t12](https://ba-pl.github.io/wiki/assets/images/4026/26t12.png "26t12")
 
-**UWAGA! Na ten moment nie wszystkie funkcje z 4024 posiadają stabilną wersję w 4026. W takim przypadku instalator wyświetli ikonę X, a funkcja nie zostanie doinstalowana.**
+**UWAGA! Nie wszystkie funkcje posiadają wersję w 4026. W przypadku gdy nie pojawi się nazwa w kolumnie workloads, funkcja nie zostanie doinstalowana.**
 <br>
 <br>
-Można dodać źródło testowe (testing feed), w którym znajduje się więcej paczek. Są to wersje testowe, które wymagają akceptacji dodatkowych warunków.
+Niektóre funkcje jak np. równoległa instalacja TwinCAT 2 i 3 oraz instalacja starszych Remote Manager wymagają dodatkowych kroków po wykonaniu migracji. Jeśli zgadzamy się na wykonanie migracji przechodzimy dalej klikając Next. Po ukończeniu usuwania starszych wersji TwinCAT pojawi się komunikat:
 
-![26t13](https://ba-pl.github.io/wiki/assets/images/4026/26t13.png "26t13")
+![26t14_2](https://ba-pl.github.io/wiki/assets/images/4026/26t14_2.png "26t14_2")
 
-Niektóre funkcje jak np. równoległa instalacja TwinCAT 2 i 3 nie są wspierane. W takim przypadku instalator wyświetli ikonę ostrzeżenia:
+Zatwierdzamy przyciskiem OK, po czym system uruchomi się ponownie. Po restarcie migracja będzie kontynuowana. Pojawi się monit o uprawnienia administratora, zatwierdzamy go.
+Po ukończeniu procedury wyświetli się podsumowanie migracji:
 
-![26t14](https://ba-pl.github.io/wiki/assets/images/4026/26t14.png "26t14")
+![26t15_2](https://ba-pl.github.io/wiki/assets/images/4026/26t15_2.png "26t15_2")
 
-Oznacza to że migracja usunie TwinCAT 2 z systemu i nie będzie możliwości jego instalacji równolegle z działaniem TwinCAT 3 build 4026.
-<br>
-Jeśli zgadzamy się na wykonanie migracji przechodzimy dalej klikając Next i uruchamiamy migrację klikając Yes.
-
-![26t15](https://ba-pl.github.io/wiki/assets/images/4026/26t15.png "26t15")
-
-Po migracji, aby nadal programować sterowniki z 4024 należy przejść do punktu 4 i doinstalować TwinCAT Standard Remote Manager.
+Zatwierdzamy je klikając **Finish**. Po migracji można już korzystać z TwinCAT 4026. Dodatkowo, aby programować sterowniki z starszymi wersjami TwinCAT’a należy przejść do rozdziału dotyczącego *Remote Managera*.
 # Instalacja TwinCAT i funkcji
 W głównym oknie znajduje się pole wyboru, które pozwala określić co chcemy zainstalować:
 
-![26t16](https://ba-pl.github.io/wiki/assets/images/4026/26t16.png "26t16")
+![26t16_2](https://ba-pl.github.io/wiki/assets/images/4026/26t16_2.png "26t16_2")
 
 - Engineering: narzędzie programistyczne
 - Runtime: środowisko uruchomieniowe
@@ -126,112 +144,126 @@ Engineering + Runtime pozwala programować sterowniki i symulować program lokal
 <br>
 Aby tylko programować sterowniki z naszego komputera możemy wybrać sam pakiet Engineering.
 <br>
-Na sterowniku wybieramy Runtime lub Engineering + Runtime, co pozwoli dodatkowo programować sterownik lokalnie, bez konieczności instalacji środowiska na innym komputerze.
+Na sterowniku zawsze wybieramy Runtime, czasem Engineering + Runtime, co pozwoli dodatkowo programować sterownik lokalnie, bez konieczności instalacji środowiska na innym komputerze.
 <br>
-Po wybraniu odpowiedniej opcji zaznaczamy workload TwinCAT Standard:
+Po wybraniu odpowiedniej opcji zaznaczamy workloady Engineering i Runtime w TwinCAT Standard, klikając na ikonę pobierania (na ikonie widać również wersję):
 
-![26t17](https://ba-pl.github.io/wiki/assets/images/4026/26t17x.png "26t17")
+![26t17_2](https://ba-pl.github.io/wiki/assets/images/4026/26t17_2.png "26t17_2")
 
 Podobnie możemy zaznaczyć funkcje TwinCAT’a które mają zostać zainstalowane.
 <br>
-Widok podsumowujący po prawej stronie pokazuje listę paczek, które zostaną zainstalowane w systemie.
-<br>
-Jeśli potrzebujemy programować sterowniki z buildem 4024 należy zaznaczyć TwinCAT Standard Remote Manager i w wybieramy odpowiedni build.
-<br>
-W każdym momencie można wrócić do tego okna i dodać lub usunąć funkcje z TwinCAT’a. Aby rozpocząć instalację klikamy Install.
-<br>
+Ikona w prawym górnym rogu zasygnalizuje nam ilość zmian. Można ją kliknąć:
+
+![26t17_3](https://ba-pl.github.io/wiki/assets/images/4026/26t17_3.png "26t17_3")
+
+Po prawej stronie pojawi się widok podsumowujący z listą produktów, które zostaną zainstalowane, odinstalowane lub zaktualizowane w systemie:
+
+![26t17_4](https://ba-pl.github.io/wiki/assets/images/4026/26t17_4.png "26t17_4")
+
+Aby rozpocząć instalację klikamy **Apply modifications** na dole podsumowania:
+
+![26t17_5](https://ba-pl.github.io/wiki/assets/images/4026/26t17_5.png "26t17_5")
+
+Potwierdzamy instalację klikając **YES**:
+
+![26t17_6](https://ba-pl.github.io/wiki/assets/images/4026/26t17_6.png "26t17_6")
+
 Instalator może poprosić o podwyższenie uprawnień. Po potwierdzeniu rozpocznie się pobieranie i instalacja środowiska:
 
-![26t18](https://ba-pl.github.io/wiki/assets/images/4026/26t18.png "26t18")
+![26t17_7](https://ba-pl.github.io/wiki/assets/images/4026/26t17_7.png "26t17_7")
 
-Instalacja może trwać około 40 minut. Podczas instalacji nie należy uruchamiać innych instalatorów, gdyż mogą zakłócić instalację środowiska.
-Po instalacji okno wyświetli podsumowanie:
+Instalacja może trwać dłuższą chwilę. Podczas instalacji nie należy uruchamiać innych instalatorów, gdyż mogą zakłócić instalację środowiska.
+<br>
+Po instalacji okno wyświetli się komunikat:
 
-![26t19](https://ba-pl.github.io/wiki/assets/images/4026/26t19.png "26t19")
+![26t17_8](https://ba-pl.github.io/wiki/assets/images/4026/26t17_8.png "26t17_8")
 
-Sprawdzamy czy wszystkie paczki zostały zainstalowane poprawnie i zamykamy okno. Jeśli podczas instalacji pojawią się błędy prosimy o przesłanie informacji na support@beckhoff.pl
+oraz podsumowanie instalacji:
+
+![26t17_9](https://ba-pl.github.io/wiki/assets/images/4026/26t17_9.png "26t17_9")
+
+Sprawdzamy czy wszystkie paczki zostały zainstalowane poprawnie i zamykamy okno przyciskiem **CLOSE**. Jeśli podczas instalacji pojawią się błędy prosimy o przesłanie informacji na *support@beckhoff.pl*
 # Modyfikowanie instalacji 
 Aby dodać lub usunąć funkcje należy ponownie uruchomić Package Manager (prawy przycisk myszy -> Uruchom jako Administrator):
 
 ![26t20](https://ba-pl.github.io/wiki/assets/images/4026/26t20.png "26t20")
 
-Zakładka Available możemy dodać nowe funkcje zaznaczając elementy i klikając Install
+W zakładce *Browse*  możemy dodać nowe funkcje zaznaczając elementy i klikając **Apply modifications**:
 
-![26t21](https://ba-pl.github.io/wiki/assets/images/4026/26t21x.png "26t21")
+![26t21_2](https://ba-pl.github.io/wiki/assets/images/4026/26t21_2.png "26t21_2")
 
-Zakładka Installed wyświetla listę zainstalowanych pakietów:
+Zakładka *Installed* wyświetla listę zainstalowanych funkcji. Możemy je usuwać klikając na danym elemencie ikonę kosza:
 
-![26t22](https://ba-pl.github.io/wiki/assets/images/4026/26t22x.png "26t22")
+![26t21_3](https://ba-pl.github.io/wiki/assets/images/4026/26t21_3.png "26t21_3")
 
-Element z ikonką zaznaczenia w prostokącie informuje, że jest dostępna jego nowsza wersja:
-
-![26t23](https://ba-pl.github.io/wiki/assets/images/4026/26t23.png "26t23")
-
-Klikając na konkretny element możemy zadecydować co z nim zrobić:
-- zaktualizować
-
-![26t24](https://ba-pl.github.io/wiki/assets/images/4026/26t24.png "26t24")
-
-- pozostawić bez zmian
-
-![26t25](https://ba-pl.github.io/wiki/assets/images/4026/26t25.png "26t25")
-
-- odinstalować 
-
-![26t26](https://ba-pl.github.io/wiki/assets/images/4026/26t26.png "26t26")
-
+po czym standardowo w zakładce podsumowania klikamy **Apply modifications.**
 <br>
-Po wybraniu co chcemy zrobić po prawej stronie pojawi się podsumowanie z podziałem na kategorie Install/Upgrade/Uninstall.
 <br>
-Aby zastosować zmiany klikamy przycisk Install/Upgrade/Uninstall na dole podsumowania.
+Zakładka *Updates* odblokuje się w gdy pojawią się nowe wersje funkcji. Można w niej zaktualizować funkcje TwinCAT, klikając analogicznie jak w przypadku instalacji funkcji.
 
-# Dodawanie Remote Manager do wersji 4024
+# Instalacja starszych buildów (Remote Manage) i/lub TwinCAT 2
 
-Jeśli posidasz zainstalowaną wersję 4026 a chcesz nadal korzystać z wersji 4024, należy wykonać dwa główne kroki:
-- dodać do instalacji poprzednią wersję XAE Shell 
-
-![26t34](https://ba-pl.github.io/wiki/assets/images/4026/26t34.png "26t34")
-
-![26t35](https://ba-pl.github.io/wiki/assets/images/4026/26t35.png "26t35_v2")
-
-- doinstalować pakiet wybranej wersji Remote Managera
-
-![26t36](https://ba-pl.github.io/wiki/assets/images/4026/26t36.png "26t36")
-
-Jeśli Remote Manager nie jest dostpępnu z poziomu UI Package Managera, można go doinstalować z poziomu CLI.
+Po instalacji/migracji można doinstalować starsze wersje TwinCAT. Aby to wykonać należy dodać kolejny feed (źródło) w ustawieniach TwinCAT Package Manager.
 <br>
-W Beckhoff Stable Feed jest dostępnych tylko parę wersji RM. Aby uzyskać dostęp do wszystkich należy dodać Beckhoff Outdated Feed.
 <br>
-Kroki, jakie należy wykonać:
-1. Uruchamiamy wiersz poleceń jako administrator
-2. Wyszukujemy workload lub wpisujemy bezpośrednio nazwę
+Klikamy ikonę ustawień w lewym dolnym rogu:
 
-![cli1](https://ba-pl.github.io/wiki/assets/images/4026/cli1.png "cli1")
+![26t34_1](https://ba-pl.github.io/wiki/assets/images/4026/26t34_1.png "26t34_1")
 
-3. Wpisujemy **tcpkg list nazwa_pakietu --all** co zwróci listę dostępnych wersji:
+W *Feeds* dodajemy *Beckhoff Outdated Feed*:
 
-![cli2](https://ba-pl.github.io/wiki/assets/images/4026/cli2.png "cli2")
+![26t34_2](https://ba-pl.github.io/wiki/assets/images/4026/26t34_2.png "26t34_2")
 
-4. Instalujemy Remote Manager w konkretnej wersji, np: **tcpkg install TwinCAT.StandardRM.XAE=4024.53.9**
+![26t34_3](https://ba-pl.github.io/wiki/assets/images/4026/26t34_3.png "26t34_3")
 
-![cli3](https://ba-pl.github.io/wiki/assets/images/4026/cli3.png "cli3")
+Wprowadzamy poświadczenia, zapisujemy zmiany klikając **Save**. Akceptujemy disclaimer klikając **YES**. Jeśli pojawi się monit o uprawnienia administratora, akceptujemy go:
 
-Jeśli brakuje wersji której nam potrzeba można spróbować dodać Beckhoff Outdated Feed.
+![26t34_4](https://ba-pl.github.io/wiki/assets/images/4026/26t34_4.png "26t34_4")
+
+W efekcie na liście powinny być dostępne 2 feedy:
+
+![26t34_5](https://ba-pl.github.io/wiki/assets/images/4026/26t34_5.png "26t34_5")
+
+Zamykamy okno konfiguracji, czekamy aż odświeży się lista pakietów. Domyślnie dalej wyświetlane są pakiety z Beckhoff Stable Feed. Aby włączyć wyświetlanie wszystkich pakietów klikamy po lewej stronie:
+
+![26t34_6](https://ba-pl.github.io/wiki/assets/images/4026/26t34_6.png "26t34_6")
+
+## Instalacja Remote Manager dla TwinCAT 3
+W zakładce *Browse* klikamy na nazwę **Engineering - TwinCAT Standard Remote Manager**. Po prawej stronie pojawi się opis funkcji. Klikamy **Versions**. Wyświetli się lista wszystkich dostępnych wersji, gdzie dodajemy do instalacji starsze wersje TwinCAT:
+
+![26t34_7](https://ba-pl.github.io/wiki/assets/images/4026/26t34_7.png "26t34_7")
+
+Wybieramy żądaną wersję, a następnie standardowo zatwierdzamy modyfikacje.
+
+## Instalacja TwinCAT 2
+W celu instalacji TwinCAT 2 musimy przełączyć z widoku workloadów (funkcji) na widok pojedynczych pakietów:
+
+![26t34_8](https://ba-pl.github.io/wiki/assets/images/4026/26t34_8.png "26t34_8")
+
+Na liście znajdziemy dwa pakiety:
+
+![26t34_9](https://ba-pl.github.io/wiki/assets/images/4026/26t34_9.png "26t34_9")
+
+•	Pakiet TwinCAT.XAE.Tc2Engineering zainstaluje narzędzie inżynierskie TwinCAT 2.
+•	Pakiet TwinCAT.XAE.PLC.Tc2ProjectConverter doda do 4024 i starszych buildów możliwość konwertowania projektów z TC2.
 <br>
-Można to wykonać z UI lub CLI. Link do feed'a: **https://public.tcpkg.beckhoff-cloud.com/api/v1/feeds/outdated**
+Instalujemy potrzebne pakiety. Po instalacji warto przywrócić standardowy widok workload’ów klikając:
 
-![cli4](https://ba-pl.github.io/wiki/assets/images/4026/cli4.png "cli4")
-
-Po tych ustawieniach, można korzystać z wersji 4026 w TcXaeShell64 oraz z wersji 4024 w standardowym TcXaeShell:
-
-![26t37](https://ba-pl.github.io/wiki/assets/images/4026/26t37.png "26t37")
-
+![26t34_10](https://ba-pl.github.io/wiki/assets/images/4026/26t34_10.png "26t34_10")
 # Odinstalowywanie TwinCAT
-Aby odinstalować TwinCAT należy najpierw odinstalować wszystkie zainstalowane pakiety, następnie odinstalować aplikację Beckhoff TwinCAT Package Manager z panelu sterowania:
+Aby odinstalować TwinCAT należy najpierw odinstalować wszystkie zainstalowane pakiety, następnie odinstalować aplikację Beckhoff TwinCAT Package Manager z panelu sterowania. Najprościej wykonać to uruchamiając CMD z uprawnieniami Administratora i wpisując polecenie:
 
-![26t27](https://ba-pl.github.io/wiki/assets/images/4026/26t27.png "26t27")
+![26t27_2](https://ba-pl.github.io/wiki/assets/images/4026/26t27_2.png "26t27_2")
 
-**UWAGA! Odinstalowanie aplikacji Beckhoff TwinCAT Package Manager bez odinstalowania wszystkich pakietów pozostawi pliki w systemie i może spowodować brak możliwości korzystania z TwinCAT.**
+Po czym potwierdzamy operację, wpisując Y:
+
+![26t27_3](https://ba-pl.github.io/wiki/assets/images/4026/26t27_3.png "26t27_3")
+
+Po ukończeniu operacji można usunąć Beckhoff TwinCAT Package Manager z komputera:
+
+![26t27_4](https://ba-pl.github.io/wiki/assets/images/4026/26t27_4.png "26t27_4")
+
+**UWAGA! Odinstalowanie aplikacji Beckhoff TwinCAT Package Manager bez odinstalowania wszystkich pakietów pozostawi pliki w systemie i może spowodować brak możliwości instalacji TwinCAT!**
 
 # Dodatek - konfiguracja symulacji na VM
 W konfiguracji maszyny wirtualnej należy przydzielić minimum 2 rdzenie. W tym celu zamykamy maszynę i klikamy (na przykładzie VirtualBox, analogicznie w innym oprogramowaniu):
