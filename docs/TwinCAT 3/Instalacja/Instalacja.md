@@ -8,7 +8,7 @@ layout: page
 
 # Instalacja wersji 4026
 {: .no_toc }
-<h6> Data modyfikacji: 11.04.2025 </h6>
+<h6> Data modyfikacji: 10.06.2025 </h6>
 ## Table of Contents
 {: .no_toc .text-delta }
 
@@ -34,7 +34,7 @@ TwinCAT Package Manager składa się z dwóch programów które ze sobą współ
 Szereg korzyści wynikających z TwinCAT Package Manager wymaga wykonania dodatkowych kroków instalacyjnych na systemach, na których zainstalowano starsze wersje TwinCAT’a. Firma Beckhoff przygotowała narzędzie migracyjne które umożliwia wykonanie przeniesienie obecnej konfiguracji do nowej wersji TwinCAT’a.
 <br>
 <br>
-Niniejsza instrukcja opisuje kroki wykonywane w interfejsie graficznym menedżera pakietów. Oficjalne informacje znajdują się w [Infosys.](https://infosys.beckhoff.com)
+Niniejsza instrukcja opisuje kroki wykonywane w interfejsie graficznym menedżera pakietów. Oficjalne informacje znajdują się w [Infosys.](https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_installation/15698617995.html&id=7523796010185393366)
 
 # Pobieranie i instalacja Package Manager 
 Aby pobrać Package Manager przechodzimy na oficjalną [stronę Beckhoff](https://www.beckhoff.com/pl-pl/support/download-finder/) i klikamy w link na kafelku TwinCAT Package Manager (TwinCAT 3.1 Build 4026):
@@ -53,7 +53,7 @@ Uruchamiamy pobrany instalator, zapoznajemy się z warunkami licencji i potwierd
 
 ![26t4](https://ba-pl.github.io/wiki/assets/images/4026/26t4x.png "26t4")
 
-Po chwili instalator zakończy pracę. Zamykamy go przyciskiem Close
+Po chwili instalator zakończy pracę. Zamykamy go przyciskiem **Close**.
 
 ![26t5](https://ba-pl.github.io/wiki/assets/images/4026/26t5x.png "26t5")
 ## Pierwsze uruchomienie Package Manager
@@ -87,7 +87,7 @@ W komputerach, na których zainstalowano Visual Studio 2017/2019/2022 okno dodat
 <br>
 Po wybraniu integracji klikamy ikonę zapisu (dyskietka) i przechodzimy dalej klikając **Next**. Zainstalowane edytory i integracje z VS można będzie zmienić później w ustawieniach Package Manager.
 <br>
-Na tym etapie następują drobne różnice w przypadku instalacji 4026 na systemie bez TwinCAT’a i systemie na którym znajdują się starsze wersje TwinCAT’a. W pierwszym przypadku przechodzimy do rozdziału *Ścieżka instalacji*. Gdy mamy zainstalowaną starszą wersję TwinCAT, przechodzimy do rozdziału dotyczącego *migracji*. 
+Na tym etapie następują drobne różnice w przypadku instalacji 4026 na systemie bez TwinCAT’a i systemie na którym znajdują się starsze wersje TwinCAT’a. W pierwszym przypadku przechodzimy do rozdziału [Ścieżka instalacji](https://ba-pl.github.io/wiki/docs/TwinCAT%203/Instalacja/Instalacja/#%C5%9Bcie%C5%BCka-instalacji). Gdy mamy zainstalowaną starszą wersję TwinCAT, przechodzimy do rozdziału dotyczącego [migracji](https://ba-pl.github.io/wiki/docs/TwinCAT%203/Instalacja/Instalacja/#migracja-starszych-build%C3%B3w-do-package-manager). 
 
 ### Ścieżka instalacji 
 Ostatnim, opcjonalnym krokiem jest wskazanie ścieżki instalacji. Po zatwierdzeniu zmiana nie będzie możliwa:
@@ -96,12 +96,13 @@ Ostatnim, opcjonalnym krokiem jest wskazanie ścieżki instalacji. Po zatwierdze
 
 Aby zatwierdzić, klikamy **Finish**.
 <br>
+<br>
 **UWAGA! Nie zalecamy zmiany domyślnej ścieżki instalacji TwinCAT, gdyż może to powodować problemy!**
 
 # Migracja starszych buildów do Package Manager 
-W przypadku gdy w systemie jest zainstalowany starsza wersja TwinCAT 3 należy wykonać migrację funkcji do 4026. Jeśli w systemie nie ma starszych wersji TwinCAT’a należy pominąć ten punkt. Gdy chcemy doinstalować Remote Manager do starszych wersji, przechodzimy do rodziału dotyczącego *Remote Managera*.
+W przypadku gdy w systemie jest zainstalowany starsza wersja TwinCAT 3 należy wykonać migrację funkcji do 4026. Jeśli w systemie nie ma starszych wersji TwinCAT’a należy pominąć ten punkt. Gdy chcemy doinstalować Remote Manager do starszych wersji, przechodzimy do rodziału dotyczącego [Remote Managera](https://ba-pl.github.io/wiki/docs/TwinCAT%203/Instalacja/Instalacja/#instalacja-starszych-build%C3%B3w-remote-manage-ilub-twincat-2).
 <br>
-Procedura migracji polega na wykryciu w systemie poprzednich wersji oraz funkcji TwinCAT, usunięcie ich z zachowaniem ustawień, licencji itp., usunięciu pozostałości z systemu, następnie instalacje w nowym formacie paczek. Klikamy Yes. Jeśli system poprosi nas o uprawnienia administratora, przyznajemy je.
+Procedura migracji polega na wykryciu w systemie poprzednich wersji oraz funkcji TwinCAT, usunięcie ich z zachowaniem ustawień, licencji itp., usunięciu pozostałości z systemu, następnie instalacje w nowym formacie paczek. Klikamy **Yes**. Jeśli system poprosi nas o uprawnienia administratora, przyznajemy je.
 
 ![26t9_2](https://ba-pl.github.io/wiki/assets/images/4026/26t9_2.png "26t9_2")
 
@@ -109,27 +110,24 @@ Pierwszym krokiem jest pobranie i instalacja najnowszej wersji skryptu dokonują
 
 ![26t10_2](https://ba-pl.github.io/wiki/assets/images/4026/26t10_2.png "26t10_2")
 
-Po kliknięciu Yes może pojawić się monit o uprawnienia administratora. Zatwierdzamy go. Po chwili rozpocznie się symulacja migracji. Po ukończeniu wyświetli podsumowanie co zostanie usunięte i przeniesione:
+Po kliknięciu **Yes** może pojawić się monit o uprawnienia administratora. Zatwierdzamy go. Po chwili rozpocznie się symulacja migracji. Po ukończeniu wyświetli podsumowanie co zostanie usunięte i przeniesione:
 
 ![26t11_2](https://ba-pl.github.io/wiki/assets/images/4026/26t11_2.png "26t11_2")
-
-Klikamy OK, po czym nastąpi skanowanie systemu i wyświetlenie listy funkcji i odpowiednich paczek/workload’ów którymi zostaną zastąpione:
-
-![26t12](https://ba-pl.github.io/wiki/assets/images/4026/26t12.png "26t12")
 
 **UWAGA! Nie wszystkie funkcje posiadają wersję w 4026. W przypadku gdy nie pojawi się nazwa w kolumnie workloads, funkcja nie zostanie doinstalowana.**
 <br>
 <br>
-Niektóre funkcje jak np. równoległa instalacja TwinCAT 2 i 3 oraz instalacja starszych Remote Manager wymagają dodatkowych kroków po wykonaniu migracji. Jeśli zgadzamy się na wykonanie migracji przechodzimy dalej klikając Next. Po ukończeniu usuwania starszych wersji TwinCAT pojawi się komunikat:
+Niektóre funkcje jak np. równoległa instalacja TwinCAT 2 i 3 oraz instalacja starszych Remote Manager wymagają dodatkowych kroków po wykonaniu migracji. Jeśli zgadzamy się na wykonanie migracji przechodzimy dalej klikając **Next**. Po ukończeniu usuwania starszych wersji TwinCAT pojawi się komunikat:
 
 ![26t14_2](https://ba-pl.github.io/wiki/assets/images/4026/26t14_2.png "26t14_2")
 
-Zatwierdzamy przyciskiem OK, po czym system uruchomi się ponownie. Po restarcie migracja będzie kontynuowana. Pojawi się monit o uprawnienia administratora, zatwierdzamy go.
+Zatwierdzamy przyciskiem **OK**, po czym system uruchomi się ponownie. Po restarcie migracja będzie kontynuowana. Pojawi się monit o uprawnienia administratora, zatwierdzamy go.
+<br>
 Po ukończeniu procedury wyświetli się podsumowanie migracji:
 
 ![26t15_2](https://ba-pl.github.io/wiki/assets/images/4026/26t15_2.png "26t15_2")
 
-Zatwierdzamy je klikając **Finish**. Po migracji można już korzystać z TwinCAT 4026. Dodatkowo, aby programować sterowniki z starszymi wersjami TwinCAT’a należy przejść do rozdziału dotyczącego *Remote Managera*.
+Zatwierdzamy je klikając **Finish**. Po migracji można już korzystać z TwinCAT 4026. Dodatkowo, aby programować sterowniki z starszymi wersjami TwinCAT’a należy przejść do rozdziału dotyczącego [Remote Managera](https://ba-pl.github.io/wiki/docs/TwinCAT%203/Instalacja/Instalacja/#instalacja-starszych-build%C3%B3w-remote-manage-ilub-twincat-2).
 # Instalacja TwinCAT i funkcji
 W głównym oknie znajduje się pole wyboru, które pozwala określić co chcemy zainstalować:
 
@@ -142,9 +140,12 @@ W głównym oknie znajduje się pole wyboru, które pozwala określić co chcemy
 
 Engineering + Runtime pozwala programować sterowniki i symulować program lokalnie. Najczęściej korzystamy z tej opcji.
 <br>
+<br>
 Aby tylko programować sterowniki z naszego komputera możemy wybrać sam pakiet Engineering.
 <br>
+<br>
 Na sterowniku zawsze wybieramy Runtime, czasem Engineering + Runtime, co pozwoli dodatkowo programować sterownik lokalnie, bez konieczności instalacji środowiska na innym komputerze.
+<br>
 <br>
 Po wybraniu odpowiedniej opcji zaznaczamy workloady Engineering i Runtime w TwinCAT Standard, klikając na ikonę pobierania (na ikonie widać również wersję):
 
@@ -245,6 +246,7 @@ Na liście znajdziemy dwa pakiety:
 ![26t34_9](https://ba-pl.github.io/wiki/assets/images/4026/26t34_9.png "26t34_9")
 
 •	Pakiet TwinCAT.XAE.Tc2Engineering zainstaluje narzędzie inżynierskie TwinCAT 2.
+
 •	Pakiet TwinCAT.XAE.PLC.Tc2ProjectConverter doda do 4024 i starszych buildów możliwość konwertowania projektów z TC2.
 <br>
 Instalujemy potrzebne pakiety. Po instalacji warto przywrócić standardowy widok workload’ów klikając:
