@@ -67,6 +67,6 @@ Uruchamiamy program ponownie (**Online-->Run**). Jeśli licznik nie zatrzymał s
 
 **UWAGA!! Może być tak, że jeden z liczników Checks się inkrementuje, a w miejscu ustawienie Breakpointu program się nie zatrzymuje. W takim wypadku błąd występuje w tasku, który nie jest w tym momencie debugowany. Debugowany może być jednocześnie tylko jeden task. To, który task jest aktualnie debugowany można zmienić w trybie online w zakładce Task Configuration**
 
-
+![chtc2_9](https://ba-pl.github.io/wiki/assets/images/tc2Checks/chtc2_9.png "chtc2_9")
 
 
