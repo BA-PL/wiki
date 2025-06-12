@@ -1,7 +1,7 @@
 ---
 title: Debugowanie kodu - funkcje Checks
 parent: TwinCAT 2
-nav_order: 2
+nav_order: 3
 layout: page
 ---
 
