@@ -234,7 +234,7 @@ W zakładce *Browse* klikamy na nazwę **Engineering - TwinCAT Standard Remote M
 
 ![26t34_7](https://ba-pl.github.io/wiki/assets/images/4026/26t34_7.png "26t34_7")
 
-Wybieramy żądaną wersję, a następnie standardowo zatwierdzamy modyfikacje.
+Wybieramy żądaną wersję, a następnie standardowo zatwierdzamy [modyfikacje.](https://ba-pl.github.io/wiki/docs/TwinCAT%203/Instalacja/Instalacja/#modyfikowanie-instalacji)
 
 ## Instalacja TwinCAT 2
 W celu instalacji TwinCAT 2 musimy przełączyć z widoku workloadów (funkcji) na widok pojedynczych pakietów:
