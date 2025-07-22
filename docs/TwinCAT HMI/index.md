@@ -43,7 +43,7 @@ W celu poprawnego działania aplikacji nazwa projektu jak i ścieżka nie może 
 <br>
 Główny widok po utworzeniu projektu powinien wyglądać tak:
 
-![hmi5](hmi5.png "hmi5")
+![hmi5a](hmi5a.png "hmi5a")
 
 1.	Drzewko **Solution Explorer** w którym znajdują się wszystkie pliki oraz foldery wykorzystywane w projekcie. Za pomocą tej przeglądarki będziemy tworzyli nowe panele wyświetlające wizualizację, importowali pliki składowe projektu jak i konfigurowali połączenia czy też dodawali nowe rozszerzenia do solution. 
 <br>
