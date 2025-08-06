@@ -1,11 +1,11 @@
 ---
-title: InfluxDB
+title: InfluxDB 2.0
 parent: Database Server 
 nav_order: 1
 layout: page
 ---
 
-# InfluxDB
+# InfluxDB 2.0
 {: .no_toc }
 <h6> Data modyfikacji: 06.08.2025 </h6>
 ## Table of Contents
@@ -28,7 +28,7 @@ Obecnie TwinCAT 3 współpracuje wyłącznie z InfluxDB w wersjach **1.x i 2.x**
  
 </div>
 
-# Instalacja InfluxDB
+# Instalacja InfluxDB 2.0
 
 Krokiem pierwszym jest aktywacja serwera InfluxDB2. Aby to zrobić należy wejść na stronę [InfluxData.](https://docs.influxdata.com/influxdb/v2/install/?t=Windows)
 <br>
@@ -104,17 +104,14 @@ W następnym kroku generujemy licencję trial dla dodatku TF6420 (można to zrob
 
 ![inf14](https://ba-pl.github.io/wiki/assets/images/influx/inf14.png "inf14")
 
-Aby licencja została odczytana, należy przerestartować Runtime TwinCAT:
-
-![inf15](https://ba-pl.github.io/wiki/assets/images/influx/inf15.png "inf15")
-
+Aby licencja została odczytana, należy przerestartować Runtime TwinCAT.
+<br>
+<br>
 W ustawieniach TcDbServer wybieramy urządzenie na którym ma znaleźć się serwer **(1)** TF6420 (czyli urządzenie, które ma się łączyć do bazy z poziomu TwinCATa, nie musi być to to samo urządzenie na ktróym znajduje się baza).
 <br>
 Jeśli na wybranym urządzeniu jest zainstalowany dodatek i aktywna licencja, na fioletowej ikonie powienin pojawiać się zielony kwadracik **(2)**.
-<br>
-Na koniec zaznaczamy opcję *Impersonate User* **(3)**. 
 
-![inf16](https://ba-pl.github.io/wiki/assets/images/influx/inf16.png "inf16")
+![inf16a](https://ba-pl.github.io/wiki/assets/images/influx/inf16a.png "inf16a")
 
 Teraz dodajemy nową bazę:
 
