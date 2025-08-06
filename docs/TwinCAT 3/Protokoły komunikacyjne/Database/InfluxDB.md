@@ -86,7 +86,7 @@ Finalnie powinniśmy uzyskać okno jak poniżej, gdzie powinna się wyświetlać
 
 Aby korzystać z InfluxDB, należy na komputerze z narzędziem inżynierskim oraz na sterowniku, który będzie łączył się bazą, zainstalować dodatek TF6420.
 <br> 
-Instrukacja instalacji dodatków znajduje się [tutaj.](https://ba-pl.github.io/wiki/docs/TwinCAT%203/Instalacja/Instalacja/#modyfikowanie-instalacji)
+Instrukcja instalacji dodatków znajduje się [tutaj.](https://ba-pl.github.io/wiki/docs/TwinCAT%203/Instalacja/Instalacja/#modyfikowanie-instalacji)
 <br>
 Po zainstalowaniu dodatku tworzymy nowy projekt *Empty TwinCAT Database Server Project*:
 
@@ -140,7 +140,7 @@ Przetestujmy teraz jeszcz jedną opcję - zmieniamy nazwę **(1)** Bucket (na ni
 
 ![inf20](https://ba-pl.github.io/wiki/assets/images/influx/inf20.png "inf20")
 
-W rezultacie powienin pojawić się komunikat:
+W rezultacie powinien pojawić się komunikat:
 
 ![inf21](https://ba-pl.github.io/wiki/assets/images/influx/inf21.png "inf21")
 
@@ -152,11 +152,11 @@ Wracamy do TwinCATa i dodajemy nową grupę Autlogowania:
 
 ![inf23](https://ba-pl.github.io/wiki/assets/images/influx/inf23.png "inf23")
 
-W usatwieniach grupy sprawdzamy, czy tryb zapisu jest ustawiony na *Append*:
+W ustawieniach grupy sprawdzamy, czy tryb zapisu jest ustawiony na *Append*:
 
 ![inf24](https://ba-pl.github.io/wiki/assets/images/influx/inf24.png "inf24")
 
-W zakłace *AdsDevice* wybieramy urządzenie, z którego będziemy brali dane do logowania do bazy, a następnie tworzymy testowy program PLC, który będzie generował przykładowe dane.
+W zakładce *AdsDevice* wybieramy urządzenie, z którego będziemy brali dane do logowania do bazy, a następnie tworzymy testowy program PLC, który będzie generował przykładowe dane.
 
 ![inf25](https://ba-pl.github.io/wiki/assets/images/influx/inf25.png "inf25")
 
@@ -226,13 +226,13 @@ Tabela powinna się pojawić również po stronie serwra Influx:
 ![inf35](https://ba-pl.github.io/wiki/assets/images/influx/inf35.png "inf35")
 
 Kolejnym krokiem jest przypisanie naszych zmiennych z programu, odpowiednim zmiennym z tabeli. 
-Aby to zrobić wchodzimy w zakładkę DBTable **(1)**, wybieramy TableMode **(2)**jako CUSTOM, jako tabelę **(3)** naszą tabelę, i finalnie przypisujemy odpowiednie zmienne odpowiednim kolumnom w tabeli **(4)**. 
+Aby to zrobić wchodzimy w zakładkę DBTable **(1)**, wybieramy TableMode **(2)** jako CUSTOM, jako tabelę **(3)** naszą tabelę, i finalnie przypisujemy odpowiednie zmienne odpowiednim kolumnom w tabeli **(4)**. 
 <br>
 Kolumnie **_time** nic nie przypisujemy (powinna uzupełniać się automatycznie).
 
 ![inf36](https://ba-pl.github.io/wiki/assets/images/influx/inf36.png "inf36")
 
-Następnie należy znów aktywować konfigurację TcDbServer **(1)**, po czym wejść w Autlog Group View **(2)**:
+Następnie należy znów aktywować konfigurację TcDbServer **(1)**, po czym wejść w *Autolog Group View* **(2)**:
 
 ![inf37](https://ba-pl.github.io/wiki/assets/images/influx/inf37.png "inf37")
 
@@ -241,7 +241,7 @@ Powinna się w tym momencie wyświetlić nasza grupa autologowania. Jeśli wszys
 
 ![inf38](https://ba-pl.github.io/wiki/assets/images/influx/inf38.png "inf38")
 
-Pozostawiamy Autloggera włączonego i przechodzimy do interfejsu Influx. Kilkamy przycisk **Submit** (1) i możemy teraz manualnie odświeżać naszą bazę danych, przy pomocy przycisku odświeżania **(2)**
+Pozostawiamy Autloggera włączonego i przechodzimy do interfejsu Influx. Kilkamy przycisk **Submit** (1) i możemy teraz manualnie odświeżać naszą bazę danych, przy pomocy przycisku odświeżania **(2)**.
 Powinniśmy również zaobserwować odpowiedni wykres **(3)**.
 
 ![inf39](https://ba-pl.github.io/wiki/assets/images/influx/inf39.png "inf39")
