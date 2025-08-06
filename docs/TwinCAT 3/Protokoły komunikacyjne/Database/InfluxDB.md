@@ -64,7 +64,7 @@ Powinniśmy otrzymać rezultat jak poniżej:
 Następnie aktywujemy serwer przy pomocy komendy *influxd*: 
 
 ```
-influxd version
+influxd 
 ```
 
 ![inf8](https://ba-pl.github.io/wiki/assets/images/influx/inf8.png "inf8")
