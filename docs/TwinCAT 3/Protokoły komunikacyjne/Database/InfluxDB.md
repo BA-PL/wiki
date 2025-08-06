@@ -24,23 +24,23 @@ InfluxDB może obsłużyć miliony punktów danych na sekundę. Zdarza się, że
 INFO
 {: .label .label-purple }
 
-Obecnie TwinCAT 3 współpracuje wyłącznie z InfluxDB w wersjach 1.x i 2.x, poniższy poradnik dotyczy tylko i wyłącznie współpracy z InfluxDB 2.x
+Obecnie TwinCAT 3 współpracuje wyłącznie z InfluxDB w wersjach **1.x i 2.x**, poniższy poradnik dotyczy tylko i wyłącznie współpracy z InfluxDB **2.x**.
  
 </div>
 
 # Instalacja InfluxDB
 
-Krokiem pierwszym jest aktywacja serwera InfluxDB2. Aby to zrobić należy wejść na stronę [InfluxData](https://docs.influxdata.com/influxdb/v2/install/?t=Windows)
+Krokiem pierwszym jest aktywacja serwera InfluxDB2. Aby to zrobić należy wejść na stronę [InfluxData.](https://docs.influxdata.com/influxdb/v2/install/?t=Windows)
 <br>
-Następnie wybieramy odpowiednia wersję (1) oraz odpowiedni system operacyjny (2):
+Następnie wybieramy odpowiednia wersję **(1)** oraz odpowiedni system operacyjny **(2)**:
 
 ![inf1](https://ba-pl.github.io/wiki/assets/images/influx/inf1.png "inf1")
 
-i pobieramy (3) InfluxDB v2:
+i pobieramy **(3)** InfluxDB v2:
 
 ![inf2](https://ba-pl.github.io/wiki/assets/images/influx/inf2.png "inf2")
 
-Jeżeli plik pobrał się poprawnie, należy stworzyć folder InfluxData, w folderze Program Files, i tam wypakować pobrany plik. Widok po wypakowaniu:
+Jeżeli plik pobrał się poprawnie, należy stworzyć folder **InfluxData**, w folderze Program Files, i tam wypakować pobrany plik. Widok po wypakowaniu:
 
 ![inf3](https://ba-pl.github.io/wiki/assets/images/influx/inf3.png "inf3")
 
@@ -55,32 +55,30 @@ Następnie należy skonfigurować zmienne środowiskowe systemu, abyśmy mogli z
 W tym momencie można sprawdzić, czy wszystko zostało poprawnie skonfigurowane. Wchodzimy w wiersz poleceń, i wpisujemy komendę:
 ```
 influxd version
-
 ```
 
 Powinniśmy otrzymać rezultat jak poniżej: 
 
 ![inf7](https://ba-pl.github.io/wiki/assets/images/influx/inf7.png "inf7")
 
-Następnie aktywujemy serwer przy pomocy komendy influxd. 
+Następnie aktywujemy serwer przy pomocy komendy *influxd*: 
 
 ```
 influxd version
-
 ```
 
 ![inf8](https://ba-pl.github.io/wiki/assets/images/influx/inf8.png "inf8")
 
-Komenda ta na tym etapie powinna pozostać uruchomiona tak długo aż jej nie wyłączymy(ctrl+c).
+Komenda ta na tym etapie powinna pozostać uruchomiona tak długo aż jej nie wyłączymy (Ctrl+c).
 
-## Interfejs IfluxDB2
+## Interfejs InfluxDB2
 
 Jeśli wykonaliśmy wszystkie poprzednie kroki poprawnie, w przeglądarce wpisujemy adres **localhost:8086**:
 
 ![inf8a](https://ba-pl.github.io/wiki/assets/images/influx/inf8a.png "inf8a")
 
 Następnie przechodzimy proces zakładania konta (zapamietując podane dane, potem będą potrzebne).
-Finalnie powinniśmy uzyskać okno jak poniżej, gdzie powinna się wyświetlać nazwa konta, organizacji oraz bucketu które stworzyliśmy. 
+Finalnie powinniśmy uzyskać okno jak poniżej, gdzie powinna się wyświetlać nazwa konta, organizacji oraz bucketu które stworzyliśmy:
 
 ![inf9](https://ba-pl.github.io/wiki/assets/images/influx/inf9.png "inf9")
 
@@ -94,7 +92,7 @@ Po zainstalowaniu dodatku tworzymy nowy projekt *Empty TwinCAT Database Server P
 
 ![inf10](https://ba-pl.github.io/wiki/assets/images/influx/inf10.png "inf10")
 
-Następnie dodajemy do drzewka projektu *TwinCAT XAE Project*(standardowy projekt).
+Następnie dodajemy do drzewka projektu *TwinCAT XAE Project* (standardowy projekt).
 
 ![inf11](https://ba-pl.github.io/wiki/assets/images/influx/inf11.png "inf11")
 
@@ -110,11 +108,11 @@ Aby licencja została odczytana, należy przerestartować Runtime TwinCAT:
 
 ![inf15](https://ba-pl.github.io/wiki/assets/images/influx/inf15.png "inf15")
 
-W ustawieniach TcDbServer wybieramy urządzenie na którym ma znaleźć się serwer (1) TF6420 (czyli urządzenie, które ma się łączyć do bazy z poziomu TwinCATa, nie musi być to to samo urządzenie na ktróym znajduje się baza).
+W ustawieniach TcDbServer wybieramy urządzenie na którym ma znaleźć się serwer **(1)** TF6420 (czyli urządzenie, które ma się łączyć do bazy z poziomu TwinCATa, nie musi być to to samo urządzenie na ktróym znajduje się baza).
 <br>
-Jeśli na wybranym urządzeniu jest zainstalowany dodatek i aktywna licencja, na fioletowej ikonie powienin pojawiać się zielony kwadracik (2).
+Jeśli na wybranym urządzeniu jest zainstalowany dodatek i aktywna licencja, na fioletowej ikonie powienin pojawiać się zielony kwadracik **(2)**.
 <br>
-Na koniec zaznaczamy opcję *Impersonate User* (3). 
+Na koniec zaznaczamy opcję *Impersonate User* **(3)**. 
 
 ![inf16](https://ba-pl.github.io/wiki/assets/images/influx/inf16.png "inf16")
 
@@ -129,7 +127,7 @@ W oknie, które się pojawi, dokonujemy odpowiednich ustawień:
 Wchodzimy w nową bazę danych, i wybieramy:
 <br>
 1. InfluxDB2 jako typ naszej bazy danych.
-2. Server, to jest localhost8086, organizacja, taka jaką uprzednio utworzyliśmy(w tym przypadku Test5), Bucket również(w tym wypadku TestBucket1).
+2. Server, to jest *localhost:8086*, organizację taka jaką uprzednio utworzyliśmy (w tym przypadku *Test5*), oraz wcześniej utworzony Bucket (w tym wypadku *TestBucket1*).
 3. Wpisujemy nazwę użytkownika, oraz hasło takie jakie utworzyliśmy wcześniej.
 4. Klikamy check.
 <br>
@@ -138,7 +136,7 @@ Po kliknięciu **Check** powinno pokazać się okno:
 
 ![inf19](https://ba-pl.github.io/wiki/assets/images/influx/inf19.png "inf19")
 
-Przetestujmy teraz jeszcz jedną opcję - zmieniamy nazwę Bucket (na nieistniejącą) a następnie klikamy **Create**. 
+Przetestujmy teraz jeszcz jedną opcję - zmieniamy nazwę **(1)** Bucket (na nieistniejącą) a następnie klikamy **Create** (2). 
 
 ![inf20](https://ba-pl.github.io/wiki/assets/images/influx/inf20.png "inf20")
 
@@ -150,7 +148,7 @@ Nowo utworzony Bucket powinien się również pojawić na stronie serwera Influx
 
 ![inf22](https://ba-pl.github.io/wiki/assets/images/influx/inf22.png "inf22")
 
-Wracamy do TwinCATa i dodahmey nową grupę Autlogowania:
+Wracamy do TwinCATa i dodajemy nową grupę Autlogowania:
 
 ![inf23](https://ba-pl.github.io/wiki/assets/images/influx/inf23.png "inf23")
 
@@ -195,7 +193,7 @@ i przeciągamy wybrane zmienne:
 
 ![inf27](https://ba-pl.github.io/wiki/assets/images/influx/inf27.png "inf27")
 
-Po tych zmianach aktywujmey konfigurację proejktu DbServer:
+Po tych zmianach aktywujmey konfigurację projektu DbServer:
 
 ![inf28](https://ba-pl.github.io/wiki/assets/images/influx/inf28.png "inf28")
 
@@ -211,15 +209,15 @@ i otwieramy *SQL Query Editor*:
 
 ![inf31](https://ba-pl.github.io/wiki/assets/images/influx/inf31.png "inf31")
 
-W *SQL Query Editor* ustawiamy odpowiedni Target (1) i wcześniej utworzony Bucket (2):
+W *SQL Query Editor* ustawiamy odpowiedni Target **(1)** i wcześniej utworzony Bucket **(2)**:
 
 ![inf32](https://ba-pl.github.io/wiki/assets/images/influx/inf32.png "inf32")
 
-Po zaznaczeniu naszego zasobnika, tworzymy tabelę (1) nadając jej nazwę (2) oraz uzupełniając pola jak na zdjeciu poniżej, za pomocą kliknięcia PPM i opcji *Append Datafield*. Na koniec wykonujmey komedę **Create** (4):
+Po zaznaczeniu naszego zasobnika, tworzymy tabelę **(1)** nadając jej nazwę **(2)** oraz uzupełniając pola jak na zdjeciu poniżej **(3)**, za pomocą kliknięcia PPM i opcji *Append Datafield*. Na koniec wykonujmey komedę **Create** (4):
 
 ![inf33](https://ba-pl.github.io/wiki/assets/images/influx/inf33.png "inf33")
 
-Ponowenie w lewym dolnym rogu narzędzia powinniśmy dostać informację zwrotną:
+Ponownie w lewym dolnym rogu narzędzia powinniśmy dostać informację zwrotną:
 
 ![inf34](https://ba-pl.github.io/wiki/assets/images/influx/inf34.png "inf34")
 
@@ -228,23 +226,23 @@ Tabela powinna się pojawić również po stronie serwra Influx:
 ![inf35](https://ba-pl.github.io/wiki/assets/images/influx/inf35.png "inf35")
 
 Kolejnym krokiem jest przypisanie naszych zmiennych z programu, odpowiednim zmiennym z tabeli. 
-Aby to zrobić wchodzimy w zakładkę DBTable(1), wybieramy TableMode(2) jako CUSTOM, jako tabelę(3) naszą tabelę, i finalnie przypisujemy odpowiednie zmienne odpowiednim kolumnom w tabeli (4). 
+Aby to zrobić wchodzimy w zakładkę DBTable **(1)**, wybieramy TableMode **(2)**jako CUSTOM, jako tabelę **(3)** naszą tabelę, i finalnie przypisujemy odpowiednie zmienne odpowiednim kolumnom w tabeli **(4)**. 
 <br>
-Kolumnie _time nic nie przypisujemy (powinna uzupełniać się automatycznie).
+Kolumnie **_time** nic nie przypisujemy (powinna uzupełniać się automatycznie).
 
 ![inf36](https://ba-pl.github.io/wiki/assets/images/influx/inf36.png "inf36")
 
-Następnie należy znów aktywować konfigurację TcDbServer(1), po czym wejść w Autlog Group Viev(2):
+Następnie należy znów aktywować konfigurację TcDbServer **(1)**, po czym wejść w Autlog Group View **(2)**:
 
 ![inf37](https://ba-pl.github.io/wiki/assets/images/influx/inf37.png "inf37")
 
-Teraz w okienku obserwacji grupy autologowania ustawiamy odpowiednie urządzenie (1) i logujemy się do obserwacji(2). 
-Powinna się w tym momencie wyświetlić nasza grupa autologowania. Jeśli wszystko przebiegło pomyślnie, klikamy w Autolog Start(3). Jeśli licznik cykli jest większy niż zero oraz mamy komunikat *NoError* (4), to oznacza ze nasze dane są logowane.
+Teraz w okienku obserwacji grupy autologowania ustawiamy odpowiednie urządzenie **(1)** i logujemy się do obserwacji **(2)**. 
+Powinna się w tym momencie wyświetlić nasza grupa autologowania. Jeśli wszystko przebiegło pomyślnie, klikamy w Autolog Start **(3)**. Jeśli licznik cykli jest większy niż zero oraz mamy komunikat *NoError* **(4)**, to oznacza ze nasze dane są logowane.
 
 ![inf38](https://ba-pl.github.io/wiki/assets/images/influx/inf38.png "inf38")
 
-Pozostawiamy Autloggera włączonego i przechodzimy do interfejsu Influx. Kilkamy przycisk **Submit** (1) i możemy teraz manualnie odświeżać naszą bazę danych, przy pomocy przycisku odświeżania (2).
-Powinniśmy również zaobserwować odpowiedni wykres (3).
+Pozostawiamy Autloggera włączonego i przechodzimy do interfejsu Influx. Kilkamy przycisk **Submit** (1) i możemy teraz manualnie odświeżać naszą bazę danych, przy pomocy przycisku odświeżania **(2)**
+Powinniśmy również zaobserwować odpowiedni wykres **(3)**.
 
 ![inf39](https://ba-pl.github.io/wiki/assets/images/influx/inf39.png "inf39")
 
@@ -268,13 +266,13 @@ Na początek potrzebujemy zmienić ustawienia grupy autologowania, musimy jednak
 
 ![inf43](https://ba-pl.github.io/wiki/assets/images/influx/inf43.png "inf43")
 
-W ustawieniach grupy (1) zmieniamy parametr *StartUp* (2) i aktywujemy konfiguracę (3):
+W ustawieniach grupy **(1)** zmieniamy parametr *StartUp* **(2)** i aktywujemy konfigurację **(3)**:
 
 ![inf44](https://ba-pl.github.io/wiki/assets/images/influx/inf44.png "inf44")
 
-Powyższe usatwienie spowoduje, że grupa bedzie się uruchamiać wraz ze stratem TwinCAT do trybu Run Mode (zakładamy więc, że na sterowniku jest wgrany program, bootproject i stan TwincAT po uruchomienu sterownika automatycznie ustawia się na Run Mode).
+Powyższe usatwienie spowoduje, że grupa bedzie się uruchamiać wraz ze startem TwinCAT do trybu Run Mode (zakładamy więc, że na sterowniku jest wgrany program, bootproject i stan TwinCAT po uruchomienu sterownika automatycznie ustawia się na Run Mode).
 
-Ostatnim krokiem jest dodany Influxd do usług (na urządzeniu, gdzie jest serwer bazy InfluxDB2).
+Ostatnim krokiem jest dodanie Influxd do usług (na urządzeniu, gdzie jest serwer bazy InfluxDB2).
 <br>
 Pobieramy w tym celu [NSSM](https://nssm.cc/download):
 
@@ -288,11 +286,10 @@ Uruchamiamy wiersz poleceń i przechodzimy do tej ścieżki i odpowiedniego kata
 
 ![inf47](https://ba-pl.github.io/wiki/assets/images/influx/inf47.png "inf47")
 
-Sprawdazamy działanie nssm komedą:
+Sprawdzamy działanie nssm komedą:
 
 ```
 nssm --help
-
 ```
 
 ![inf48](https://ba-pl.github.io/wiki/assets/images/influx/inf48.png "inf48")
@@ -301,10 +298,9 @@ Jeśli usługa działa, wywołujemy komendę:
 
 ```
 nssm install InfluxDB
-
 ```
 
-Powinno pojawić się okno które uzupełniamy oidpowiednimi danymi:
+Powinno pojawić się okno które uzupełniamy odpowiednimi danymi:
 
 ![inf49](https://ba-pl.github.io/wiki/assets/images/influx/inf49.png "inf49")
 
@@ -314,8 +310,8 @@ Otwieramy okienko *Uruchom* i wpisujemy **services.msc**:
 
 ![inf49a](https://ba-pl.github.io/wiki/assets/images/influx/inf49a.png "inf49a")
 
-Upewniamy się, że wszystkie konsole, na których mieliśmy włączony serwer InfluxDB są wyłączone i odnajdujemy wśród usług, usługę InfluxDB(1), w którą wchodzimy.
-Upewniamy się, że tryb uruchomienia jest automatyczny (2), po czym kikamy uruchom (3) i zatwierdzamu ustawienia (4). 
+Upewniamy się, że wszystkie konsole, na których mieliśmy włączony serwer InfluxDB są wyłączone i odnajdujemy wśród usług, usługę InfluxDB **(1)**, w którą wchodzimy.
+Upewniamy się, że tryb uruchomienia jest automatyczny **(2)**, po czym kikamy Uruchom **(3)** i zatwierdzamy ustawienia **(4)**. 
 
 ![inf50](https://ba-pl.github.io/wiki/assets/images/influx/inf50.png "inf50")
 
