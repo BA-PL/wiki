@@ -224,7 +224,7 @@ W zakładce **DBTable** w polu **TableMode** należy wybrać opcję **CUSTOM**, 
 
 ![db34](https://ba-pl.github.io/wiki/assets/images/DataBase/db34.png "db34")
 
-Jeżeli grupa ma za zadanie zapisywać wartości do bazy to zmienne *ID* oraz *Timestamp* należy odpowiednio ustawić jako *<AutoID>* oraz *<Data Timestamps>*. Jeżeli jednak grupa będzie miała za zadanie odczytywanie zmiennych z bazy to *<AutoID>* oraz *<Data Timestamps>* należy zastąpić zmiennymi ze struktury, do których wpisywane będą odczytywane wartości.
+Jeżeli grupa ma za zadanie zapisywać wartości do bazy to zmienne **ID** oraz **Timestamp** należy odpowiednio ustawić jako **AutoID** oraz **Data Timestamps**. Jeżeli jednak grupa będzie miała za zadanie odczytywanie zmiennych z bazy to **AutoID** oraz **Data Timestamps** należy zastąpić zmiennymi ze struktury, do których wpisywane będą odczytywane wartości.
 
 Na koniec należy wykonać zapis (Save All) i aktywację konfiguracji projektu baz danych.
 
