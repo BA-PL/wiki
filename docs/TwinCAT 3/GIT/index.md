@@ -14,8 +14,6 @@ layout: page
 1. TOC
 {:toc}
 
-
-# GIT
 ## Przygotowanie TwinCAT XAE
 
 Do efektywnego zarządzania kodem źródłowym zaleca się skonfigurować poniższe ustawienia narzędzia inżynierskiego.
@@ -112,4 +110,4 @@ Otwieramy pustą instancję TwinCAT XAE i wybieramy z paska narzędzi opcję **G
 Wybieramy miejsce gdzie projekt ma zostać zapisany oraz podajemy adres URL zdalnego repozytorium.  
 ![Clone](image-21.png)
 
-Po kliknięciu przycisku Clone, cały projekt wraz z całą historią zmian zostanie pobrany do wybranego folderu.
+Po kliknięciu przycisku **Clone**, cały projekt wraz z całą historią zmian zostanie pobrany do wybranego folderu.
