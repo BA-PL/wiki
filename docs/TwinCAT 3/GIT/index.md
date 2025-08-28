@@ -57,7 +57,7 @@ W prawym dolnym rogu pojaw się informacja o aktualnym stanie naszego repozytori
 ### TwinCAT Project Compare
 Do porównywania zmian w projektach warto skonfigurować **TwinCAT Project Compare**.  
 Narzędzie znajduje się w katalogu Tools po kliknięciu na ikonę TwinCAT'a.  
-Należy pamiętać, aby wybrać opcję **Specific Project**, a nie globalne ustawienie w punkcie **(4)**. Należy wybrać plik **..\MyProject\.git\config**  
+Należy pamiętać, aby wybrać opcję **Specific Project**, a nie globalne ustawienie w punkcie **(4)**. Należy wybrać plik **..\MyProject\ .git\config**  
 ![TwinCAT Project Compare](image-10.png)
 
 ### Commitowanie zmian
