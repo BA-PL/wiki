@@ -112,77 +112,39 @@ Aby sprawdzi czy VBS jest wykorzystywane, należy w okienku uruchomi wpisać **m
 
 ![loc17](https://ba-pl.github.io/wiki/assets/images/local/loc17.png "loc17")
 ![loc18](https://ba-pl.github.io/wiki/assets/images/local/loc18.png "loc18")
-
-#### <ins>**Wyłączenie VBS dla Windows 7 lub Windows 10**</ins> 
-
 <br>
-Aby wyłączyć tę funkcję w oknie uruchom wpisz komendę **gpedit.msc**
 
-![loc19](https://ba-pl.github.io/wiki/assets/images/local/loc19.png "loc19")
-
-Przechodzimy do sekcji  Computer configuration -> Administrative Templates -> System -> Device Guard -> Turn on virtualization based security
-
-![loc20](https://ba-pl.github.io/wiki/assets/images/local/loc20.png "loc20")
-
-W oknie, które się pojawi, wykonujemy konfigurację jak na zdjęciu poniżej:
-
-![loc21](https://ba-pl.github.io/wiki/assets/images/local/loc21.png "loc21")
-
-Następnie używamy cmd z prawami administratora i wykonujemy komedę **gpupdate /force**
-
-![loc22](https://ba-pl.github.io/wiki/assets/images/local/loc22.png "loc22")
-
-Następnie należy ponownie uruchomić komputer. **„Shutdown”** nie działa z Windows 10/11, ponieważ nie przeładowuje jądra.
-
-#### <ins>**Wyłącznie VBS dla Windows 11**</ins> 
-
+**Wyłączenie VBS - na własne ryzyko!**
 <br>
-Otwieramy ustawienia i wyszukujemy opcji *Core Isolation*:
-
-![loc23](https://ba-pl.github.io/wiki/assets/images/local/loc23.png "loc23")
-
-Następnie wyłączamy funkcję **Memory integrity** i restartujemy system.
-
-![loc24](https://ba-pl.github.io/wiki/assets/images/local/loc24.png "loc24")
-
-#### <ins>**Dodatkowe ustawienia które mogą być wymagane**</ins> 
-
 <br>
-Może być konieczne wprowadzenie dodatkowych zmian w rejestrach.
-**WAŻNE**: Jeśli dane rejestry ze zdjęć nie istnieją na Twoim komputerze, nie należy ich tworzyć
-- Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\DeviceGuard\Scenarios\HypervisorEnforcedCodeIntegrity 
-	- ENABLED = 0
 
-![loc25](https://ba-pl.github.io/wiki/assets/images/local/loc25.png "loc25")
+Od TwinCAT w wersji 4026.15 po instalacji pojawia się skrypt ułatwiający wyłączenie Virtualization Based Security na komputerach. Aby go uruchomić na komputerze programisty uruchamiamy PowerShell z uprawnieniami Administratora i uruchamiamy skrypt:
 
-- Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\DeviceGuard 
-	- EnableVirtualizationBasedSecurity = 0
+`C:\Program Files (x86)\Beckhoff\TwinCAT\3.1\System\DisableVirtualizationBasedSecurity.ps1`
 
-![loc26](https://ba-pl.github.io/wiki/assets/images/local/loc26.png "loc26")
+W skrypcie znajduje się notatka z którą należy się zapoznać:
+```
+PLEASE NOTE:
+The TwinCAT runtime environment cannot be started within a Hyper-V environment. As soon as a component of the computer uses Hyper-V, only the engineering environment (XAE) can be used on this computer, but not the runtime environment (XAR).
+In addition to software solutions for virtual machines, Hyper-V can also be used by operating system tools (Device Guard, Credential Guard, VBS,...) or other Hyper-V programs.
+Further Information about TwinCAT requirements: https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_overview/6162419083.html
 
-- Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\DeviceGuard\Scenarios\SystemGuard
-	- ENABLED = 0 
+WARNING:
+This script helps to configure the system accordingly and will disable VBS, which are critical for protecting your system against advanced threats.
+Consultation required: Please consult with your IT department or the end customer before proceeding to ensure this action
+aligns with security policies.
 
-![loc27](https://ba-pl.github.io/wiki/assets/images/local/loc27.png "loc27")
+PROCEED WITH CAUTION:
+Understand the risks and seek guidance if necessary. By continuing, you accept responsibility for these changes.
+```
+Znane są nam przypadki w których wyłączenie VBS powoduje nieprawidłowe działanie funkcji BitLocker.
+Jeśli korzystamy z niej, nie polecamy wyłączania VBS a inne rozwiązania jak np. maszyna wirtualna.
 
-- Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\DeviceGuard\Scenarios\CredentialGuard
-	- ENABLED = 0 
+Inna alterantywa to TwinCAT User Mode w którym możemy uruchomić symulację:
+https://infosys.beckhoff.com/content/1033/tc170x_tc3_usermode_runtime/index.html
+Niestety na ten moment posiada on ograniczenia, z którymi warto się zapoznać:
+https://infosys.beckhoff.com/content/1033/tc170x_tc3_usermode_runtime/11319889035.html
 
-![loc28](https://ba-pl.github.io/wiki/assets/images/local/loc28.png "loc28")
-
-#### <ins>**Sprawdzenie czy VBS zostało poprawnie wyłączone**</ins> 
-
-<br>
-Aby sprawdzi czy VBS jest wyłączone, należy w okienku uruchomi wpisać **msinfo32.exae**:
-
-![loc29](https://ba-pl.github.io/wiki/assets/images/local/loc29.png "loc29")
-
-Ustawienie *Virtualization based security* powinno mieć status **Not enabled**:
-
-![loc30](https://ba-pl.github.io/wiki/assets/images/local/loc30.png "loc30")
-
-Zauważ również, że zobaczysz wiele wpisów dotyczących Hyper-V z wartością „yes”. Jest to w porządku, są to zależności Hyper-V dla osób, które chcą skonfigurować Hyper-V. W rzeczywistości nie jest on uruchomiony.
-Jeśli zabezpieczenia oparte na wirtualizacji są wyłączone, powinieneś być gotowy do pracy z TwinCAT.
 
 ## Dodatek - przywracanie izolowanego rdzenia
 Aby przywrócić na komputerze wyizolowany rdzeń należy wywołać okno „Set on Target” (w analogiczny sposób jak przy jego izolacji – rozdział 4.1). Następnie należy ustawić ilość rdzeni „Isolated” na 0 i wybrać „Set”. W następnym kroku wykonujemy restart komputera. 
