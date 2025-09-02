@@ -117,9 +117,7 @@ Aby sprawdzić czy VBS jest wykorzystywane, należy w okienku uruchomi wpisać *
 **Wyłączenie VBS** 
 
 <div class="code-example" markdown="1" style="background: rgba(255, 0, 0, 0.8)">
-
 Na własne ryzyko!
- 
 </div>
 
 Od TwinCAT w wersji 4026.15 po instalacji pojawia się skrypt ułatwiający wyłączenie Virtualization Based Security na komputerach. Aby go uruchomić na komputerze programisty uruchamiamy PowerShell z uprawnieniami Administratora i uruchamiamy skrypt:
@@ -145,6 +143,7 @@ Znane są nam przypadki w których wyłączenie VBS powoduje nieprawidłowe dzia
 Jeśli korzystamy z niej, nie polecamy wyłączania VBS a inne rozwiązania jak np. maszyna wirtualna.
 
 Inna alterantywa to TwinCAT User Mode w którym możemy uruchomić symulację: [link](https://infosys.beckhoff.com/content/1033/tc170x_tc3_usermode_runtime/index.html)
+<br>
 Niestety na ten moment posiada on ograniczenia, z którymi warto się zapoznać: [link](https://infosys.beckhoff.com/content/1033/tc170x_tc3_usermode_runtime/11319889035.html)
 
 
