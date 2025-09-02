@@ -108,15 +108,19 @@ bcdedit /set hypervisorlaunchtype off
 
 Zabezpieczenia oparte na wirtualizacji wykorzystują funkcje wirtualizacji sprzętu do tworzenia i izolowania bezpiecznego regionu pamięci od normalnego systemu operacyjnego. Windows może używać tego wirtualnego trybu bezpiecznego do hostowania szeregu rozwiązań zabezpieczających, zapewniając im znacznie zwiększoną ochronę przed lukami w systemie operacyjnym i zapobiegając wykorzystaniu złośliwych exploitów, które próbują pokonać zabezpieczenia.
 
-Aby sprawdzi czy VBS jest wykorzystywane, należy w okienku uruchomi wpisać **msinfo32.exe**
+Aby sprawdzić czy VBS jest wykorzystywane, należy w okienku uruchomi wpisać **msinfo32.exe**
 
 ![loc17](https://ba-pl.github.io/wiki/assets/images/local/loc17.png "loc17")
 ![loc18](https://ba-pl.github.io/wiki/assets/images/local/loc18.png "loc18")
 <br>
 
-**Wyłączenie VBS - na własne ryzyko!**
-<br>
-<br>
+**Wyłączenie VBS** 
+
+<div class="code-example" markdown="1" style="background: rgba(255, 0, 0, 0.8)">
+
+Na własne ryzyko!
+ 
+</div>
 
 Od TwinCAT w wersji 4026.15 po instalacji pojawia się skrypt ułatwiający wyłączenie Virtualization Based Security na komputerach. Aby go uruchomić na komputerze programisty uruchamiamy PowerShell z uprawnieniami Administratora i uruchamiamy skrypt:
 
@@ -140,10 +144,8 @@ Understand the risks and seek guidance if necessary. By continuing, you accept r
 Znane są nam przypadki w których wyłączenie VBS powoduje nieprawidłowe działanie funkcji BitLocker.
 Jeśli korzystamy z niej, nie polecamy wyłączania VBS a inne rozwiązania jak np. maszyna wirtualna.
 
-Inna alterantywa to TwinCAT User Mode w którym możemy uruchomić symulację:
-https://infosys.beckhoff.com/content/1033/tc170x_tc3_usermode_runtime/index.html
-Niestety na ten moment posiada on ograniczenia, z którymi warto się zapoznać:
-https://infosys.beckhoff.com/content/1033/tc170x_tc3_usermode_runtime/11319889035.html
+Inna alterantywa to TwinCAT User Mode w którym możemy uruchomić symulację: [link](https://infosys.beckhoff.com/content/1033/tc170x_tc3_usermode_runtime/index.html)
+Niestety na ten moment posiada on ograniczenia, z którymi warto się zapoznać: [link](https://infosys.beckhoff.com/content/1033/tc170x_tc3_usermode_runtime/11319889035.html)
 
 
 ## Dodatek - przywracanie izolowanego rdzenia
