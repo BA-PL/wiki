@@ -316,7 +316,7 @@ Po restarcie komputera dane powinny logować się automatycznie.
 
 # Logowanie danych z PLC
 
-Dane do logowania powinny zawsze być tablicą struktur. Absolutne minimum struktury to pojedyńcza wartośćnumeryczna do logowania z opisowym atrybutem. Sama struktura powinna mieć następującą postać:
+Dane do logowania powinny zawsze być tablicą struktur. Absolutne minimum struktury to pojedyńcza wartość numeryczna do logowania z opisowym atrybutem. Sama struktura powinna mieć następującą postać:
 
 ```
 TYPE WindTurbineData :
@@ -342,9 +342,9 @@ Atrybut `FieldName` opisuje jak dana zmienna ma się nazywać po stronie Influx 
 Atrybut `TagName` z kolei dodaje dodatkowy filtr po którym możemy wyszukiwać. W powyższym przykładzie `ID` jest nowym filtrem gdzie jedną z wartości po których chcemy filtrować będzie to wartość zmiennej `STRING(225)`. 
 Przykładowo możemy szukać wszystkich danych które posiadają `ID == "Wind Turbine 5"`
 
-Jeżeli atrybuty nie zostaną skonfigurowane dane nie zostaną przesłane nawe w przypadku pojedyńczej zmiennej !
+Jeżeli atrybuty nie zostaną skonfigurowane dane nie zostaną przesłane nawet w przypadku pojedyńczej zmiennej!
 
-Nazwa pola `_measurement` czyli tzw. naszej tablicy jest wprowadzana w wartości ` QueryOption_TSDB_Insert.sDataType` bloku ` QueryOption_TSDB_Insert : T_QueryOptionTimeSeriesDB_Insert;`. Pełen opis z przykładową konfiguracją na stronie [Infosys w opisie dodatku TF6420](https://infosys.beckhoff.com/english.php?content=../content/1033/tf6420_tc3_database_server/8117583755.html&id=5199556541044360835)
+Nazwa pola `_measurement` czyli tzw. naszej tablicy jest wprowadzana w wartości `QueryOption_TSDB_Insert.sDataType`  bloku `QueryOption_TSDB_Insert : T_QueryOptionTimeSeriesDB_Insert;`. Pełen opis z przykładową konfiguracją na stronie [Infosys w opisie dodatku TF6420](https://infosys.beckhoff.com/english.php?content=../content/1033/tf6420_tc3_database_server/8117583755.html&id=5199556541044360835)
 <br>
 <br>
 Przykładowy program do pobrania:
