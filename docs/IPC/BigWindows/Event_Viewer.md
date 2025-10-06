@@ -83,7 +83,15 @@ Aby udostępnić listę zdarzeń należy:
 - uruchomić aplikację Event Viewer
 - przejść do sekcji *Windows Logs > Application* 
 - z prawej strony wybieramy opcje *Save All Events As...*
-- zapisujemy wygenerowany plik pod dowolną nazwą i przesyłamy jako załącznik na support
+- wygenerowany plik zapisujemy pod dowolną nazwą
 
 ![EventViewer_SaveAllEvents](https://ba-pl.github.io/wiki/assets/images/EV/EventViewer_SaveAllEvents.png "EventViewer_SaveAllEvents")
+
+Operację wykonać najlepiej dla zakładek Application, System oraz Security.
+
+![EV_tabs](https://ba-pl.github.io/wiki/assets/images/EV/EV_tabs.png "EV_tabs") 
+
+Następnie te pliki wysyłamy jako załącznik na **support@beckhoff.pl**.
+ 
+
 
