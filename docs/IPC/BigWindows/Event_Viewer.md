@@ -67,6 +67,7 @@ Logi związane z systemami Beckhoff'a są umieszczane w folderze *Windows Logs >
 ## Przykładowa diagnostyka
 
 Przeglądając listę zdarzeń często mozemy się natknąć na eventy z przedrostkiem Tc*
+<br>
 Zawierają one informacje na temat przejść, maszyn stanów, uruchomień różnych usług i w zależności od ważności danego komuniaktu możemy oczytać czy dana usługa zachowuje się zgodnie z oczekiwaniami.
 
 
