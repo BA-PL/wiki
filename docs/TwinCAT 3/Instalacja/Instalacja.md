@@ -204,7 +204,12 @@ Zakładka *Updates* odblokuje się w gdy pojawią się nowe wersje funkcji. Moż
 
 # Instalacja starszych buildów (Remote Manage) i/lub TwinCAT 2
 
-Po instalacji/migracji można doinstalować starsze wersje TwinCAT. Aby to wykonać należy dodać kolejny feed (źródło) w ustawieniach TwinCAT Package Manager.
+Po instalacji/migracji można doinstalować starsze wersje TwinCAT. 
+W pierwszym kroku sprawdzamy/aktywujemy integrację z XAEShell32:
+
+![x32](https://ba-pl.github.io/wiki/assets/images/4026/x32.png "x32")
+
+Następnie dodajemy kolejny feed (źródło) w ustawieniach TwinCAT Package Manager.
 <br>
 <br>
 Klikamy ikonę ustawień w lewym dolnym rogu:
