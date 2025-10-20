@@ -77,7 +77,7 @@ Aktywujemy konfigurację TwinCATa:
 
 Licencje są już aktywne:
 
-![Valid](https://ba-pl.github.io/wiki/assets/images/licencje/Valid.png "Valid")
+![Valid2](https://ba-pl.github.io/wiki/assets/images/licencje/Valid2.png "Valid2")
 
 
 
