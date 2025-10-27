@@ -1,7 +1,7 @@
 ---
 title: Database Server
 parent: Protokoły komunikacyjne
-nav_order: 5
+nav_order: 6
 layout: page
 ---
 
