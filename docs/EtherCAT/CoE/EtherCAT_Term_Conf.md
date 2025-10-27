@@ -35,6 +35,8 @@ Są to indeksy, które najczęściej służą wyborowi takich parametrów jak tr
 
 ![coe1](https://ba-pl.github.io/wiki/assets/images/CoE/coe1.png "coe1")
 
+Zmiany ustawień w zakładce CoE nie wymagają aktywacji konfiguracji, są aplikowane od razu i zapisywane w pamięci modułu. 
+
 ### Diagnostyka modułów
 
 Są to indeksy, które pozwalają na sprawdzenie parametrów takich jak aktualne wartości wejść dla modułów AI:
@@ -71,6 +73,9 @@ Zakładka Startup posiada inny interfejs niż zakładka CoE-Online i służy prz
 
 W zakładce tej wybieramy, który parametr ma zostać nadpisany - oraz w którym momencie - jako że wybieramy tzw. Transition - czyli moment przejścia między stanami EtherCAT modułu, w którym dane zostaną wpisane.
 
+<br>
+Po skonfigurowaniu zakładki Startup, do jej prawidłowego działania wymagana jest aktywacja konfiguracji. 
+<br>
 **Liczba pojedyncza jest tu nieprzypadkowa, każdy pojedyczny SubIndex należy skonfigurować oddzielnie!!!**
 
 ![coe9](https://ba-pl.github.io/wiki/assets/images/CoE/coe9.png "coe9")
@@ -82,6 +87,6 @@ W zakładce tej wybieramy, który parametr ma zostać nadpisany - oraz w którym
 Po uruchomieniu urządzenia typu EtherCAT Slave następuje przejście modułu przez wszystkie stany (INIT -> PREOP -> SAFEOP ->OP). W takim przypadku tranzycje zdefiniowane w Startup List zawsze mają miejsce. Daje nam to następujące zalety:
 * nawet jeśli urządzenie zostało przekonfigurowane w trakcie pracy, po restarcie powróci do ustawień ze Startup List, co jest idealne w przypadku konieczności zastosowania rozwiązań "tymczasowych" (np. inny typ czujnika w przypadku awarii)
 * Starup List jest eksportowalna / importowalna. Dzięki temu można w łatwy i wygodny sposób przenosić konfigurację między projektami czy poszczególnymi modułami, jeśli mamy w aplikacji wiele modułów tego samego typu
-* W przypadku awarii modułu mamy pewność, że nieważne skąd będzie pochodzić moduł (nowy z pudełka, z innej maszyny, "z odzysku") - jeśli pierwszą komendą w Startup List będzie przywrócenie do ustawień fabrycznych (patrz wyżej) moduł ZAWSZE będzie traktowany jak moduł nowy, wyjęty z pudełka
+* W przypadku awarii modułu mamy pewność, że nieważne skąd będzie pochodzić moduł (nowy z pudełka, z innej maszyny, "z odzysku") - jeśli pierwszą komendą w Startup List będzie przywrócenie do ustawień fabrycznych (a następnie wgranie właściwych ustawień) moduł będzie traktowany jak moduł nowy, wyjęty z pudełka
 * Służby Utrzymania Ruchu nie muszą podczas wymiany sprzętu martwić się o jego konfigurację - wystarczy w miejsce uszkodzonego modułu wstawić moduł tego samego typu, a podczas uruchamiania "skonfiguruje się sam".
 * Mamy możliwość reakcji w przypadku nieprawidłowego zadziałania aplikacji (możliwość konfigurowania tranzycji nie tylko w "pozytywną" stronę, ale również tranzycji takich jak przejście modułu ze stanu OP do SAFEOP wywołane np. watchdogiem)
