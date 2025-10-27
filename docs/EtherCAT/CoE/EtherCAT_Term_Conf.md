@@ -33,35 +33,35 @@ Poniżej przedstawiono kilka funkcjonalności, które można zrealizować dzięk
 
 Są to indeksy, które najczęściej służą wyborowi takich parametrów jak tryb pracy, filtry, typy czujników czy parametry pracy. Są dostępne dla każdego kanału z osobna, co przekłada się na możliwość stosowania różnych typów urządzeń z tym samym modułem na różnych kanałach
 
-![coe1](https://ba-pl.github.io/wiki/assets/images/CoE/ceo1.png "coe1")
+![coe1](https://ba-pl.github.io/wiki/assets/images/CoE/coe1.png "coe1")
 
 ### Diagnostyka modułów
 
 Są to indeksy, które pozwalają na sprawdzenie parametrów takich jak aktualne wartości wejść dla modułów AI:
 
-![coe2](https://ba-pl.github.io/wiki/assets/images/CoE/ceo2.png "coe2")
+![coe2](https://ba-pl.github.io/wiki/assets/images/CoE/coe2.png "coe2")
 
 Czy indeksy diagnostyczne dla modułów posiadających takowy interfejs:
 
-![coe3](https://ba-pl.github.io/wiki/assets/images/CoE/ceo3.png "coe3")
+![coe3](https://ba-pl.github.io/wiki/assets/images/CoE/coe3.png "coe3")
 
-![coe4](https://ba-pl.github.io/wiki/assets/images/CoE/ceo4.png "coe4")
+![coe4](https://ba-pl.github.io/wiki/assets/images/CoE/coe4.png "coe4")
 
 ### Przywracanie ustawień fabrycznych modułów
 
 Dzięki interfejsowi CoE-Online łatwo można przywrócić moduł do ustawień fabrycznych. Można to wykonać na dwa sposoby:
 
-![coe5](https://ba-pl.github.io/wiki/assets/images/CoE/ceo5.png "coe5")
+![coe5](https://ba-pl.github.io/wiki/assets/images/CoE/coe5.png "coe5")
 
 1. Wpisanie wartości "0x64616F6C" w pole HEX w Indes 1011, SubIndex 001:
 
-![coe6](https://ba-pl.github.io/wiki/assets/images/CoE/ceo6.png "coe6")
+![coe6](https://ba-pl.github.io/wiki/assets/images/CoE/coe6.png "coe6")
 
 2. Edycja wartości poprzez Hex Edit i wpisanie wartości 'load'
 
-![coe7](https://ba-pl.github.io/wiki/assets/images/CoE/ceo7.png "coe7")
+![coe7](https://ba-pl.github.io/wiki/assets/images/CoE/coe7.png "coe7")
 
-![coe8](https://ba-pl.github.io/wiki/assets/images/CoE/ceo8.png "coe8")
+![coe8](https://ba-pl.github.io/wiki/assets/images/CoE/coe8.png "coe8")
 
 ## Konfiguracja modułów przy pomocy zakładki Startup
 
@@ -73,9 +73,9 @@ W zakładce tej wybieramy, który parametr ma zostać nadpisany - oraz w którym
 
 **Liczba pojedyncza jest tu nieprzypadkowa, każdy pojedyczny SubIndex należy skonfigurować oddzielnie!!!**
 
-![coe9](https://ba-pl.github.io/wiki/assets/images/CoE/ceo9.png "coe9")
+![coe9](https://ba-pl.github.io/wiki/assets/images/CoE/coe9.png "coe9")
 
-![coe10](https://ba-pl.github.io/wiki/assets/images/CoE/ceo10.png "coe10")
+![coe10](https://ba-pl.github.io/wiki/assets/images/CoE/coe10.png "coe10")
 
 ## Dlaczego warto stosować konfigurację modułu przy pomocy Startup List?
 
