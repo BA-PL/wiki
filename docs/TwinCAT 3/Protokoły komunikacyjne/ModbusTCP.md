@@ -61,7 +61,7 @@ Modbus TCP domyślnie komunikuje się po porcie TCP 502. Należy więc pamięta�
 
 Dla funkcjonalności Modbus Server należy zainstalować serwer Mobus TCP (opisane wyżej) oraz zadeklarować odpowiednie zmienne w PLC. Ważne jest, aby deklaracja była dokładnie taka, jak opisana [w Infosys](https://infosys.beckhoff.com/content/1033/tf6250_tc3_modbus_tcp/192743435.html) - z dokładnością co do nazwy listy zmiennych globalnych, na których znajdują się odpowiednie tablice - inaczej funkcjonalność serwera nie będzie działać poprawnie.
 
-![mtcp5v2](https://ba-pl.github.io/wiki/assets/images/ModbusTCP/mtcp5v2.png "mtcp5v2")
+![gvl](https://ba-pl.github.io/wiki/assets/images/ModbusTCP/gvl.png "gvl")
 
 Wówczas odpowiednio zadekladrowane tablice będą odpowiadać poniższym obszarom (warto zwrócić uwagę na PLC memory area, czyli deklarację %M, która mapowana jest domyślnie na adresie 16#3000):
 
