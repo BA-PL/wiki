@@ -22,28 +22,28 @@ layout: page
 ![mtcp1](https://ba-pl.github.io/wiki/assets/images/ModbusTCP/mtcp1.png "mtcp1")
 
 Protokół Modbus TCP (licencja TF6250) jest oparty o warstwę TCP/IP, może więc zostać uruchomiony na dowolnym porcie Ethernet zawartym w sterowniku (od Q1 2026 możliwość uruchomienia na dedykowanym module EL6251). Pozwala on na komunikację typu serwer/klient z wieloma urządzeniami z branży automatyki, które udostępniają swoje dane procesowe. Jest protokołem uniwersalnym, wspieranym przez wielu producentów. 
-W Beckhoff można go uruchomić na WSZYSTKICH sterownikach (już od Performance Level 10 - CX7xxx).
+W Beckhoff można go uruchomić na wszystkich sterownikach (już od Performance Level 10 - CX7xxx).
 
 ![mtcp2](https://ba-pl.github.io/wiki/assets/images/ModbusTCP/mtcp2.png "mtcp2")
 
 # Instalacja
 
-## DLA WINDOWS CE
+## Dla Windows CE
 
 Instalacja następuje poprzez instalację dodatku na komputerze inżynierskim (opisane niżej) i przeniesienie pliku CAB na sterownik, co opisane jest [w Infosys](https://infosys.beckhoff.com/content/1033/tf6250_tc3_modbus_tcp/705884939.html).
 
-## DLA TWINCAT/BSD
+## Dla TwinCAT/BSD
 
 Instalacja odbywa się poprzez command line z poziomu sterownika. Opisane jest to [w Infosys](https://infosys.beckhoff.com/content/1033/tf6250_tc3_modbus_tcp/11519180811.html)
 
-## DLA PEŁNYCH SYSTEMÓW OPERACYJNYCH
+## Dla pełnych systemów operacyjnych
 
 Procedura instalacji dodatków opisana jest oddzielnie [dla wersji 4026](https://ba-pl.github.io/wiki/docs/TwinCAT%203/Instalacja/Instalacja/#instalacja-twincat-i-funkcji) oraz [dla wersji 4024](https://ba-pl.github.io/wiki/docs/TwinCAT%203/Instalacja/Instalacja%204024/#instalacja-bibliotek-oraz-dodatkowych-narz%C4%99dzi).
 Należy postępować zgodnie z instrukcją, instalując dodatek TF6250 Modbus TCP.
 
-# KONFIGURACJA
+# Konfiguracja
 
-## ODBLOKOWANIE PORTU W FIREWALL
+## Odblokowanie portu w Firewall
 
 Modbus TCP domyślnie komunikuje się po porcie TCP 502. Należy więc pamiętać o odblokowaniu odpowiedniego portu w firewall **na sterowniku**.
 
@@ -57,7 +57,7 @@ Modbus TCP domyślnie komunikuje się po porcie TCP 502. Należy więc pamięta�
 
 * Dla TwinCAT/BSD odblokowanie portu w Firewall wykonuje się z poziomu Command Line. Procedura opisana jest [w Infosys](https://infosys.beckhoff.com/content/1033/twincat_bsd/6424551179.html)
 
-# FUNKCJONALNOŚĆ SLAVE (SERVER)
+# Funkcjonalność serwera
 
 Dla funkcjonalności Modbus Server należy zainstalować serwer Mobus TCP (opisane wyżej) oraz zadeklarować odpowiednie zmienne w PLC. Ważne jest, aby deklaracja była dokładnie taka, jak opisana [w Infosys](https://infosys.beckhoff.com/content/1033/tf6250_tc3_modbus_tcp/192743435.html) - z dokładnością co do nazwy listy zmiennych globalnych, na których znajdują się odpowiednie tablice - inaczej funkcjonalność serwera nie będzie działać poprawnie.
 
@@ -67,13 +67,13 @@ Wówczas odpowiednio zadekladrowane tablice będą odpowiadać poniższym obszar
 
 ![mtcp6](https://ba-pl.github.io/wiki/assets/images/ModbusTCP/mtcp6.png "mtcp6")
 
-# FUNKCJONALNOŚĆ MASTER (CLIENT)
+# Funkcjonalność client
 
 W celu uruchomienia funkcjonalności Modbus Client, podobnie jak w przypadku funkcjonalności Server, musimy zainstalować na sterowniku dodatek TF6250, natomiast w środowisku inżynierskim należy dodać bibliotekę Tc2_ModbusSrv. Pozwala ona na wywołanie wszystkich funkcji Modbusowych (lista poniżej):
 
 ![mtcp7](https://ba-pl.github.io/wiki/assets/images/ModbusTCP/mtcp7.png "mtcp7")
 
-## BLOKI DO ODCZYTU / ZAPISU DANYCH
+## Bloki do odczytu / zapisu danych
 
 Standardowy blok do odczytu / zapisu danych w Modbus TCP posiada następujące wejścia / wyjścia:
 
@@ -98,7 +98,7 @@ Standardowy blok do odczytu / zapisu danych w Modbus TCP posiada następujące w
 * _nErrId_ - w przypadku zmiennej bError w stanie wysokim informuje o typie błędu, jaki wystąpił. Błędy komunikacyjne opisane są w odpowiednim rozdziale [w Infosys](https://infosys.beckhoff.com/content/1033/tf6250_tc3_modbus_tcp/374277003.html)
 * _cbRead_ - w przypadku bloków odczytu podaje ilość odczytanych bajtów danych (w przypadku odczytu zakończonego sukcesem)
 
-# NAJCZĘSTSZE PRZYCZYNY BRAKU KOMUNIKACJI MODBUS TCP
+# Najczęstsze przyczyny braku komunikacji Modbus TCP 
 
 Poniżej podane są najczęściej spotykane problemy przy konfiguracji / uruchomieniu funkcjonalności Modbus TCP. Warto zapoznać się z tym rozdziałem, aby ich uniknąć.
 
