@@ -68,13 +68,13 @@ Prawidłowo działące połączenie powinno mieć następujący status
    - **DefaultData** - Pozwala na utworzenie tabelki z danymi które zawsze są widoczne w każdym raporcie
    - **Footer** - stopka dokumentu 
    - **Logo** - Logo wyświetlane w prawym górnym rogu dokumentu. Zalecany format PNG
-   - **Publish locations** - miejsca gdzie raporty mają zostać utworzone. Raporty można gromadzić lokalnie na komputerze w wybranej lokalizacji. Możliwe jest również wysyłanie automatyczne raportów na wybrane adresy email. Domyślnie jest możliwa konfiguracja 3 typów raportów
-   
-	![ReportLocation](https://ba-pl.github.io/wiki/assets/images/Reporting/image-6.png)
-  
-  - **Signature configuration** -  Możliwe jest utworzenie podpisów cyfrowych do walidacji oryginalności dokumentu. 
+   - **Publish locations** - miejsca gdzie raporty mają zostać utworzone. Raporty można gromadzić lokalnie na komputerze w wybranej lokalizacji. Możliwe jest również wysyłanie automatyczne raportów na wybrane adresy email. Domyślnie jest możliwa konfiguracja 3 typów raportów  
+   - **Signature configuration** -  Możliwe jest utworzenie podpisów cyfrowych do walidacji oryginalności dokumentu. 
 
  W celu utworzenia najprostrzego raportu zaleca się utworzenie *Headera* oraz określenie *Publish location*
+ 
+ 
+![ReportLocation](https://ba-pl.github.io/wiki/assets/images/Reporting/image-6.png)
 
 ## Uzupełnienie zawartości raportu
 
