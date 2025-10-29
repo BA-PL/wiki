@@ -69,13 +69,17 @@ Prawidłowo działące połączenie powinno mieć następujący status
    - **Footer** - stopka dokumentu 
    - **Logo** - Logo wyświetlane w prawym górnym rogu dokumentu. Zalecany format PNG
    - **Publish locations** - miejsca gdzie raporty mają zostać utworzone. Raporty można gromadzić lokalnie na komputerze w wybranej lokalizacji. Możliwe jest również wysyłanie automatyczne raportów na wybrane adresy email. Domyślnie jest możliwa konfiguracja 3 typów raportów
-  ![ReportLocation](image-6.png)
- - **Signature configuration** -  Możliwe jest utworzenie podpisów cyfrowych do walidacji oryginalności dokumentu. 
+   
+![ReportLocation](image-6.png)
+  
+  - **Signature configuration** -  Możliwe jest utworzenie podpisów cyfrowych do walidacji oryginalności dokumentu. 
 
  W celu utworzenia najprostrzego raportu zaleca się utworzenie *Headera* oraz określenie *Publish location*
 
 ## Uzupełnienie zawartości raportu
+
 ![Report format](https://ba-pl.github.io/wiki/assets/images/Reporting/image-7.png)
+
 W celu wygenerowania raportu, poza samym opisem szablonu należy jeszcze zparametryzować co ma zostać przekazane
 
 Mamy możliwość dodania na ten moment 3 typów elementów
@@ -86,7 +90,9 @@ Mamy możliwość dodania na ten moment 3 typów elementów
 Same dane można pobrać za pomocą protokołu ADS  z dowolnego sterownika, OPC UA lub można przekazać poprzez utworzenie zmiennej Serwerowej a następnie dynamiczie z poziomu HMI je modyfikować.
 
 Dodatkowymi parametrami które należy mieć na uwadze są parametry na dole listy konfiguracyjnej.
+
 ![Reports extended confgi](https://ba-pl.github.io/wiki/assets/images/Reporting/image-8.png)
+
 *Export path* - jest to ścieżka gdzie poszczególne raporty mogą zostać umieszczone. Domyśnie jest to folder z lokalizacją serwera HMI (a dokładniej w jego zawartości .\TcHmiReporting\reports )
 
 *Overwrite reports* - jest prostym przełączeniem że w folderze z raportami, dany typ raportu ma być nadpisywany bez poprzednich iteracji/bez kopii
@@ -99,20 +105,26 @@ Dodatkowymi parametrami które należy mieć na uwadze są parametry na dole lis
 
 Nazwa raportu *ReportBasic*
   
-Zmienna serwerowa : 
+Zmienna serwerowa: 
+
 ![Server symbol](https://ba-pl.github.io/wiki/assets/images/Reporting/image-9.png)
 
 Konfiguracja pojedyńczego Text field'a:
+
 ![Text field](https://ba-pl.github.io/wiki/assets/images/Reporting/image-10.png)
 
 Następnie w celu wygenerowania raportu należy za pomocą zdarzenia w HMI wprowadzić nazwę raportu który chcemy wygenerować jako ciąg string do zmiennej `%s%TcHmiReporting.OrderReport%/s%`. Wprowadzenie wartości można wykonać np poprzez event .onPressed dowolnego elemntu HMI.
+
 ![alt text](https://ba-pl.github.io/wiki/assets/images/Reporting/image-11.png)
 
-Aby podejrzeć czy raport się wygenerował można użyć kontrolki FileExplorer. Kontrolka File explorer dodatkowo umożliwia nam utworzenie kopii, zmianę nazwy oraz zdalne pobranie pliku z raportem na nasz lokalny komputer. W celu uzyskania dostępu do folderu z raportami należy odpowiednio wcześniej skonfigurować Virtual directories serwera HMI !!!
+Aby podejrzeć czy raport się wygenerował można użyć kontrolki FileExplorer. Kontrolka File explorer dodatkowo umożliwia nam utworzenie kopii, zmianę nazwy oraz zdalne pobranie pliku z raportem na nasz lokalny komputer. W celu uzyskania dostępu do folderu z raportami należy odpowiednio wcześniej skonfigurować Virtual directories serwera HMI !!!.
+
 ![FileExplorer](image-12.png)
+
 ![alt text](https://ba-pl.github.io/wiki/assets/images/Reporting/image-13.png)
 
 Uzyskany raport
+
 ![alt text](https://ba-pl.github.io/wiki/assets/images/Reporting/image-14.png)
 
 Raporty mozna również przeglądać bezpośrednio z poziomu HMI. W tym celu należy doinstalować nuget PDFViewer, a następnie przekazać ścieżkę do raportu. \
