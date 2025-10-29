@@ -6,7 +6,6 @@ layout: page
 
 # EtherCAT
 <h6> Data modyfikacji: 20.12.2024 </h6>
-<br>
 
 # Webinar
 
@@ -15,6 +14,8 @@ Obejrzyj nasze webinary na YouTube:
 - [zaawansowane funkcje EtherCAT](https://www.youtube.com/watch?v=YyM8JJXCjLE&list=PLCdWZ6-IFaTEhfNxIT1bXeWV8k4QoegVv&index=6)
 - [EtherCAT & Profinet](https://www.youtube.com/watch?v=zf_Ihd789ac&list=PLCdWZ6-IFaTEhfNxIT1bXeWV8k4QoegVv&index=27)
 <br>
+<br>
+
 **Cechy podstawowe:**
 <br>
 - Sieć typu single-master (jedno urządzenie zarządzające siecią)

@@ -246,4 +246,5 @@ Dowiedz się więcej z naszego kanału na YouTube:
 - [funkcjonalności TwinCAT HMI](https://www.youtube.com/watch?v=ORhnYzzNK0Y&list=PLCdWZ6-IFaTEhfNxIT1bXeWV8k4QoegVv&index=32)
 - [Audit Trail](https://www.youtube.com/watch?v=Ip4r1x140oM&list=PLCdWZ6-IFaTEhfNxIT1bXeWV8k4QoegVv&index=63)
 - [seria Na Hardkodzie](https://www.youtube.com/watch?v=tTnDJP6hmQ4&list=PLCdWZ6-IFaTFZv1v4g6zxWLBZBoAe4tvL&index=3)
+
 ---
