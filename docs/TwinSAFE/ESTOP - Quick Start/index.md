@@ -279,3 +279,7 @@ Błąd bloku funkcyjnego wskazuje w tym wypadku na przekroczenie czasu nadzoru s
 ![safety53](safety53.png "Safety53")
 
 Sygnał reset, ze względu na wykrycie usterki sprzętowej, nie jest w tym wypadku wystarczający do powrotu układu w tryb pracy – wymagane jest podanie sygnału potwierdzenia błędu „ErrAck” całej grupy bezpieczeństwa.
+
+# Webinar
+
+Dowiedz się więcej o technologii TwinSAFE oglądając nasz webinar na [YouTube.](https://www.youtube.com/watch?v=GX_5E4FDLN4&list=PLCdWZ6-IFaTEhfNxIT1bXeWV8k4QoegVv&index=14)

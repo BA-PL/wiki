@@ -238,4 +238,12 @@ Następnie uruchamiamy Live View i testujemy dwukierunkową wymianę danych.
 <br>
 Jeśli chcemy nadpisywać zmienne liczbowe z możliwością narzucenia limitów, należy wybrać kontrolkę **Numeric Input** zamiast standardowego Textbox.
 
+# Webinar
+
+Dowiedz się więcej z naszego kanału na YouTube:
+<br>
+- [o produkcie TwinCAT HMI](https://www.youtube.com/watch?v=1mu9l_HFbB0&list=PLCdWZ6-IFaTEhfNxIT1bXeWV8k4QoegVv&index=19)
+- [funkcjonalności TwinCAT HMI](https://www.youtube.com/watch?v=ORhnYzzNK0Y&list=PLCdWZ6-IFaTEhfNxIT1bXeWV8k4QoegVv&index=32)
+- [Audit Trail](https://www.youtube.com/watch?v=Ip4r1x140oM&list=PLCdWZ6-IFaTEhfNxIT1bXeWV8k4QoegVv&index=63)
+- [seria Na Hardkodzie](https://www.youtube.com/watch?v=tTnDJP6hmQ4&list=PLCdWZ6-IFaTFZv1v4g6zxWLBZBoAe4tvL&index=3)
 ---

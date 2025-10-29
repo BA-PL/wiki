@@ -366,6 +366,10 @@ Wynik komendy SELECT zostanie zawarty w strukturze **stSelect.**
 
 \* procedurę tworzy się tylko raz, przesyłane zostają jedynie jej parametry
 
+# Webinar
+
+Obejrzyj nasz webinar na [YouTube.](https://www.youtube.com/watch?v=I_LegOHDEak&list=PLCdWZ6-IFaTEhfNxIT1bXeWV8k4QoegVv&index=3)
+
 # Przykładowe aplikacje
 
 Przykłady aplikacji możesz pobrać tutaj:
