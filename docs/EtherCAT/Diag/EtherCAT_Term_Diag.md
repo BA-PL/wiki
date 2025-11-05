@@ -5,7 +5,7 @@ layout: page
 parent: EtherCAT
 ---
 
-# EtherCAT Diag
+# EtherCAT Diagnostyka
 {: .no_toc }
 <h6> Data modyfikacji: 05.11.2025 </h6>
 ## Table of Contents
@@ -25,7 +25,7 @@ Diagnostyka składa się z kilku podstawowych elementów do sprawdzenia, które 
 
 Magistrala EtherCAT działa na zasadzie maszyny stanów, natomiast przejścia między stanami odbywają się po spełnieniu ściśle określonych warunków. W komunikacji EtherCAT wyróżniamy następujące stany:
 
-![1](1.png "1")
+![1](https://ba-pl.github.io/wiki/assets/images/EtherDiag/1.png "1")
 
 ### INIT
 
@@ -74,11 +74,11 @@ Tryb ten jest swoistym "restartem" firmware, więc w niektórych przypadkach wyk
 
 Stan magistrali EtherCAT na urządzeniu typu Slave można odczytać, korzystając ze zmiennej zaszytej w Process Data urządzenia:
 
-![4](4.png "4")
+![4](https://ba-pl.github.io/wiki/assets/images/EtherDiag/4.png "4")
 
 Pełna lista wraz z opisem funkcji pozwalającej na rozkodowanie wartości w PLC znajduje się [Tutaj](https://infosys.beckhoff.com/content/1033/tcplclib_tc2_ethercat/57081355.html)
 
-![5](5.png "5")
+![5](https://ba-pl.github.io/wiki/assets/images/EtherDiag/5.png "5")
 
 ## Change Counters
 
@@ -89,7 +89,7 @@ EtherCAT jest magistralą posiadającą funkcjonalność autoresetu - czyli po w
 
 Liczniki włącza się z poziomu widoku EtherCAT -> Online:
 
-![6](6.png "6")
+![6](https://ba-pl.github.io/wiki/assets/images/EtherDiag/6.png "6")
 
 ## Emergency Scan
 
@@ -97,10 +97,10 @@ W niektórych przypadkach, gdy istnieje uzasadnione podejrzenie problemów komun
 
 Emergency Scan wywołuje się z zakladki EtherCAT -> Advanced Settings -> Emergency -> Scan:
 
-![7](7.png "7")
+![7](https://ba-pl.github.io/wiki/assets/images/EtherDiag/7.png "7")
 
 Następnie należy wybrać ilość ramek, które chcemy przesłać i wybrać Start Scan - wynik pokaże się w oknie:
 
-![8](8.png "8")
+![8](https://ba-pl.github.io/wiki/assets/images/EtherDiag/8.png "8")
 
 Jakikolwiek inny wynik niż 100% poprawnych ramek oznacza, że z komunikacją mogą występować problemu, co będzie prowadziło do późniejszej niestabilności aplikacji.
