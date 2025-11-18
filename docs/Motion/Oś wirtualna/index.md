@@ -62,7 +62,7 @@ Opis poszczególnych funkcjonalności:
 * F8 - reset osi 
 * F9 - rozpoczęcie procedury Homingu
 
-Parametry osi wpływające na powyższe ruchy opisane są [tutaj](tu będzie link do dokumentacji Parametry Osi jak ją zrobię XD)
+Parametry osi wpływające na powyższe ruchy opisane są [tutaj](https://ba-pl.github.io/wiki/docs/Motion/Parametry%20NC)
 
 ## Utworzenie programu PLC i przypisanie osi
 
