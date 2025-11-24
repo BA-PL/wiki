@@ -226,7 +226,11 @@ Po ustawieniu opcji jak na powyższym zdjęciu przechodzimy do zakładki Save & 
 
 ## Dostęp do katalogu Boot 
  
- W następstwie błędu programistycznego może się zdarzyć, że sterownik przejdzie w tryb Exception. Oznaką tego jest zatrzymanie wykonywania programu PLC oraz zapalenie się diody TC na sterowniku na żółto. Jeśli w projekcie została zaznaczona opcja *Autostart boot project* to może się zdarzyć, że sterownik wpadnie w nieskończoną pętlę błędu. W takim przypadku, aby uniemożliwić uruchomienie programu PLC możemy zmienić nazwę katalogu C:\TwinCAT\3.1\Boot. TwinCAT uruchamia się wtedy w trybie Config, a program PLC nie jest wykonywany. W przypadku gdy nie możemy bezpośrednio odczytać dysku sterownika do zmiany nazwy wyżej wymienionego katalogu możemy wykorzystać BST. W tym celu należy zbootować BST na sterowniku jak opisano to w poprzednich rozdziałach a następnie:
+ W następstwie błędu programistycznego może się zdarzyć, że sterownik przejdzie w tryb Exception. Oznaką tego jest zatrzymanie wykonywania programu PLC oraz zapalenie się diody TC na sterowniku na żółto. Jeśli w projekcie została zaznaczona opcja *Autostart boot project* to może się zdarzyć, że sterownik wpadnie w nieskończoną pętlę błędu. W takim przypadku, aby uniemożliwić uruchomienie programu PLC możemy zmienić nazwę katalogu Boot. Dokładna ścieżka:
+- C:\TwinCAT\3.1\Boot dla TwinCAT'a w wersji 4024 
+- C:\ProgramData\Beckhoff\TwinCAT\3.1\Boot dla TwinCAT'a w wersji 4026(folder ProgramData jest ukryty).
+
+TwinCAT uruchamia się wtedy w trybie Config, a program PLC nie jest wykonywany. W przypadku gdy nie możemy bezpośrednio odczytać dysku sterownika do zmiany nazwy wyżej wymienionego katalogu możemy wykorzystać BST. W tym celu należy zbootować BST na sterowniku jak opisano to w poprzednich rozdziałach a następnie:
  
  - wybrać zakładkę **Manage Images**:
  
@@ -236,7 +240,11 @@ Po ustawieniu opcji jak na powyższym zdjęciu przechodzimy do zakładki Save & 
  
  ![bst31](https://ba-pl.github.io/wiki/assets/images/BST/bst31.png "bst31")
   
-- następnie przechodzimy do domyślnej lokalizacji TwinCAT'a, np. **C:\TwinCAT\3.1** i odszukujemy folder **Boot**. Klikamy PPM i zmieniamy nazwę:
+- następnie przechodzimy do domyślnej lokalizacji TwinCAT'a, np. 
+   - **C:\TwinCAT\3.1** dla TwinCAT'a w wersji 4024
+   - **C:\ProgramData\Beckhoff\TwinCAT\3.1** dla TwinCAT'a w wersji 4026
+
+i odszukujemy folder **Boot**. Klikamy PPM i zmieniamy nazwę:
 
 ![bst32](https://ba-pl.github.io/wiki/assets/images/BST/bst32.png "bst32")
 
