@@ -49,9 +49,10 @@ zawarte są informacje o:
 
 # Tworzenie nowego projektu 
 
-Aby uruchomić środowisko, klikamy na ikonę TwinCATa i wybieramy opcję TwinCAT XAE:
-
-![tc3q5](tc3q5.png "tc3q5")
+Aby uruchomić środowisko, klikamy na ikonę TwinCATa i wybieramy opcję:
+- TwinCAT XAE (TcXaeShell) dla wersji 4024 i straszych
+- TwinCAT XAE (TcXaeShell64) dla wersji 4026
+![tc3q5v2](tc3q5v2.png "tc3q5v2")
 
 <div class="code-example" markdown="1" style="background: rgba(210, 243, 242, 0.8)">
 
@@ -68,9 +69,13 @@ Następnie tworzymy nowy projekt korzystając z górnego menu:
 
 ![tc3q6](tc3q6.png "tc3q6")
 
-Z okna dialogowego które się pojawi należy wybrać TwinCAT XAE Project i potwierdzić wybór:
+Z okna dialogowego które się pojawi należy wybrać TwinCAT XAE Project i potwierdzić wybór (zdjęcie dla wersji 4024):
 
 ![tc3q7](tc3q7.png "tc3q7")
+
+Wersja 4026: 
+
+![tc3q7v2](tc3q7v2.png "tc3q7v2")
 
 Następnie należy wpisać nazwę projektu i ścieżkę i utworzyć projekt.
 <br>
@@ -230,7 +235,7 @@ Na tym etapie można przejść do deklaracji zmiennych. W tym celu dodajemy list
 
 Deklarujemy zmienne jak na zdjęciu poniżej:
 
-![tc3q36](tc3q36.png "tc3q36")
+![tc3q36v2](tc3q36v2.png "tc3q36v2")
 
 ```
 bPrzycisk1	AT%I*	: BOOL;
@@ -258,7 +263,7 @@ Kompilacja rozpocznie się po wybraniu z menu opcji **BUILD --> Rebuild** *nazwa
 
 O tym, czy kompilacja się powiodła, poinformuje nas okno **Output** znajdujące się zazwyczaj w dolnej części środowiska:
 
-![tc3q38](tc3q38.png "tc3q38")
+![tc3q38v2](tc3q38v2.png "tc3q38v2")
 
 ### Typy i deklracja zmiennych 
 
