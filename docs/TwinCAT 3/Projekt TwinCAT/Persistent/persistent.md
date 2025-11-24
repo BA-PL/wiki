@@ -51,7 +51,7 @@ W przypadku korzystania ze sterowników z 1-second UPS co do zasady przyjmuje si
 <br>
 W przypadku integracji sterownika z zewnętrznym UPS ograniczenie co do ilości możliwych danych typu Persistent do zapisu wynika z pojemności UPS, a więc jesteśmy w stanie zapisać tyle danych Persistent, na ile pozwoli nam długość podtrzymania bateryjnego z UPS.
 <br>
-Ilość zapisywanych zmiennych Persistent możemy kontrolować przez sprawdzanie wielkości plików Port_xxx.bootdata oraz Port_xxx.bootdata-old znajdujących się w lokalizacji **TwinCAT/3.1/Boot/Plc**
+Ilość zapisywanych zmiennych Persistent możemy kontrolować przez sprawdzanie wielkości plików Port_xxx.bootdata oraz Port_xxx.bootdata-old znajdujących się w lokalizacji **TwinCAT/3.1/Boot/Plc** dla TwinCAT w wersji 4024 lub **C:\ProgramData\Beckhoff\TwinCAT\3.1\Boot\Plc** dla TwinCAT w wersji 4026 (folder ProgramData jest ukryty).
 
 ![pers3](https://ba-pl.github.io/wiki/assets/images/Persistent/pers3.png "pers3")
 
