@@ -147,19 +147,20 @@ Inna alterantywa to TwinCAT User Mode w którym możemy uruchomić symulację: [
 Niestety na ten moment posiada on ograniczenia, z którymi warto się zapoznać: [link](https://infosys.beckhoff.com/content/1033/tc170x_tc3_usermode_runtime/11319889035.html)
 
 
-## Dodatek - przywracanie izolowanego rdzenia
+### Dodatek - przywracanie izolowanego rdzenia
 Aby przywrócić na komputerze wyizolowany rdzeń należy wywołać okno „Set on Target” (w analogiczny sposób jak przy jego izolacji – rozdział 4.1). Następnie należy ustawić ilość rdzeni „Isolated” na 0 i wybrać „Set”. W następnym kroku wykonujemy restart komputera. 
 
 ![loc31](https://ba-pl.github.io/wiki/assets/images/local/loc31.png "loc31")
 
 Jeśli mamy sytuację, w której rdzeń procesora nie jest widoczny w TwinCAT, przywracanie należy wykonać z poziomu systemu Windows. W tym celu należy w oknie uruchom wpisać komendę **msconfig**:
 
-![loc32](https://ba-pl.github.io/wiki/assets/images/local/loc32.png "loc32")
+![loc32v2](https://ba-pl.github.io/wiki/assets/images/local/loc32v2.png "loc32v2")
 
 W oknie które się pojawi należy wybrać zakładkę **Boot** i przycisk **Advanced options**. Następnie należy odznaczyć opcję **Number of processors** i zatwierdzić ustawienia przyciskiem OK. W kolejnym oknie należy wybrać przycisk **Apply** a następnie **OK**. Pojawi się komunikat o konieczności restartu komputera, który należy potwierdzić.
 
-![loc33](https://ba-pl.github.io/wiki/assets/images/local/loc33.png "loc33")
+![loc33v2](https://ba-pl.github.io/wiki/assets/images/local/loc33v2.png "loc33v2")
 
 Po restarcie komputera należy ponownie otworzyć zakładkę z ustawieniami rozruchu, zaznaczyć opcję **Number of processors** i z rozwijanej listy wybrać maksymalną ich liczbę. Zatwierdzić ustawienia w taki sam sposób jak poprzednio i ponownie zrestartować komputer. Wszystkie rdzenie będą aktywne.
 
-![loc34](https://ba-pl.github.io/wiki/assets/images/local/loc34.png "loc34")
+![loc34v2](https://ba-pl.github.io/wiki/assets/images/local/loc34v2.png "loc34v2")
+
