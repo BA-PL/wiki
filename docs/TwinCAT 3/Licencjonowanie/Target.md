@@ -79,6 +79,11 @@ Licencje są już aktywne:
 
 ![Valid2](https://ba-pl.github.io/wiki/assets/images/licencje/Valid2.png "Valid2")
 
+Plik licencyjny jest przechowywany na sterowniku w katalogu: 
+
+
+- dla TwinCAT'a w wersji 4024 **C:\TwinCAT\3.1\Target\License**
+- dla TwinCAT'a w wersji 4026 **C:\ProgramData\TwinCAT\3.1\License** (\ProgramData jest folderem ukrytym)
 
 
 

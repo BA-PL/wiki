@@ -115,7 +115,10 @@ Aby wgrać licencję z modułu do pamięci sterownika wybieramy Cache Dongle Lic
 
 ![cachelicense](https://ba-pl.github.io/wiki/assets/images/licencje/cachelicense.png "cachelicense")
 
-Wygenerowany plik zostanie umieszczony na sterowniku w katalogu instalacyjnym TwinCAT ...\TwinCAT\3.1\Target\License
+Wygenerowany plik zostanie umieszczony na sterowniku w katalogu:
+
+- dla TwinCAT'a w wersji 4024 **C:\TwinCAT\3.1\Target\License**
+- dla TwinCAT'a w wersji 4026 **C:\ProgramData\TwinCAT\3.1\License** (\ProgramData jest folderem ukrytym)
 
 Aktywujemy konfigurację TwinCATa:
 
