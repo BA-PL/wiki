@@ -79,3 +79,4 @@ Jeśli instalacja wymaga restartu, wykonujemy go komendą:
 sudo reboot
 ```
 
+Po tych czynnościach dioda TC na sterowniku powinna się zaświecić (na niebiesko).
