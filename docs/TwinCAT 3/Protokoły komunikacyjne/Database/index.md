@@ -234,7 +234,7 @@ W programie PLC możemy w dowolnym momencie sprawdzić status lub rozpocząć/pr
 
 # Tryb PLC Expert
 Tryb ten ma podobne możliwości oraz wymagania, co tryb konfiguracji. Jedyną różnicą jest wprowadzanie wszystkich wyżej wymienionych ustawień bezpośrednio w kodzie PLC. Wszystkie bloki funkcyjne zawierają metody pozwalające na wykonanie wielu różnych komend SQL w zależności od zapotrzebowania. Skrócone opisy możliwych do zrealizowania czynności:
-- FB_ConfigTcDBSrv – Wprowadza zmiany w pliku konfiguracyjnym CurrentConfigDataBase.xml. Plik ten zawiera informacje o całej konfiguracji Tc3_DataBase_Server na danym komputerze i znajduje się domyślnie w folderze C:\TwinCAT\3.1\Boot. Za pomocą tego bloku możemy więc dowolnie odczytywać, dodawać oraz usuwać kolejne bazy danych oraz grupy autologowania zmiennych.
+- FB_ConfigTcDBSrv – Wprowadza zmiany w pliku konfiguracyjnym CurrentConfigDataBase.xml. Plik ten zawiera informacje o całej konfiguracji Tc3_DataBase_Server na danym komputerze i znajduje się domyślnie w folderze ...\TwinCAT\3.1\Boot. Za pomocą tego bloku możemy więc dowolnie odczytywać, dodawać oraz usuwać kolejne bazy danych oraz grupy autologowania zmiennych.
 - FB_PLCDBAutoLogEvt – Blok ten pozwala na uruchamianie, zatrzymywanie oraz sprawdzanie statusu grup autologowania.
 - FB_PLCDBCreateEvt – Pozwala na utworzenie pliku bazy danych określonego wcześniej w pliku konfiguracyjnym, oraz nowych tabeli do dowolnych baz danych.
 - FB_PLCDBReadEvt – Działa w dwóch trybach. Pierwszy pozwala na odczytywanie dowolnej ilości rejestrów z tabeli w formacie zgodnym ze standardową tabelą Tc3_Database. Drugi tryb pozwala na odczytanie dowolnej tabeli, ale wymaga załączenia struktury zgodnej z kolejnymi kolumnami tabeli.
