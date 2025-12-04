@@ -34,12 +34,12 @@ Po instalacji dodatku należy wygenerować licencję, na czas testów może być
 # Tryb Konfiguracji
 Tryb konfiguracji umożliwia zestawienie połączenia z serwerem bazy danych (może być to serwer lokalny), utworzenie tabel w bazie oraz wybranie zmiennych z programu PLC, które mogą być automatycznie logowane do bazy. Aby wykonać powyższe kroki, należy w środowisku TwinCAT dodać nowy projekt Empty TwinCAT Database Server Project.
 
-![db1](https://ba-pl.github.io/wiki/assets/images/DataBase/db1.png "db1")
+![db0](https://ba-pl.github.io/wiki/assets/images/DataBase/db0.png "db0")
 
 ## Ustawienia serwera 
 W pierwszym oknie wskazujemy urządzenie, które jest serwerem bazy danych **(1)**, możemy również ustawić tryb i lokalizację zapisu logów **(2)** bazy (jest to rejestr błędów, który w przypadku problemów, pomoże nam namierzyć ich źródło).
 
-![db2](https://ba-pl.github.io/wiki/assets/images/DataBase/db2.png "db2")
+![db2_2](https://ba-pl.github.io/wiki/assets/images/DataBase/db2_2.png "db2_2")
 
 Opcja Impersonate user **(3)** jest zaznaczana, jeżeli jest potrzeba, żeby zrealizować połączenie przez sieć z plikową bazą danych taką jak Access lub SQL Compact.
 Pozostałe ustawienia zmieniamy w razie potrzeby.
@@ -47,14 +47,14 @@ Pozostałe ustawienia zmieniamy w razie potrzeby.
 ## Dodawanie bazy 
 W celu dodania bazy należy kliknąć **PPM na TcDbServer** i wybrać **Add -> Add New Database (1)**. Pojawi się okno do wskazania rodzaju bazy danych **(2)**, z którą ma zachodzić komunikacja poprzez TwinCAT Database Server.
 
-![db3](https://ba-pl.github.io/wiki/assets/images/DataBase/db3.png "db3")
+![db3_2](https://ba-pl.github.io/wiki/assets/images/DataBase/db3_2.png "db3_2")
 
 Z listy rozwijanej można wybrać jeden z obsługiwanych typów baz danych albo typ *ODBC*, gdzie jest możliwość ręcznego utworzenia *Connection String* do połączenia z bazami spoza listy (więcej informacji dostępne w dokumentacji), zgodnie ze standardem SQL.
 DBID nadawane jest automatycznie przy każdej dodanej bazie i umożliwia rozróżnienie w konfiguracji i programie PLC wielu baz w jednym projekcie.
 
-![db4](https://ba-pl.github.io/wiki/assets/images/DataBase/db4.png "db4")
+![db4_2](https://ba-pl.github.io/wiki/assets/images/DataBase/db4_2.png "db4_2")
 
-W przykładzie wybrano bazę **SQLite (1)**. W polu **SQLite Database File (2)** należy podać ścieżkę do pliku bazy, o rozszerzeniu **.db** (plik nie musi na tym etapie istnieć). Opcjonalnie można podać hasło po zaznaczeniu opcji **Authentication**. Jeżeli baza ta jeszcze nie istnieje, można ją utworzyć klikając **Create (3)**. Wybierając **Check** można sprawdzić, czy połączenie z bazą działa. W tym przypadku, po kliknięciu przycisku **Check**, powinien pojawić się komunikat pokazany poniżej.
+W przykładzie wybrano bazę **SQLite (1)**. W polu **SQLite Database File (2)** należy podać ścieżkę do pliku bazy, o rozszerzeniu **.db** (plik powinien istnieć, można utworzyć na dysku plik tekstowy i zminieć jego rozszerzenie na .db). Opcjonalnie można podać hasło po zaznaczeniu opcji **Authentication**. Wybierając **Check (3)** można sprawdzić, czy połączenie z bazą działa. W tym przypadku, po kliknięciu przycisku **Check**, powinien pojawić się komunikat pokazany poniżej.
 
 ![db5](https://ba-pl.github.io/wiki/assets/images/DataBase/db5.png "db5")
 
@@ -63,7 +63,7 @@ Na dole okna widać automatycznie wygenerowany **Connection String (4)** zawiera
 Po tak wykonanej konfiguracji, można dodatkowo wybrać w polu **FailoverDB** tak zwaną failover database, w której zachowane zostaną dane w razie napotkania błędu w trybie konfiguracyjnym. W razie rozłączenia z siecią, ta funkcja automatycznie zapewni, że dane nie przepadną i zostaną zapisane w innym miejscu.
 Na zakończenie tego etapu należy zapisać zmiany i aktywować konfigurację projektu bazy danych (1) **(nie mylić z aktywowaniem konfiguracji PLC)**. Spowoduje to przesłanie pliku z konfiguracją na urządzenie docelowe wybrane w Server Settings.
 
-![db6](https://ba-pl.github.io/wiki/assets/images/DataBase/db6.png "db6")
+![db6_2](https://ba-pl.github.io/wiki/assets/images/DataBase/db6_2.png "db6_2")
 
 Operacja ta nie wywołuje żadnego okna popup, należy obserwować okno błędów oraz okno **Output (Ctrl+Alt+O)**. Jeśli aktywacja się powiodła, powinna pojawić się informacja jak poniżej:
 
@@ -85,7 +85,7 @@ W oknie jak obok należy wybrać serwer bazy danych (1), w razie potrzeby odświ
 
 W przykładzie wykorzystano standardową strukturę tabeli. Aby utworzyć taką tabelę należy na pustym polu kliknąć **PPM** i wybrać opcję **Set Standard Table Schema.**
 
-![db11](https://ba-pl.github.io/wiki/assets/images/DataBase/db11.png "db11")
+![db11_2](https://ba-pl.github.io/wiki/assets/images/DataBase/db11_2.png "db11_2")
 
 Kolumny zawierają kolejno: auto inkrementujące się ID wiersza, będące kluczem głównym; stempel czasowy zawierający aktualną datę i godzinę; nazwę zmiennej; wartość zmiennej. Pozostawienie ich bez zmian pozwoli na wykorzystanie standardowej metody logowania tabeli.
 <br>
@@ -131,38 +131,38 @@ Aby rozpocząć pracę z grupami należy dodać je na wybranej bazie, klikając 
 ![db18](https://ba-pl.github.io/wiki/assets/images/DataBase/db18.png "db18")
 
 Pierwsze okno, które się pojawi, to główne ustawienia trybu logowania:
-- **Start Up** – wybranie opcji *Automatic* spowoduje uruchamianie logowania grupy razem ze startem TwinCATA, opcja *Manual* wymaga sterownia grupą z poziomu kodu PLC
-- **Direction** - decyduje o kierunku przepływu danych. Wybranie *DeviceAsTarget* daje możliwość uaktualniania zmiennych PLC wartościami znajdującymi się w bazie. Wybranie *DeviceAsSource* pozwoli na zapisywanie zmiennych PLC na jeden z trzech sposobów, które konfiguruje się w polu *Write Mode*
+- **Start Mode** – wybranie opcji *Automatic* spowoduje uruchamianie logowania grupy razem ze startem TwinCATA, opcja *Manual* wymaga sterownia grupą z poziomu kodu PLC
+- **Write Direction** - decyduje o kierunku przepływu danych. Wybranie *DeviceAsTarget* daje możliwość uaktualniania zmiennych PLC wartościami znajdującymi się w bazie. Wybranie *DeviceAsSource* pozwoli na zapisywanie zmiennych PLC na jeden z trzech sposobów, które konfiguruje się w polu *Write Mode*
+- **Log Mode** – dane mogę być logowane w momencie zmiany wartości zmiennej (onChange) lub co określony w milisekundach w parametrze *Cyclic Time* czasu (opcja Cyclic). W przypadku wybrania trybu *OnChange* czas z parametru *Cyclic Time* określa jak często sprawdzane jest czy wartość się zmieniła. 
 - **Write Mode**:
 	- UPDATE – wartości zmiennych w bazie będą aktualizowane (nadpisywane)
 	- APPEND – wartości będą każdorazowo dopisane jako nowy wiersz
 	- RINGBUFFER_TIME – określa maksymalny czas żywotności rekordu w sekundach, po upłynięciu tego czasu zostanie on usunięty. Czas określany jest w polu *Ringbuffer Parameter*
 	- RINGBUFFER_COUNT – określa maksymalną ilość rekordów, po jej przekroczeniu kolejne rekordy będą usuwane, zaczynając od najstarszego. Ilość rekordów jest określana w polu *Ringbuffer Parameter*
-- **Log Mode** – dane mogę być logowane w momencie zmiany wartości zmiennej (onChange) lub co określony w milisekundach w parametrze *Cyclic Time* czasu (opcja Cyclic)
 
-![db19](https://ba-pl.github.io/wiki/assets/images/DataBase/db19.png "db19")
+![db19_2](https://ba-pl.github.io/wiki/assets/images/DataBase/db19_2.png "db19_2")
 
 W opisywanym przykładzie konfiguracja wygląda jak na zdjęciu powyżej (Start Up → Manual, Write Mode → Append).
 
 ### AdsDevice
 W oknie AdsDevice, w polach **AMS NetID i ADS Device**, należy wybrać urządzenie, z którego pobierane będą zmienne. Zmieniając typ połączenia można zdecydować, czy zmienne mają być odszukiwane po adresie w pamięci **(Connection Type → byIGroupIOffset)** czy po nazwie **(Connection Type → bySymbolName)**. Ma to znaczenie w przypadku ręcznego dodawania symbolów zmiennych. Przy odszukiwaniu po adresie w trakcie deklarowania kolejnych zmiennych adresy mogą się zmieniać, co może potem powodować nieprzewidziane skutki. Przy odszukiwaniu po nazwie ten problem nie występuje.
 
-![db20](https://ba-pl.github.io/wiki/assets/images/DataBase/db20.png "db20")
+![db20_2](https://ba-pl.github.io/wiki/assets/images/DataBase/db20_2.png "db20_2")
 
 ### Symbols
 Zakładka **Symbols** służy do skonfigurowania zmiennych, które mają być logowane do bazy. Można w tym celu skorzystać z narzędzia **Target Browser**. Program na sterowniku, z którego będą pobierane zmienne musi być uruchomiony.
 
-![db21](https://ba-pl.github.io/wiki/assets/images/DataBase/db21.png "db21")
+![db21_2](https://ba-pl.github.io/wiki/assets/images/DataBase/db21_2.png "db21_2")
 
 Wybrane zmienne należy z okna **Target Browser** umieścić w zakładce **Symbols** metodą drag’n’drop.
 
-![db22](https://ba-pl.github.io/wiki/assets/images/DataBase/db22.png "db22")
+![db22_2](https://ba-pl.github.io/wiki/assets/images/DataBase/db22_2.png "db22_2")
 
 ### DBTable
 Ostatnim krokiem jest dodanie standardowej tabeli w zakładce **DBTable**. Do tej tabeli wpisywane będą zmienne. W wersji **STANDARD** każda zmienna zostanie przekazana osobno. Można również wybrać tryb **CUSTOM**, który pozwoli na ręczne dopasowanie nazwy, typu i zawartości każdej kolumny, jednak trzeba pamiętać, aby były one zgodne z istniejącą tabelą.
 W przykładzie wybrano **TableMode → Standard i Table → (Nazwa utworzonej wcześniej tabeli)**.
 
-![db23](https://ba-pl.github.io/wiki/assets/images/DataBase/db23.png "db23")
+![db23_2](https://ba-pl.github.io/wiki/assets/images/DataBase/db23_2.png "db23_2")
 
 ### Uruchomienie
 **Uwaga!** Po zakończeniu konfiguracji należy zapisać wszystkie zmiany wybierając **Save All**, niezapisane zmiany nie zostaną wprowadzone. Następnie należy aktywować konfigurację projektu bazy danych.
@@ -193,7 +193,7 @@ Przykład odczytanych danych:
 
 Jeśli grupa autologowania działa poprawnie, można zmienić tryb jej uruchamiania na AutoStart i aktywować konfigurację projektu baz danych. Od tej pory skonfigurowane zmienne będą logować się do bazy automatycznie, razem z uruchomieniem się Run-Time’u TwinCATa.
 
-![db29](https://ba-pl.github.io/wiki/assets/images/DataBase/db29.png "db29")
+![db29_2](https://ba-pl.github.io/wiki/assets/images/DataBase/db29_2.png "db29_2")
 
 # Tryb Konfiguracji - przykład niestandardowej tabeli 
 W trybie konfiguracyjnym można skorzystać z opcji stworzenia własnej tabeli. W tym celu należy postępować jak w rozdziale 2.3, ale na etapie tworzenia tabeli, zamiast opcji *Set Standard Table Schema*, należy dodać odpowiednie pola opcją **Append Datafield**. W każdej tabeli niezbędny jest klucz główny, dlatego zaleca się dodanie ID w pierwszej kolumnie. Wybranie typu *BigInt* oraz własności *IDENTITY(1,1)* spowoduje, że ID będzie miało wartość początkową równą 1 i będzie inkrementowane automatycznie przez serwer. Stempel czasowy można uzyskać poprzez dodanie kolumny *Timestamp* typu *DateTime*. Analogicznie należy dodać kolejne kolumny.
@@ -218,11 +218,11 @@ Następnie należy strukturę takiego typu zadeklarować w programie PLC oraz wg
 ## Niestandardowa grupa autologowania
 Aby uruchomić niestandardową grupę autologowania należy skonfigurować zakładki **AutoLogGroup** oraz **AdsDevice** jak opisano w rozdziale 2.4. W zakładce **Symbols**, korzystając z okna **Target Browser**, należy umieścić zawartość opisanej wyżej struktury z programu PLC (program PLC musi być uruchomiony):
 
-![db33](https://ba-pl.github.io/wiki/assets/images/DataBase/db33.png "db33")
+![db33_2](https://ba-pl.github.io/wiki/assets/images/DataBase/db33_2.png "db33_2")
 
 W zakładce **DBTable** w polu **TableMode** należy wybrać opcję **CUSTOM**, a w polu **Tables** wybrać odpowiednią tabelę. Następnie trzeba ręcznie wykonać powiązanie zmiennych:
 
-![db34](https://ba-pl.github.io/wiki/assets/images/DataBase/db34.png "db34")
+![db34_2](https://ba-pl.github.io/wiki/assets/images/DataBase/db34_2.png "db34_2")
 
 Jeżeli grupa ma za zadanie zapisywać wartości do bazy to zmienne **ID** oraz **Timestamp** należy odpowiednio ustawić jako **AutoID** oraz **Data Timestamps**. Jeżeli jednak grupa będzie miała za zadanie odczytywanie zmiennych z bazy to **AutoID** oraz **Data Timestamps** należy zastąpić zmiennymi ze struktury, do których wpisywane będą odczytywane wartości.
 
