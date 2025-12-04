@@ -40,7 +40,7 @@ Jeśli chcemy uruchamiać oba środowisk z jednego miejsca (przy aktywnym Runtim
 # Projekt bootowalny, kod źródłowy na sterowniku
 ## Wgrywanie projektu bootowalnego
 
-Jeśli chcemy Projekt PLC ustawić jako projekt bootowalny, należy po wgraniu programu na sterownik kliknąć PPM na nazwę projektu i wybrać Activate Boot Project (opcja aktywna po wylogowaniu z podglądu online programu), a następnie zaznaczyć opcję Autostart Boot Project. Na sterowniku w lokalizacji **…\TwinCAT\3.1\Boot\Plc** pojawi się plik, który w nazwie ma numer portu i jest typu AUTOSTART FILE.
+Jeśli chcemy Projekt PLC ustawić jako projekt bootowalny, należy po wgraniu programu na sterownik kliknąć PPM na nazwę projektu i wybrać Activate Boot Project (opcja aktywna po wylogowaniu z podglądu online programu), a następnie zaznaczyć opcję Autostart Boot Project. Na sterowniku w lokalizacji **C:\TwinCAT\3.1\Boot\Plc** (dla TwinCAT'a w wersji 4024) lub **C:\ProgramData\Beckhoff\TwinCAT\3.1\Boot\Plc** (dla TwinCAT'a w wersji 4026) pojawi się plik, który w nazwie ma numer portu i jest typu AUTOSTART FILE.
 
 ![faq4](https://ba-pl.github.io/wiki/assets/images/faq/faq4.png "faq4")
 
@@ -304,17 +304,6 @@ Przy pokazywaniu projektów w których znajdują się biblioteki nie będące do
 
 ![faq55](https://ba-pl.github.io/wiki/assets/images/faq/faq55.png "faq55")
 
-##	Kopiowanie bibliotek z TC2 do TC3
-Czasami po konwersji projektu z TwinCAT 2 do TwinCAT 3 może wystąpić problem z niektórymi blokami funkcyjnymi znajdującymi się w importowanych bibliotekach. Aby go naprawić należy wykonać następujące kroki:
-- Skopiować brakujące biblioteki z lokalizacji TC2:  **C:\TwinCAT\Plc** do lokalizacj **C:\TwinCAT\3.1\Components\Plc\Converter\Lib**
-- Usunąć bieżące mapowanie konwersji biblioteki w opcjach Visual Studio. **Tools --> Options --> TwinCat --> PLC Environment --> Libraries.**  
-
-![faq56](https://ba-pl.github.io/wiki/assets/images/faq/faq56.png "faq56")
-
-- Po utworzeniu projektu nowego solution i zaimportowaniu projektu z TC2 wskazać na jaką bibliotekę w TC3 ma być użyta konwersja ( wraz z zaznaczonym checkbox „Remember this mapping for…”) .
-
-![faq57](https://ba-pl.github.io/wiki/assets/images/faq/faq57.png "faq57")
-
 # Tips and tricks 
 ## Watchlist 
 Aby dodać zmienne do swojej Watchlisty należy kliknąć na wybraną zmienną PPM a następnie wybrać **Add To Watch**. Pojawi się okno **ADS Symbol Watch** gdzie będą widoczne wybrane zmienne. Po zapisaniu projektu, **Watchlist** również zostanie zapisany.
@@ -333,5 +322,15 @@ Aby otworzyć w TC3 aplikację stworzą w TC2, należy kliknąć PPM na nazwę p
 Jeśli chcemy otworzyć jednie projekt PLC, wystarczyć wybrać opcję jak na zdjęciu poniżej i wskazać plik .pro: 
 
 ![faq61](https://ba-pl.github.io/wiki/assets/images/faq/faq61.png "faq61")
+
+<div class="code-example" markdown="1" style="background: rgba(210, 243, 242, 0.8)">
+
+INFO
+{: .label .label-purple }
+
+Opcja 'Load Project from TwinCAT 2.xx Version' dostępna jest jedynie dla TwinCAT'a w wersji 4024. 
+W wersji 4026 można wczytać projekt PLC .pro, instalując uprzednio paczkę 'Tc2ProjectConverter' z feed'a Outdated.
+ 
+</div>
 
 

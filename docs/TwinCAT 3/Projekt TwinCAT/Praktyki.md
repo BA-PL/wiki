@@ -75,7 +75,7 @@ W celu zablokowania wersji biblioteki należy w drzewku projektu w zakładce Ref
 ## Zaktualizuj pliki opisowe urządzeń (esi dla EtherCAT i inne)
 Są to pliki, które najczęściej dostępne są na stronie producenta. Umożliwiają one odczytywanie parametrów urządzenia w trybie online, a także ich modyfikację. Pozwalają one także na odczytanie odpowiednich indeksów oraz subindeksów dla poszczególnych parametrów urządzenia, umożliwiając odczytywanie i zapisywanie parametrów z poziomu programu PLC.
 <br>
-Aktualizacji dokonuje się w folderze **TwinCAT\3.1\Config\Io** wybierając folder z odpowiednim protokołem komunikacyjnym. Pliki te powinny być dostarczone przez producenta urządzenia.
+Aktualizacji dokonuje się w folderze **C:\TwinCAT\3.1\Config\Io** (dla TwinCAT'a w wersji 4024) lub **C:\Program Files (x86)\Beckhoff\TwinCAT\3.1\Config\Io** (dla TwinCAT'a w wersji 4026) wybierając folder z odpowiednim protokołem komunikacyjnym. Pliki te powinny być dostarczone przez producenta urządzenia.
 <br>
 Dla urządzeń EtherCAT w celu aktualizacji plików opisowych należy wybrać w górnyn menu zakładkę TwinCAT --> EtherCAT Devices --> Update Device Descriptions via ETG website.
 
@@ -92,7 +92,7 @@ Dla obsługi Safety należy stworzyć osobny projekt PLC, w którym będą reali
 ![por10](https://ba-pl.github.io/wiki/assets/images/praktyki/por10.png "por10")
 
 ## Zainstaluj sterowniki real-time do karty sieciowej (jeśli wymaga tego wybrany typ komunikacji)
-zależności od rodzaju używanego urządzenia, sterowniki real-time do karty sieciowej są zainstalowane domyślnie lub trzeba je doinstalować (z folderu TwinCAT/3.1/System/TcRteInstall.exe). Sterowniki z Windowsem CE oraz komputery z serii Embedded PC (czyli CX) mają sterowniki zainstalowane domyślnie. Dla urządzeń Industrial PC sterowniki można zamówić zainstalowane fabrycznie lub zainstalować je samemu. Umożliwiają one obsługę sieci EtherCAT – w przypadku ich braku niemożliwe będzie np. zeskanowanie za pomocą TwinCAT wyspy EK1100.
+zależności od rodzaju używanego urządzenia, sterowniki real-time do karty sieciowej są zainstalowane domyślnie lub trzeba je doinstalować (z folderu C:\TwinCAT\3.1\System\TcRteInstall.exe dla TwinCAT'a w wersji 4024 lub C:\Program Files (x86)\Beckhoff\TwinCAT\3.1\System\TcRteInstall.exe dla TwinCAT'a w wersji 4026). Sterowniki z Windowsem CE oraz komputery z serii Embedded PC (czyli CX) mają sterowniki zainstalowane domyślnie. Dla urządzeń Industrial PC sterowniki można zamówić zainstalowane fabrycznie lub zainstalować je samemu. Umożliwiają one obsługę sieci EtherCAT – w przypadku ich braku niemożliwe będzie np. zeskanowanie za pomocą TwinCAT wyspy EK1100.
 
 ![por11](https://ba-pl.github.io/wiki/assets/images/praktyki/por11.png "por11")
 

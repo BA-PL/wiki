@@ -41,7 +41,7 @@ W przypadku występowania w aplikacji więcej niż jednego modułu tego samego m
 # Przygotowanie projektu safety pod aplikację
 Pierwszym krokiem jest utworzenie nowego Solution z projektem TwinCAT XAE.
 
-![safety3](safety3.png "Safety3")
+![safety3_2](safety3_2.png "Safety3_2")
 
 Po utworzeniu projektu i połączeniu ze sterownikiem zeskanować należy moduły rozszerzeń. Krok ten wykonać należy przed przystąpieniem do tworzenia projektu safety. 
 
