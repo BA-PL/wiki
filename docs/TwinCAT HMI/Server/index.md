@@ -14,8 +14,6 @@ parent: TwinCAT HMI
 1. TOC
 {:toc}
 
-Niniejsza instrukcja jest wprowadzeniem do narzędzia TwinCAT HMI i opisuje jedynie podstawowe operacje. 
-
 # Wersja 1.12 
 
 ## Instalacja 
@@ -23,7 +21,7 @@ Zaczynamy od pobrania i instalacji wersji 1.12 (wersja dla osób pracujących z 
 - na stronie [Beckhoff](https://www.beckhoff.com/pl-pl/) wyszukujemy frazę **TF2000**
 - pobieramy instalator
 
-![s1](s1.png "s1")
+![s1a](s1a.png "s1a")
 
 - instalujemy produkt na urządzeniu docelowym (czyli tym, które ma hostować aplikację HMI; może być to inne urządzenie niż to, które poźniej będzie wizualizację wyśwetlać)
 - po instalacji na pasku systemowym pojawi się ikona serwera
@@ -41,7 +39,7 @@ Należy więc otworzyć dowolny projekt TwinCAT, nawiązać połączenie ze ster
 
 Po wygenerowaniu licencji należy przeładować stan TwinCATa (np. ponownie do Run lub Config), aby status licencji był poprawny.
 
-![s5](s5.png "s5")
+![s5a](s5a.png "s5a")
 
 ## Utworzenie hasła
 
@@ -59,7 +57,7 @@ Za pierwszym razem należy ustawić hasło, które będzie potem używane do zmi
 
 Powinna otworzyć się strona konfiguracyjna - dalsze ustawienia robimy wedle potrzeb. 
 
-![s9](s9.png "s9")
+![s9a](s9a.png "s9a")
 
 ## Dodanie wyjątku do zapory sieciowej
 
@@ -83,7 +81,7 @@ Robimy to w krokach:
 
 - wskazujemy plik **TcHmiServer.exe** z lokalizacji **C:\TwinCAT\Functions\TF2000-HMI-Server**
 
-![s14](s14.png "s14")
+![s14a](s14a.png "s14a")
 
 Zatwierdzamy zmiany. 
 
@@ -91,7 +89,7 @@ Zatwierdzamy zmiany.
 
 Aby przesłać gotową aplikację z narzędzia inżynierskiego na docelowy serwer, klikamy PPM na nazwie projektu i wybieramy opcję *Publish to TwinCAT HMI Server*:
 
-![s15](s15.png "s15")
+![s15a](s15a.png "s15a")
 
 Nadajemy nazwę profilu, pod którą będą zapisane dane serwera:
 
@@ -99,7 +97,7 @@ Nadajemy nazwę profilu, pod którą będą zapisane dane serwera:
 
 Następnie, wyszkujeemy dostępne w sieci serwery:
 
-![s17](s17.png "s17")
+![s17a](s17a.png "s17a")
 
 Wybieramy serwer z listy (sterownik):
 
@@ -107,7 +105,7 @@ Wybieramy serwer z listy (sterownik):
 
 Uzupełniamy hasło i sprawdzamy połączenie:
 
-![s19](s19.png "s19")
+![s19a](s19a.png "s19a")
 
 Powienien pojawić się komunikat:
 
@@ -115,7 +113,7 @@ Powienien pojawić się komunikat:
 
 W następnym kroku wykonujemy operację *Publish*:
 
-![s21](s21.png "s21")
+![s21_1](s21_1.png "s21_1")
 
 Jeśli pojawi się ostrzeżenie jak poniżej:
 
@@ -123,12 +121,12 @@ Jeśli pojawi się ostrzeżenie jak poniżej:
 
 to można anualować proces, zmienić platfromę na TwinCAT HMI:
 
-![s21b](s21b.png "s21b")
+![s21b2](s21b2.png "s21b2")
 
 i ponowić publikację. 
 Status publikacji można obserwować w oknie *Output*:
 
-![s22](s22.png "s22")
+![s22a](s22a.png "s22a")
 
 Po zakończonej publikacji można otworzyć wizualizację na kilka sposobów:
 - z zewnętrznego urządzenia podając adres: https://adresIP_serwera:1020
@@ -139,6 +137,5 @@ Po zakończonej publikacji można otworzyć wizualizację na kilka sposobów:
 	- na urządzeniu z serwerem: http://127.0.0.1:1010
 	- kilkając na ikonę serwera i opcję *Start Page*
 	
-![s24](s24.png "s24")	
 ![s24](s24.png "s24")	
 
