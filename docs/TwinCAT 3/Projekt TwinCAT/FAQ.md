@@ -243,7 +243,7 @@ Następnie należy odszukać ustawienia **TwinCAT --> PLC Enviroment --> Text Ed
 
 ![faq42](https://ba-pl.github.io/wiki/assets/images/faq/faq42.png "faq42")
 
-## 3.9.2	Zmiana stylu środowiska
+## Zmiana stylu środowiska
 Aby zmienić styl środowiska należy wybrać **TOOLS --> Options**. Następnie w ustawieniach **Environment --> General** z rozwijanego menu można wybrać kolor środowiska: Niebieski, Ciemny, Jasny.
 
 ![faq43](https://ba-pl.github.io/wiki/assets/images/faq/faq43.png "faq43")
@@ -329,7 +329,7 @@ INFO
 {: .label .label-purple }
 
 Opcja 'Load Project from TwinCAT 2.xx Version' dostępna jest jedynie dla TwinCAT'a w wersji 4024. 
-W wersji 4026 można wczytać projekt PLC .pro, instalując uprzednio paczkę 'Tc2ProjectConverter' z feed'a Outdated.
+Dodatkowo, jeśli na komputerze jest wersja 4026, to aby wczytać projekt PLC .pro, należy doinstalować paczkę 'Tc2ProjectConverter' z feed'a Outdated.
  
 </div>
 
