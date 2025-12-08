@@ -2,7 +2,7 @@
 title: Beckhoff RT Linux® 
 nav_order: 3
 layout: page
-parent: IPC
+parent: IPC OS 
 ---
 
 # Beckhoff RT Linux® 

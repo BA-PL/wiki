@@ -1,10 +1,10 @@
 ---
-title: IPC
+title: IPC OS 
 nav_order: 2
 layout: page
 ---
 
-# IPC / Embedded PC 
+# IPC / Embedded PC / Operating Systems 
 
 
 ![IPC](IPC.png "IPC")

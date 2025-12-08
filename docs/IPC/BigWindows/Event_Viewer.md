@@ -1,6 +1,6 @@
 ---
 title: Event Viewer
-parent: Windows 7/10 
+parent: Windows 7/10/11 
 nav_order: 2
 layout: page
 ---

@@ -1,6 +1,6 @@
 ---
 title: Beckhoff Service Tool 
-parent: Windows 7/10 
+parent: Windows 7/10/11 
 nav_order: 1
 layout: page
 ---
