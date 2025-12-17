@@ -23,7 +23,9 @@ Dla starszych komputerów/systemów, można spróbować uruchomić lokalną symu
 <br>
 W przypadku używania TC1700 dlasze rozdziały należy pominąć i postępować zgodnie z intrukcją z linku powyżej.
 
-# Przygotowanie komputera 
+# Symulacja lokalna bez TC1700
+
+## Przygotowanie komputera 
 W celu uruchomienia TwinCAT w symulacji, niezbędne są dwa kroki:
 - sprawdzenie, czy na komputerze włączona jest obsługa wirtualizacji (ustawienie w BIOS)
 
@@ -35,7 +37,7 @@ W celu uruchomienia TwinCAT w symulacji, niezbędne są dwa kroki:
 
 ![loc2](https://ba-pl.github.io/wiki/assets/images/local/loc2.png "loc2")
 
-# Przygotowanie projektu 
+## Przygotowanie projektu 
 Jeżeli posiadamy gotowy projekt, który chcielibyśmy uruchomić w trybie symulacji, to w pierwszej kolejności należy:
 - jako urządzenie docelowe wybrać *Local* czyli lokalny komputer
 
@@ -53,7 +55,7 @@ Jeżeli posiadamy gotowy projekt, który chcielibyśmy uruchomić w trybie symul
 
 ![loc6](https://ba-pl.github.io/wiki/assets/images/local/loc6.png "loc6")
 
-## Uruchomienie projektu
+### Uruchomienie projektu
 Po wykonaniu czynności z poprzednich rozdziałów, można wykonać próbę uruchomienia projektu:
 - aktywujemy konfigurację 
 
