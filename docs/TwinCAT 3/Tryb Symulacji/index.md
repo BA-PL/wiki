@@ -16,7 +16,7 @@ parent: TwinCAT 3
 
 Dokumentacja przedstawia szereg ustawień, które mogą być wymagane do uruchomienia lokalnej symulacji aplikacji PLC (bez komputera Beckhoff).
 
-# TwinCAT UserMode Runtime - TC17000
+# TwinCAT UserMode Runtime - TC1700
 
 Obecnie do lokalnej symulacji zalecamy konfigurację tego dodatku: [TC1700](https://infosys.beckhoff.com/english.php?content=../content/1033/tc170x_tc3_usermode_runtime/index.html&id=749290863730644296).
 Dla starszych komputerów/systemów, można spróbować uruchomić lokalną symulację bez dodatku TC1700, wtedy należy postępować zgodnie z kolejnymi rozdziałami.
