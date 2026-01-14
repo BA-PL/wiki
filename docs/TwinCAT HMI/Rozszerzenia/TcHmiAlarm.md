@@ -8,7 +8,7 @@ layout: page
 
 # TcHmiAlarm
 {: .no_toc }
-<h6> Data modyfikacji: 29.10.2025 </h6>
+<h6> Data modyfikacji: 14.01.2026 </h6>
 ## Table of Contents
 {: .no_toc .text-delta }
 
@@ -26,7 +26,7 @@ Kompletny opis tej technologii znajduje się [tutaj.](https://infosys.beckhoff.c
 <br>
 Warto również zapoznać się z webinariami:
 - oficjalny webinar Beckhoff Niemcy: [link](https://www.beckhoff.com/pl-pl/support/webinars/twincat-3-eventlogger-event-based-communications-from-the-twincat-runtime-system.html)
-- oficjalny webinar Beckhoff Polska: [link] (https://www.youtube.com/watch?v=Xvqesx6IzNM)
+- oficjalny webinar Beckhoff Polska: [link](https://www.youtube.com/watch?v=Xvqesx6IzNM)
 
 ## TcHmiAlarm
 
@@ -154,9 +154,9 @@ W przypadku przykładu zostaną odfiltrowane alarmy pochodzące z EventLoggera, 
 
 ![20](https://ba-pl.github.io/wiki/assets/images/alarm/20.png "20")
 
-Po uruchomieniu widoku LiveView oraz:
-- ustawieniu w programie PLC zmiennej bErro na TRUE
-- lub zmiana wartości zmiennej rTemperture na wartość powyżej 26
+Po uruchomieniu widoku *LiveView* oraz:
+- ustawieniu w programie PLC zmiennej **bError** na **TRUE**
+- lub zmiana wartości zmiennej **rTemperture** na wartość powyżej **26**
 powinno spowodować pojawienie się alarmów:
 
 ![21](https://ba-pl.github.io/wiki/assets/images/alarm/21.png "21")
