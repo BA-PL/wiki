@@ -270,7 +270,7 @@ Po zbootowaniu sterownika z BST:
 	- cd C:\ProgramData\Beckhoff\TwinCAT\3.1
 	- ren Boot oldBoot
 	
-![bst37](https://ba-pl.github.io/wiki/assets/images/BST/bst37.png "bst37")
+![bst38](https://ba-pl.github.io/wiki/assets/images/BST/bst38.png "bst38")
 
 Nazwa folderu Boot została zmieniona.
 
