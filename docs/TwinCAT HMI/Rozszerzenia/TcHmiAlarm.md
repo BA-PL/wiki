@@ -161,4 +161,22 @@ powinno spowodować pojawienie się alarmów:
 
 ![21](https://ba-pl.github.io/wiki/assets/images/alarm/21.png "21")
 
+### Alarm z parametrem
+
+Istnieje możliwość dodania parametru do alarmu, tj. na przykład wyświetlenia aktualnej wartości zmiennej, która wywołała alarm.
+<br>
+W poprzednich przykładach wyświetlony został alarm:
+
+- *Water temperature too high!!* uzależniony od watości zmiennej **rTemperature**
+
+Można do treści alarmu dodać aktualną wartość temperatury, należy w tym celu zmodyfikować klucz tekstowy:
+
+![22](https://ba-pl.github.io/wiki/assets/images/alarm/22.png "22")
+
+gdzie po wyrażenie ** {value} ** zostanie podstawiona wartość zmiennej, dla której był konfigurowany alarm.
+<br>
+Po tych zmianach, po wywołaniu alarmu (wartość zmiennej **rTemperature** w PLC musi przekroczyć 26), alarm będzie wyglądał następująco:
+
+![23](https://ba-pl.github.io/wiki/assets/images/alarm/23.png "23")
+
 
