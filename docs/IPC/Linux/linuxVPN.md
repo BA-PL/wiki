@@ -55,18 +55,19 @@ Premium:
 - Polityki MDM (Mobile Device Management) umożliwiające wymuszanie konfiguracji i zgodności urządzeń,
 - Audyt konfiguracji oraz logowanie przepływów sieciowych, ułatwiające analizę bezpieczeństwa i diagnostykę.
 
-#Instalacja i uruchomienie na Linuxie
+# Instalacja i uruchomienie na Linuxie
+
 Poniższa instalacja i konfiguracja zawiera podstawowe połączenie ze sterownikiem przez Tailscale - po jej wykonaniu, możliwe będzie połączenie się ze sterownikiem po ADS celem wgrania programu, dostępem do terminala przez ssh itp.
 
 ![2](https://ba-pl.github.io/wiki/assets/images/tail/2.png "2")
 
-1. Pobieramy i instalujemy za pomocą połączenia metody `curl` i `sh` program tailscale:
+- Pobieramy i instalujemy za pomocą połączenia metody `curl` i `sh` program tailscale:
 
  ```curl -fsSL https://tailscale.com/install.sh | sh```
  
 ![3](https://ba-pl.github.io/wiki/assets/images/tail/3.png "3")
 
-2. Uruchamiamy aplikację tailscale - po wpisaniu poniższej komendy, tailscale zostaje także dodany do autouruchamiania się w systemie:
+- Uruchamiamy aplikację tailscale - po wpisaniu poniższej komendy, tailscale zostaje także dodany do autouruchamiania się w systemie:
 
 ```sudo tailscale up```
 
@@ -82,7 +83,7 @@ Tailscale posiada system użytkowników - sterownika PLC nie trzeba podpinać na
 
 Po wejściu w link i zaakceptowaniu urządzenia do naszej sieci Tailscale, podstawowa konfiguracja została zakończona - sterownik powinien być widoczny w sieci Tailscale, powinna być również możliwość łączenia się z nim poprzez np. ssh. Dalsze kroki konfiguracji należy dostosować do swojej architektury systemu i tego, jak wyglądają interakcje pomiędzy urządzeniami w sieci Tailscale. 
 
-3. Status usługi tailscale w systemie Linux możemy sprawdzić poprzez komendę:
+- Status usługi tailscale w systemie Linux możemy sprawdzić poprzez komendę:
 
 ``` systemctl status tailscaled.service```
 
@@ -98,7 +99,7 @@ lub poprzez komendę bezpośrednio na sterowniku z Linuxem:
 
 ![9](https://ba-pl.github.io/wiki/assets/images/tail/9.png "9")
 
-#Konfiguracja PLC jako gateway VPN do innych urzadzen w sieci
+# Konfiguracja PLC jako gateway VPN do innych urzadzen w sieci
 
 ![10](https://ba-pl.github.io/wiki/assets/images/tail/10.png "10")
 
@@ -107,25 +108,35 @@ Przykładowo, mamy sterownik CX9240, do którego podpinamy na port X000 kabel z 
 
 - Tworzymy plik w folderze /etc/sysctl.d który zezwala na przekazywanie pakietów dalej przez sterownik.  Przechodzimy do folderu:
 
- ```cd /etc/sysctl.d```
+```
+cd /etc/sysctl.d
+```
  
 Tworzymy nowy plik i otwieramy przez edytor nano:
 
-```sudo nano 90-ipv4-forward.conf```
+```
+sudo nano 90-ipv4-forward.conf
+```
 
 Następnie, wpisujemy w środku pliku
 
-```net.ipv4.ip_forward=1```
+```
+net.ipv4.ip_forward=1
+```
 
 zapisujemy Ctrl+S, wychodzimy Ctrl+X.
 
 Następnie wczytujemy nowo dodany parametr poprzez komendę:
 
-```sudo systemctl restart systemd-sysctl```
+```
+sudo systemctl restart systemd-sysctl
+```
 
 - Na linuxie wpisujemy komendę do uruchamiania tailscale wraz z pulą adresów IP które będą dostępne przez ten sterownik. Jako przykład, drugi port CX9240 ma IP 192.168.50.15 oraz chce stanowić gateway dla urządzeń o puli IP 192.168.50.XXX
 
-```sudo tailscale up --advertise-routes=192.168.50.0/24```
+```
+sudo tailscale up --advertise-routes=192.168.50.0/24
+```
 
 ![11](https://ba-pl.github.io/wiki/assets/images/tail/11.png "11")
 
@@ -141,7 +152,9 @@ Z prawej strony przechodzimy do opcji Edit route settings i akceptujemy:
 
 - Tworzymy reguły firewalla, aby poprawnie przekazywać pakiety:
 
-```sudo nano /etc/nftables.conf.d/90-tailscale.rules```
+```
+sudo nano /etc/nftables.conf.d/90-tailscale.rules
+```
 
 A następnie wypełniamy odpowiednio plik:
 
@@ -170,11 +183,13 @@ table inet filter {
 zapisujemy Ctrl+S, wychodzimy Ctrl+X.
 Przeładowujemy firewalla poprzez komendę:
 
-```sudo systemctl reload nftables```
+```
+sudo systemctl reload nftables
+```
 
 Następnie możemy testować na własnym laptopie, czy widzimy inne urządzenia w sieci poprzez transfer pakietów przez sterownik z Linuxem.
 
-#Przydatne tipy i komendy
+# Przydatne tipy i komendy
 
 Na stronie https://tailscale.com/kb/1080/cli znajduje się opis komend, jakie można wpisywać, aby wchodzić w interakcje z naszą usługą Tailscale.
 
