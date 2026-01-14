@@ -229,7 +229,7 @@ Po ustawieniu opcji jak na powyższym zdjęciu przechodzimy do zakładki Save & 
  W następstwie błędu programistycznego może się zdarzyć, że sterownik przejdzie w tryb Exception. Oznaką tego jest zatrzymanie wykonywania programu PLC oraz zapalenie się diody TC na sterowniku na żółto. Jeśli w projekcie została zaznaczona opcja *Autostart boot project* to może się zdarzyć, że sterownik wpadnie w nieskończoną pętlę błędu. W takim przypadku, aby uniemożliwić uruchomienie programu PLC możemy zmienić nazwę katalogu Boot.
  TwinCAT uruchamia się wtedy w trybie Config, a program PLC nie jest wykonywany. W przypadku gdy nie możemy bezpośrednio odczytać dysku sterownika do zmiany nazwy wyżej wymienionego katalogu możemy wykorzystać BST. W tym celu należy zbootować BST na sterowniku jak opisano to w poprzednich rozdziałach a następnie postępować zgodnie z opisem poniżej, w zależności od wersji TwinCAT znajdującej się na sterowniku.
  
-## Postępowanie dla TwinCAT 4024
+### Postępowanie dla TwinCAT 4024
 
 Po zbootowaniu sterownika z BST:
 
@@ -249,7 +249,7 @@ i odszukujemy folder **Boot**. Klikamy PPM i zmieniamy nazwę:
 ![bst32](https://ba-pl.github.io/wiki/assets/images/BST/bst32.png "bst32")
 
 
-## Postępowanie dla TwinCAT 4026
+### Postępowanie dla TwinCAT 4026
 
 Po zbootowaniu sterownika z BST:
 
