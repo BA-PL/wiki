@@ -7,7 +7,7 @@ layout: page
 
 # Beckhoff Service Tool (BST) 
 {: .no_toc }
-<h6> Data modyfikacji: 30.12.2024 </h6>
+<h6> Data modyfikacji: 14.01.2026 </h6>
 ## Table of Contents
 {: .no_toc .text-delta }
 
@@ -226,13 +226,14 @@ Po ustawieniu opcji jak na powyższym zdjęciu przechodzimy do zakładki Save & 
 
 ## Dostęp do katalogu Boot 
  
- W następstwie błędu programistycznego może się zdarzyć, że sterownik przejdzie w tryb Exception. Oznaką tego jest zatrzymanie wykonywania programu PLC oraz zapalenie się diody TC na sterowniku na żółto. Jeśli w projekcie została zaznaczona opcja *Autostart boot project* to może się zdarzyć, że sterownik wpadnie w nieskończoną pętlę błędu. W takim przypadku, aby uniemożliwić uruchomienie programu PLC możemy zmienić nazwę katalogu Boot. Dokładna ścieżka:
-- C:\TwinCAT\3.1\Boot dla TwinCAT'a w wersji 4024 
-- C:\ProgramData\Beckhoff\TwinCAT\3.1\Boot dla TwinCAT'a w wersji 4026(folder ProgramData jest ukryty).
-
-TwinCAT uruchamia się wtedy w trybie Config, a program PLC nie jest wykonywany. W przypadku gdy nie możemy bezpośrednio odczytać dysku sterownika do zmiany nazwy wyżej wymienionego katalogu możemy wykorzystać BST. W tym celu należy zbootować BST na sterowniku jak opisano to w poprzednich rozdziałach a następnie:
+ W następstwie błędu programistycznego może się zdarzyć, że sterownik przejdzie w tryb Exception. Oznaką tego jest zatrzymanie wykonywania programu PLC oraz zapalenie się diody TC na sterowniku na żółto. Jeśli w projekcie została zaznaczona opcja *Autostart boot project* to może się zdarzyć, że sterownik wpadnie w nieskończoną pętlę błędu. W takim przypadku, aby uniemożliwić uruchomienie programu PLC możemy zmienić nazwę katalogu Boot.
+ TwinCAT uruchamia się wtedy w trybie Config, a program PLC nie jest wykonywany. W przypadku gdy nie możemy bezpośrednio odczytać dysku sterownika do zmiany nazwy wyżej wymienionego katalogu możemy wykorzystać BST. W tym celu należy zbootować BST na sterowniku jak opisano to w poprzednich rozdziałach a następnie postępować zgodnie z opisem poniżej, w zależności od wersji TwinCAT znajdującej się na sterowniku.
  
- - wybrać zakładkę **Manage Images**:
+## Postępowanie dla TwinCAT 4024
+
+Po zbootowaniu sterownika z BST:
+
+ - klikamy przycisk **Manage Images**:
  
 ![bst30](https://ba-pl.github.io/wiki/assets/images/BST/bst30.png "bst30")
  
@@ -240,12 +241,38 @@ TwinCAT uruchamia się wtedy w trybie Config, a program PLC nie jest wykonywany.
  
  ![bst31](https://ba-pl.github.io/wiki/assets/images/BST/bst31.png "bst31")
   
-- następnie przechodzimy do domyślnej lokalizacji TwinCAT'a, np. 
-   - **C:\TwinCAT\3.1** dla TwinCAT'a w wersji 4024
-   - **C:\ProgramData\Beckhoff\TwinCAT\3.1** dla TwinCAT'a w wersji 4026
+- następnie przechodzimy do domyślnej lokalizacji TwinCAT'a
+   - **C:\TwinCAT\3.1** 
 
 i odszukujemy folder **Boot**. Klikamy PPM i zmieniamy nazwę:
 
 ![bst32](https://ba-pl.github.io/wiki/assets/images/BST/bst32.png "bst32")
 
 
+## Postępowanie dla TwinCAT 4026
+
+Po zbootowaniu sterownika z BST:
+
+ - klikamy przycisk **Settings**:
+
+![bst34](https://ba-pl.github.io/wiki/assets/images/BST/bst34.png "bst34")
+
+- w zakładce **Linked Buttons** dodajemy nowy przycisk ze ścieżką do cmd, jak  na zdjeciu poniżej
+
+![bst35](https://ba-pl.github.io/wiki/assets/images/BST/bst35.png "bst35")
+
+- po powrocie do ekranu głównego mozemy otworzyć **cmd**
+
+![bst36](https://ba-pl.github.io/wiki/assets/images/BST/bst36.png "bst36")
+
+- wpisujemy kolejno komendy:
+	- C:
+	- cd C:\ProgramData\Beckhoff\TwinCAT\3.1
+	- ren Boot oldBoot
+	
+![bst37](https://ba-pl.github.io/wiki/assets/images/BST/bst37.png "bst37")
+
+Nazwa folderu Boot została zmieniona.
+
+
+	
