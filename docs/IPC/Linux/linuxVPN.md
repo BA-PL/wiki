@@ -1,7 +1,7 @@
 ---
 title: Tailscale VPN
 parent: Beckhoff RT Linux® 
-nav_order: 3
+nav_order: 4
 layout: page
 ---
 
