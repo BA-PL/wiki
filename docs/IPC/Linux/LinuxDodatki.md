@@ -1,5 +1,5 @@
 ---
-title: Instalacja dodtaków TF (TF1810)
+title: Instalacja dodatków TF (TF1810)
 parent: Beckhoff RT Linux® 
 nav_order: 2
 layout: page

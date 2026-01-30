@@ -15,7 +15,7 @@ layout: page
 1. TOC
 {:toc}
 
-# Wprowadzennie
+# Wprowadzenie
 TwinCAT 3.1 Build 4026 jest instalowany za pomocą TwinCAT Package Manager. Taki sposób instalacji nie ogranicza TwinCAT’a do trzech wariantów jak w poprzednich wersjach, lecz pozwala instalować, aktualizować i usuwać poszczególne komponenty niezależnie. Użytkownik może określić z jakich komponentów będzie korzystał na komputerze programisty czy sterowniku i zainstalować tylko używane przez niego funkcje.
 <br>
 <br>
