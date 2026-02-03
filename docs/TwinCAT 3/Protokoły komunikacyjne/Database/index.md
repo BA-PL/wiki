@@ -1,6 +1,6 @@
 ---
 title: Database Server
-parent: Protokoły komunikacyjne
+parent: Protokoły komunikacyjne TF6xxx
 nav_order: 6
 layout: page
 ---

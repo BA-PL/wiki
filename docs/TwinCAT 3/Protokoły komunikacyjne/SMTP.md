@@ -1,6 +1,6 @@
 ---
 title: SMTP
-parent: Protokoły komunikacyjne
+parent: Protokoły komunikacyjne TF6xxx
 nav_order: 7
 layout: page
 ---

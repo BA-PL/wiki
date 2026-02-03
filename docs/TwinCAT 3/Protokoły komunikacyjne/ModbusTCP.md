@@ -1,6 +1,6 @@
 ---
 title: ModbusTCP
-parent: Protokoły komunikacyjne
+parent: Protokoły komunikacyjne TF6xxx
 nav_order: 4
 layout: page
 ---

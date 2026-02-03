@@ -1,6 +1,6 @@
 ---
 title: ADS
-parent: Protokoły komunikacyjne
+parent: Protokoły komunikacyjne TF6xxx
 nav_order: 1
 layout: page
 ---

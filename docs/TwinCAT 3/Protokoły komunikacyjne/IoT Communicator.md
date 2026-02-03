@@ -1,6 +1,6 @@
 ---
 title: IoT Communicator
-parent: Protokoły komunikacyjne
+parent: Protokoły komunikacyjne TF6xxx
 nav_order: 2
 layout: page
 ---

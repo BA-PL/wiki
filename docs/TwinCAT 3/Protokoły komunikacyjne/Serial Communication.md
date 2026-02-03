@@ -1,6 +1,6 @@
 ---
 title: Serial Communication
-parent: Protokoły komunikacyjne
+parent:Protokoły komunikacyjne TF6xxx
 nav_order: 5
 layout: page
 ---
