@@ -24,7 +24,7 @@ Założenia:
 
 Przygotowanie:
 - na obu sterownikach jest zainstalowany tc31-xar-um 
-- opcjonalnie, dla interfejsu tctap0 ustawiamy statyczny adres IP, zgodnie z instrukcją [tutaj](https://infosys.beckhoff.com/english.php?content=../content/1033/beckhoff_rt_linux/18089353227.html)
+- opcjonalnie, dla interfejsu tctap0 (switched port) ustawiamy statyczny adres IP, zgodnie z instrukcją [tutaj](https://infosys.beckhoff.com/english.php?content=../content/1033/beckhoff_rt_linux/18089353227.html)
 
 ![eap1](https://ba-pl.github.io/wiki/assets/images/linux/eap1.png "eap1")
 
