@@ -20,7 +20,7 @@ Założenia:
 - komunikacja na zasadzie Publisher-Subscriber za pomocą EtherCAT Automation Protocol
 - wymiana danych pomiędzy
 	- CX8290
-	- CX9240 z opcją M910 (dodatkowa karta sieciowa)
+	- CX9240 z opcją M910 (dodatkowy interfejs sieciowy)
 
 Przygotowanie:
 - na obu sterownikach jest zainstalowany tc31-xar-um 
