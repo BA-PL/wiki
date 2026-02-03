@@ -1,11 +1,11 @@
 ---
-title: Protokoły komunikacyjne  
+title: Wybrane protokoły komunikacyjne  
 parent: Beckhoff RT Linux® 
 nav_order: 5
 layout: page
 ---
 
-# Protokoły komunikacyjne
+# Wybrane protokoły komunikacyjne
 {: .no_toc }
 <h6> Data modyfikacji: 03.02.2026 </h6>
 ## Table of Contents
