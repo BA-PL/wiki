@@ -1,7 +1,7 @@
 ---
 title: GIT - systemy kontroli wersji 
 parent: TwinCAT 3
-nav_order: 9
+nav_order: 8
 layout: page
 ---
 
