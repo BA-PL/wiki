@@ -22,7 +22,7 @@ Założenia:
 	- CX8290
 	- CX9240 z opcją M910 (dodatkowy interfejs sieciowy)
 
-Przygotowanie:
+Przygotowanie nie objętę instrukcją:
 - na obu sterownikach jest zainstalowany tc31-xar-um 
 - opcjonalnie, dla interfejsu tctap0 (switched port) ustawiamy statyczny adres IP, zgodnie z instrukcją [tutaj](https://infosys.beckhoff.com/english.php?content=../content/1033/beckhoff_rt_linux/18089353227.html)
 
@@ -119,4 +119,84 @@ Aktywujemy konfigurację i wgrywamy aplikację. Wartość zmiennej powinna się 
 ![eap18](https://ba-pl.github.io/wiki/assets/images/linux/eap18.png "eap18")
 
 
+# PROFINET
 
+Założenia:
+- uruchomienie protokołu PROFINET jako Profinet Controller na sterowniku CX9240 z portem M910 (dodatkowy interfejs sieciowy)
+- jako PROFINET device do demonstracji został użyty Coupler EK9320
+
+Przygotowanie nie objęte instrukcją:
+- na sterowniku CX9240 jest zainstalowany tc31-xar-um 
+
+
+![eap1](https://ba-pl.github.io/wiki/assets/images/linux/eap1.png "eap1")
+
+## Instalacja pakietu TF627x
+
+Na początek należy na sterowniku doinstalować driver do komunikacji profinet:
+
+![prof1](https://ba-pl.github.io/wiki/assets/images/linux/prof1.png "prof1")
+
+Robimy to w krokach:
+
+```
+sudo apt update
+```
+
+a następnie:
+
+```
+sudo apt install tf627x-profinet-rt-xar
+```
+
+Po utworzeniu projektu i połączeniu się ze sterownikiem, dodajemy do zakłdaki I/O Profinet Controller CCAT:
+
+![prof2](https://ba-pl.github.io/wiki/assets/images/linux/prof2.png "prof2")
+
+W zakładce Adapter powinna automatycznie podłączyć się karta sieciowa:
+
+![prof3](https://ba-pl.github.io/wiki/assets/images/linux/prof3.png "prof3")
+
+Jest to ten interfejs:
+
+![eap4a](https://ba-pl.github.io/wiki/assets/images/linux/eap4a.png "eap4a")
+
+Profinet powinien być synchronizowany z taskiem, którego czas cyklu jest wartością, która jest potęgą dwójki.
+Można więc zmienić czas cyklu standardowego tasku PLC lub utworzyć oddzielny task.
+W przykładzie ustawiono czas tasku PLC na 8ms:
+
+![prof4](https://ba-pl.github.io/wiki/assets/images/linux/prof4.png "prof4")
+
+wtedy w zakłdce **Sync Task** zostawiamy ustawienie **Standard (via Mapping)**:
+
+![prof5](https://ba-pl.github.io/wiki/assets/images/linux/prof5.png "prof5")
+
+Na tym etapie możemy aktywować konfigurację, sprawdzimy czy ustawienia są poprawne oraz wygeneruje się licencja trail (jeśli nie ma standardowej):
+
+![prof6](https://ba-pl.github.io/wiki/assets/images/linux/prof6.png "prof6")
+
+Po udanej aktywacji, możemy powrócić do trybu Config Mode i kontynuować konfigurację.
+<br>
+Jeśli jest potrzeba, można dostowować adres IP dla sieci Profinet (nie musi być zgodny z adresem karty sieciowej w systemie):
+
+![prof7](https://ba-pl.github.io/wiki/assets/images/linux/prof7.png "prof7")
+
+Następnie skanujemy magistralę PROFINET:
+
+![prof8](https://ba-pl.github.io/wiki/assets/images/linux/prof8.png "prof8")
+
+Dokonujemy ustawień nazw/adresów na zeskanowanych urządzeniach i dodajemy je do konfiguracji:
+
+![prof8](https://ba-pl.github.io/wiki/assets/images/linux/prof8.png "prof8")
+
+Potwierdzamy pojawiający się komunikat:
+
+![prof10](https://ba-pl.github.io/wiki/assets/images/linux/prof10.png "prof10")
+
+Na koniec linkujemy zmienne do odpowiednich danych i wgrywamy konfigurację:
+
+![prof11](https://ba-pl.github.io/wiki/assets/images/linux/prof11.png "prof11")
+
+Po wgraniu konfiguracji i uruchomieniu aplikacji sprawdzamy czy nie błędów:
+
+![prof12](https://ba-pl.github.io/wiki/assets/images/linux/prof12.png "prof12")
