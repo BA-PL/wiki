@@ -146,6 +146,8 @@ a następnie:
 sudo apt install tf627x-profinet-rt-xar
 ```
 
+## Konfiguracja  
+
 Po utworzeniu projektu i połączeniu się ze sterownikiem, dodajemy do zakłdaki I/O Profinet Controller CCAT:
 
 ![prof2](https://ba-pl.github.io/wiki/assets/images/linux/prof2.png "prof2")
