@@ -128,9 +128,6 @@ Założenia:
 Przygotowanie nie objęte instrukcją:
 - na sterowniku CX9240 jest zainstalowany tc31-xar-um 
 
-
-![eap1](https://ba-pl.github.io/wiki/assets/images/linux/eap1.png "eap1")
-
 ## Instalacja pakietu TF627x
 
 Na początek należy na sterowniku doinstalować driver do komunikacji profinet:
@@ -187,7 +184,7 @@ Następnie skanujemy magistralę PROFINET:
 
 Dokonujemy ustawień nazw/adresów na zeskanowanych urządzeniach i dodajemy je do konfiguracji:
 
-![prof8](https://ba-pl.github.io/wiki/assets/images/linux/prof8.png "prof8")
+![prof9](https://ba-pl.github.io/wiki/assets/images/linux/prof9.png "prof9")
 
 Potwierdzamy pojawiający się komunikat:
 
