@@ -14,7 +14,7 @@ layout: page
 1. TOC
 {:toc}
 
-# Odszuakanie nazwy i instalacja dodatku
+# Odszuakanie nazwy oraz instalacja dodatku
 
 Jeśli mamy już skonfigurowany dostęp do APT - [patrz tutaj](https://ba-pl.github.io/wiki/docs/IPC/Linux/linuxBase/#pod%C5%82%C4%85czenie-i-instalacja-twincat) - zacznie od komendy update'u:
 
