@@ -78,7 +78,7 @@ sudo apt install tf1200-ui-client
 Następnie dodajemy użytkownika dla automatycznego startu wizualizacji w systemie (powinien być inny niż Administrator) komendą:
 
 ```
-sudo /etc/TwinCAT/Functions/TF1200-UI-Client/scripts/setup-full.sh --user=TF1200 --autologin –autostart 
+sudo /etc/TwinCAT/Functions/TF1200-UI-Client/scripts/setup-full.sh --user=TF1200 --autologin --autostart 
 ```
 
 ![linux9](https://ba-pl.github.io/wiki/assets/images/linux/linux9.png "linux9")
