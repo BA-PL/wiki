@@ -147,3 +147,20 @@ cat srvTrace.log
 
 ![u10](https://ba-pl.github.io/wiki/assets/images/linux/u10.png "u10")
 
+# Sprawdzenie wersji systemu
+
+Aby sprawdzić główną wersję systemu, można użyć komendy:
+
+```
+cat /etc/debian_version
+```
+
+![u11](https://ba-pl.github.io/wiki/assets/images/linux/u11.png "u11")
+
+Jeśli chcemy porównać swój build z buildem ze strony Beckhoff, użyjemy komendy:
+
+```
+cat /etc/os-release.d/* 2>/dev/null
+```
+
+![u12](https://ba-pl.github.io/wiki/assets/images/linux/u12.png "u12")
