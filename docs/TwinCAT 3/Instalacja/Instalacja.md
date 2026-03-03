@@ -128,6 +128,43 @@ Po ukończeniu procedury wyświetli się podsumowanie migracji:
 ![26t15_2](https://ba-pl.github.io/wiki/assets/images/4026/26t15_2.png "26t15_2")
 
 Zatwierdzamy je klikając **Finish**. Po migracji można już korzystać z TwinCAT 4026. Dodatkowo, aby programować sterowniki z starszymi wersjami TwinCAT’a należy przejść do rozdziału dotyczącego [Remote Managera](https://ba-pl.github.io/wiki/docs/TwinCAT%203/Instalacja/Instalacja/#instalacja-starszych-build%C3%B3w-remote-manage-ilub-twincat-2).
+
+# Konfiguracja Runtime TwinCAT
+
+Microsoft od Windows **11** wymusza domyślnie włączoną opcję *Virtualization Based Security (VBS).* 
+Opcja ta wykorzystuje wirtualizację (Hyper-V), przez co nie jest kompatybilna z TwinCAT.
+Od wersji **4026.21**, dla komputerów które korzystają z VBS, Hyper-V lub na których nie można uruchomić Realtime ze względu na blokady lub wymogi IT, pojawiła się nowa funkcjonalność uruchomienia *User Mode*.
+<br>
+Od teraz pierwsza instalacja TwinCAT automatycznie wybiera odpowiedni typ Runtime, nazwany **XarMode**:
+
+![xar](https://ba-pl.github.io/wiki/assets/images/4026/xar.png "xar")
+
+**Bez Run Mode** oznacza brak możliwości aktywacji konfiguracji i przełączenia TwinCAT w tryb Run Mode na komputerze. 
+Nie oznacza to braku możliwości programowania i aktywowania konfiguracji na sterowniku!
+W efekcie na komputerach programistów, które często są komputerami domenowymi, zarządzanymi przez reguły grupy, TwinCAT instalowany jest w trybie **KMwithUM**. Oznacza to że część komponentów (np. router ADS) która nie wymaga dodziałania Hyper-V, jest instalowana jako sterownik w Kernel Mode (Realtime) a środowisko uruchomieniowe korzysta z, od niedawna dostępnego, **User Mode (aplikacja Windows)**. Zaletą tego jest możliwość uruchamiania programów w symulacji na komputerach, na których wcześniej nie było to możliwe z racji ograniczeń. Również nie jest wymagana zmiana ustawień tj. wyłączanie Hyper-V, wyłączanie VBS itp.
+<br>
+Innym przykładem konfiguracji która wcześniej nie była obsługiwana są nowe komputery z procesorami ARM. Są to komputery z dedykowaną wersją systemu Windows, w których z racji innej architektury CPU runtime TwinCAT nie jest dostępny. Instalacja TwinCAT w pełnym User mode pozwala programować sterowniki komputerami z ARM.
+
+## Zmiana typ Runtime
+
+Postępujemy w sposób jak poniżej:
+
+![settings](https://ba-pl.github.io/wiki/assets/images/4026/settings.png "settings")
+
+![xar2](https://ba-pl.github.io/wiki/assets/images/4026/xar2.png "xar2")
+
+<div class="code-example" markdown="1" style="background: rgba(255, 0, 0, 0.7)">
+
+INFO
+{: .label .label-blue }
+
+UWAGA! Zmiana typu Runtime dla zainstalowanego TwinCAT wiąże się z deinstalacja i instalacją wielu pakietów. Operacja może zająć sporo czasu, zalecane jest wykonanie jej przed instalacją.
+ 
+</div>
+
+Więcej informacji: [infosys](https://infosys.beckhoff.com/content/1033/tc3_installation/20830884491.html)
+
+
 # Instalacja TwinCAT i funkcji
 W głównym oknie znajduje się pole wyboru, które pozwala określić co chcemy zainstalować:
 
