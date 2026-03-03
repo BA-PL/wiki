@@ -145,7 +145,7 @@ W efekcie na komputerach programistów, które często są komputerami domenowym
 <br>
 Innym przykładem konfiguracji która wcześniej nie była obsługiwana są nowe komputery z procesorami ARM. Są to komputery z dedykowaną wersją systemu Windows, w których z racji innej architektury CPU runtime TwinCAT nie jest dostępny. Instalacja TwinCAT w pełnym User mode pozwala programować sterowniki komputerami z ARM.
 
-## Zmiana typ Runtime
+## Zmiana typu Runtime
 
 Postępujemy w sposób jak poniżej:
 
