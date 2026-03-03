@@ -153,10 +153,10 @@ Postępujemy w sposób jak poniżej:
 
 ![xar2](https://ba-pl.github.io/wiki/assets/images/4026/xar2.png "xar2")
 
-<div class="code-example" markdown="1" style="background: rgba(255, 0, 0, 0.7)">
+<div class="code-example" markdown="1" style="background: rgba(255, 0, 0, 0.7), color:white">
 
 INFO
-{: .label .label-blue }
+{: .label .label-yellow }
 
 UWAGA! Zmiana typu Runtime dla zainstalowanego TwinCAT wiąże się z deinstalacja i instalacją wielu pakietów. Operacja może zająć sporo czasu, zalecane jest wykonanie jej przed instalacją.
  
