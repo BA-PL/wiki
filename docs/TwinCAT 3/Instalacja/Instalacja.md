@@ -153,7 +153,7 @@ Postępujemy w sposób jak poniżej:
 
 ![xar2](https://ba-pl.github.io/wiki/assets/images/4026/xar2.png "xar2")
 
-<div class="code-example" markdown="1" style="background: rgba(255, 0, 0, 0.7), color:white">
+<div class="code-example" markdown="1" style="background: rgba(255, 0, 0, 0.5)">
 
 INFO
 {: .label .label-yellow }
