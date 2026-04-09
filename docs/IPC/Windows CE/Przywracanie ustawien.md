@@ -30,12 +30,12 @@ Po odczytaniu karty należy usunąć całą jej zawartość potwierdzając pojaw
 <br>
 <br>
 
-<div class="code-example" markdown="1" style="background: rgba(236, 116, 136, 0.8)">
+<div class="code-example" markdown="1" style="background-color: rgba(255, 0, 0, 0.6); color: white">
 
-WAŻNE
-{: .label .label-red }
+UWAGA
+{: .label .label-yellow }
 
-**UWAGA!** Karta nie wymaga formatowania. Formatowanie robimy tylko w przypadku nowej karty, wybierając system plików FAT16 lub FAT32
+Karta nie wymaga formatowania. Formatowanie robimy tylko w przypadku nowej karty, wybierając system plików FAT16 lub FAT32
  
 </div>
 <br>
