@@ -62,6 +62,14 @@ Kolejną komendą jest update zasobów APT, robimy to komendą:
 ```
 sudo apt update
 ```
+<div class="code-example" markdown="1" style="background: rgba(255, 0, 0, 0.6)">
+
+UWAGA
+{: .label .label-yellow }
+
+Aby komenda wykonała się poprawnie, na sterowniku wymagane jest połączenie z internetem. 
+ 
+</div>
 
 ![linux3](https://ba-pl.github.io/wiki/assets/images/linux/linux3.png "linux3")
 
