@@ -62,7 +62,7 @@ Kolejną komendą jest update zasobów APT, robimy to komendą:
 ```
 sudo apt update
 ```
-<div class="code-example" markdown="1" style="background: rgba(255, 0, 0, 0.6)">
+<div class="code-example" markdown="1" style="background-color: rgba(255, 0, 0, 0.6); color: white">
 
 UWAGA
 {: .label .label-yellow }
