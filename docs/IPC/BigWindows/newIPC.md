@@ -26,7 +26,7 @@ Do komputera można podpiąć się na dwa sposoby:
 
 2. **Sieciowo**: wykorzystując protokół RDP, czyli Podłączenie pulpitu zdalnego (ang. Remote Desktop Connection). Do realizacji takiego połączenia potrzebny jest adres sieciowy komputera, a sposób na jego uzyskanie opisany jest poniżej.
 
-## Adres sieciowy komputera
+# Adres sieciowy komputera
 
 Każdy adapter sieciowy w naszych komputerach posiada ustawiony adres DHCP.
 
@@ -34,17 +34,17 @@ Niektóre adaptery sieciowe posiadają przyporządkowane DIP Switche, które poz
 
 Aby podłączyć się do komputera po sieci, musimy znać jego adres IP.
 
-### TwinCAT zainstalowany na komputerze
+## Przypadek 1 - TwinCAT jest fabrycznie zainstalowany na IPC
 
 Jeżeli TwinCAT jest zainstalowany, to możemy wyszukać komputer przy użyciu routera ADS, który wyszukuje wszystkie routery na sieci. Służy do tego opcja **Broadcast Search**.
 
 ![BroadcastSearch](https://ba-pl.github.io/wiki/assets/images/ipc/BroadcastSearch.png "Broadcastsearch")
 
-### Brak TwinCAT'a na komputerze
+## Przypadek 2 - Brak fabrycznie zainstalowanego TwinCAT'a na komputerze
 
 W przypadku braku routera ADS, należy wykorzystać oprogramowanie firm trzecich. Wybór narzędzia najlepiej uzależnić od konfiguracji sieciowej.
 
-#### Advance IP Scanner
+### Advance IP Scanner
 
 <div class="code-example" markdown="1" style="background: rgba(210, 243, 242, 0.8)">
 
@@ -72,7 +72,7 @@ Hostname może się różnić w zależności od systemu Windows oraz typu komput
   * CX-ABCDEF
   * CP-ABCDEF
 
-#### Wireshark
+### Wireshark
 
 <div class="code-example" markdown="1" style="background: rgba(210, 243, 242, 0.8)">
 
