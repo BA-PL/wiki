@@ -40,7 +40,7 @@ Jeżeli TwinCAT jest zainstalowany, to możemy wyszukać komputer przy użyciu r
 
 ![BroadcastSearch](https://ba-pl.github.io/wiki/assets/images/ipc/BroadcastSearch.png "Broadcastsearch")
 
-## Przypadek 2 - Brak fabrycznie zainstalowanego TwinCAT'a na komputerze
+## Przypadek 2 - Brak fabrycznie zainstalowanego TwinCAT'a na IPC
 
 W przypadku braku routera ADS, należy wykorzystać oprogramowanie firm trzecich. Wybór narzędzia najlepiej uzależnić od konfiguracji sieciowej.
 
