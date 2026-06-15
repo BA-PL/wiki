@@ -7,7 +7,7 @@ layout: page
 
 # GIT
 {: .no_toc }
-<h6> Data modyfikacji: 28.08.2025 </h6>
+<h6> Data modyfikacji: 15.06.2026 </h6>
 ## Table of Contents
 {: .no_toc .text-delta }
 
