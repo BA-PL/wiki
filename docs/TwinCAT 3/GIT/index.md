@@ -20,7 +20,7 @@ Do efektywnego zarządzania kodem źródłowym zaleca się skonfigurować poniż
 
 * Zapisywanie obiektów TwinCAT w oddzielnych plikach pozwoli na lepsze zarządzanie projektem oraz porównywanie zmian. 
 TwinCAT → XAE Environment → File settings.   
-![File settings](image-1.png)
+![File settings](fileSett.png)
 
 * LineID mają znaczenie znaczenie w momencie ustawiania breakpointów. Aby ich stosowanie nie powodowało widocznych zmian, należy odseparować je od kodu źródłowego i stworzyć dla nich odrębny plik.  
 TwinCAT → PLC Environment → WriteOptions.  
