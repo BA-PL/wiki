@@ -1,6 +1,6 @@
 title: BAPL Support
 description: BAPL Support
-theme: just-the-docs
+remote_theme: just-the-docs/just-the-docs
 color_scheme: beck
 
 url: https://ba-pl.github.io/wiki/
