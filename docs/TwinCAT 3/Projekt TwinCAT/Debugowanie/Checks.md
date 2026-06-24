@@ -7,68 +7,165 @@ layout: page
 
 # Funkcje Checks 
 <br>
-<h6> Data modyfikacji: 30.12.2024 </h6>
+<h6> Data modyfikacji: 24.06.2026 </h6>
 <br>
 
-Niniejsza instrukcja opisuje ogólną ideę, sposób dodania do projektu, a także sposób użycia funkcji diagnostycznych Checks. Są to funkcje służące do wykrywania i ochrony programu PLC przed błędami programistycznymi mogącymi prowadzić do tzw. Exception Mode, a więc trybu wyjątku, mogącego doprowadzić np. do samoczynnego restartu sterownika. Sytuacje, które rozpoznaje i tymczasowo naprawiają funkcje Checks to: próba dzielenia przez zero, przekroczenie zakresu tablic, a także przekroczenie zakresu liczby znakowej lub bezznakowej.
+Instrukcja opisująca w jaki sposób wykorzystać funkcje diagnostyczne "Checks".
+Służą one do wykrywania błędów programistycznych, które mogą prowadzić do tzw. Exception Mode lub samoczynnego restartu sterownika.
+Szczegółowa dokumentacja: [Object POUs for implicit checks](https://infosys.beckhoff.com/content/1033/tc3_plc_intro/2530351499.html)
 
-## Informacje ogólne
+Funkcje zabezpieczają program PLC przed takimi operacjami jak:
+* Dzielenie przez zero
+* Przekroczenie zakresu tablicy
+* Przekroczenie zakresu liczby ze znakiem lub bez znaku
+
+Od wersji **TC3.1.4026.14** dostępny jest nowy sposób debugowania projektu przy ich użyciu.
+
+<div class="code-example" markdown="1" style="background: rgba(210, 243, 242, 0.8)">
+
+INFO
+{: .label .label-purple }
+
+Od wersji 3.1.4026.14 dostępna jest funkcja `CreateCallstackCoreDump()`, która pozwala na wykrycie miejsca błędu bez zatrzymywania sterownika. Dokumentacja: [Creation of a core dump via runtime function](https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_plc_intro/18677193867.html&id=)
+ 
+</div>
+
+| Wersja Checksów | Do pobrania | Sposób debugowania |
+|---|---|---|
+| Podstawowa |[Download Checks](https://github.com/BA-PL/Checks_Base/archive/refs/heads/main.zip){: .btn .btn-red } | Breakpoint |
+| Rozszerzona (TC >= 4026.14) | [Download Checks](https://github.com/BA-PL/Checks_Ex/archive/refs/heads/main.zip){: .btn .btn-red }| Breakpoint <br> `CreateCallstackCoreDump()` |
+
+# Informacje ogólne
 
 Funkcje Checks:
-- Służą do sprawdzania np. wystąpienia dzielenia przez 0 lub przekroczenia zakresu tablicy
-- Funkcje systemowe (nie trzeba ich wywoływać)
-- Nie wolno zmieniać nazwy funkcji i argumentów wejściowych
+* Systemowe funkcje, które nie wymagają wywołania
+* Działają automatycznie po dodaniu do projektu i wgraniu programu
+* Przy każdym wystąpieniu błędu inkrementują licznik w GVL_Checks
 
-![ch1](https://ba-pl.github.io/wiki/assets/images/checks/ch1.png "ch1")
+<div class="code-example" markdown="1" style="background-color: rgba(255, 0, 0, 0.6); color: white">
 
-## Import funkcji do programu
-Pobierz wymagane pliki tutaj:
-<br>
-<br>
-[Download Checks](https://github.com/BA-PL/Checks-TC3/archive/refs/heads/main.zip){: .btn .btn-red }
+UWAGA
+{: .label .label-yellow }
 
-<br>
-Aby zaimportować funkcje Checks do projektu PLC, proponujemy wydzielić sobie oddzielny katalog, np. o nazwie Checks:
+ Nie można modyfikować nazwy oraz zmiennych wejściowych funkcji. Do poprawnego działania potrzebują zachować swoją pierwotną nazwę oraz argumenty wejściowe.
+ 
+</div>
 
-![ch2](https://ba-pl.github.io/wiki/assets/images/checks/ch2.png "ch2")
+Opis zmiennych:
 
-Następnie do katalogu dodajemy pliki związane z funkcjami Checks:
+| Zmienna | Opis |
+|---|---|
+| `nCheckBounds` | Licznik przekroczeń zakresu indeksów (np. tablic) |
+| `nCheckDivDInt` | Licznik prób dzielenia DINT przez 0 |
+| `nCheckDivLInt` | Licznik prób dzielenia LINT przez 0 |
+| `nCheckDivLReal` | Licznik prób dzielenia LREAL przez 0 |
+| `nCheckDivReal` | Licznik prób dzielenia REAL przez 0 |
+| `nCheckRangeSigned` | Licznik przekroczeń liczby ze znakiem, np. wartość poza zakresem INT(10..20) |
+| `nCheckRangeUnsigned` | Licznik przekroczeń liczby bez znaku, np. wartość poza zakresem UINT(10..20) |
+| `nCheckLRangeSigned` | Licznik przekroczeń liczby ze znakiem, np. wartość poza zakresem LINT(10..20) |
+| `nCheckLRangeUnsigned` | Licznik przekroczeń liczby bez znaku, np. wartość poza zakresem ULINT(10..20) |
 
-![ch3](https://ba-pl.github.io/wiki/assets/images/checks/ch3.png "ch3")
+# Użycie funkcji Checks
 
-## Używanie funkcji Checks 
-Po dodaniu funkcji sprawdzających do projektu wgraj zmiany w projekcie (wymaga to wgrania projektu z trybie **Download**, czyli z zatrzymaniem programu).
-<br>
-Następnie, sprawdź wartości liczników na liście zmiennych globalnych **GVL_Checks:**
+## Import do programu
 
-![ch4](https://ba-pl.github.io/wiki/assets/images/checks/ch4.png "ch4")
+Pobrane funkcje Checks można zaimportować bezpośrednio do projektu.
 
-Jeśli który licznik ma wartość różną od zera, znajdź funkcję odpowiadającą temu działaniu (o takiej samej
-nazwie):
+<div class="code-example" markdown="1" style="background-color: rgba(255, 0, 0, 0.6); color: white">
 
-![ch5](https://ba-pl.github.io/wiki/assets/images/checks/ch5.png "ch5")
+UWAGA
+{: .label .label-yellow }
 
-Następnie kliknij na linię, w której następuje inkrementacja licznika (w tym przypadku jest to linia nr 4) i postaw w tym miejscu Breakpoint (wybierz z zakładki Debug lub wciśnij F9) i zaczekaj, aż **program zatrzyma swoje działanie.**
+    Po dodaniu funkcji do projektu nie ma możliwości wgrania programu opcją Online Change.
+    Wymagane jest wgranie projektu w trybie Download, czyli z zatrzymaniem programu.
+ 
+</div>
 
-![ch6](https://ba-pl.github.io/wiki/assets/images/checks/ch6.png "ch6")
+![ImportFromZip](https://ba-pl.github.io/wiki/assets/images/checks/ImportFromZip.png)
+![ImportFromZipFiles](https://ba-pl.github.io/wiki/assets/images/checks/ImportFromZipFiles.png)
 
-Znajdź fragment programu, w którym wystąpiła niepożądana akcja. W tym celu wybierz **PLC --> Windows --> Call Stack** i wskaż element w którym była wywołana funkcja sprawdzająca.
+<div class="code-example" markdown="1" style="background: rgba(210, 243, 242, 0.8)">
 
-![ch7](https://ba-pl.github.io/wiki/assets/images/checks/ch7.png "ch7")
+INFO
+{: .label .label-purple }
 
-Następnie popraw algorytm i uruchom ponownie program:
+	Domyślne funkcje Checks
+	
+    Istnieje możliwość importu domyślnych funkcji Checks bezpośrednio przez narzędzie TwinCAT. Liczniki każdej funkcji znajdują się wtedy wewnątrz, co utrudnia diagnostykę.
+    ![DefaultChecks](https://ba-pl.github.io/wiki/assets/images/checks/DefaultChecks.png)
+ 
+</div>
 
-![ch8](https://ba-pl.github.io/wiki/assets/images/checks/ch8.png "ch8")
+## Diagnostyka
 
-Wyłącz wszystkie breakpointy, aby program PLC nie zatrzymał się w nieodpowiednim momencie:
+### Sprawdzanie poprawności kodu
+Do sprawdzania poprawności programu służą liczniki na liście zmiennych globalnych **GVL_Checks**.
+![Liczniki](https://ba-pl.github.io/wiki/assets/images/checks/Liczniki.png)
 
-![ch9](https://ba-pl.github.io/wiki/assets/images/checks/ch9.png "ch9")
+Jeżeli któryś z liczników ma wartość różną od zera, oznacza to, że wystąpił błąd określonego typu.
 
+### Szukanie miejsca wystąpienia błędu
+Znalezienie miejsca wystąpienia błędu można zrealizować na dwa sposoby:
+1. Breakpoint
+2. Funkcja `CreateCallstackCoreDump()` - dostępna wraz z najnowszymi funkcjami Checks
 
-![ch10](https://ba-pl.github.io/wiki/assets/images/checks/ch10.png "ch10")
+#### Breakpoint
+Breakpoint to znacznik ustawiany w kodzie, który zatrzymuje wykonanie programu w wybranym miejscu. Dzięki temu programista może podejrzeć aktualne wartości zmiennych i prześledzić działanie programu krok po kroku.
 
-Pamiętaj aby po naprawieniu algorytmu i ponownym uruchomieniu programu wyczyścić okno błędów i wyzerować liczniki naliczone na liście zmiennych globalnych. Pozwoli to uchronić się przed późniejszymi wątpliwościami czy błędy naliczały się, czy nie.
+<div class="code-example" markdown="1" style="background-color: rgba(255, 0, 0, 0.6); color: white">
 
-![ch11](https://ba-pl.github.io/wiki/assets/images/checks/ch11.png "ch11")
+UWAGA
+{: .label .label-yellow }
 
-Po usunięciu wszystkich błędów i przed wgraniem ostatecznej wersji projektu na sterownik, usuń funkcje Checks z projektu. 
+    Korzystanie z Breakpointów powoduje zatrzymanie działania całego programu PLC, co bardzo często wiąże się z zatrzymaniem całej maszyny w sposób nagły, niekontrolowany.
+    Należy robić to z rozwagą.
+ 
+</div>
+
+Na podstawie licznika znajdujemy odpowiadającą mu nazwę zmiennej i otwieramy funkcję. W miejscu, gdzie naliczane są liczniki, ustawiamy Breakpointa.
+![Breakpoint](https://ba-pl.github.io/wiki/assets/images/checks/Breakpoint.png)
+
+Jeżeli linia kodu, na której jest postawiony Breakpoint, się wykona, to program zostanie zatrzymany. Pozwala to prześledzić ostatnie wywołania z okna **Call Stack**.
+![CallStack](https://ba-pl.github.io/wiki/assets/images/checks/CallStack.png)
+
+Wybierając poprzednie wywołanie z listy, jesteśmy w stanie namierzyć miejsce, które spowodowało wystąpienie Breakpoint'a.
+![IdentyfikacjaMiejsca](https://ba-pl.github.io/wiki/assets/images/checks/IdentyfikacjaMiejsca.png)
+
+#### Funkcja `CreateCallstackCoreDump()`
+
+Funkcja pozwalająca w wybranym momencie zapisać plik core dump zawierający stos wywołań (Call Stack). Odbywa się to bez konieczności zatrzymywania programu breakpointem.
+Plik **.core** tworzy się w katalogu `.\Boot\Plc\CoreDump`.
+![KatalogBoot](https://ba-pl.github.io/wiki/assets/images/checks/KatalogBoot.png)
+
+Plik taki należy przekopiować na komputer inżynierski, a następnie otworzyć w środowisku TwinCAT 3.
+![LoadCoreDump](https://ba-pl.github.io/wiki/assets/images/checks/LoadCoreDump.png)
+
+Po otwarciu pliku .core, narzędzie od razu przeniesie nas do funkcji, która spowodowała stworzenie pliku.
+Korzystając ze stosu wywołań (**Call Stack**) można sprawdzić miejsce w kodzie, które spowodowało naliczenie się licznika.
+![CallStack](Chttps://ba-pl.github.io/wiki/assets/images/checks/allStack.png)
+Wybierając poprzednie wywołanie z listy, jesteśmy w stanie namierzyć miejsce, które spowodowało stworzenie pliku .core.
+![IdentyfikacjaMiejsca](https://ba-pl.github.io/wiki/assets/images/checks/IdentyfikacjaMiejsca.png)
+
+Plik .core należy zamknąć. Zwykłe wylogowanie się (Logout) nie powoduje zamknięcia pliku.
+![CloseCoreDump](Chttps://ba-pl.github.io/wiki/assets/images/checks/loseCoreDump.png)
+
+### Poprawienie kodu
+Po znalezieniu miejsca, należy przeanalizować kod i dokonać zmiany w programie.
+Nie należy zostawiać naliczających się Checks'ów.
+
+### Zerowanie liczników
+Po znalezieniu i poprawieniu programu, dobrą praktyką jest zerowanie liczników. Dzięki temu łatwiej jest zauważyć, że wystąpił błąd od ostatniej diagnostyki.
+![LicznikiZera](https://ba-pl.github.io/wiki/assets/images/checks/LicznikiZera.png)
+
+<div class="code-example" markdown="1" style="background-color: rgba(255, 0, 0, 0.6); color: white">
+
+UWAGA
+{: .label .label-yellow }
+
+    Pliki .core
+	
+    W celu ochrony dysku, plik .core zostanie stworzony tylko jeden raz, przy pierwszym naliczeniu się licznika.
+    Ważne jest, aby po znalezieniu każdego kolejnego błędu resetować licznik do 0. Pozwoli to na stworzenie nowego pliku przy kolejnym błędzie.
+	
+</div>
+
