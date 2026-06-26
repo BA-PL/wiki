@@ -5,6 +5,7 @@ gem "webrick"
 
 group :jekyll_plugins do
   gem "just-the-docs"
+  gem "kramdown-parser-gfm"
   gem "jekyll-seo-tag"
   gem "jekyll-include-cache"
   gem "jekyll-default-layout"
