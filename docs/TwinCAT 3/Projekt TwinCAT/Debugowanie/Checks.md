@@ -71,7 +71,7 @@ Opis zmiennych:
 
 Pobrane funkcje Checks można zaimportować bezpośrednio do projektu.
 
-<div class="code-example" markdown="1" style="background-color: rgba(255, 0, 0, 0.6); color: white">
+<div class="code-example" markdown="1" style="background-color: rgba(255, 0, 0, 0.6);  ">
 
 UWAGA
 {: .label .label-yellow }
@@ -92,9 +92,10 @@ INFO
 	Domyślne funkcje Checks
 	
     Istnieje możliwość importu domyślnych funkcji Checks bezpośrednio przez narzędzie TwinCAT. Liczniki każdej funkcji znajdują się wtedy wewnątrz, co utrudnia diagnostykę.
-    ![DefaultChecks](https://ba-pl.github.io/wiki/assets/images/checks/DefaultChecks.png)
  
 </div>
+
+![DefaultChecks](https://ba-pl.github.io/wiki/assets/images/checks/DefaultChecks.png)
 
 ## Diagnostyka
 
@@ -110,9 +111,10 @@ Znalezienie miejsca wystąpienia błędu można zrealizować na dwa sposoby:
 2. Funkcja `CreateCallstackCoreDump()` - dostępna wraz z najnowszymi funkcjami Checks
 
 #### Breakpoint
+<br>
 Breakpoint to znacznik ustawiany w kodzie, który zatrzymuje wykonanie programu w wybranym miejscu. Dzięki temu programista może podejrzeć aktualne wartości zmiennych i prześledzić działanie programu krok po kroku.
 
-<div class="code-example" markdown="1" style="background-color: rgba(255, 0, 0, 0.6); color: white">
+<div class="code-example" markdown="1" style="background-color: rgba(255, 0, 0, 0.6); ">
 
 UWAGA
 {: .label .label-yellow }
@@ -123,30 +125,41 @@ UWAGA
 </div>
 
 Na podstawie licznika znajdujemy odpowiadającą mu nazwę zmiennej i otwieramy funkcję. W miejscu, gdzie naliczane są liczniki, ustawiamy Breakpointa.
+
 ![Breakpoint](https://ba-pl.github.io/wiki/assets/images/checks/Breakpoint.png)
 
 Jeżeli linia kodu, na której jest postawiony Breakpoint, się wykona, to program zostanie zatrzymany. Pozwala to prześledzić ostatnie wywołania z okna **Call Stack**.
+
 ![CallStack](https://ba-pl.github.io/wiki/assets/images/checks/CallStack.png)
 
 Wybierając poprzednie wywołanie z listy, jesteśmy w stanie namierzyć miejsce, które spowodowało wystąpienie Breakpoint'a.
+
 ![IdentyfikacjaMiejsca](https://ba-pl.github.io/wiki/assets/images/checks/IdentyfikacjaMiejsca.png)
 
 #### Funkcja `CreateCallstackCoreDump()`
+<br>
 
 Funkcja pozwalająca w wybranym momencie zapisać plik core dump zawierający stos wywołań (Call Stack). Odbywa się to bez konieczności zatrzymywania programu breakpointem.
 Plik **.core** tworzy się w katalogu `.\Boot\Plc\CoreDump`.
+
 ![KatalogBoot](https://ba-pl.github.io/wiki/assets/images/checks/KatalogBoot.png)
 
 Plik taki należy przekopiować na komputer inżynierski, a następnie otworzyć w środowisku TwinCAT 3.
+
 ![LoadCoreDump](https://ba-pl.github.io/wiki/assets/images/checks/LoadCoreDump.png)
 
 Po otwarciu pliku .core, narzędzie od razu przeniesie nas do funkcji, która spowodowała stworzenie pliku.
 Korzystając ze stosu wywołań (**Call Stack**) można sprawdzić miejsce w kodzie, które spowodowało naliczenie się licznika.
+
 ![CallStack](Chttps://ba-pl.github.io/wiki/assets/images/checks/allStack.png)
+
 Wybierając poprzednie wywołanie z listy, jesteśmy w stanie namierzyć miejsce, które spowodowało stworzenie pliku .core.
+
+
 ![IdentyfikacjaMiejsca](https://ba-pl.github.io/wiki/assets/images/checks/IdentyfikacjaMiejsca.png)
 
 Plik .core należy zamknąć. Zwykłe wylogowanie się (Logout) nie powoduje zamknięcia pliku.
+
 ![CloseCoreDump](Chttps://ba-pl.github.io/wiki/assets/images/checks/loseCoreDump.png)
 
 ### Poprawienie kodu
@@ -155,9 +168,10 @@ Nie należy zostawiać naliczających się Checks'ów.
 
 ### Zerowanie liczników
 Po znalezieniu i poprawieniu programu, dobrą praktyką jest zerowanie liczników. Dzięki temu łatwiej jest zauważyć, że wystąpił błąd od ostatniej diagnostyki.
+
 ![LicznikiZera](https://ba-pl.github.io/wiki/assets/images/checks/LicznikiZera.png)
 
-<div class="code-example" markdown="1" style="background-color: rgba(255, 0, 0, 0.6); color: white">
+<div class="code-example" markdown="1" style="background-color: rgba(255, 0, 0, 0.6);">
 
 UWAGA
 {: .label .label-yellow }
