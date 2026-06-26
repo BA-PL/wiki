@@ -9,7 +9,7 @@ layout: page
 Jeśli chcesz poszerzyć swoję wiedzę, zapraszamy na nasze szkolenia, które prowadzimy w kilku lokalizacjach w Polsce.
 Więcej informacji znajdziesz [tutaj](https://www.beckhoff.com/pl-pl/support/training-offerings/).
 <br>
-<br>
+
 Ścieżka szkoleniowa:
 
 ![path](path.jpg "path")
