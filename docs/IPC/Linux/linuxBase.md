@@ -20,7 +20,7 @@ Instalacja w przystępny sposób opisana jest w [Infosys.](https://infosys.beckh
 
 # Podłączenie i instalacja TwinCAT
 
-Sterownik można skonfigurować lokalnie, korzystając z podłączonego monitora i klawiatury lub za pomocą ssh (Power Shell), zdalnie. Do połączenia ssh należy najpierw uzyskać adres IP. Różne metody są opisane [tuatj.](https://infosys.beckhoff.com/english.php?content=../content/1033/beckhoff_rt_linux/17350407691.html)
+Sterownik można skonfigurować lokalnie, korzystając z podłączonego monitora i klawiatury lub za pomocą ssh (Power Shell), zdalnie. Do połączenia ssh należy najpierw uzyskać adres IP. Różne metody są opisane [tutaj.](https://infosys.beckhoff.com/english.php?content=../content/1033/beckhoff_rt_linux/17350407691.html)
 <br>
 
 Dlasza część instrukcji będzie opierać się na konfiguracji sterownika z poziomu Power Shell i połączenia ssh.

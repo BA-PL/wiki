@@ -138,7 +138,7 @@ Najnowsza wersja dostępna jest na stronie internetowej [beckhoff.com](https://w
 
 Pierwsze kroki z Package Managerem są omówione w rozdziale:
 
-[Pobieranie i instalacja Package Manager](https://ba-pl.github.io/wiki/docs/TwinCAT%203/Instalacja/Instalacja/#pobieranie-i-instalacja-package-manager).
+[Pobieranie i instalacja Package Manager](https://ba-pl.github.io/wiki/docs/TwinCAT%203/Instalacja/Instalacja.html#pobieranie-i-instalacja-package-manager).
 
 <div class="code-example" markdown="1" style="background: rgba(210, 243, 242, 0.8)">
 

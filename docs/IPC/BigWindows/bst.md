@@ -210,7 +210,7 @@ w którym wpisz hasło domyślne (admin) lub własne, jeśli było ono przez Cie
 Więcej informacji o dostępie zdalnym znajdziesz [tutaj.](https://infosys.beckhoff.com/english.php?content=../content/1033/bst/4382504331.html)
 
 ## Przywracanie ustawień fabrycznych za pomocą BST
-Przy pomocy narzędzia BST możliwe jest również przywrócenie systemu naszego komputera przemysłowego do ustawień fabrycznych. Procedura postępowania jest wówczas analogiczna do procedury przywracania kopii zapasowej opisanej w rozdziale [Przywracanie kopii zapasowej](https://ba-pl.github.io/wiki/docs/IPC/BigWindows/bst/#przywracanie-kopii-zapasowej), gdzie zamiast wykonanej przez nas kopii należy w kroku czwartym (4) wybrać plik z fabrycznym obrazem systemu. 
+Przy pomocy narzędzia BST możliwe jest również przywrócenie systemu naszego komputera przemysłowego do ustawień fabrycznych. Procedura postępowania jest wówczas analogiczna do procedury przywracania kopii zapasowej opisanej w rozdziale [Przywracanie kopii zapasowej](https://ba-pl.github.io/wiki/docs/IPC/BigWindows/bst.html#przywracanie-kopii-zapasowej), gdzie zamiast wykonanej przez nas kopii należy w kroku czwartym (4) wybrać plik z fabrycznym obrazem systemu. 
 <br>
 Plik ten można otrzymać kontaktując się z supportem Beckhoff (**support@beckhoff.pl**) podając numer seryjny posiadanego komputera przemysłowego. Plik taki należy umieścić na BST w katalogu *Images* przed rozpoczęciem procedury przywracania.
 
