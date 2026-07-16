@@ -73,7 +73,7 @@ Plik możemy skopiować na sterownik na kilka sposobów:
 INFO
 {: .label .label-purple }
 
-**Uwaga!** W systemie Windows 7 i Windows 8.1/10 należy zmienić zabezpieczenia sieci – patrz [Dodatek I.](https://ba-pl.github.io/wiki/docs/IPC/Windows%20CE/Instalacja/#dodatek-i---przystosowanie-windows-7810-do-korzystania-z-folderu-public)
+**Uwaga!** W systemie Windows 7 i Windows 8.1/10 należy zmienić zabezpieczenia sieci – patrz [Dodatek I.](https://ba-pl.github.io/wiki/docs/IPC/Windows%20CE/Instalacja.html#dodatek-i---przystosowanie-windows-7810-do-korzystania-z-folderu-public)
  
 </div>
 
@@ -101,7 +101,7 @@ INFO
 **Warto wiedzieć**: Folder Public znajduje się w pamięci RAM sterownika. Po zaniku zasilania znika jego zawartość.
 
 <br>
-**Uwaga!** W celu prawidłowego działania protokołu SMB konieczne jest odblokowanie portów 137-139 w ustawieniach Firewall na sterowniku - patrz [Dodatek II.](https://ba-pl.github.io/wiki/docs/IPC/Windows%20CE/Instalacja/#dodatek-ii---dodanie-u%C5%BCytkownika-w-windows-ce--odblokowanie-port%C3%B3w-w-firewall)
+**Uwaga!** W celu prawidłowego działania protokołu SMB konieczne jest odblokowanie portów 137-139 w ustawieniach Firewall na sterowniku - patrz [Dodatek II.](https://ba-pl.github.io/wiki/docs/IPC/Windows%20CE/Instalacja.html#dodatek-ii---dodanie-użytkownika-w-windows-ce--odblokowanie-portów-w-firewall)
  
 </div>
 <br>

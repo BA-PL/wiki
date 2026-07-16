@@ -93,7 +93,7 @@ Nie  zostanie  usunięty  kod  źródłowy,  plik  z  projektem  bootowalnym, ko
 Przywracanie ustawień fabrycznych za pomocą aplikacji CERHOST jest jedną ze zdalnych metod. Aplikacja ta nie wymaga instalacji i można ją pobrać [tutaj.](https://infosys.beckhoff.com/content/1033/cx51x0_hw/Resources/5047075211.zip)
 <br>
 <br>
-Domyślnie  zdalny  pulpit  (CE  Remote  Host  --> CERHOST)  jest  na sterownikach  zablokowany. Odblokować  go  można  za  pomocą  opisanego wcześniej  panelu  konfiguracyjnego  w  zakładce  *Boot  Opt.*,  przełączając ustawienie *Remote Display* z **Off** na **On** i restartując sterownik. Szerszy opis [tutaj.](https://ba-pl.github.io/wiki/docs/IPC/Windows%20CE/CERHOST/)
+Domyślnie  zdalny  pulpit  (CE  Remote  Host  --> CERHOST)  jest  na sterownikach  zablokowany. Odblokować  go  można  za  pomocą  opisanego wcześniej  panelu  konfiguracyjnego  w  zakładce  *Boot  Opt.*,  przełączając ustawienie *Remote Display* z **Off** na **On** i restartując sterownik. Szerszy opis [tutaj.](https://ba-pl.github.io/wiki/docs/IPC/Windows%20CE/CERHOST.html)
 <br>
 <br>
 Po  odblokowaniu  i  pobraniu  programu,  otwieramy  go,  a  następnie wybieramy **File --> Connect**
