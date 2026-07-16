@@ -87,7 +87,7 @@ W komputerach, na których zainstalowano Visual Studio 2017/2019/2022 okno dodat
 <br>
 Po wybraniu integracji klikamy ikonę zapisu (dyskietka) i przechodzimy dalej klikając **Next**. Zainstalowane edytory i integracje z VS można będzie zmienić później w ustawieniach Package Manager.
 <br>
-Na tym etapie następują drobne różnice w przypadku instalacji 4026 na systemie bez TwinCAT’a i systemie na którym znajdują się starsze wersje TwinCAT’a. W pierwszym przypadku przechodzimy do rozdziału [Ścieżka instalacji](https://ba-pl.github.io/wiki/docs/TwinCAT%203/Instalacja/Instalacja/#%C5%9Bcie%C5%BCka-instalacji). Gdy mamy zainstalowaną starszą wersję TwinCAT, przechodzimy do rozdziału dotyczącego [migracji](https://ba-pl.github.io/wiki/docs/TwinCAT%203/Instalacja/Instalacja/#migracja-starszych-build%C3%B3w-do-package-manager). 
+Na tym etapie następują drobne różnice w przypadku instalacji 4026 na systemie bez TwinCAT’a i systemie na którym znajdują się starsze wersje TwinCAT’a. W pierwszym przypadku przechodzimy do rozdziału [Ścieżka instalacji](https://ba-pl.github.io/wiki/docs/TwinCAT%203/Instalacja/Instalacja.html#ścieżka-instalacji). Gdy mamy zainstalowaną starszą wersję TwinCAT, przechodzimy do rozdziału dotyczącego [migracji](https://ba-pl.github.io/wiki/docs/TwinCAT%203/Instalacja/Instalacja.html#migracja-starszych-buildów-do-package-manager). 
 
 ### Ścieżka instalacji 
 Ostatnim, opcjonalnym krokiem jest wskazanie ścieżki instalacji. Po zatwierdzeniu zmiana nie będzie możliwa:
@@ -100,7 +100,7 @@ Aby zatwierdzić, klikamy **Finish**.
 **UWAGA! Nie zalecamy zmiany domyślnej ścieżki instalacji TwinCAT, gdyż może to powodować problemy!**
 
 # Migracja starszych buildów do Package Manager 
-W przypadku gdy w systemie jest zainstalowany starsza wersja TwinCAT 3 należy wykonać migrację funkcji do 4026. Jeśli w systemie nie ma starszych wersji TwinCAT’a należy pominąć ten punkt. Gdy chcemy doinstalować Remote Manager do starszych wersji, przechodzimy do rodziału dotyczącego [Remote Managera](https://ba-pl.github.io/wiki/docs/TwinCAT%203/Instalacja/Instalacja/#instalacja-starszych-build%C3%B3w-remote-manage-ilub-twincat-2).
+W przypadku gdy w systemie jest zainstalowany starsza wersja TwinCAT 3 należy wykonać migrację funkcji do 4026. Jeśli w systemie nie ma starszych wersji TwinCAT’a należy pominąć ten punkt. Gdy chcemy doinstalować Remote Manager do starszych wersji, przechodzimy do rodziału dotyczącego [Remote Managera](https://ba-pl.github.io/wiki/docs/TwinCAT%203/Instalacja/Instalacja.html#instalacja-starszych-buildów-remote-manage-ilub-twincat-2).
 <br>
 Procedura migracji polega na wykryciu w systemie poprzednich wersji oraz funkcji TwinCAT, usunięcie ich z zachowaniem ustawień, licencji itp., usunięciu pozostałości z systemu, następnie instalacje w nowym formacie paczek. Klikamy **Yes**. Jeśli system poprosi nas o uprawnienia administratora, przyznajemy je.
 
@@ -127,7 +127,7 @@ Po ukończeniu procedury wyświetli się podsumowanie migracji:
 
 ![26t15_2](https://ba-pl.github.io/wiki/assets/images/4026/26t15_2.png "26t15_2")
 
-Zatwierdzamy je klikając **Finish**. Po migracji można już korzystać z TwinCAT 4026. Dodatkowo, aby programować sterowniki z starszymi wersjami TwinCAT’a należy przejść do rozdziału dotyczącego [Remote Managera](https://ba-pl.github.io/wiki/docs/TwinCAT%203/Instalacja/Instalacja/#instalacja-starszych-build%C3%B3w-remote-manage-ilub-twincat-2).
+Zatwierdzamy je klikając **Finish**. Po migracji można już korzystać z TwinCAT 4026. Dodatkowo, aby programować sterowniki z starszymi wersjami TwinCAT’a należy przejść do rozdziału dotyczącego [Remote Managera](https://ba-pl.github.io/wiki/docs/TwinCAT%203/Instalacja/Instalacja.html#instalacja-starszych-buildów-remote-manage-ilub-twincat-2).
 
 # Konfiguracja Runtime TwinCAT
 
@@ -276,7 +276,7 @@ W zakładce *Browse* klikamy na nazwę **Engineering - TwinCAT Standard Remote M
 
 ![26t34_7](https://ba-pl.github.io/wiki/assets/images/4026/26t34_7.png "26t34_7")
 
-Wybieramy żądaną wersję, a następnie standardowo zatwierdzamy [modyfikacje.](https://ba-pl.github.io/wiki/docs/TwinCAT%203/Instalacja/Instalacja/#modyfikowanie-instalacji)
+Wybieramy żądaną wersję, a następnie standardowo zatwierdzamy [modyfikacje.](https://ba-pl.github.io/wiki/docs/TwinCAT%203/Instalacja/Instalacja.html#modyfikowanie-instalacji)
 
 ## Instalacja TwinCAT 2
 W celu instalacji TwinCAT 2 musimy przełączyć z widoku workloadów (funkcji) na widok pojedynczych pakietów:
