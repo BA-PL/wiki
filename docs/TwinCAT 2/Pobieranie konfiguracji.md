@@ -19,14 +19,18 @@ Poniższa instrukcja prezentuje w jaki sposób pobrać konfigurację sprzętową
 Instrukcja w żaden sposób nie zastępuje szkolenia i nie może być tak traktowana, ponieważ może zawierać informacje i skróty myślowe niejasne dla osoby, która tego szkolenia nie przeszła.
 
 # Pobranie i instalacja TwinCAT 2
-Link do pobrania oporgramowania:
+
+Jeśli na swoim komputerze masz już TwinCAT 3, postępuj zgodnie z instrukcją:
+- dla wersji **3.1.4026** : [link](https://ba-pl.github.io/wiki/docs/TwinCAT%203/Instalacja/Instalacja.html#instalacja-starszych-build%C3%B3w-remote-manage-ilub-twincat-2)
+- dla wersji  **3.1.4024** : [link](https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_installation/179471755.html)
+
+Jeśli nie masz TwinCAT 3, po prostu uruchom stanadrdową instalację. Link do pobrania oporgramowania:
 - [wersja 32bit](https://www.beckhoff.com/pl-pl/support/download-finder/search-result/?download_group=97248943&download_item=645885953)
 - [wersja 64bit](https://www.beckhoff.com/pl-pl/support/download-finder/search-result/?download_group=97248943&download_item=645997772)
 
 Oprogramowanie instalujemy jako *Administrator*. 
 <br>
-<br>
-**UWAGA!** Jeśli posiadasz już na swoim komputerze  środowisko TwinCAT 3 (wersja<=3.1.4024.x), postępuj zgodnie z instrukcją znajdującą się [tutaj.](https://infosys.beckhoff.com/english.php?content=../content/1033/tc3_installation/179471755.html)
+
 
 # Połączenie ze sterownikiem
 W celu połączenia ze sterownikiem wyposażonym w TwinCAT 2 należy uruchomić środowisko **TwinCAT System Manager:**

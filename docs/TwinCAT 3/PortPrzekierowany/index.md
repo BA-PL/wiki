@@ -53,7 +53,7 @@ Spowodowane jest to tym, że w rejestrach urządzenia wpisany jest wewnętrzny a
 
 Uwaga!! Obrazy Windows CE od wersji TwinCAT 2.11. 2243 lub TwinCAT 3.1 Build 4016.6 mają fabrycznie zablokowany dostęp zdalny za pomocą programu CERHOST. Dalsze czynności nie będą możliwe.
 <br>
-Instrukcja odblokowania znajduje się [tutaj.](https://ba-pl.github.io/wiki/docs/IPC/Windows%20CE/CERHOST/)
+Instrukcja odblokowania znajduje się [tutaj.](https://ba-pl.github.io/wiki/docs/IPC/Windows%20CE/CERHOST.html#odblokowanie-cerhost)
 <br>
 Odnajdujemy wpis w rejestrze dotyczący połączenia z naszym komputerem (w tym przypadku jest to folder DELL) Zmieniamy wpis dotyczący adresu IP - powinien zawierać zewnętrzny adres IP routera za którym znajduje się komputer, z którego programujemy sterownik. Adres ten można sprawdzić np. na stronie [moje IP.](https://www.mojeip.cz)
 
