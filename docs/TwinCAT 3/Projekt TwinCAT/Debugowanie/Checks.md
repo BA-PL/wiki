@@ -115,17 +115,19 @@ Znalezienie miejsca wystąpienia błędu można zrealizować na dwa sposoby:
 1. Breakpoint
 2. Funkcja `CreateCallstackCoreDump()` - dostępna wraz z najnowszymi funkcjami Checks
 
+<br> 
+
 #### Breakpoint
 <br>
 Breakpoint to znacznik ustawiany w kodzie, który zatrzymuje wykonanie programu w wybranym miejscu. Dzięki temu programista może podejrzeć aktualne wartości zmiennych i prześledzić działanie programu krok po kroku.
 
-<div class="code-example" markdown="1" style="background-color: rgba(255, 0, 0, 0.6); ">
+<div class="code-example" markdown="1" style="background-color: rgba(255, 0, 0, 0.6); color: white">
 
 UWAGA
 {: .label .label-yellow }
 
-    Korzystanie z Breakpointów powoduje zatrzymanie działania całego programu PLC, co bardzo często wiąże się z zatrzymaniem całej maszyny w sposób nagły, niekontrolowany.
-    Należy robić to z rozwagą.
+Korzystanie z Breakpointów powoduje zatrzymanie działania całego programu PLC, co bardzo często wiąże się z zatrzymaniem całej maszyny w sposób nagły, niekontrolowany.
+Należy robić to z rozwagą.
  
 </div>
 
@@ -141,7 +143,9 @@ Wybierając poprzednie wywołanie z listy, jesteśmy w stanie namierzyć miejsce
 
 ![IdentyfikacjaMiejsca](https://ba-pl.github.io/wiki/assets/images/checks/IdentyfikacjaMiejsca.png)
 
-#### Funkcja `CreateCallstackCoreDump()`
+<br>
+
+#### Funkcja CreateCallstackCoreDump()
 <br>
 
 Funkcja pozwalająca w wybranym momencie zapisać plik core dump zawierający stos wywołań (Call Stack). Odbywa się to bez konieczności zatrzymywania programu breakpointem.
@@ -156,7 +160,7 @@ Plik taki należy przekopiować na komputer inżynierski, a następnie otworzyć
 Po otwarciu pliku .core, narzędzie od razu przeniesie nas do funkcji, która spowodowała stworzenie pliku.
 Korzystając ze stosu wywołań (**Call Stack**) można sprawdzić miejsce w kodzie, które spowodowało naliczenie się licznika.
 
-![CallStack](Chttps://ba-pl.github.io/wiki/assets/images/checks/allStack.png)
+![CallStack](https://ba-pl.github.io/wiki/assets/images/checks/allStack.png)
 
 Wybierając poprzednie wywołanie z listy, jesteśmy w stanie namierzyć miejsce, które spowodowało stworzenie pliku .core.
 
@@ -165,7 +169,7 @@ Wybierając poprzednie wywołanie z listy, jesteśmy w stanie namierzyć miejsce
 
 Plik .core należy zamknąć. Zwykłe wylogowanie się (Logout) nie powoduje zamknięcia pliku.
 
-![CloseCoreDump](Chttps://ba-pl.github.io/wiki/assets/images/checks/loseCoreDump.png)
+![CloseCoreDump](https://ba-pl.github.io/wiki/assets/images/checks/loseCoreDump.png)
 
 ### Poprawienie kodu
 Po znalezieniu miejsca, należy przeanalizować kod i dokonać zmiany w programie.
@@ -176,15 +180,17 @@ Po znalezieniu i poprawieniu programu, dobrą praktyką jest zerowanie licznikó
 
 ![LicznikiZera](https://ba-pl.github.io/wiki/assets/images/checks/LicznikiZera.png)
 
-<div class="code-example" markdown="1" style="background-color: rgba(255, 0, 0, 0.6);">
+
+<div class="code-example" markdown="1" style="background-color: rgba(255, 0, 0, 0.6); color: white">
 
 UWAGA
 {: .label .label-yellow }
 
-    Pliki .core
+Pliki .core
 	
-    W celu ochrony dysku, plik .core zostanie stworzony tylko jeden raz, przy pierwszym naliczeniu się licznika.
-    Ważne jest, aby po znalezieniu każdego kolejnego błędu resetować licznik do 0. Pozwoli to na stworzenie nowego pliku przy kolejnym błędzie.
-	
+W celu ochrony dysku, plik .core zostanie stworzony tylko jeden raz, przy pierwszym naliczeniu się licznika.
+Ważne jest, aby po znalezieniu każdego kolejnego błędu resetować licznik do 0. Pozwoli to na stworzenie nowego pliku przy kolejnym błędzie.
+ 
 </div>
+
 
