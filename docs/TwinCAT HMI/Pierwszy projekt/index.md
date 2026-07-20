@@ -18,7 +18,7 @@ Niniejsza instrukcja jest wprowadzeniem do narzędzia TwinCAT HMI i opisuje jedy
 
 # Instalacja
 Aby móc korzystać z TwinCAT HMI należy z poziomu TwinCAT Package Manager doinstalować pakiety **TE2000** oraz **TF2000**. Instrukcja instalowania dodatków znajduje się 
-[tutaj.](https://ba-pl.github.io/wiki/docs/TwinCAT%203/Instalacja/Instalacja/#modyfikowanie-instalacji) 
+[tutaj.](https://ba-pl.github.io/wiki/docs/TwinCAT%203/Instalacja/Instalacja.html#modyfikowanie-instalacji) 
 
 # Tworzenie nowego projektu 
 
