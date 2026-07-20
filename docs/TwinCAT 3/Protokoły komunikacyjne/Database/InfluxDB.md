@@ -86,8 +86,6 @@ Finalnie powinniśmy uzyskać okno jak poniżej, gdzie powinna się wyświetlać
 
 Aby korzystać z InfluxDB, należy na komputerze z narzędziem inżynierskim oraz na sterowniku, który będzie łączył się bazą, zainstalować dodatek TF6420.
 <br> 
-Instrukcja instalacji dodatków znajduje się [tutaj.](https://ba-pl.github.io/wiki/docs/TwinCAT%203/Instalacja/Instalacja/#modyfikowanie-instalacji)
-<br>
 Po zainstalowaniu dodatku tworzymy nowy projekt *Empty TwinCAT Database Server Project*:
 
 ![inf10](https://ba-pl.github.io/wiki/assets/images/influx/inf10.png "inf10")

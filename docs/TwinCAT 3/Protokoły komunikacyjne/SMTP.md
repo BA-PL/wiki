@@ -27,7 +27,7 @@ W celu wykorzystania możliwości przesyłania wiadomości lub e-maili należy w
 Instalacja następuje poprzez instalację dodatku na komputerze inżynierskim (opisane niżej) i przeniesienie pliku CAB na sterownik, co opisane jest w [Infosys](https://infosys.beckhoff.com/content/1033/tf6250_tc3_modbus_tcp/705884939.html).
 
 ## Dla pełnych systemów operacyjnych
-Procedura instalacji dodatków opisana jest oddzielnie [dla wersji 4026](https://ba-pl.github.io/wiki/docs/TwinCAT%203/Instalacja/Instalacja/#instalacja-twincat-i-funkcji) oraz [dla wersji 4024](https://ba-pl.github.io/wiki/docs/TwinCAT%203/Instalacja/Instalacja%204024/#instalacja-bibliotek-oraz-dodatkowych-narz%C4%99dzi).  
+Procedura instalacji dodatków opisana jest oddzielnie [dla wersji 4026](https://ba-pl.github.io/wiki/docs/TwinCAT%203/Instalacja/Instalacja.html#instalacja-twincat-i-funkcji) oraz [dla wersji 4024](https://ba-pl.github.io/wiki/docs/TwinCAT%203/Instalacja/Instalacja%204024.html#instalacja-bibliotek-oraz-dodatkowych-narz%C4%99dzi).  
 Należy postępować zgodnie z instrukcją, instalując dodatek **TF6350 SMS/SMTP**.
 
 # Dodanie bibliotek

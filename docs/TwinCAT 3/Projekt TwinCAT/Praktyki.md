@@ -27,8 +27,8 @@ Ze względu na swoją charakterystykę instrukcja ta oparta jest na uproszczenia
 Jeśli sterownik, kótry posiadasz, nie jest nowym urządzeniem, pracę warto rozpocząć od aktualizacji obrazu systemu operacyjnego. 
 Obraz należy dostosować do posiadanego urządzenia (zgodnie z zamówieniem / dokumentem otrzymanym od odpowiedniego oddziału Beckhoff).
 Procedura wymiany obrazu:
-- dla [Windows CE](https://ba-pl.github.io/wiki/docs/IPC/Windows%20CE/Przywracanie%20ustawien/)
-- dla [Windows 7 / 10](https://ba-pl.github.io/wiki/docs/IPC/BigWindows/bst/) 
+- dla [Windows CE](https://ba-pl.github.io/wiki/docs/IPC/Windows%20CE/Przywracanie%20ustawien.html)
+- dla [Windows 7 / 10](https://ba-pl.github.io/wiki/docs/IPC/BigWindows/bst.html) 
 
 
 ## Uruchamiaj wszystko jako administrator
@@ -140,7 +140,7 @@ Następnie uruchom nagrywanie z górnego przybornika (w tym samym przyborniku mo
 
 ## Sprawdź błędy za pomocą funkcji Checks
 
-Dokładny opis użycia funkcji Checks znajdziesz [tutaj.](https://ba-pl.github.io/wiki/docs/TwinCAT%203/Projekt%20TwinCAT/Debugowanie/Checks/)
+Dokładny opis użycia funkcji Checks znajdziesz [tutaj.](https://ba-pl.github.io/wiki/docs/TwinCAT%203/Projekt%20TwinCAT/Debugowanie/Checks.html)
 <br>
 Po użyciu i ostatecznym wgraniu projektu na sterownik, usuń z niego funkcje Checks.
 
@@ -172,7 +172,7 @@ Domyślne hasło dla nowych urządzeń to „1”. Hasło to należy po zakupie 
 ![por23](https://ba-pl.github.io/wiki/assets/images/praktyki/por23.png "por23")
 
 ## Utwórz kopię zapasową projektu oraz całego urządzenia
-[Beckhoff Service Tool](https://ba-pl.github.io/wiki/docs/IPC/BigWindows/bst/) pozwala na utworzenie kopii zapasowej obrazu całego systemu (dla urządzeń z Windowsem 7 lub 10). Dla sterowników z Windowsem CE wystarczy przekopiować zawartość karty pamięci na komputer. Backup taki jest potem łatwo przywrócić. Warto także utworzyć kopię zapasową projektu nad którym pracujemy, zwłaszcza gdy chcemy dokonywać na nim zmian. Można np. [spakować projekt do archiwum](https://ba-pl.github.io/wiki/docs/TwinCAT%203/Projekt%20TwinCAT/archive/)
+[Beckhoff Service Tool](https://ba-pl.github.io/wiki/docs/IPC/BigWindows/bst.html) pozwala na utworzenie kopii zapasowej obrazu całego systemu (dla urządzeń z Windowsem 7 lub 10). Dla sterowników z Windowsem CE wystarczy przekopiować zawartość karty pamięci na komputer. Backup taki jest potem łatwo przywrócić. Warto także utworzyć kopię zapasową projektu nad którym pracujemy, zwłaszcza gdy chcemy dokonywać na nim zmian. Można np. [spakować projekt do archiwum](https://ba-pl.github.io/wiki/docs/TwinCAT%203/Projekt%20TwinCAT/archive.html)
 
 # Dodatkowe Informacje
 

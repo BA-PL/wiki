@@ -71,29 +71,34 @@ Opis zmiennych:
 
 Pobrane funkcje Checks można zaimportować bezpośrednio do projektu.
 
-<div class="code-example" markdown="1" style="background-color: rgba(255, 0, 0, 0.6);  ">
+<div class="code-example" markdown="1" style="background-color: rgba(255, 0, 0, 0.6); color: white">
 
 UWAGA
 {: .label .label-yellow }
 
-    Po dodaniu funkcji do projektu nie ma możliwości wgrania programu opcją Online Change.
-    Wymagane jest wgranie projektu w trybie Download, czyli z zatrzymaniem programu.
+Po dodaniu funkcji do projektu nie ma możliwości wgrania programu opcją Online Change.
+Wymagane jest wgranie projektu w trybie Download, czyli z zatrzymaniem programu.
  
 </div>
 
+<br>
+
 ![ImportFromZip](https://ba-pl.github.io/wiki/assets/images/checks/ImportFromZip.png)
 ![ImportFromZipFiles](https://ba-pl.github.io/wiki/assets/images/checks/ImportFromZipFiles.png)
+
+<br>
 
 <div class="code-example" markdown="1" style="background: rgba(210, 243, 242, 0.8)">
 
 INFO
 {: .label .label-purple }
 
-	Domyślne funkcje Checks
-	
-    Istnieje możliwość importu domyślnych funkcji Checks bezpośrednio przez narzędzie TwinCAT. Liczniki każdej funkcji znajdują się wtedy wewnątrz, co utrudnia diagnostykę.
+Domyślne funkcje Checks
+Istnieje możliwość importu domyślnych funkcji Checks bezpośrednio przez narzędzie TwinCAT. Liczniki każdej funkcji znajdują się wtedy wewnątrz, co utrudnia diagnostykę.
  
 </div>
+
+<br>
 
 ![DefaultChecks](https://ba-pl.github.io/wiki/assets/images/checks/DefaultChecks.png)
 

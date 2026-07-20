@@ -38,7 +38,7 @@ Instalacja odbywa się poprzez command line z poziomu sterownika. Opisane jest t
 
 ## Dla pełnych systemów operacyjnych
 
-Procedura instalacji dodatków opisana jest oddzielnie [dla wersji 4026](https://ba-pl.github.io/wiki/docs/TwinCAT%203/Instalacja/Instalacja/#instalacja-twincat-i-funkcji) oraz [dla wersji 4024](https://ba-pl.github.io/wiki/docs/TwinCAT%203/Instalacja/Instalacja%204024/#instalacja-bibliotek-oraz-dodatkowych-narz%C4%99dzi).
+Procedura instalacji dodatków opisana jest oddzielnie [dla wersji 4026](https://ba-pl.github.io/wiki/docs/TwinCAT%203/Instalacja/Instalacja.html#instalacja-twincat-i-funkcji) oraz [dla wersji 4024](https://ba-pl.github.io/wiki/docs/TwinCAT%203/Instalacja/Instalacja%204024.html#instalacja-bibliotek-oraz-dodatkowych-narz%C4%99dzi).
 Należy postępować zgodnie z instrukcją, instalując dodatek TF6250 Modbus TCP.
 
 # Konfiguracja
