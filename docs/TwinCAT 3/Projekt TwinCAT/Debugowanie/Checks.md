@@ -160,7 +160,7 @@ Plik taki należy przekopiować na komputer inżynierski, a następnie otworzyć
 Po otwarciu pliku .core, narzędzie od razu przeniesie nas do funkcji, która spowodowała stworzenie pliku.
 Korzystając ze stosu wywołań (**Call Stack**) można sprawdzić miejsce w kodzie, które spowodowało naliczenie się licznika.
 
-![CallStack](https://ba-pl.github.io/wiki/assets/images/checks/allStack.png)
+![CallStack](https://ba-pl.github.io/wiki/assets/images/checks/CallStack.png)
 
 Wybierając poprzednie wywołanie z listy, jesteśmy w stanie namierzyć miejsce, które spowodowało stworzenie pliku .core.
 
@@ -169,7 +169,7 @@ Wybierając poprzednie wywołanie z listy, jesteśmy w stanie namierzyć miejsce
 
 Plik .core należy zamknąć. Zwykłe wylogowanie się (Logout) nie powoduje zamknięcia pliku.
 
-![CloseCoreDump](https://ba-pl.github.io/wiki/assets/images/checks/loseCoreDump.png)
+![CloseCoreDump](https://ba-pl.github.io/wiki/assets/images/checks/CloseCoreDump.png)
 
 ### Poprawienie kodu
 Po znalezieniu miejsca, należy przeanalizować kod i dokonać zmiany w programie.
