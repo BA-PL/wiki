@@ -63,7 +63,7 @@ Kolejną komendą jest update zasobów APT, robimy to komendą:
 sudo apt update
 ```
 
-**UWAGA**
+**UWAGA!!**
 **Aby komenda wykonała się poprawnie, na sterowniku wymagane jest połączenie z internetem.**
 **Jeśli nie możesz wpiąć sterownika bezpośrednio do sieci, przejdź** [tutaj](https://ba-pl.github.io/wiki/docs/IPC/Linux/linuxBase.html#dodatek---brak-dost%C4%99pu-do-internetu-na-sterowniku). 
  
@@ -87,3 +87,24 @@ sudo reboot
 Po tych czynnościach dioda TC na sterowniku powinna się zaświecić (na niebiesko).
 
 ## Dodatek - brak dostępu do Internetu na sterowniku
+
+Jeśli nie ma możliwości wpięcia sterownika bezpośrednio do sieci, można udostępnić sieć ze swojego komputera.
+<br>
+Założenia:
+- laptop z dostępem do Internetu po wifi
+- sterownik podpięty kablem do laptopa 1:1 
+
+<br>
+Wchodzimy w ustawienia kart sieciowych i na karcie wifi wchodzimy w właściwości:
+
+![i1](https://ba-pl.github.io/wiki/assets/images/linux/i1.png "i1")
+
+Następnie w zakładce udostępniania aktywujemy udostępnianie i wybieramy z listy kartę sieciową na której jest podłączony sterownik.
+
+![i2](https://ba-pl.github.io/wiki/assets/images/linux/i2.png "i2")
+
+Po chwili (do ok. minuty) na karcie siecowej sterownika powienien pojawiać się adres IP z puli 192.168.x.x:
+
+![i3](https://ba-pl.github.io/wiki/assets/images/linux/i3.png "i3")
+
+Sterownik ma teraz dostęp do sieci poprze laptop. 
