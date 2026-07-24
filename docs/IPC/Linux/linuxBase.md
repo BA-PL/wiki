@@ -90,6 +90,7 @@ Po tych czynnościach dioda TC na sterowniku powinna się zaświecić (na niebie
 
 Jeśli nie ma możliwości wpięcia sterownika bezpośrednio do sieci, można udostępnić sieć ze swojego komputera.
 <br>
+<br>
 Założenia:
 - laptop z dostępem do Internetu po wifi
 - sterownik podpięty kablem do laptopa 1:1 
@@ -107,4 +108,4 @@ Po chwili (do ok. minuty) na karcie siecowej sterownika powienien pojawiać się
 
 ![i3](https://ba-pl.github.io/wiki/assets/images/linux/i3.png "i3")
 
-Sterownik ma teraz dostęp do sieci poprze laptop. 
+Sterownik ma teraz dostęp do sieci poprzez laptop. 
