@@ -62,15 +62,11 @@ Kolejną komendą jest update zasobów APT, robimy to komendą:
 ```
 sudo apt update
 ```
-<div class="code-example" markdown="1" style="background-color: rgba(255, 0, 0, 0.6); color: white">
 
-UWAGA
-{: .label .label-yellow }
-
-Aby komenda wykonała się poprawnie, na sterowniku wymagane jest połączenie z internetem. 
-Jeśli nie możesz wpiąć sterownika bezpośrednio do sieci, przejdź [tutaj](https://ba-pl.github.io/wiki/docs/IPC/Linux/linuxBase.html#dodatek---brak-dost%C4%99pu-do-internetu-na-sterowniku).
+**UWAGA**
+**Aby komenda wykonała się poprawnie, na sterowniku wymagane jest połączenie z internetem.**
+**Jeśli nie możesz wpiąć sterownika bezpośrednio do sieci, przejdź** [tutaj](https://ba-pl.github.io/wiki/docs/IPC/Linux/linuxBase.html#dodatek---brak-dost%C4%99pu-do-internetu-na-sterowniku). 
  
-</div>
 
 ![linux3](https://ba-pl.github.io/wiki/assets/images/linux/linux3.png "linux3")
 
