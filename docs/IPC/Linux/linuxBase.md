@@ -68,6 +68,7 @@ UWAGA
 {: .label .label-yellow }
 
 Aby komenda wykonała się poprawnie, na sterowniku wymagane jest połączenie z internetem. 
+Jeśli nie możesz wpiąć sterownika bezpośrednio do sieci, przejdź tutaj.
  
 </div>
 
@@ -88,3 +89,5 @@ sudo reboot
 ```
 
 Po tych czynnościach dioda TC na sterowniku powinna się zaświecić (na niebiesko).
+
+# Dodatek - brak dostępu do Internetu na sterowniku
