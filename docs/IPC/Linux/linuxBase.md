@@ -68,7 +68,7 @@ UWAGA
 {: .label .label-yellow }
 
 Aby komenda wykonała się poprawnie, na sterowniku wymagane jest połączenie z internetem. 
-Jeśli nie możesz wpiąć sterownika bezpośrednio do sieci, przejdź tutaj.
+Jeśli nie możesz wpiąć sterownika bezpośrednio do sieci, przejdź [tutaj](https://ba-pl.github.io/wiki/docs/IPC/Linux/linuxBase.html#dodatek---brak-dost%C4%99pu-do-internetu-na-sterowniku).
  
 </div>
 
@@ -90,4 +90,4 @@ sudo reboot
 
 Po tych czynnościach dioda TC na sterowniku powinna się zaświecić (na niebiesko).
 
-# Dodatek - brak dostępu do Internetu na sterowniku
+## Dodatek - brak dostępu do Internetu na sterowniku
